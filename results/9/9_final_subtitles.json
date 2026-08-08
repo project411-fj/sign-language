@@ -1,0 +1,478 @@
+[
+    {
+        "ocr_ground_truth": "台灣的暫時性關稅為20%",
+        "stt_original": "台湾的暂时性关税是20%",
+        "start_second": 167,
+        "end_second": 169,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "行政院經貿談判辦公室副總談判代表 顏慧欣",
+        "stt_original": "行政院经贸谈判办公室副总谈判代表严慧欣",
+        "start_second": 174,
+        "end_second": 175,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "原因是資通訊產品還未談妥",
+        "stt_original": "原因是资通讯产品还没有谈妥",
+        "start_second": 169,
+        "end_second": 174,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "美國對等關稅將在7號正式上路",
+        "stt_original": "美国对等关税将在7号正式上路",
+        "start_second": 167,
+        "end_second": 169,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "台灣的暫時性關稅為20%",
+        "stt_original": "台湾的暂时性关税为20%",
+        "start_second": 167,
+        "end_second": 169,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "行政院經貿談判辦公室副總談判代表 顏慧欣",
+        "stt_original": "行政院经贸谈判办公室副总谈判代表严慧欣",
+        "start_second": 174,
+        "end_second": 175,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "原因是資通訊產品還未談妥",
+        "stt_original": "原因是资通讯产品还未谈妥",
+        "start_second": 169,
+        "end_second": 174,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "我方是連同232條款一起談",
+        "stt_original": "我方是联同232条款一起谈",
+        "start_second": 169,
+        "end_second": 174,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "我們在這個總結性會議上面",
+        "stt_original": "我们在总结性会议上",
+        "start_second": 174,
+        "end_second": 175,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "那也開放所有產業可以來做申請",
+        "stt_original": "那也开放所有的产业可以来做申请",
+        "start_second": 175,
+        "end_second": 181,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "調降比率第二多",
+        "stt_original": "调降比率第二多",
+        "start_second": 182,
+        "end_second": 182,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "至於受關稅衝擊較大的產業",
+        "stt_original": "至于受关税冲击较大的产业",
+        "start_second": 182,
+        "end_second": 182,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "國民黨主席朱立倫批評政府",
+        "stt_original": "国民党主席朱立伦批评政府",
+        "start_second": 192,
+        "end_second": 195,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "謝政霖 謝其文 台北報導",
+        "stt_original": "谢震灵 谢奇文 台北报导",
+        "start_second": 195,
+        "end_second": 221,
+        "duration": 27
+    },
+    {
+        "ocr_ground_truth": "川普表示只要企業承諾在美投資",
+        "stt_original": "川普表示说只要企业承诺在美投资",
+        "start_second": 266,
+        "end_second": 270,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "就立即免繳高達1 00%的半導體關稅",
+        "stt_original": "就可以立即免缴高达百分之百的半导体关税",
+        "start_second": 266,
+        "end_second": 270,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "這欠繳的稅率也會被美國追討回來",
+        "stt_original": "这欠缴的税率也会被美国追讨回来",
+        "start_second": 270,
+        "end_second": 275,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "那麼川普宣布這項政策之際",
+        "stt_original": "那么川普宣布这一项政策之际",
+        "start_second": 275,
+        "end_second": 281,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "他也在白宮同時就宣布了",
+        "stt_original": "他也在白宫同时就宣布了",
+        "start_second": 281,
+        "end_second": 286,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "表示說台積電已經對美投資",
+        "stt_original": "表示说台积电已经对美投资",
+        "start_second": 292,
+        "end_second": 296,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "他聲稱有2千億美元",
+        "stt_original": "他声称有2000亿美元",
+        "start_second": 292,
+        "end_second": 296,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "同時也在亞利桑那州已經設廠了",
+        "stt_original": "同时也在亚利桑那州已经设厂了",
+        "start_second": 296,
+        "end_second": 300,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "根據川普公布的半導體稅率的新政策",
+        "stt_original": "那么根据川普公布的这半导体税率的新政策",
+        "start_second": 296,
+        "end_second": 300,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "他也是在今天已經跟川普見過面了",
+        "stt_original": "他也在今天已经跟川普见过面了",
+        "start_second": 300,
+        "end_second": 302,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "在白宮已經完成會談",
+        "stt_original": "在白宫已经完成会谈",
+        "start_second": 302,
+        "end_second": 308,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "不過可以看到相關的個股",
+        "stt_original": "不过可以看到相关的个股",
+        "start_second": 308,
+        "end_second": 311,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "在盤後是大漲的",
+        "stt_original": "在盘后是大涨的",
+        "start_second": 308,
+        "end_second": 311,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "包含蘋果漲大約是3%",
+        "stt_original": "包含了苹果涨大约3%",
+        "start_second": 311,
+        "end_second": 328,
+        "duration": 18
+    },
+    {
+        "ocr_ground_truth": "台電公司第一時間派員緊急斷電",
+        "stt_original": "第一时间派员紧急断电",
+        "start_second": 360,
+        "end_second": 360,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "隨後由員警和消防隊進一步調查",
+        "stt_original": "随后由员警和消防队进一步调查",
+        "start_second": 360,
+        "end_second": 360,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "進一步釐清事發經過與死者的身分",
+        "stt_original": "事发经过与死者的身份",
+        "start_second": 360,
+        "end_second": 361,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "加上天色漸暗",
+        "stt_original": "加上天色建案",
+        "start_second": 361,
+        "end_second": 361,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "考量人員作業安全",
+        "stt_original": "考量人员作业安全",
+        "start_second": 361,
+        "end_second": 361,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "鍾建剛 綜合報導",
+        "stt_original": "珠峰之中建刚综合报道",
+        "start_second": 361,
+        "end_second": 361,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "台灣動物救援小組",
+        "stt_original": "台湾动物救援小组",
+        "start_second": 369,
+        "end_second": 403,
+        "duration": 35
+    },
+    {
+        "ocr_ground_truth": "日前公開多處南部貓狗園受創情況",
+        "stt_original": "日前公开了多处南部猫狗园受创的情形",
+        "start_second": 372,
+        "end_second": 376,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "台灣動物救援小組",
+        "stt_original": "而台湾动物救援小组",
+        "start_second": 369,
+        "end_second": 403,
+        "duration": 35
+    },
+    {
+        "ocr_ground_truth": "台灣動物救援小組",
+        "stt_original": "台湾动物救援小组",
+        "start_second": 369,
+        "end_second": 403,
+        "duration": 35
+    },
+    {
+        "ocr_ground_truth": "拍攝南部多處貓狗園淹水狀況",
+        "stt_original": "拍摄南部多处猫狗园区淹水状况",
+        "start_second": 403,
+        "end_second": 403,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "台灣動物救援小組",
+        "stt_original": "台湾动物救援小组表示",
+        "start_second": 369,
+        "end_second": 372,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "南洋台灣姊妹會以一年時間",
+        "stt_original": "南洋台湾姐妹会历时一年",
+        "start_second": 443,
+        "end_second": 445,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "顯示他們最常遇到網購詐騙",
+        "stt_original": "检视他们最常遇到的是网购诈骗",
+        "start_second": 423,
+        "end_second": 441,
+        "duration": 19
+    },
+    {
+        "ocr_ground_truth": "難以針對高風險族群制定有效對策",
+        "stt_original": "让反诈策略难以针对高风险族群制定有效对策",
+        "start_second": 441,
+        "end_second": 443,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "南洋台灣姊妹會以一年時間",
+        "stt_original": "南洋台湾姐妹会以一年时间调查研究",
+        "start_second": 443,
+        "end_second": 445,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "調查研究移民工如何面對不實資訊與詐騙",
+        "stt_original": "移民工如何面对不实资讯与诈骗",
+        "start_second": 443,
+        "end_second": 445,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "政大社工所教授 夏曉鵰",
+        "stt_original": "政大社工所教授夏小娟指出",
+        "start_second": 445,
+        "end_second": 446,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "他們是政府製造出的被害者",
+        "stt_original": "他们是政府所制造的被害者",
+        "start_second": 445,
+        "end_second": 445,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "我就人間蒸發",
+        "stt_original": "我就人间蒸发",
+        "start_second": 445,
+        "end_second": 446,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "建立友善移民工的檢舉與通報機制",
+        "stt_original": "建立友善移民工的检举与通报机制",
+        "start_second": 446,
+        "end_second": 451,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "林曉慧 沈志明 台北報導",
+        "stt_original": "公社新闻联小会沈志明台北报导",
+        "start_second": 451,
+        "end_second": 451,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "美國總統川普5號簽署行政命令",
+        "stt_original": "美国总统川普五号签署了一项行政命令",
+        "start_second": 478,
+        "end_second": 484,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "美國總統川普5號簽署行政命令",
+        "stt_original": "认为美国总统川普五号签署了一项行政命令",
+        "start_second": 478,
+        "end_second": 484,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "他同時再把矛頭指向跨性別選手",
+        "stt_original": "他同时在把矛头指向了跨性别选手",
+        "start_second": 466,
+        "end_second": 477,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "美國總統川普5號簽署行政命令",
+        "stt_original": "美国总统川普五号签署行政命令",
+        "start_second": 478,
+        "end_second": 484,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "宣布成立2028年洛杉磯奧運任務小組",
+        "stt_original": "宣布成立二零二八年洛杉矶奥运任务小组",
+        "start_second": 478,
+        "end_second": 484,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "由他擔任主席",
+        "stt_original": "由他担任主席",
+        "start_second": 484,
+        "end_second": 490,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "負責調度國務院",
+        "stt_original": "负责调度国务院司法部",
+        "start_second": 484,
+        "end_second": 490,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "國土安全部以及情報等部門",
+        "stt_original": "国土安全部以及情报等部门",
+        "start_second": 484,
+        "end_second": 490,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "確保奧運賽事能夠順利進行",
+        "stt_original": "确保奥运赛事能够顺利进行",
+        "start_second": 490,
+        "end_second": 493,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "同時將對參賽者進行嚴格的性別檢測",
+        "stt_original": "同时将对参赛者进行严格的性别检测",
+        "start_second": 493,
+        "end_second": 499,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "川普稍早在2號簽署的行政命令",
+        "stt_original": "川普稍早在二号签署的行政命令",
+        "start_second": 509,
+        "end_second": 521,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "便禁止跨性別學生運動員參加女子運動賽事",
+        "stt_original": "便禁止跨性别学生运动员参加女子运动赛事",
+        "start_second": 509,
+        "end_second": 521,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "還有2025年世界盃足球賽",
+        "stt_original": "还有2025年世界杯足球赛",
+        "start_second": 521,
+        "end_second": 532,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "同時又適逢建國250週年慶",
+        "stt_original": "同时又侍奉建国250周年庆",
+        "start_second": 521,
+        "end_second": 532,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "提到他可能不會尋求競選第3任期",
+        "stt_original": "提到他可能不会寻求竞选第三任期",
+        "start_second": 545,
+        "end_second": 556,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "卻讓2028年大選的參選人選浮出檯面",
+        "stt_original": "却让2028大选的参选人选浮出台面",
+        "start_second": 556,
+        "end_second": 559,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "法國總理貝胡6號下午前來勘災時表示",
+        "stt_original": "法国总理贝胡6号下午前来勘灾",
+        "start_second": 614,
+        "end_second": 617,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "這是一場規模空前的災難",
+        "stt_original": "这是一场规模空前的灾难",
+        "start_second": 614,
+        "end_second": 617,
+        "duration": 4
+    }
+]
