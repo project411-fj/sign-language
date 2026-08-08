@@ -1,0 +1,450 @@
+[
+    {
+        "ocr_ground_truth": "看完報紙重點繼續來關心",
+        "stt_original": "看完報紙重點,繼續來關心。",
+        "start_second": 80,
+        "end_second": 102,
+        "duration": 23
+    },
+    {
+        "ocr_ground_truth": "我們台灣的人就不要工作嗎",
+        "stt_original": "我們台灣的人就不要工作嘛,",
+        "start_second": 119,
+        "end_second": 121,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "我不曉得別人是怎麼想啦",
+        "stt_original": "我不曉得別人是怎麼想了,",
+        "start_second": 119,
+        "end_second": 121,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "對台灣釋出兩千多個職缺",
+        "stt_original": "對台灣釋出了2000多個職缺。",
+        "start_second": 147,
+        "end_second": 163,
+        "duration": 17
+    },
+    {
+        "ocr_ground_truth": "兩岸青年要傳承中華文化精神",
+        "stt_original": "兩岸青年要傳承中華文化精神,",
+        "start_second": 163,
+        "end_second": 165,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "堅定維護祖國統一",
+        "stt_original": "堅定維護祖國統一。",
+        "start_second": 163,
+        "end_second": 165,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "期待吸引台灣棒壘球教練 教師 律師",
+        "stt_original": "期待吸引台灣棒壘球教練、教師、律師到對岸就業,",
+        "start_second": 165,
+        "end_second": 166,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "涉嫌在台非法設點挖角高科技人才",
+        "stt_original": "涉嫌在臺灣非法設點挖角高科技人才,",
+        "start_second": 176,
+        "end_second": 177,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "企圖竊取台灣機密技術",
+        "stt_original": "企圖竊取臺灣機密技術,",
+        "start_second": 176,
+        "end_second": 177,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "期間共搜索25處",
+        "stt_original": "期間共搜索二十五處,",
+        "start_second": 181,
+        "end_second": 185,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "訊問相關涉案人員共57人次",
+        "stt_original": "詢問相關涉案人員共五十七人次,",
+        "start_second": 181,
+        "end_second": 185,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "檢方也持續查緝非法中資滲透",
+        "stt_original": "檢方也持續查緝非法中資滲透,",
+        "start_second": 185,
+        "end_second": 186,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "守護國家關鍵核心科技",
+        "stt_original": "守護國家關鍵核心科技。",
+        "start_second": 185,
+        "end_second": 186,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "首場在昨天展開",
+        "stt_original": "首場在昨天展開,",
+        "start_second": 200,
+        "end_second": 215,
+        "duration": 16
+    },
+    {
+        "ocr_ground_truth": "台電董事長曾文生擔任反方代表",
+        "stt_original": "臺電董事長曾文生擔任反方代表,",
+        "start_second": 231,
+        "end_second": 233,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "完成總統賴清德在競選時的承諾",
+        "stt_original": "完成總統賴清德在競選時的承諾。",
+        "start_second": 237,
+        "end_second": 249,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "針對葉宗洸表示走入非核家園後火力全開",
+        "stt_original": "針對葉宗光表示走入非核家園後活力全開,",
+        "start_second": 261,
+        "end_second": 262,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "過去高雄市長陳其邁總強調南電北送",
+        "stt_original": "過去高雄市長陳其邁總長調南電北送,",
+        "start_second": 261,
+        "end_second": 262,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "但是有一百天備轉容量低於6%",
+        "stt_original": "但是有一百天備轉容量低於百分之六,",
+        "start_second": 262,
+        "end_second": 262,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "而最近三年卻幾乎沒有發生",
+        "stt_original": "而最近三年卻幾乎沒有發生,",
+        "start_second": 262,
+        "end_second": 262,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "核三除役後確實夜尖峰時北部電力較充裕72:]5",
+        "stt_original": "確實葉建峰時北部電力較充裕,",
+        "start_second": 262,
+        "end_second": 263,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "核三除役後確實夜尖峰時北部電力較充裕72:]5",
+        "stt_original": "核三除以後確實葉建峰時北部電力較充裕,",
+        "start_second": 262,
+        "end_second": 263,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "核三除役後確實夜尖峰時北部電力較充裕72:]5",
+        "stt_original": "核三除以後確實葉建峰時北部電力較充裕,",
+        "start_second": 262,
+        "end_second": 263,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "此支援南部",
+        "stt_original": "因此支援南部。",
+        "start_second": 262,
+        "end_second": 263,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "南部其實南電北送很長一段時間",
+        "stt_original": "南部其實南電北送很長一段時間了,",
+        "start_second": 263,
+        "end_second": 272,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "就是我們現在發生了一段短暫的時間 後'繼續運轉?",
+        "stt_original": "就是我們現在發生了一段短暫的時間,",
+        "start_second": 263,
+        "end_second": 272,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "工作人員忙進忙出",
+        "stt_original": "工作人員忙進忙出,",
+        "start_second": 320,
+        "end_second": 320,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "丹娜絲颱風造成台南許多房屋受損",
+        "stt_original": "丹納斯颱風造成臺南許多房屋受損,",
+        "start_second": 320,
+        "end_second": 320,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "對市話的需求更大於網路",
+        "stt_original": "對市化的需求更大於網路。",
+        "start_second": 321,
+        "end_second": 321,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "行政院7日通過災後復原重建特別條例草案",
+        "stt_original": "行政院七號通過災後復原重建特別條例草案,",
+        "start_second": 321,
+        "end_second": 322,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "災後重建特別條例送請立法院審議後",
+        "stt_original": "災後重建特別條例送起立法院審議後,",
+        "start_second": 354,
+        "end_second": 355,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "行政院強調將持續與立院各黨團溝通",
+        "stt_original": "行政院強調將持續與立院各黨團溝通,",
+        "start_second": 354,
+        "end_second": 355,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "希望早日完成立法程序",
+        "stt_original": "希望早日完成立法程序,",
+        "start_second": 355,
+        "end_second": 358,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "騎車離開又轉回來直接撞倒民眾",
+        "stt_original": "騎車離開又轉回來直接撞倒民眾。",
+        "start_second": 390,
+        "end_second": 390,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "台鐵基隆站從7月底至今",
+        "stt_original": "臺鐵吉隆站從七月底至今,",
+        "start_second": 390,
+        "end_second": 393,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "站務人員每天遭到遊民騷擾至少3次以上",
+        "stt_original": "站務人員每天遭到遊民騷擾至少三次以上,",
+        "start_second": 390,
+        "end_second": 393,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "有的還遭遇毆打言語攻擊",
+        "stt_original": "有的還遭遇毆打、言語攻擊,",
+        "start_second": 393,
+        "end_second": 394,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "甚至在下班後被尾隨跟蹤",
+        "stt_original": "甚至在下班後被尾隨跟蹤,",
+        "start_second": 393,
+        "end_second": 394,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "譴責交通部以及台鐵公司沒有履行雇主義務",
+        "stt_original": "譴責交通部以及臺鐵公司沒有履行僱主",
+        "start_second": 394,
+        "end_second": 394,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "違反研究倫理的案件再發生",
+        "stt_original": "違反研究倫理的案件再度發生。",
+        "start_second": 398,
+        "end_second": 401,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "但查核頻率內容深度需做調整",
+        "stt_original": "但是查核的頻率、內容深度都需要做調整。",
+        "start_second": 413,
+        "end_second": 417,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "針對人體研究計畫",
+        "stt_original": "針對人體研究計畫,",
+        "start_second": 417,
+        "end_second": 422,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "教育部應設立永久的單一申訴窗口",
+        "stt_original": "教育部應該設立永久的單一申訴窗口。",
+        "start_second": 422,
+        "end_second": 428,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "較少建立內控內稽的機制",
+        "stt_original": "的IRB較少建立內控內積機制。",
+        "start_second": 428,
+        "end_second": 430,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "民黨立委 柯志恩",
+        "stt_original": "國民黨立委柯志恩問及,",
+        "start_second": 430,
+        "end_second": 437,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "(有幾次)基本上每一間學校都有進行抽查",
+        "stt_original": "基本上每一間學校都有進行抽查。",
+        "start_second": 430,
+        "end_second": 437,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "(本席要求教育部必須要針對主管的)",
+        "stt_original": "教育部必須要針對主管的IRB",
+        "start_second": 441,
+        "end_second": 468,
+        "duration": 28
+    },
+    {
+        "ocr_ground_truth": "針對人體研究計畫",
+        "stt_original": "審查的人體研究計畫,",
+        "start_second": 417,
+        "end_second": 422,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "教育部應設立永久的單一申訴窗口",
+        "stt_original": "設立永久的單一申訴窗口,",
+        "start_second": 422,
+        "end_second": 428,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "受人體研究法規範",
+        "stt_original": "受人體研究法規範,",
+        "start_second": 468,
+        "end_second": 475,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "涉案科技公司都能一手架設",
+        "stt_original": "科技公司都能一手架設,",
+        "start_second": 505,
+        "end_second": 511,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "光是去年就設計超過700個不法網站",
+        "stt_original": "光是去年就涉及超過七百萬人,",
+        "start_second": 505,
+        "end_second": 511,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "張梓嘉 台北報導",
+        "stt_original": "張子佳台北報導。",
+        "start_second": 523,
+        "end_second": 523,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "不過現在美國衛生部卻對這項技術",
+        "stt_original": "不過現在美國衛生部卻對這項技術提出了安全疑慮,",
+        "start_second": 535,
+        "end_second": 538,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "並且對疫苗提出安全性疑慮",
+        "stt_original": "並且對疫苗提出安全性疑慮。",
+        "start_second": 561,
+        "end_second": 563,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "小羅勃甘迺迪表示根據科學數據顯示",
+        "stt_original": "小羅伯甘奈迪表示,根據科學數據顯示,",
+        "start_second": 578,
+        "end_second": 580,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "更廣泛的疫苗技術平台",
+        "stt_original": "更廣泛的疫苗技術平臺,",
+        "start_second": 582,
+        "end_second": 583,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "即使病毒變異也能夠保持有效防範",
+        "stt_original": "即使病毒異變也能夠保持有效防範。",
+        "start_second": 582,
+        "end_second": 583,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "明尼蘇達大學傳染病研究政策中心主任 歐斯特荷姆",
+        "stt_original": "明尼蘇達大學的傳染病研究專家歐斯特荷姆",
+        "start_second": 583,
+        "end_second": 584,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "小羅勃甘迺迪是知名的疫苗懷疑論者",
+        "stt_original": "外媒分析,小羅姆·甘迺迪是知名的疫苗懷疑論者,",
+        "start_second": 584,
+        "end_second": 587,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "曾經把疫苗強制令比喻成納粹大屠殺",
+        "stt_original": "曾經把疫苗強制令比喻成納粹大屠殺,",
+        "start_second": 587,
+        "end_second": 588,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "從他擔任美國衛生部長開始",
+        "stt_original": "從他擔任美國衛生部長開始,",
+        "start_second": 588,
+        "end_second": 588,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "改變國家衛生部門開發與監管疫苗的方式",
+        "stt_original": "已經有多項政策改變了國家衛生部門開發與監管疫苗的方式。",
+        "start_second": 588,
+        "end_second": 588,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "另外 氣象署對全台7個縣市發布高溫資訊",
+        "stt_original": "而另外氣象署對全台七個縣市發布高溫資訊,",
+        "start_second": 620,
+        "end_second": 648,
+        "duration": 29
+    }
+]
