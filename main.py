@@ -28,7 +28,7 @@ def find_videos(target_dir):
 
 
 def run_phase_1(source_video):
-    """Filter the source video and pass its result to Phase 2."""
+
     original_cwd = Path.cwd()
     try:
         os.chdir(BASE_DIR)
@@ -43,7 +43,7 @@ def run_phase_1(source_video):
 
 
 def run_phase_2(phase_1_result, output_dir, progress):
-    """Create OCR and STT text from the Phase 1 result."""
+
     source_video = phase_1_result["source_video"]
     stem = source_video.stem
     ocr_text = output_dir / f"{stem}_ocr.txt"
@@ -64,7 +64,7 @@ def run_phase_2(phase_1_result, output_dir, progress):
 
 
 def run_phase_3(phase_2_result, output_dir, threshold, progress):
-    """Convert and match the OCR/STT data returned by Phase 2."""
+
     stem = phase_2_result["source_video"].stem
     ocr_json = output_dir / f"{stem}_ocr.json"
     stt_json = output_dir / f"{stem}_stt.json"
@@ -92,7 +92,7 @@ def run_phase_3(phase_2_result, output_dir, threshold, progress):
 
 
 def run_pipeline(source_video, output_dir, threshold):
-    """Run Phase 1 -> Phase 2 -> Phase 3 for one video."""
+    #Run Phase 1 -> Phase 2 -> Phase 3 for one video.
     output_dir.mkdir(parents=True, exist_ok=True)
     (BASE_DIR / "cropvideos").mkdir(exist_ok=True)
 
@@ -108,7 +108,7 @@ def run_pipeline(source_video, output_dir, threshold):
 
 
 def run_all(target_dir="target", output_dir="results", threshold=80):
-    """Process every target MP4 sequentially."""
+    #Process every videos in /target
     videos = find_videos(target_dir)
     results_dir = BASE_DIR / output_dir
     results = {}
