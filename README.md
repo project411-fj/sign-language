@@ -21,7 +21,7 @@ Final subtitle JSON
 ## Project structure
 
 ```text
-Formal/
+/
 |-- main.py
 |-- target/                       # Source MP4 files
 |-- cropvideos/                   # Phase 1 video output
@@ -247,10 +247,10 @@ Each video receives an independent result directory, so files from different vid
 Place MP4 files in:
 
 ```text
-E:\Formal\target
+\target
 ```
 
-Open a terminal in `E:\Formal` and run:
+Open a terminal and run:
 
 ```powershell
 python main.py
@@ -291,7 +291,7 @@ Phase 3：JSON 轉換與 OCR/STT 比對
 ## 專案結構
 
 ```text
-Formal/
+/
 |-- main.py
 |-- target/                       # 來源 MP4
 |-- cropvideos/                   # Phase 1 影片輸出
@@ -517,10 +517,10 @@ final_json = run_phase_3(phase_2_result, output_dir, threshold, progress)
 將 MP4 放入：
 
 ```text
-E:\Formal\target
+\target
 ```
 
-在 `E:\Formal` 開啟終端並執行：
+開啟終端並執行：
 
 ```powershell
 python main.py
