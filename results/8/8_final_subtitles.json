@@ -1,0 +1,275 @@
+[
+    {
+        "ocr_ground_truth": "預估要到下週二各地雨勢才會趨緩",
+        "stt_original": "估計要到下個禮拜二,各地的雨勢才會趨緩。",
+        "start_second": 30,
+        "end_second": 31,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "到了禮拜六 禮拜天 禮拜一這三天",
+        "stt_original": "到了禮拜六、禮拜天、禮拜一這三天,",
+        "start_second": 44,
+        "end_second": 51,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "又會有一波西南風再度的增強",
+        "stt_original": "又會有一波西南風再度的增強。",
+        "start_second": 44,
+        "end_second": 51,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "這現場可以說是非常的狼藉",
+        "stt_original": "這現場可以說是非常的狼藉喔。",
+        "start_second": 58,
+        "end_second": 58,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "現場土石泥流厚度 至少有一個輪胎高",
+        "stt_original": "那這個現場土石的這個泥流厚度至少有一個輪胎高,",
+        "start_second": 58,
+        "end_second": 58,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "連人帶車墜落大約150公尺高的深谷",
+        "stt_original": "連人帶車墜落大約一百五十公尺深的深谷。",
+        "start_second": 73,
+        "end_second": 83,
+        "duration": 11
+    },
+    {
+        "ocr_ground_truth": "昨下午山區降雨明顯 搜救任務中斷",
+        "stt_original": "昨天下午,山區降雨明顯,搜救任務中斷。",
+        "start_second": 83,
+        "end_second": 101,
+        "duration": 19
+    },
+    {
+        "ocr_ground_truth": "劉姓女子昨天晚間在台中沙鹿落網",
+        "stt_original": "流性女子昨天晚間在台中沙鹿落網,新北地院裁定擠壓。",
+        "start_second": 119,
+        "end_second": 121,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "遭法院通緝",
+        "stt_original": "遭到法院通緝",
+        "start_second": 130,
+        "end_second": 130,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "提供符合資格的55歲以上原住民",
+        "stt_original": "提供符合資格的55歲以上原住民",
+        "start_second": 152,
+        "end_second": 220,
+        "duration": 69
+    },
+    {
+        "ocr_ground_truth": "維持現行25%關稅",
+        "stt_original": "維持現行25%的關稅",
+        "start_second": 228,
+        "end_second": 242,
+        "duration": 15
+    },
+    {
+        "ocr_ground_truth": "丹娜絲颱風災後復原特別條例",
+        "stt_original": "將提出德納斯颱風災後復原特別條例",
+        "start_second": 290,
+        "end_second": 292,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "國民黨團提出災後重建條例草案",
+        "stt_original": "而國民黨團也提出了災後重建條例",
+        "start_second": 289,
+        "end_second": 289,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "首場會議制定因應策略",
+        "stt_original": "首場會議制定因應策略",
+        "start_second": 275,
+        "end_second": 277,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "盤點全台施工廠商 統一材料定價",
+        "stt_original": "盤點全臺施工廠商統一材料定價",
+        "start_second": 275,
+        "end_second": 277,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "下週將陸續進場協助災區",
+        "stt_original": "下週將陸續進場協助災區",
+        "start_second": 277,
+        "end_second": 277,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "災區仍然面臨缺工",
+        "stt_original": "災區仍然面臨缺工",
+        "start_second": 277,
+        "end_second": 277,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "研考會也針對具有丈量專業背景的",
+        "stt_original": "研考會也針對具有丈量專業背景的",
+        "start_second": 277,
+        "end_second": 289,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "災民期盼政府協助重建家園",
+        "stt_original": "那麼來修繕 災民期盼政府協助重建家園",
+        "start_second": 289,
+        "end_second": 289,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "國民黨團提出災後重建條例草案",
+        "stt_original": "國民黨團提出災後重建條例草案",
+        "start_second": 289,
+        "end_second": 289,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "青農貸款放寬認定等農漁民補助方案",
+        "stt_original": "放寬認定等農人民補助方案",
+        "start_second": 289,
+        "end_second": 290,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "朝野共識建請行政院下週提出",
+        "stt_original": "朝野共事 建請行政院下週提出",
+        "start_second": 290,
+        "end_second": 292,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "丹娜絲颱風災後復原特別條例",
+        "stt_original": "丹納斯颱風災後復原特別條例",
+        "start_second": 290,
+        "end_second": 292,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "並提供店家及攤商慰助金",
+        "stt_original": "並提供店家及攤商衛助金",
+        "start_second": 294,
+        "end_second": 294,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "比照2024年凱米颱風提供淹水救助金",
+        "stt_original": "凱密颱風 提供淹水救助金",
+        "start_second": 294,
+        "end_second": 294,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "至於風災特別條例的經費規模",
+        "stt_original": "至於風災特別條例的經費規模",
+        "start_second": 294,
+        "end_second": 295,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "目前仍在研議規劃",
+        "stt_original": "目前仍在研議規劃",
+        "start_second": 294,
+        "end_second": 295,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "農地被污染 農民憂心忡忡向市議員陳情",
+        "stt_original": "農民憂心忡忡 向事遠澄情",
+        "start_second": 310,
+        "end_second": 325,
+        "duration": 16
+    },
+    {
+        "ocr_ground_truth": "聽人在打注音的時候",
+        "stt_original": "聽人在打注音的時候",
+        "start_second": 357,
+        "end_second": 358,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "都會不小心有錯誤的字",
+        "stt_original": "都會不小心有錯誤的字",
+        "start_second": 357,
+        "end_second": 358,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "李勻說由各自的方式出發去感受",
+        "stt_original": "李雲說由各自的方式出發去感受",
+        "start_second": 358,
+        "end_second": 359,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "以及戲曲手勢與手語的交會融合",
+        "stt_original": "以及戲曲手勢與手語的交匯融合",
+        "start_second": 359,
+        "end_second": 362,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "三組表演者各自發想 解構語言",
+        "stt_original": "三組表演者各自發想解構語言",
+        "start_second": 362,
+        "end_second": 366,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "那我覺得其實身體的邊界這件事情",
+        "stt_original": "那我覺得其實身體的邊界這件事情",
+        "start_second": 366,
+        "end_second": 366,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "就大家可以融在一起",
+        "stt_original": "就大家可以融在一起",
+        "start_second": 366,
+        "end_second": 366,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "有讓新人表演者展現想法的孵育組",
+        "stt_original": "有讓新人表演者展現想法的呼籲組",
+        "start_second": 366,
+        "end_second": 367,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "也有經過較長時間打磨的熟成組",
+        "stt_original": "也有經過較長時間打磨的熟成組",
+        "start_second": 366,
+        "end_second": 367,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "為牠們提供一個安全的據點",
+        "stt_original": "為他們提供一個安全的據點",
+        "start_second": 400,
+        "end_second": 400,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "安心繁衍後代",
+        "stt_original": "安心繁衍後代",
+        "start_second": 400,
+        "end_second": 400,
+        "duration": 1
+    }
+]

@@ -1,0 +1,478 @@
+[
+    {
+        "ocr_ground_truth": "16日立法院外交及國防委員會",
+        "stt_original": "十六日立法院外交及国防委员会",
+        "start_second": 231,
+        "end_second": 232,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "邀請相關部會討論談判進度",
+        "stt_original": "邀请相关部会讨论谈判进度",
+        "start_second": 231,
+        "end_second": 232,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "外界關注",
+        "stt_original": "外界关注台湾",
+        "start_second": 232,
+        "end_second": 236,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "台灣始終不在關稅公布名單當中",
+        "stt_original": "始终不在关税公布名单当中",
+        "start_second": 232,
+        "end_second": 236,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "但更多台灣企業也對談判結果",
+        "stt_original": "但更多台湾企业也对谈判结果万分紧张",
+        "start_second": 240,
+        "end_second": 240,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "就是降下來都在觀望為主",
+        "stt_original": "就是荡下来都在观望为主",
+        "start_second": 244,
+        "end_second": 249,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "當然是希望穩定啦",
+        "stt_original": "当然是希望稳定",
+        "start_second": 244,
+        "end_second": 249,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "但是我知道這個避免不了",
+        "stt_original": "但是我知道这个避免不了",
+        "start_second": 249,
+        "end_second": 263,
+        "duration": 15
+    },
+    {
+        "ocr_ground_truth": "讓廠商遭遇雙重的衝擊",
+        "stt_original": "让厂商遭遇双重的冲击",
+        "start_second": 263,
+        "end_second": 264,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "726罷免投票進入倒數",
+        "stt_original": "726罢免投票进入倒数",
+        "start_second": 264,
+        "end_second": 269,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "昨天開始各地陸續進行電視說明會",
+        "stt_original": "昨天开始各地陆续进行电视说明会",
+        "start_second": 269,
+        "end_second": 275,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "場內立委傅崛萁與罷團領銜人",
+        "stt_original": "而场内立委傅坤祺与霸团的领衔人",
+        "start_second": 281,
+        "end_second": 288,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "雙方也各自拿手板首次正面交鋒",
+        "stt_original": "双方也各自拿手板首次正面交锋",
+        "start_second": 288,
+        "end_second": 288,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "而這次唯一面臨立委市長雙罷免的新竹市",
+        "stt_original": "而这次唯一面临立委市长双罢免的新竹市",
+        "start_second": 288,
+        "end_second": 296,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "罷團領銜人延續鄭正鈴 高虹安的司法戰",
+        "stt_original": "霸团领衔人延续政政前高鸿安的司法战",
+        "start_second": 296,
+        "end_second": 305,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "面對首波726大罷免投票",
+        "stt_original": "面对首波726大罢免投票",
+        "start_second": 305,
+        "end_second": 308,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "昨天開始各地陸續進行電視說明會",
+        "stt_original": "16号起各地陆续进行电视说明会",
+        "start_second": 269,
+        "end_second": 275,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "我們財劃法修正以後",
+        "stt_original": "我们裁判法修正以后",
+        "start_second": 308,
+        "end_second": 327,
+        "duration": 20
+    },
+    {
+        "ocr_ground_truth": "花蓮縣每一年增加161億元",
+        "stt_original": "花莲县每一年增加一百六十一亿元",
+        "start_second": 308,
+        "end_second": 327,
+        "duration": 20
+    },
+    {
+        "ocr_ground_truth": "擔任審核全國預算的立委角色",
+        "stt_original": "担任审核全国预算的立委角色",
+        "start_second": 327,
+        "end_second": 332,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "更是讓人無法信任啊",
+        "stt_original": "更是让人无法信任",
+        "start_second": 327,
+        "end_second": 332,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "罔顧花東人返家的安全",
+        "stt_original": "罔顾花栋人返家的安全",
+        "start_second": 334,
+        "end_second": 335,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "講到激動處連手板都不小心拿反",
+        "stt_original": "讲到激动处连手板都不小心拿反",
+        "start_second": 334,
+        "end_second": 335,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "而在新北 罷團板橋大刪元",
+        "stt_original": "而在新北霸团板桥大山园",
+        "start_second": 335,
+        "end_second": 339,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "則質疑藍委葉元之對選民不忠",
+        "stt_original": "则质疑蓝伟叶元之对选民不忠",
+        "start_second": 335,
+        "end_second": 339,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "但他本人則拿問政評鑑來反擊",
+        "stt_original": "但他本人则拿问政评鉴来反击",
+        "start_second": 339,
+        "end_second": 348,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "薪水可能比他議員跟立委的本薪還要多)葉元之罷",
+        "stt_original": "薪水可能比他的议员跟立委的本性还要多",
+        "start_second": 348,
+        "end_second": 349,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "到底是立法委員還是脫口秀演員",
+        "stt_original": "到底是立法委员还是脱口秀委员",
+        "start_second": 349,
+        "end_second": 353,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "我是國會評鑑優良立委<",
+        "stt_original": "我是国会评鉴优良立委",
+        "start_second": 353,
+        "end_second": 359,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "如果我都不去立法院開會 我怎麼質詢",
+        "stt_original": "如果我都不去立法院开会",
+        "start_second": 359,
+        "end_second": 363,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "罷團領銜人直攻鄭正鈴",
+        "stt_original": "新竹市霸团领先人职工郑振前",
+        "start_second": 363,
+        "end_second": 364,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "已經被傳出有貪污的高虹安",
+        "stt_original": "已经被传出有贪污的高安",
+        "start_second": 364,
+        "end_second": 371,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "傳送了政府檔案到中國國台辦",
+        "stt_original": "传送的政府档案到中国国台办",
+        "start_second": 376,
+        "end_second": 384,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "台北地檢署已經正式將鄭正鈴委員列為被貨說明會",
+        "stt_original": "台北地检署已经正式将郑振前委员列为被告",
+        "start_second": 376,
+        "end_second": 384,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "抹黑抹紅無所不用其極",
+        "stt_original": "抹黑抹红无所不用其极",
+        "start_second": 384,
+        "end_second": 386,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "他們提告了沒有錯",
+        "stt_original": "他们提告了没有错",
+        "start_second": 384,
+        "end_second": 386,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "以及新竹縣林思銘等5個罷免案",
+        "stt_original": "以及新竹县的林思敏等五个罢免案",
+        "start_second": 389,
+        "end_second": 389,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "至於如果投票日遇到颱風",
+        "stt_original": "至于如果投票日遇到了台风",
+        "start_second": 417,
+        "end_second": 428,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "距離首波罷免投票倒數10天",
+        "stt_original": "距离首波罢免投票倒数十天",
+        "start_second": 429,
+        "end_second": 430,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "立法院內政委員會",
+        "stt_original": "立法院内政委员会考察",
+        "start_second": 429,
+        "end_second": 430,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "考察區公所726罷免案投開票規畫",
+        "stt_original": "区公所七二六罢免案投开票规划",
+        "start_second": 430,
+        "end_second": 431,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "針對日前網傳這次沒有投票通知單",
+        "stt_original": "针对日前网传这次没有投票通知单",
+        "start_second": 430,
+        "end_second": 431,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "否則可能吃上最高200萬的罰鍰",
+        "stt_original": "否则可能吃上最高两百万的罚还",
+        "start_second": 433,
+        "end_second": 434,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "至於常見的告急 搶救用詞是否觸法",
+        "stt_original": "至于常见的告急抢救用词是否触法",
+        "start_second": 433,
+        "end_second": 434,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "過往國民黨都有監票部隊",
+        "stt_original": "过往国民党都有监票部队",
+        "start_second": 438,
+        "end_second": 439,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "組發會主委許宇甄表示",
+        "stt_original": "组发会主委徐宇珍表示",
+        "start_second": 439,
+        "end_second": 440,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "今年還是會有監票志工",
+        "stt_original": "还是会有监票志工",
+        "start_second": 439,
+        "end_second": 440,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "至少一個投開票所會有兩個人",
+        "stt_original": "至少一个投开票所会有两个人",
+        "start_second": 440,
+        "end_second": 441,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "就大概有1萬2千人左右",
+        "stt_original": "就大概有一万两千人左右",
+        "start_second": 440,
+        "end_second": 441,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "但消防員工作權益促進會控訴",
+        "stt_original": "但是消防员工作权益促进会控诉",
+        "start_second": 457,
+        "end_second": 487,
+        "duration": 31
+    },
+    {
+        "ocr_ground_truth": "新北市府門口大批警力駐守",
+        "stt_original": "新北市府门口大批警力助手",
+        "start_second": 482,
+        "end_second": 482,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "到場的基層消防員心中氣憤難平",
+        "stt_original": "到场的基层消防员心中气愤难平",
+        "start_second": 482,
+        "end_second": 483,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "就是因為這件事件",
+        "stt_original": "就是因为这件事",
+        "start_second": 482,
+        "end_second": 483,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "資料都沒有",
+        "stt_original": "资料都没有",
+        "start_second": 483,
+        "end_second": 484,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "目前資料都還沒收到",
+        "stt_original": "目前资料都还没收到",
+        "start_second": 488,
+        "end_second": 490,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "委員會的名單一個也不知道",
+        "stt_original": "委员会的名单一个也不知道",
+        "start_second": 488,
+        "end_second": 490,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "不但訴求市府在18號的災調會召開前",
+        "stt_original": "不但诉求市府在十八号的灾调会召开前",
+        "start_second": 490,
+        "end_second": 491,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "不是 你們是委員嗎",
+        "stt_original": "博大你们是委员吗",
+        "start_second": 491,
+        "end_second": 491,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "經典歌曲橄欖樹淺淺吟唱卻渲染力十足",
+        "stt_original": "经典歌曲橄榄树浅浅吟唱",
+        "start_second": 526,
+        "end_second": 534,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "在舞台高歌的",
+        "stt_original": "在舞台高歌的",
+        "start_second": 545,
+        "end_second": 548,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "曾經登台獻聲",
+        "stt_original": "曾经登台献声",
+        "start_second": 553,
+        "end_second": 557,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "克服了視覺障礙",
+        "stt_original": "不容易克服了视觉障碍",
+        "start_second": 562,
+        "end_second": 565,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "來看公視國際記者楊智強",
+        "stt_original": "公视国际记者杨志强",
+        "start_second": 590,
+        "end_second": 595,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "泰國大麻合法化倡議者",
+        "stt_original": "是泰国大麻合法化的倡议者",
+        "start_second": 599,
+        "end_second": 599,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "許多外國遊客來此",
+        "stt_original": "许多外国游客来此",
+        "start_second": 599,
+        "end_second": 600,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "就是希望嘗試這項禁忌物品",
+        "stt_original": "就是希望尝试这项竞技物品",
+        "start_second": 600,
+        "end_second": 600,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "現在泰國政府想要回到過去",
+        "stt_original": "现在泰国政府想要回到过去",
+        "start_second": 600,
+        "end_second": 600,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "來看公視國際記者楊智強",
+        "stt_original": "公视国际记者杨志强",
+        "start_second": 590,
+        "end_second": 595,
+        "duration": 6
+    }
+]

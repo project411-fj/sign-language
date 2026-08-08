@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pt
+
+# VS Code
+.vscode/
+
+# Source videos
+source_videos/
+
+# Cropped videos
+cropvideos/
+
+# Ignore files inside target
+target/*
+!target/.gitkeep

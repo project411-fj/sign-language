@@ -1,0 +1,282 @@
+[
+    {
+        "ocr_ground_truth": "台中市豐原區-家軍用品店老闆",
+        "stt_original": "首先來關心台中市豐原區一家軍用品店老闆。",
+        "start_second": 9,
+        "end_second": 29,
+        "duration": 21
+    },
+    {
+        "ocr_ground_truth": "市府有相關資源都可提供專業應對與協助",
+        "stt_original": "市府有相關的資源,都可以提供專業的應對與協助。",
+        "start_second": 45,
+        "end_second": 46,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "臉書被許多不肖分子投放廣告",
+        "stt_original": "臉書被許多不肖分子投放廣告,",
+        "start_second": 69,
+        "end_second": 72,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "導致民眾受騙",
+        "stt_original": "導致民眾受騙。",
+        "start_second": 72,
+        "end_second": 80,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "網路購物詐騙",
+        "stt_original": "網購詐騙、",
+        "start_second": 69,
+        "end_second": 72,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "受騙型態都是投資詐騙",
+        "stt_original": "照片形態都是投資詐騙。",
+        "start_second": 88,
+        "end_second": 89,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "數發部曾因臉書廣告服務違反防詐條例",
+        "stt_original": "述發部曾因臉書廣告服務違反防詐條例重罰1500萬元,",
+        "start_second": 89,
+        "end_second": 90,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "美國總統川普推動的大而美法案",
+        "stt_original": "美國總統川普推動的大而美法案",
+        "start_second": 170,
+        "end_second": 186,
+        "duration": 17
+    },
+    {
+        "ocr_ground_truth": "打破眾院史上最長的演講紀錄",
+        "stt_original": "打破眾院史上最長的演講記錄",
+        "start_second": 216,
+        "end_second": 218,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "延遲了投票時間",
+        "stt_original": "延遲了投票時間",
+        "start_second": 216,
+        "end_second": 218,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "這場表決對川普與共和黨而言",
+        "stt_original": "這場表決對川普與共和黨而言",
+        "start_second": 218,
+        "end_second": 219,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "是回歸執政以來的重大立法里程碑",
+        "stt_original": "是回歸執政以來的重大立法里程碑",
+        "start_second": 218,
+        "end_second": 219,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "大而美法案其中一項稅改法案",
+        "stt_original": "大而美法案其中一項稅改法案是半導體投資",
+        "start_second": 223,
+        "end_second": 275,
+        "duration": 53
+    },
+    {
+        "ocr_ground_truth": "台北地院審理京華城案",
+        "stt_original": "台北地院審理精華成案",
+        "start_second": 285,
+        "end_second": 296,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "而涉嫌散佈恐嚇圖文的一名戴姓嫌犯",
+        "stt_original": "而涉嫌散佈恐嚇圖文的一名",
+        "start_second": 307,
+        "end_second": 323,
+        "duration": 17
+    },
+    {
+        "ocr_ground_truth": "台北地院審理京華城案",
+        "stt_original": "應曉薇台北地院3號審理精華成案",
+        "start_second": 285,
+        "end_second": 296,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "任何以暴力恐嚇",
+        "stt_original": "任何以暴力恐嚇",
+        "start_second": 370,
+        "end_second": 383,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "散佈仇恨言論等行為",
+        "stt_original": "散布仇恨言論等行為",
+        "start_second": 370,
+        "end_second": 383,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "緊急送醫搶救後仍宣告不治",
+        "stt_original": "緊急送醫搶救後仍宣告不治",
+        "start_second": 411,
+        "end_second": 411,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "(平常都會在那游泳?)對",
+        "stt_original": "平常是都會在那裡游泳",
+        "start_second": 411,
+        "end_second": 417,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "[城鎮韌性防空演習]",
+        "stt_original": "城鎮任性演習",
+        "start_second": 456,
+        "end_second": 457,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "還要依照賣場人員引導避難",
+        "stt_original": "要依照賣場人員引導避難",
+        "start_second": 464,
+        "end_second": 465,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "民眾大多贊成防空避難演練多納入不同情境",
+        "stt_original": "民眾大多贊成防空避難演練多納入不同情境",
+        "start_second": 464,
+        "end_second": 464,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "以及現場同時模擬情報傳遞等",
+        "stt_original": "顧客簡易包紮以及現場同時模擬情報傳遞等",
+        "start_second": 465,
+        "end_second": 466,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "瑞莎說辦比賽當然有壓力",
+        "stt_original": "辦比賽當然有壓力",
+        "start_second": 494,
+        "end_second": 505,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "有點緊張跟興奮",
+        "stt_original": "有點緊張跟興奮",
+        "start_second": 505,
+        "end_second": 507,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "因屬民間自辦邀請賽",
+        "stt_original": "英屬民間自辦邀請賽瑞莎表示",
+        "start_second": 520,
+        "end_second": 521,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "瑞莎表示是和團隊持續募資找贊助商",
+        "stt_original": "是和團隊持續募資找贊助商",
+        "start_second": 520,
+        "end_second": 521,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "台灣排名末段班",
+        "stt_original": "台灣排名末段班",
+        "start_second": 521,
+        "end_second": 521,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "她認為體操協會需要改革的東西還很多",
+        "stt_original": "他認為體操協會需要改革的東西",
+        "start_second": 521,
+        "end_second": 521,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "或是穿淺色的袖套或外套",
+        "stt_original": "或是穿淺色的袖套或外套全身包緊緊",
+        "start_second": 539,
+        "end_second": 540,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "別人比較不會流汗可能習慣了",
+        "stt_original": "比較不會流汗他可能習慣了",
+        "start_second": 540,
+        "end_second": 542,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "形成颱風機率高",
+        "stt_original": "形成颱風機率高",
+        "start_second": 543,
+        "end_second": 543,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "爸媽也覺得不可思議",
+        "stt_original": "爸媽也覺得不可思議",
+        "start_second": 556,
+        "end_second": 557,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "你潛到20公尺以下就已經",
+        "stt_original": "20公尺一下就已經",
+        "start_second": 557,
+        "end_second": 567,
+        "duration": 11
+    },
+    {
+        "ocr_ground_truth": "紀錄片臨淵入魚",
+        "stt_original": "紀錄片林淵入魚",
+        "start_second": 567,
+        "end_second": 567,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "鏡頭跟著華揚與阿先的人生修煉之路",
+        "stt_original": "盡頭跟著華陽與阿仙的人生修煉之路",
+        "start_second": 567,
+        "end_second": 567,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "從陸上到水下",
+        "stt_original": "從路上到水下",
+        "start_second": 567,
+        "end_second": 568,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "停歇在這片靜謚的藍色水域之中",
+        "stt_original": "停歇在這片靜謐的藍色水域",
+        "start_second": 567,
+        "end_second": 568,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "綜合報導",
+        "stt_original": "綜合報導",
+        "start_second": 417,
+        "end_second": 432,
+        "duration": 16
+    }
+]

@@ -1,0 +1,331 @@
+[
+    {
+        "ocr_ground_truth": "讀報時間來看到",
+        "stt_original": "錄報時間,來看到。",
+        "start_second": 8,
+        "end_second": 96,
+        "duration": 89
+    },
+    {
+        "ocr_ground_truth": "前一天行政院經濟發展委員會",
+        "stt_original": "前一天,行政院經濟發展委員會召開顧問會議,",
+        "start_second": 138,
+        "end_second": 145,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "召開顧問會議卻不見副院長鄭麗君身影",
+        "stt_original": "卻不見副院長鄭麗君身影。",
+        "start_second": 138,
+        "end_second": 145,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "我們持續秉持深化台美經貿關係",
+        "stt_original": "我們持續秉持深化台美經貿關係,",
+        "start_second": 152,
+        "end_second": 160,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "雙方互利互補兩個原則",
+        "stt_original": "雙方互利互補的兩個原則進行談判,",
+        "start_second": 152,
+        "end_second": 160,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "尤其川普宣布日本對等關稅",
+        "stt_original": "尤其川普宣布日本對等關稅從25%降至15%,",
+        "start_second": 176,
+        "end_second": 178,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "學者分析 日本的談判籌碼比台灣好",
+        "stt_original": "事實分析,日本的談判籌碼比台灣好,",
+        "start_second": 182,
+        "end_second": 185,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "台灣關稅可能是落在百分之20至25之間",
+        "stt_original": "台灣最後關稅可能落在20%至25%之間,",
+        "start_second": 182,
+        "end_second": 185,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "有可能無法在8月1號前做出結論",
+        "stt_original": "有可能無法在8月1號前作出結論。",
+        "start_second": 188,
+        "end_second": 188,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "台師大人體研究倫理審查委員會主委陳學志",
+        "stt_original": "台師大人體研究倫理審查委員會主委陳學聚,",
+        "start_second": 212,
+        "end_second": 238,
+        "duration": 27
+    },
+    {
+        "ocr_ground_truth": "醫師全聯會則說",
+        "stt_original": "醫師全聯會則說,",
+        "start_second": 240,
+        "end_second": 242,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "每個環節都應保障受試者權益",
+        "stt_original": "研究計劃每個環節都應該保障受試者權益。",
+        "start_second": 240,
+        "end_second": 242,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "其實這個研究計畫如果有問題",
+        "stt_original": "其實這個研究計劃如果有問題,",
+        "start_second": 242,
+        "end_second": 248,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "體育署要處理註銷周台英的教練證",
+        "stt_original": "體育署要處理註銷周台英的教練證,",
+        "start_second": 248,
+        "end_second": 251,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "按程序 中華足協得先開紀律委員會",
+        "stt_original": "按程序中華足協得先開紀律委員會,",
+        "start_second": 248,
+        "end_second": 251,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "我的錯 還是希望球員能夠原諒我",
+        "stt_original": "我的錯,還是希望球員能夠原諒我。",
+        "start_second": 251,
+        "end_second": 254,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "由於週六舉辦罷免投票",
+        "stt_original": "由於週六舉辦罷免投票,",
+        "start_second": 293,
+        "end_second": 299,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "中選會主委李進勇還特別親自拜會氣象署",
+        "stt_original": "中選會主委李靖勇還特別傾思拜會氣象署,",
+        "start_second": 293,
+        "end_second": 299,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "氣象署也仔細簡報分析供作參考",
+        "stt_original": "氣象署也仔細簡報分析,",
+        "start_second": 299,
+        "end_second": 303,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "死者是坐在車頭第一排的乘客",
+        "stt_original": "死者是坐在車頭第一排的乘客,",
+        "start_second": 323,
+        "end_second": 335,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "然後我原本是想要走前門下車",
+        "stt_original": "然後我們原本是想要走前門下車,",
+        "start_second": 335,
+        "end_second": 336,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "但前門就是其實已經被卡住了",
+        "stt_original": "但前門就其實已經被卡住了。",
+        "start_second": 335,
+        "end_second": 336,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "是動用機具才將人救出",
+        "stt_original": "是動用機具才將人救出,",
+        "start_second": 336,
+        "end_second": 339,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "國光客運表示",
+        "stt_original": "果光客運表示,",
+        "start_second": 340,
+        "end_second": 341,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "車籍是正常",
+        "stt_original": "車騎是正常,",
+        "start_second": 341,
+        "end_second": 342,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "最後一次檢驗日是在今年6/25",
+        "stt_original": "最後一次檢驗日是在今年6月25號,",
+        "start_second": 342,
+        "end_second": 345,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "司機工時初步了解沒有違規情事",
+        "stt_original": "司機工時初步了解沒有違規情勢,",
+        "start_second": 342,
+        "end_second": 345,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "台北市蛋商公會解釋",
+        "stt_original": "台北市蛋商工會,",
+        "start_second": 388,
+        "end_second": 390,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "上週蛋價連兩漲漲6元",
+        "stt_original": "絡繹不絕,上週蛋價連兩盞漲6元,",
+        "start_second": 376,
+        "end_second": 376,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "但本週不漲",
+        "stt_original": "但本週不漲,",
+        "start_second": 376,
+        "end_second": 376,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "農業部趕緊澄清絕無此事",
+        "stt_original": "農業部趕緊澄清,決無此事。",
+        "start_second": 377,
+        "end_second": 377,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "整個蛋價是由市場機制來決定的",
+        "stt_original": "整個蛋價是由市長其實來決定的,",
+        "start_second": 377,
+        "end_second": 385,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "台北市蛋商公會解釋",
+        "stt_original": "台北市蛋商工會解釋,",
+        "start_second": 388,
+        "end_second": 390,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "顧及消費者接受度 本週才沒漲",
+        "stt_original": "由於連兩盞顧及消費者接受度本週才沒漲,",
+        "start_second": 388,
+        "end_second": 390,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "只是養雞協會不滿",
+        "stt_original": "只是養雞協會不滿,",
+        "start_second": 390,
+        "end_second": 391,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "由協會主動公告產地價",
+        "stt_original": "兩週後由協會主動公告產地價。",
+        "start_second": 391,
+        "end_second": 392,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "台北市蛋商公會解釋",
+        "stt_original": "台北市蛋商工會回應,",
+        "start_second": 388,
+        "end_second": 390,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "支持雙方有效溝通",
+        "stt_original": "支持雙方有效溝通,",
+        "start_second": 392,
+        "end_second": 396,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "是可以由我們的遊客可以自行去走",
+        "stt_original": "有哪些的步道是可以由我們的遊客可以自行去走,",
+        "start_second": 429,
+        "end_second": 437,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "也針對導覽設施 安全動線",
+        "stt_original": "也針對導覽設施、安全動線,",
+        "start_second": 437,
+        "end_second": 437,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "希望旅行業者也幫忙評估",
+        "stt_original": "希望旅行業者也幫忙評估。",
+        "start_second": 437,
+        "end_second": 437,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "我覺得這裡是真的可以進來",
+        "stt_original": "覺得這裡是真的可以進來,",
+        "start_second": 437,
+        "end_second": 438,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "只是我們會受限在管制的時間內",
+        "stt_original": "只是我們會受限在管制的時間內,",
+        "start_second": 437,
+        "end_second": 438,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "但前提還是要觀察轄區內的安全性",
+        "stt_original": "並且要觀察轄區內的安全性,",
+        "start_second": 438,
+        "end_second": 438,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "否則還是無法吸引客群",
+        "stt_original": "否則還是無法吸引客群。",
+        "start_second": 438,
+        "end_second": 438,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "關心天氣 台灣周遭相繼生成兩個颱風",
+        "stt_original": "在台灣周遭相繼有生成了兩個颱風,",
+        "start_second": 440,
+        "end_second": 462,
+        "duration": 23
+    },
+    {
+        "ocr_ground_truth": "另外 桃園到台南 台東 恆春半島",
+        "stt_original": "另外,桃園到台南、台東、恆春半島",
+        "start_second": 462,
+        "end_second": 477,
+        "duration": 16
+    }
+]

@@ -1,0 +1,380 @@
+[
+    {
+        "ocr_ground_truth": "但中南部山區仍有大雨的可能",
+        "stt_original": "雨勢趨緩,但中南部山區仍有大雨的可能。",
+        "start_second": 30,
+        "end_second": 36,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "南橫公路也有部分山區路段",
+        "stt_original": "南橫公路也有部分山區路段,",
+        "start_second": 96,
+        "end_second": 104,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "昨天俄羅斯遠東外海規模8.8強震",
+        "stt_original": "昨天,俄羅斯遠東外海規模8.8的強震,",
+        "start_second": 193,
+        "end_second": 211,
+        "duration": 19
+    },
+    {
+        "ocr_ground_truth": "就能把沿岸的建築物完全沖毀",
+        "stt_original": "就能夠把沿岸的建築物完全的沖毀。",
+        "start_second": 265,
+        "end_second": 306,
+        "duration": 42
+    },
+    {
+        "ocr_ground_truth": "另外 海洋所也請漁會通知海嘯狀況",
+        "stt_original": "另外,海洋所也請漁會通知海嘯狀況,",
+        "start_second": 306,
+        "end_second": 306,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "後續更要留意餘震",
+        "stt_original": "後續更要留意余震。",
+        "start_second": 314,
+        "end_second": 314,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "千島海溝是一個要防範的重點",
+        "stt_original": "千島海溝是一個要防範的重點,",
+        "start_second": 314,
+        "end_second": 321,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "另外一個就是阿留申海溝",
+        "stt_original": "然後另外一個就是阿劉森海溝,",
+        "start_second": 314,
+        "end_second": 321,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "30號晚間8點多發生一起割頸命案",
+        "stt_original": "30號晚間8點多發生一起割擠命案,",
+        "start_second": 352,
+        "end_second": 352,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "在夜店當公關的27歲古姓女子",
+        "stt_original": "在夜店當公關的27歲古姓女子,",
+        "start_second": 352,
+        "end_second": 352,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "持刀割傷後頸和腹部",
+        "stt_original": "持刀割傷後頸和腹部。",
+        "start_second": 352,
+        "end_second": 352,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "根據了解谷姓女子與劉姓前男友",
+        "stt_original": "古姓女子與劉姓前男友",
+        "start_second": 352,
+        "end_second": 353,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "曾為夜店同事也曾同居",
+        "stt_original": "曾為夜店同事也曾同居,",
+        "start_second": 352,
+        "end_second": 353,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "目前保外就醫的受刑人還有超過500名",
+        "stt_original": "目前保外就醫的受刑人還有超過500名,",
+        "start_second": 373,
+        "end_second": 383,
+        "duration": 11
+    },
+    {
+        "ocr_ground_truth": "從獄方到檢察機關都被立委質疑",
+        "stt_original": "從預方到檢查機關都被立委質疑,",
+        "start_second": 383,
+        "end_second": 384,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "監督管理有疏失",
+        "stt_original": "監督管理有疏失。",
+        "start_second": 383,
+        "end_second": 384,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "即使矯正署回應都按相關程序辦理",
+        "stt_original": "即使矯正署回應都按相關程序辦理,",
+        "start_second": 394,
+        "end_second": 396,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "卻讓立委批評",
+        "stt_original": "卻讓立委批評,",
+        "start_second": 396,
+        "end_second": 398,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "獄政與檢察機關消極處理",
+        "stt_original": "預證與檢查機關消極處理,",
+        "start_second": 396,
+        "end_second": 398,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "沒有執行拘提 更別說是發布通緝",
+        "stt_original": "沒有執行具體更別說是發布同期。",
+        "start_second": 398,
+        "end_second": 401,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "(這件事情責任追究 需要多久)",
+        "stt_original": "這件事情責任追究需要多久?",
+        "start_second": 401,
+        "end_second": 410,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "我們希望是在一個禮拜內",
+        "stt_original": "我們希望是在一個禮拜內。",
+        "start_second": 401,
+        "end_second": 410,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "(不能夠對保外就醫的受刑人",
+        "stt_original": "不能夠對保外就醫的受刑人",
+        "start_second": 415,
+        "end_second": 419,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "去實施科技設備監控)",
+        "stt_original": "去實施科技設備監控,",
+        "start_second": 415,
+        "end_second": 419,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "(當時為什麼沒有提到說",
+        "stt_original": "當時為什麼沒有提到說",
+        "start_second": 419,
+        "end_second": 428,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "應該修改相關的辦法)",
+        "stt_original": "應該修改相關的辦法?",
+        "start_second": 419,
+        "end_second": 428,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "健署長吳昭軍表示",
+        "stt_original": "國健署長吳釗君回應,",
+        "start_second": 463,
+        "end_second": 481,
+        "duration": 19
+    },
+    {
+        "ocr_ground_truth": "然後護航兩大跨國煙草公司的加熱",
+        "stt_original": "然後護航兩大跨國煙草公司的加熱,",
+        "start_second": 461,
+        "end_second": 463,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "加味加熱菸違法上市",
+        "stt_original": "加味加熱煙違法上市。",
+        "start_second": 461,
+        "end_second": 463,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "然後護航兩大跨國煙草公司的加熱",
+        "stt_original": "然後護航兩大跨國煙草公司的加味加熱煙違法上市。",
+        "start_second": 461,
+        "end_second": 463,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "然後護航兩大跨國煙草公司的加熱",
+        "stt_original": "然後護航兩大跨國煙草公司的加味加熱煙違法上市。",
+        "start_second": 461,
+        "end_second": 463,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "健署長吳昭軍表示",
+        "stt_original": "國健署署長吳釗君表示,",
+        "start_second": 463,
+        "end_second": 467,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "加熱菸審查歷經兩屆委員會一切依法行政",
+        "stt_original": "加熱煙審查歷經兩屆委員會,",
+        "start_second": 463,
+        "end_second": 467,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "秉持專業與科學",
+        "stt_original": "秉持專業與科學,",
+        "start_second": 467,
+        "end_second": 469,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "也要求業者必須符合相關條件",
+        "stt_original": "也要求業者必須符合相關條件,",
+        "start_second": 467,
+        "end_second": 469,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "我們的立場都是一樣的",
+        "stt_original": "我們的立場都是一樣的,",
+        "start_second": 470,
+        "end_second": 481,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "加味的加熱菸不能通過審查上市",
+        "stt_original": "針對民團呼籲加味的加熱煙不能通過審查上市,",
+        "start_second": 481,
+        "end_second": 481,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "加味的加熱菸不能通過審查上市",
+        "stt_original": "針對民團呼籲加味的加熱煙不能通過審查上市,",
+        "start_second": 481,
+        "end_second": 481,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "推估業者相關上市規劃方案",
+        "stt_original": "法官審查,推估業者相關上市規劃方案,",
+        "start_second": 481,
+        "end_second": 482,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "推估業者相關上市規劃方案",
+        "stt_original": "法官審查,推估業者相關上市規劃方案,",
+        "start_second": 481,
+        "end_second": 482,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "調節市場 全國肉品市場昨休市1天因應",
+        "stt_original": "為了調節市場,全國肉品市場昨天是休市一天,",
+        "start_second": 494,
+        "end_second": 505,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "調節市場 全國肉品市場昨休市1天因應",
+        "stt_original": "為了調節市場,全國肉品市場昨天是休市一天,",
+        "start_second": 494,
+        "end_second": 505,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "調節市場 全國肉品市場昨休市1天因應",
+        "stt_original": "為了調節市場,全國肉品市場昨天是休市一天,",
+        "start_second": 494,
+        "end_second": 505,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "為了調節市場",
+        "stt_original": "為調節市場",
+        "start_second": 494,
+        "end_second": 505,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "預估要到9月後",
+        "stt_original": "預估要到九月",
+        "start_second": 505,
+        "end_second": 506,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "全面進行未成年照顧者普查",
+        "stt_original": "全面進行未成年照顧者普查",
+        "start_second": 522,
+        "end_second": 534,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "他會假裝自己很好 才能堅強活下去",
+        "stt_original": "他會假裝自己很好才能堅持在家裡",
+        "start_second": 534,
+        "end_second": 534,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "他會假裝自己很好 才能堅強活下去",
+        "stt_original": "他會假裝自己很好才能堅持在家裡",
+        "start_second": 534,
+        "end_second": 534,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "他會假裝自己很好 才能堅強活下去",
+        "stt_original": "他會假裝自己很好才能堅持在家裡",
+        "start_second": 534,
+        "end_second": 534,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "他會假裝自己很好 才能堅強活下去",
+        "stt_original": "他會假裝自己很好才能堅持在家裡",
+        "start_second": 534,
+        "end_second": 534,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "他會假裝自己很好 才能堅強活下去",
+        "stt_original": "他會假裝自己很好才能堅持在家裡",
+        "start_second": 534,
+        "end_second": 534,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "他會假裝自己很好 才能堅強活下去",
+        "stt_original": "他會假裝自己很好才能堅持在家裡",
+        "start_second": 534,
+        "end_second": 534,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "兒少時期的他 在母親需要時",
+        "stt_original": "兒少時期的他在母親需要時",
+        "start_second": 534,
+        "end_second": 537,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "得站出來並承接情緒",
+        "stt_original": "得站出來並承接情緒",
+        "start_second": 534,
+        "end_second": 537,
+        "duration": 4
+    }
+]

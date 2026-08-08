@@ -1,0 +1,499 @@
+[
+    {
+        "ocr_ground_truth": "大雨一直下 台南後壁區淹成一片汪洋",
+        "stt_original": "大雨一直下,台南貨幣區淹成一片,",
+        "start_second": 37,
+        "end_second": 37,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "日累積雨量都突破400毫米",
+        "stt_original": "日累積雨量都突破400毫米,",
+        "start_second": 41,
+        "end_second": 41,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "如今屋頂都還沒有修好",
+        "stt_original": "如今屋頂都還沒有修好,",
+        "start_second": 41,
+        "end_second": 41,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "想到颱風季還有2個多月",
+        "stt_original": "想到颱風季還有兩個多月,",
+        "start_second": 45,
+        "end_second": 46,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "不知該怎麼辦",
+        "stt_original": "不知道該怎麼辦。",
+        "start_second": 45,
+        "end_second": 46,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "另外還有台電工程人員搶修停電",
+        "stt_original": "而另外,還有台電工程人員搶修停電。",
+        "start_second": 67,
+        "end_second": 78,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "朴子市這戶平房",
+        "stt_original": "浦子市這戶平房,",
+        "start_second": 78,
+        "end_second": 79,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "因為致災性降雨",
+        "stt_original": "因為致災性降雨,",
+        "start_second": 78,
+        "end_second": 79,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "以及與美國對等關稅等",
+        "stt_original": "以及與美國對等關稅等,",
+        "start_second": 187,
+        "end_second": 200,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "針對這個消息",
+        "stt_original": "針對這個消息,",
+        "start_second": 200,
+        "end_second": 200,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "公視記者也詢問了美國國務院發言人",
+        "stt_original": "公視記者也詢問了美國國務院發言人,",
+        "start_second": 200,
+        "end_second": 200,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "因此不評論假設性的狀況",
+        "stt_original": "因此不評論假設性的狀況。",
+        "start_second": 200,
+        "end_second": 208,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "以及現在台灣還在跟美國談對等關稅談判",
+        "stt_original": "以及現在台灣還在跟美國談這對等關係談判,",
+        "start_second": 208,
+        "end_second": 212,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "因此表示總統暫時沒有海外訪問的安排",
+        "stt_original": "因此表示總統暫時沒有海外訪問的這個安排了。",
+        "start_second": 208,
+        "end_second": 212,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "對於川普這項決定的評論",
+        "stt_original": "對於川普這項決定的評論,",
+        "start_second": 212,
+        "end_second": 213,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "對此葛來儀就表示說",
+        "stt_original": "那麼對此葛萊伊就表示說,",
+        "start_second": 212,
+        "end_second": 213,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "暗示台美關係是可以談判的",
+        "stt_original": "暗示說台美關係是可以談判的,",
+        "start_second": 213,
+        "end_second": 217,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "團員們仍舊展現堅強的實力 奪得金牌",
+        "stt_original": "團員們仍舊展現堅強的實力,",
+        "start_second": 242,
+        "end_second": 255,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "主辦單位突然告知接獲抗議",
+        "stt_original": "主辦單位突然告知接獲抗議,",
+        "start_second": 258,
+        "end_second": 261,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "我們在會場內的國旗必須撤下",
+        "stt_original": "我們在會場內的國旗必須撤下,",
+        "start_second": 258,
+        "end_second": 261,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "淨重:",
+        "stt_original": "獎狀。",
+        "start_second": 281,
+        "end_second": 299,
+        "duration": 19
+    },
+    {
+        "ocr_ground_truth": "強調這世界上最瞭解",
+        "stt_original": "強調這世界上,",
+        "start_second": 266,
+        "end_second": 267,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "綜合報導",
+        "stt_original": "綜合報導。",
+        "start_second": 46,
+        "end_second": 46,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "福源花生醬\"黃麴毒素超標",
+        "stt_original": "發現有三件黃麴毒素超標。",
+        "start_second": 267,
+        "end_second": 281,
+        "duration": 15
+    },
+    {
+        "ocr_ground_truth": "黃麴毒素是一級致癌物",
+        "stt_original": "黃麴毒素是一級的致癌物,",
+        "start_second": 281,
+        "end_second": 299,
+        "duration": 19
+    },
+    {
+        "ocr_ground_truth": "熱門伴手禮",
+        "stt_original": "新竹熱門伴手禮,",
+        "start_second": 267,
+        "end_second": 281,
+        "duration": 15
+    },
+    {
+        "ocr_ground_truth": "不僅具有肝毒性",
+        "stt_original": "不僅具有乾毒性,",
+        "start_second": 300,
+        "end_second": 301,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "長期食用也可能有致癌的風險",
+        "stt_original": "長期食用也可能有致癌的風險。",
+        "start_second": 300,
+        "end_second": 301,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "衛生局提醒",
+        "stt_original": "衛生局提醒,",
+        "start_second": 314,
+        "end_second": 316,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "台灣氣候高溫潮濕",
+        "stt_original": "台灣氣候高溫潮濕,",
+        "start_second": 314,
+        "end_second": 316,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "堅果類等食材",
+        "stt_original": "堅果類等食材,",
+        "start_second": 314,
+        "end_second": 316,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "開封後也應盡早食用完畢",
+        "stt_original": "開封後也應儘早食用完畢,",
+        "start_second": 316,
+        "end_second": 317,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "高喊口號 手舉\"憂\"字手板",
+        "stt_original": "高喊口號手舉優字手板,",
+        "start_second": 363,
+        "end_second": 364,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "呼籲政府應廢除巴氏量表",
+        "stt_original": "呼籲政府應廢除八十兩表,",
+        "start_second": 364,
+        "end_second": 365,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "作為聘僱外籍看護資格的評估",
+        "stt_original": "作為併顧外籍看護資格的評估,",
+        "start_second": 364,
+        "end_second": 365,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "新增開放80歲以上長者",
+        "stt_original": "新增開放八十歲以上長者,",
+        "start_second": 365,
+        "end_second": 366,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "如果有10萬名的健康老人的需求出來",
+        "stt_original": "如果有十萬名的健康老人的需求出來,",
+        "start_second": 366,
+        "end_second": 366,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "他們都找不到人了",
+        "stt_original": "他們都找不到人了,",
+        "start_second": 366,
+        "end_second": 366,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "或者要搶人要怎麼辦 加薪",
+        "stt_original": "或者要搶了要怎麼辦,",
+        "start_second": 366,
+        "end_second": 366,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "包括身障 罕病 失智",
+        "stt_original": "包括身障、寒病、失智失能,",
+        "start_second": 366,
+        "end_second": 366,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "勞動部表示",
+        "stt_original": "勞動部表示,",
+        "start_second": 366,
+        "end_second": 367,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "預計29號將與衛福部共同召開記者會",
+        "stt_original": "將與衛福部共同召開記者會,",
+        "start_second": 366,
+        "end_second": 367,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "馬來西亞首相安華",
+        "stt_original": "馬來西亞首相安華,",
+        "start_second": 398,
+        "end_second": 403,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "帶著泰國代理總理普譚",
+        "stt_original": "帶著泰國代理總理普坦,",
+        "start_second": 398,
+        "end_second": 472,
+        "duration": 75
+    },
+    {
+        "ocr_ground_truth": "以及柬埔寨總理洪馬內握手合炤",
+        "stt_original": "以及柬埔寨總理洪瑪內,",
+        "start_second": 403,
+        "end_second": 440,
+        "duration": 38
+    },
+    {
+        "ocr_ground_truth": "象徵泰柬兩國的邊境衝突告一段落",
+        "stt_original": "象徵泰檢兩國的邊境衝突,",
+        "start_second": 403,
+        "end_second": 413,
+        "duration": 11
+    },
+    {
+        "ocr_ground_truth": "28號下午在吉隆坡近郊展開和談",
+        "stt_original": "28號下午在吉隆坡近郊,",
+        "start_second": 413,
+        "end_second": 416,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "會後泰柬兩國都同意立即停火",
+        "stt_original": "泰檢兩國都同意立即停火,",
+        "start_second": 416,
+        "end_second": 421,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "馬來西亞首相安華",
+        "stt_original": "馬來西亞首相安華,",
+        "start_second": 398,
+        "end_second": 403,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "洪馬內指出",
+        "stt_original": "洪瑪內指出,",
+        "start_second": 440,
+        "end_second": 440,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "這場從24號爆發的衝突",
+        "stt_original": "這場從24號爆發的衝突,",
+        "start_second": 440,
+        "end_second": 440,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "導致雙方有30萬人流離失所",
+        "stt_original": "導致雙方有30萬人流離失所。",
+        "start_second": 440,
+        "end_second": 440,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "他跟普譚都在記者會上",
+        "stt_original": "他跟普坦都在記者會上,",
+        "start_second": 440,
+        "end_second": 446,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "中國參與調解",
+        "stt_original": "與美國中國參與調解。",
+        "start_second": 440,
+        "end_second": 446,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "早日恢復邊境地區的和平穩定",
+        "stt_original": "早日恢復邊境地區的和平穩定。",
+        "start_second": 474,
+        "end_second": 474,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "鈴木一朗正式走進古柏鎮名人堂",
+        "stt_original": "林穆伊朗正式走進古柏鎮名人堂,",
+        "start_second": 494,
+        "end_second": 499,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "在致詞時以英文演說",
+        "stt_original": "在致詞時以英文演說,",
+        "start_second": 499,
+        "end_second": 505,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "但提到前輩野茂英雄時",
+        "stt_original": "但提到前輩野貌英雄時,",
+        "start_second": 499,
+        "end_second": 505,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "改以日文表達感謝",
+        "stt_original": "敢以日文表達感謝。",
+        "start_second": 499,
+        "end_second": 505,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "是日本第一位以野手身份",
+        "stt_original": "是日本第一位以野手身份",
+        "start_second": 552,
+        "end_second": 552,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "站上西雅圖水手大聯盟球場",
+        "stt_original": "站上西雅图水手大联盟球场",
+        "start_second": 552,
+        "end_second": 552,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "菜鳥球季便拿下美國聯盟",
+        "stt_original": "菜鸟球季便拿下美国联盟最有价值",
+        "start_second": 552,
+        "end_second": 553,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "最有價值與年度最佳新人獎",
+        "stt_original": "与年度最佳新人奖",
+        "start_second": 552,
+        "end_second": 553,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "在他19賽季職業生涯",
+        "stt_original": "在他19赛季职业生涯",
+        "start_second": 553,
+        "end_second": 558,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "共敲出3089支大聯盟安打",
+        "stt_original": "共敲出3089支大联盟安打",
+        "start_second": 553,
+        "end_second": 558,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "也是史上首位連續10個球季",
+        "stt_original": "也是史上首位连续10个球季",
+        "start_second": 558,
+        "end_second": 561,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "達成單季200支以上安打的球員",
+        "stt_original": "达成单季200支以上安打的球员",
+        "start_second": 558,
+        "end_second": 561,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "其中2004年更寫下",
+        "stt_original": "其中2004年更写下",
+        "start_second": 561,
+        "end_second": 568,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "大聯盟單季安打紀錄262支",
+        "stt_original": "大联盟单季安打记录262支",
+        "start_second": 561,
+        "end_second": 568,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "並以打擊率.372",
+        "stt_original": "并以打击率3成72",
+        "start_second": 568,
+        "end_second": 569,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "奪下個人生涯第二座打擊王",
+        "stt_original": "夺下个人生涯第二座打击王",
+        "start_second": 568,
+        "end_second": 569,
+        "duration": 2
+    }
+]

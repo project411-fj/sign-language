@@ -1,0 +1,450 @@
+[
+    {
+        "ocr_ground_truth": "整起事件從民眾闖進高風險水域違規玩水",
+        "stt_original": "整起事件,從民眾闖進高風險水域違規玩水,",
+        "start_second": 33,
+        "end_second": 45,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "不滿情緒高漲",
+        "stt_original": "不滿情緒高漲,",
+        "start_second": 48,
+        "end_second": 48,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "就是因為8號消防接獲溺水事故",
+        "stt_original": "就是因為8號消防接獲溺水事故。",
+        "start_second": 48,
+        "end_second": 48,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "在37歲的吳恩碩宣告不治後",
+        "stt_original": "在37歲的吳恩碩宣告不治後,",
+        "start_second": 48,
+        "end_second": 49,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "36歲的張敬謙也傳來噩耗",
+        "stt_original": "36歲的張敬謙也傳來2號。",
+        "start_second": 48,
+        "end_second": 49,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "這次的救援任務難度高",
+        "stt_original": "這次的救援任務難度高,",
+        "start_second": 63,
+        "end_second": 63,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "光是基礎訓練未必足夠",
+        "stt_original": "光是基礎訓練未必足夠。",
+        "start_second": 63,
+        "end_second": 63,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "操作船艇是一件比較進階的急流救生",
+        "stt_original": "操作船艇是一件比較進階的急流救生,",
+        "start_second": 63,
+        "end_second": 64,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "那這一塊的話",
+        "stt_original": "那這一塊的話,",
+        "start_second": 63,
+        "end_second": 64,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "穿梭在砂卡礑步道的落石區",
+        "stt_original": "穿梭在沙卡黨步道的落石區,",
+        "start_second": 86,
+        "end_second": 86,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "找尋到罹難的游姓一家五口",
+        "stt_original": "找尋到罹難的遊行一家五口,",
+        "start_second": 86,
+        "end_second": 88,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "平常調皮又可愛的牠",
+        "stt_original": "平常調皮又可愛的他,",
+        "start_second": 86,
+        "end_second": 88,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "蠻親人的",
+        "stt_original": "蠻清冷的,",
+        "start_second": 88,
+        "end_second": 88,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "至今未走出陰霾",
+        "stt_original": "至今未走出陰霾,",
+        "start_second": 88,
+        "end_second": 89,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "已調離原單位",
+        "stt_original": "已調離原單位。",
+        "start_second": 88,
+        "end_second": 89,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "110年由民間捐贈給花蓮縣搜救大隊當搜救犬",
+        "stt_original": "111年由民間捐贈給花蓮縣搜救大隊當搜救犬,",
+        "start_second": 89,
+        "end_second": 91,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "監察院日前對於新北市河濱公園",
+        "stt_original": "監察院日前對於新北市河濱公園設置批刑車組,",
+        "start_second": 94,
+        "end_second": 97,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "設置?型車阻 影響身障者通行權益",
+        "stt_original": "影響身障者通行權益,",
+        "start_second": 100,
+        "end_second": 101,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "通過糾正新北市府",
+        "stt_original": "通過糾正新北市政府。",
+        "start_second": 101,
+        "end_second": 104,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "但同時也讓輪椅族很難通過",
+        "stt_original": "但同時也讓輪椅組很難通過。",
+        "start_second": 123,
+        "end_second": 124,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "身心障礙團體昨天召開記者會",
+        "stt_original": "因此身心障礙民團召開記者會,",
+        "start_second": 104,
+        "end_second": 108,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "其實不只公園",
+        "stt_original": "其實不只公園,",
+        "start_second": 124,
+        "end_second": 124,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "也時常讓乘坐輪椅的身障者通行不便",
+        "stt_original": "各處馬路路口的車組也時常讓乘坐輪椅的身障者通行不便。",
+        "start_second": 124,
+        "end_second": 124,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "也被直擊現蹤蘇澳港",
+        "stt_original": "也被直擊線中蘇澳港,",
+        "start_second": 231,
+        "end_second": 233,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "疑似展開測試",
+        "stt_original": "疑似展開測試。",
+        "start_second": 231,
+        "end_second": 233,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "特種",
+        "stt_original": "台中、",
+        "start_second": 86,
+        "end_second": 88,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "關切召員能否迅速恢復戰力",
+        "stt_original": "關切招援能否迅速恢復戰力。",
+        "start_second": 236,
+        "end_second": 236,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "也罕見的加入戰術討論",
+        "stt_original": "也罕見的加入戰術討論。",
+        "start_second": 236,
+        "end_second": 237,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "召員圍在一起進行戰術討論 繪製射擊圖卡",
+        "stt_original": "招援围在一起进行战术讨论",
+        "start_second": 237,
+        "end_second": 237,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "確認自己的防守範圍",
+        "stt_original": "确认自己的防守范围",
+        "start_second": 237,
+        "end_second": 237,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "讓後備部隊具備城鎮戰的作戰能力",
+        "stt_original": "让后辈部队具备城镇战的作战能力",
+        "start_second": 237,
+        "end_second": 237,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "初級緊急醫療救護的證炤",
+        "stt_original": "还具有EMT-1初级紧急医疗救护的证照",
+        "start_second": 237,
+        "end_second": 238,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "現場演練戰傷救護",
+        "stt_original": "现场演练战伤救护",
+        "start_second": 238,
+        "end_second": 239,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "美國總統 川普",
+        "stt_original": "美国总统川普",
+        "start_second": 266,
+        "end_second": 316,
+        "duration": 51
+    },
+    {
+        "ocr_ground_truth": "美國總統 川普",
+        "stt_original": "美国总统川普9号",
+        "start_second": 266,
+        "end_second": 316,
+        "duration": 51
+    },
+    {
+        "ocr_ground_truth": "特別點名巴西",
+        "stt_original": "特别点名巴西",
+        "start_second": 287,
+        "end_second": 292,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "是一場獵巫行動",
+        "stt_original": "是一场猎物行动",
+        "start_second": 293,
+        "end_second": 298,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "川普也表示",
+        "stt_original": "川普也表示",
+        "start_second": 298,
+        "end_second": 298,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "川普再公布7國關稅",
+        "stt_original": "川普已公布14国关税",
+        "start_second": 255,
+        "end_second": 266,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "此外受到西南風和低壓帶影響",
+        "stt_original": "受到西南风和低压带的影响",
+        "start_second": 338,
+        "end_second": 350,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "有蒙雨等級以上降雨的機率",
+        "stt_original": "有豪雨等级以上降雨的几率",
+        "start_second": 350,
+        "end_second": 352,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "10日這兩天的累積雨量",
+        "stt_original": "日这两天的累积雨量",
+        "start_second": 362,
+        "end_second": 372,
+        "duration": 11
+    },
+    {
+        "ocr_ground_truth": "綜合報導",
+        "stt_original": "综合报道",
+        "start_second": 372,
+        "end_second": 497,
+        "duration": 126
+    },
+    {
+        "ocr_ground_truth": "東山區沒水沒電好幾天",
+        "stt_original": "东山区没水没电好几天",
+        "start_second": 417,
+        "end_second": 421,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "消防分隊也出動水車",
+        "stt_original": "消防分队也出动水车",
+        "start_second": 417,
+        "end_second": 421,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "供民眾接水應急",
+        "stt_original": "供民众接水应急",
+        "start_second": 417,
+        "end_second": 421,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "民眾至今還在整理家園",
+        "stt_original": "民众至今还在整理家园",
+        "start_second": 421,
+        "end_second": 423,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "大量廢棄物堆置在民宅前方等待清運",
+        "stt_original": "大量废青物堆置在民宅前方",
+        "start_second": 421,
+        "end_second": 423,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "想當天狀況",
+        "stt_original": "回想当天状况",
+        "start_second": 423,
+        "end_second": 425,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "讓里長心有餘悸",
+        "stt_original": "让里长心有余悸",
+        "start_second": 423,
+        "end_second": 425,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "國軍協助移除倒塌路樹",
+        "stt_original": "国军协助移除倒塌露宿",
+        "start_second": 425,
+        "end_second": 425,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "也派出機具及人力前來馳援",
+        "stt_original": "也派出机具及人力前来持援",
+        "start_second": 425,
+        "end_second": 425,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "協助清運垃圾及路樹斷枝等",
+        "stt_original": "协助清运垃圾及露宿断肢等",
+        "start_second": 425,
+        "end_second": 425,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "也是被壓壞 只能從外地調發電機來",
+        "stt_original": "只能从外地调发电机来",
+        "start_second": 444,
+        "end_second": 447,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "不見台電來修復",
+        "stt_original": "不见台电来修复",
+        "start_second": 447,
+        "end_second": 450,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "簡直成了棄嬰",
+        "stt_original": "简直成了弃婴",
+        "start_second": 447,
+        "end_second": 450,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "有些地方雖然復電",
+        "stt_original": "有些地方虽然负电",
+        "start_second": 458,
+        "end_second": 458,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "綜合報導",
+        "stt_original": "甲乙纵和报导",
+        "start_second": 372,
+        "end_second": 497,
+        "duration": 126
+    },
+    {
+        "ocr_ground_truth": "另外來看 美國機場從2006年開始",
+        "stt_original": "另外来看美国机场从2006年开始",
+        "start_second": 497,
+        "end_second": 513,
+        "duration": 17
+    },
+    {
+        "ocr_ground_truth": "美國國土安全部長 諾姆",
+        "stt_original": "美国国土安全部宣布",
+        "start_second": 517,
+        "end_second": 523,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "也會花費較長的時間",
+        "stt_original": "也会花费较长的时间",
+        "start_second": 513,
+        "end_second": 517,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "美國國土安全部長 諾姆",
+        "stt_original": "美国国土安全部宣布",
+        "start_second": 517,
+        "end_second": 523,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "免脫鞋安檢措施才宣布",
+        "stt_original": "免脱鞋安检措施才宣布",
+        "start_second": 523,
+        "end_second": 524,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "就受到美國航空協會的大力支持",
+        "stt_original": "就受到美国航空协会的大力支持",
+        "start_second": 523,
+        "end_second": 524,
+        "duration": 2
+    }
+]

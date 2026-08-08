@@ -1,0 +1,527 @@
+[
+    {
+        "ocr_ground_truth": "台南市永康鬧區昨晚突然飄出瓦斯異味",
+        "stt_original": "首先來關心台南市永康鬧區,昨晚突然飄出瓦斯異味。",
+        "start_second": 10,
+        "end_second": 31,
+        "duration": 22
+    },
+    {
+        "ocr_ground_truth": "瓦斯公司也關閉閥門尋找洩漏源",
+        "stt_original": "瓦斯公司也關閉閥門,尋找洩漏員。",
+        "start_second": 31,
+        "end_second": 42,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "並調來怪手待濃度降低後",
+        "stt_original": "並調來怪手帶濃度降低後",
+        "start_second": 55,
+        "end_second": 56,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "在中段開挖設置新閥門",
+        "stt_original": "在中段開挖設置新閥門",
+        "start_second": 55,
+        "end_second": 56,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "才能確認是否影響白天上班通勤",
+        "stt_original": "是否影響白天上班通勤",
+        "start_second": 42,
+        "end_second": 48,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "嘉義縣議員蔡政宜的助理",
+        "stt_original": "嘉義縣議員蔡正怡的助理",
+        "start_second": 96,
+        "end_second": 97,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "向法院聲請羈押禁見",
+        "stt_original": "向法院申請羈押獲准",
+        "start_second": 104,
+        "end_second": 113,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "我們只是來幫忙送貨而已",
+        "stt_original": "我們只是來幫忙送貨而已",
+        "start_second": 95,
+        "end_second": 96,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "對外自稱是綽號雨刷的",
+        "stt_original": "對外自稱是綽號雨刷的嘉義縣議員",
+        "start_second": 96,
+        "end_second": 97,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "私下解釋兩人是當兵認識",
+        "stt_original": "私下解釋兩人是當兵認識",
+        "start_second": 97,
+        "end_second": 98,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "強調清者自清",
+        "stt_original": "強調親者自親",
+        "start_second": 97,
+        "end_second": 98,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "中共升高台海情勢緊張",
+        "stt_original": "中共升高台海情勢緊張",
+        "start_second": 206,
+        "end_second": 230,
+        "duration": 25
+    },
+    {
+        "ocr_ground_truth": "對中實施數千次大規模網路攻擊",
+        "stt_original": "對中實施數千次大規模網路攻擊",
+        "start_second": 235,
+        "end_second": 235,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "方式包括漏洞掃描 釣魚郵件",
+        "stt_original": "方式包括漏洞掃描 釣魚郵件",
+        "start_second": 235,
+        "end_second": 235,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "木馬植入等",
+        "stt_original": "木馬直入等",
+        "start_second": 235,
+        "end_second": 235,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "指中共此舉明顯是脈絡性的操作",
+        "stt_original": "指中共此舉明顯是脈絡性的操作",
+        "start_second": 235,
+        "end_second": 252,
+        "duration": 18
+    },
+    {
+        "ocr_ground_truth": "立委則擔憂被通緝的官兵個資若為真",
+        "stt_original": "立委則擔憂 被通緝的官兵",
+        "start_second": 252,
+        "end_second": 253,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "從中獲取經濟利益",
+        "stt_original": "從中獲取經濟利益",
+        "start_second": 276,
+        "end_second": 276,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "這樣貿易上來做這樣處罰的話",
+        "stt_original": "貿易商來做這樣的處罰的話",
+        "start_second": 276,
+        "end_second": 277,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "其實是犧牲他自己人民生產的利益",
+        "stt_original": "那其實是犧牲他自己人民生產的利益",
+        "start_second": 276,
+        "end_second": 277,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "限制統戰滲透就被制裁",
+        "stt_original": "限制統戰滲透就被制裁",
+        "start_second": 277,
+        "end_second": 277,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "中國是出於意識形態",
+        "stt_original": "中國是出於意識形態株連救足",
+        "start_second": 277,
+        "end_second": 277,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "黃子杰 張梓嘉 台北報導",
+        "stt_original": "張梓佳臺北報導",
+        "start_second": 309,
+        "end_second": 309,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "若訓練發生意外",
+        "stt_original": "若訓練發生意外",
+        "start_second": 307,
+        "end_second": 307,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "本島的醫療資源比離島豐富",
+        "stt_original": "本島的醫療資源比離島豐富",
+        "start_second": 307,
+        "end_second": 309,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "可以確保官兵獲得妥善治療",
+        "stt_original": "可以確保官兵獲得妥善治療",
+        "start_second": 307,
+        "end_second": 309,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "台南報導",
+        "stt_original": "臺北報導",
+        "start_second": 56,
+        "end_second": 526,
+        "duration": 471
+    },
+    {
+        "ocr_ground_truth": "某菁英盃辯論賽的最佳辯土榮譽並非如此",
+        "stt_original": "某菁英杯辯論賽的最佳辨識榮譽",
+        "start_second": 322,
+        "end_second": 326,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "原本錄取該生的陽明交大 台北醫學大學",
+        "stt_original": "原本錄取該生的陽明膠大",
+        "start_second": 326,
+        "end_second": 333,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "沒有做的一個學習歷程檔案",
+        "stt_original": "這三年多來沒有做的一個學習歷程檔案",
+        "start_second": 348,
+        "end_second": 348,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "目前看來是個案",
+        "stt_original": "目前看來是個案",
+        "start_second": 348,
+        "end_second": 359,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "升學輔導專家認為",
+        "stt_original": "升學輔導專家認為",
+        "start_second": 359,
+        "end_second": 359,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "以此案來說",
+        "stt_original": "以此案來說",
+        "start_second": 359,
+        "end_second": 359,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "台南報導",
+        "stt_original": "臺北報導",
+        "start_second": 56,
+        "end_second": 526,
+        "duration": 471
+    },
+    {
+        "ocr_ground_truth": "食藥署長也建議",
+        "stt_original": "署長也建議",
+        "start_second": 384,
+        "end_second": 395,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "過去早就備好洗手台和水桶",
+        "stt_original": "過去早就備好洗手臺和水桶",
+        "start_second": 395,
+        "end_second": 395,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "我們有說要不要找(錢)",
+        "stt_original": "我們有說要不要找",
+        "start_second": 395,
+        "end_second": 395,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "不要找你先放著",
+        "stt_original": "不要找你先放的",
+        "start_second": 395,
+        "end_second": 395,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "再來我們要找(錢)就是去洗手",
+        "stt_original": "再來我們要找就是去洗手",
+        "start_second": 395,
+        "end_second": 395,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "先討論一下研究-下",
+        "stt_original": "先討論一下 研究一下",
+        "start_second": 395,
+        "end_second": 396,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "多聽取做吃的的一些意見",
+        "stt_original": "多聽取做吃的一些意見",
+        "start_second": 395,
+        "end_second": 396,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "再來採納",
+        "stt_original": "再來採納",
+        "start_second": 395,
+        "end_second": 396,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "這個我們不反對啦",
+        "stt_original": "這個我們不反對",
+        "start_second": 396,
+        "end_second": 397,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "新制引來不少小吃業者不同聲音",
+        "stt_original": "新智引來不少小食業者不同聲音",
+        "start_second": 397,
+        "end_second": 399,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "有人認為如果只有一人作業經營",
+        "stt_original": "如果只有一人作業經營",
+        "start_second": 397,
+        "end_second": 399,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "很難專門再聘請一個人找錢 收錢",
+        "stt_original": "很難專門再聘請一個人找錢收錢",
+        "start_second": 399,
+        "end_second": 402,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "衛福部長邱泰源(6/5)上午在立法院表示",
+        "stt_original": "衛福部長邱太元上午在臺北",
+        "start_second": 399,
+        "end_second": 402,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "新制主要是希望所有人",
+        "stt_original": "新智主要是希望所有人",
+        "start_second": 402,
+        "end_second": 406,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "努力把食品衛生做好",
+        "stt_original": "努力把食品衛生做好",
+        "start_second": 402,
+        "end_second": 406,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "才能提高電子支付使用率",
+        "stt_original": "提高電子支付使用率",
+        "start_second": 419,
+        "end_second": 421,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "間隔縮短為2個月",
+        "stt_original": "間隔縮短為兩個月",
+        "start_second": 483,
+        "end_second": 483,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "平時拍戲會接觸很多人",
+        "stt_original": "陳淑芳平時拍戲會接觸很多人",
+        "start_second": 457,
+        "end_second": 460,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "此現在出門都會戴上口罩",
+        "stt_original": "因此現在出門都會戴上口罩",
+        "start_second": 460,
+        "end_second": 467,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "就怕再次感染新冠病毒",
+        "stt_original": "就怕再次感染新冠病毒",
+        "start_second": 467,
+        "end_second": 472,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "根據疾管署監測",
+        "stt_original": "根據疾管署監測",
+        "start_second": 475,
+        "end_second": 475,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "上週全台新冠門急診就醫達6.2萬人次",
+        "stt_original": "上週全臺新冠門急診就醫",
+        "start_second": 475,
+        "end_second": 475,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "儘速就醫 避免重症死亡發生",
+        "stt_original": "避免重症死亡發生",
+        "start_second": 475,
+        "end_second": 476,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "或器官原來就已經有缺損",
+        "stt_original": "或器官原來就已經有切損",
+        "start_second": 476,
+        "end_second": 483,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "預估符合資格者約有76萬人",
+        "stt_original": "預估符合資格者約有七十六萬人",
+        "start_second": 483,
+        "end_second": 483,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "台南報導",
+        "stt_original": "臺北報導",
+        "start_second": 56,
+        "end_second": 526,
+        "duration": 471
+    },
+    {
+        "ocr_ground_truth": "交通部公布最新道安數據",
+        "stt_original": "交通部公布最新到案數據",
+        "start_second": 502,
+        "end_second": 502,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "薛宜家 林志堅 台北報導",
+        "stt_original": "薛佳麟間臺北報導",
+        "start_second": 421,
+        "end_second": 445,
+        "duration": 25
+    },
+    {
+        "ocr_ground_truth": "趕緊衝進派出所要報案",
+        "stt_original": "趕緊衝進派出所要報案",
+        "start_second": 537,
+        "end_second": 537,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "表示要向他採購40捆電線",
+        "stt_original": "表示要向他採購四十捆電線",
+        "start_second": 537,
+        "end_second": 537,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "以及委託代購20桶乳膠漆",
+        "stt_original": "以及委託代購二十桶乳膠漆",
+        "start_second": 537,
+        "end_second": 537,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "而臉書日前因為網路廣告揭露不全",
+        "stt_original": "因為網路廣告揭露不全",
+        "start_second": 559,
+        "end_second": 559,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "近日數發部又收到內政部所送來",
+        "stt_original": "今日 訴法部又收到內政部",
+        "start_second": 559,
+        "end_second": 560,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "禁止12個國家的國民入境",
+        "stt_original": "禁止十二個國家的國民入境",
+        "start_second": 572,
+        "end_second": 581,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "川普第一個總統任期實施過",
+        "stt_original": "川普第一個總統任期實施過",
+        "start_second": 583,
+        "end_second": 587,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "對7個穆斯林國家公民的入境禁令捲土重來",
+        "stt_original": "對七個穆斯林國家公民的入境禁令",
+        "start_second": 583,
+        "end_second": 587,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "索馬利亞 蘇丹與葉門",
+        "stt_original": "利比亞 索馬利亞 蘇丹與葉門",
+        "start_second": 587,
+        "end_second": 588,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "另外從蒲隆地 古巴 寮國 獅子山",
+        "stt_original": "另外 從普隆地 古巴 納瓦斯",
+        "start_second": 588,
+        "end_second": 588,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "可能讓數萬人陷於困境",
+        "stt_original": "可能讓數萬人陷於困境",
+        "start_second": 588,
+        "end_second": 589,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "川普同一天還簽署公告",
+        "stt_original": "川普同一天還簽署公告",
+        "start_second": 589,
+        "end_second": 594,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "共和黨人長期指控前總統拜登",
+        "stt_original": "共和黨人長期指控前總統拜登",
+        "start_second": 607,
+        "end_second": 612,
+        "duration": 6
+    }
+]
