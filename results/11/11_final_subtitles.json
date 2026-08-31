@@ -1,0 +1,275 @@
+[
+    {
+        "ocr_ground_truth": "今天高雄 屏東跟台東",
+        "stt_original": "而今天高雄、屏東跟臺東",
+        "start_second": 19,
+        "end_second": 31,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "海邊浪花一陣陣打上岸邊",
+        "stt_original": "海邊浪花一陣陣打上岸邊",
+        "start_second": 45,
+        "end_second": 46,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "整體的天氣大致上都是比較回穩",
+        "stt_original": "身體的天氣大致上都是比較回穩",
+        "start_second": 46,
+        "end_second": 50,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "各地上面以多雲到晴為主",
+        "stt_original": "各地上面以多雨盪起為主",
+        "start_second": 46,
+        "end_second": 50,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "中央災害應變中心統計到週三晚間8點",
+        "stt_original": "中央災害應變中心統計到週三",
+        "start_second": 50,
+        "end_second": 51,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "台灣附近大致以偏東風的風場為主",
+        "stt_original": "臺灣附近大致以偏東風的風場為主",
+        "start_second": 51,
+        "end_second": 53,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "市區加油站的屋頂被吹垮",
+        "stt_original": "市區加油站的屋頂被吹垮",
+        "start_second": 63,
+        "end_second": 69,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "大浪湧起越過防波堤",
+        "stt_original": "大浪湧起 越過防波堤",
+        "start_second": 74,
+        "end_second": 76,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "不斷灌入台東富岡漁港",
+        "stt_original": "不斷灌入臺東富岡漁港 中臺",
+        "start_second": 74,
+        "end_second": 76,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "楊柳颱風直撲台灣台東首當其衝",
+        "stt_original": "洋流颱風來襲 臺東首當其衝",
+        "start_second": 53,
+        "end_second": 61,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "乘客被迫在機上等待超過3小時",
+        "stt_original": "乘客被迫在機上等待超過三個小時",
+        "start_second": 97,
+        "end_second": 108,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "民眾黨主席 黃國昌",
+        "stt_original": "民眾黨主席黃國昌批評",
+        "start_second": 232,
+        "end_second": 270,
+        "duration": 39
+    },
+    {
+        "ocr_ground_truth": "而中選會昨天舉行第四場公投說明會",
+        "stt_original": "而中選會昨天是舉行第四場公投說明會",
+        "start_second": 197,
+        "end_second": 198,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "而中選會昨天舉行第四場公投說明會",
+        "stt_original": "而中選會昨天是舉行第四場公投說明會",
+        "start_second": 197,
+        "end_second": 198,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "而中選會昨天舉行第四場公投說明會",
+        "stt_original": "而中選會昨天是舉行第四場公投說明會",
+        "start_second": 197,
+        "end_second": 198,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "而中選會昨天舉行第四場公投說明會",
+        "stt_original": "而中選會昨天是舉行第四場公投說明會",
+        "start_second": 197,
+        "end_second": 198,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "反方代表則是20歲公民代表吳亞昕",
+        "stt_original": "反方代表則是二十歲的公民代表吳雅心",
+        "start_second": 199,
+        "end_second": 216,
+        "duration": 18
+    },
+    {
+        "ocr_ground_truth": "體認到核能風險會深深影響下-代人生活",
+        "stt_original": "他說 核能風險會深深影響下一代人",
+        "start_second": 238,
+        "end_second": 239,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "核三重啟公投第四場說明會",
+        "stt_original": "核三重啟公投第四場說明會",
+        "start_second": 219,
+        "end_second": 224,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "正方代表是公投案發起人",
+        "stt_original": "政方代表是公投案發起人",
+        "start_second": 219,
+        "end_second": 224,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "身兼民眾黨主席的黨團總召黃國昌",
+        "stt_original": "沈建明中壤主席的黨團總召黃國昌",
+        "start_second": 224,
+        "end_second": 232,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "\"確認無安全疑慮的情況下重啟核三\"",
+        "stt_original": "疑慮的情況下重啟核三",
+        "start_second": 243,
+        "end_second": 269,
+        "duration": 27
+    },
+    {
+        "ocr_ground_truth": "風險就能夠被接受了",
+        "stt_original": "風險就能夠被接受了",
+        "start_second": 270,
+        "end_second": 271,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "衛福部的醫事人員性別事件資訊專區上線",
+        "stt_original": "衛福部的醫事人員性別事件資訊專區上線",
+        "start_second": 271,
+        "end_second": 284,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "衛福部的醫事人員性別事件資訊專區上線",
+        "stt_original": "來到衛福部醫事人員性別事件資訊專區",
+        "start_second": 271,
+        "end_second": 284,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "(如果這個醫生被判刑確定)",
+        "stt_original": "那如果這個醫生被判刑確定",
+        "start_second": 293,
+        "end_second": 294,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "(你還會去就醫嗎)",
+        "stt_original": "你還會去就醫嗎",
+        "start_second": 293,
+        "end_second": 294,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "目前系統可查詢到7名醫事人員資料",
+        "stt_original": "目前系統可查詢到七名醫事人員資料",
+        "start_second": 295,
+        "end_second": 295,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "從事音樂工作的林小姐40歲才結婚",
+        "stt_original": "從事音樂工作的林小姐",
+        "start_second": 340,
+        "end_second": 340,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "婚後她和先生想要有個孩子",
+        "stt_original": "她和先生想要有個孩子",
+        "start_second": 340,
+        "end_second": 340,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "台灣晚婚晚育成為常態",
+        "stt_original": "臺灣晚婚晚育已經成為常態",
+        "start_second": 314,
+        "end_second": 330,
+        "duration": 17
+    },
+    {
+        "ocr_ground_truth": "你就一定不會成功",
+        "stt_original": "你就一定不會成功",
+        "start_second": 341,
+        "end_second": 341,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "國健署強調正研擬擴大試管嬰兌補助",
+        "stt_original": "國健署強調 正嚴以擴大不孕症補助",
+        "start_second": 330,
+        "end_second": 340,
+        "duration": 11
+    },
+    {
+        "ocr_ground_truth": "最快今年底公告上路",
+        "stt_original": "最快今年底公告上路",
+        "start_second": 341,
+        "end_second": 362,
+        "duration": 22
+    },
+    {
+        "ocr_ground_truth": "且全和電機資訊有關",
+        "stt_original": "和洋教 且全漢電機資訊有關",
+        "start_second": 362,
+        "end_second": 363,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "考量未來出路與就業薪資",
+        "stt_original": "考量未來出入與就業薪資 理工校系",
+        "start_second": 365,
+        "end_second": 367,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "理工校系已是多數高中生首選",
+        "stt_original": "已是多數高中生首選",
+        "start_second": 365,
+        "end_second": 367,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "魏佳卉表示即便大學的人社相關科係",
+        "stt_original": "即便大學的人設相關科系",
+        "start_second": 368,
+        "end_second": 375,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "通常棲息在智利南部與阿根廷的森林中",
+        "stt_original": "通常棲息在智利南部與阿根廷的森林中",
+        "start_second": 390,
+        "end_second": 391,
+        "duration": 2
+    }
+]

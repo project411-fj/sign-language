@@ -1,0 +1,296 @@
+[
+    {
+        "ocr_ground_truth": "強颱樺加沙移動速度很快",
+        "stt_original": "強颱化加沙,移動速度很快。",
+        "start_second": 12,
+        "end_second": 14,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "氣象署預估最快8點30分解除陸上警報",
+        "stt_original": "氣象署預估,最快8點30分會解除陸上警報。",
+        "start_second": 14,
+        "end_second": 28,
+        "duration": 15
+    },
+    {
+        "ocr_ground_truth": "強颱樺加沙昨天已經在花東地區帶來風雨",
+        "stt_original": "強台、花家沙,昨天已經在花東地區帶來了風雨。",
+        "start_second": 28,
+        "end_second": 33,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "花蓮則是因為馬太鞍溪堰塞湖有溢流風險",
+        "stt_original": "花蓮則是因為馬太安溪艷澀湖有溢流的風險。",
+        "start_second": 41,
+        "end_second": 57,
+        "duration": 17
+    },
+    {
+        "ocr_ground_truth": "川普總統也親自到場",
+        "stt_original": "而川普總統也親自到場。",
+        "start_second": 172,
+        "end_second": 182,
+        "duration": 11
+    },
+    {
+        "ocr_ground_truth": "總計有將近十萬名支持者參加",
+        "stt_original": "總計有將近10萬名支持者參加。",
+        "start_second": 189,
+        "end_second": 194,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "忠心良僕等標語",
+        "stt_original": "忠心良樸等標語,",
+        "start_second": 194,
+        "end_second": 195,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "現場充滿宗教氣氛",
+        "stt_original": "現場充滿宗教氣氛。",
+        "start_second": 194,
+        "end_second": 195,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "現場保守派政商名流雲集",
+        "stt_original": "現場保守派政商名流雲集,",
+        "start_second": 195,
+        "end_second": 200,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "決裂的特斯拉執行長馬斯克再次同框交談",
+        "stt_original": "川普跟已經決裂的特斯拉執行長馬斯克再次同框交談。",
+        "start_second": 195,
+        "end_second": 200,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "也痛斥民主黨的激進左派煽動政治暴力",
+        "stt_original": "也痛斥民主黨的激進左派煽動政治暴力,",
+        "start_second": 212,
+        "end_second": 218,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "希望兇嫌被判處極刑",
+        "stt_original": "希望兇嫌被判處極刑。",
+        "start_second": 212,
+        "end_second": 218,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "典禮最後川普在舞台上擁抱哭泣的柯克遺孀",
+        "stt_original": "點禮最後,川普在舞台上擁抱哭泣的柯克遺孀,",
+        "start_second": 232,
+        "end_second": 239,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "艾瑞卡也將繼承亡夫遺志擔任轉捩點執行長",
+        "stt_original": "艾瑞卡也將繼承王夫遺志,擔任美國轉捩點的執行長。",
+        "start_second": 232,
+        "end_second": 239,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "多家媒體與網路全程直播這場追思會",
+        "stt_original": "多家媒體跟網路全程直播這場追思會,",
+        "start_second": 239,
+        "end_second": 243,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "讓美國再次偉大紀念商品的攤位大發利市",
+        "stt_original": "讓美國再次偉大紀念商品的攤位大發利市,",
+        "start_second": 243,
+        "end_second": 244,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "為美國保守運動注入了更強大的能量",
+        "stt_original": "為美國傳統運動注入了更強的力量。",
+        "start_second": 245,
+        "end_second": 251,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "財劃法之後中央將大筆預算撥給地方",
+        "stt_original": "《財化法》後,中央將大筆預算撥給地方,",
+        "start_second": 288,
+        "end_second": 290,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "中央及地方政府都沒編列明年度預算",
+        "stt_original": "中央及地方政府都沒有編列明年度預算,",
+        "start_second": 286,
+        "end_second": 287,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "營養午餐恐將面臨斷炊難題",
+        "stt_original": "營養午餐恐怕將面臨斷垂的難題。",
+        "start_second": 286,
+        "end_second": 287,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "中央其實要明確的告訴我們到底",
+        "stt_original": "中央其實要很明確的告訴我們,",
+        "start_second": 287,
+        "end_second": 287,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "不要讓學生午餐使用國產食材的事開天窗",
+        "stt_original": "不要讓學生的午餐使用國產食材的事開天窗,",
+        "start_second": 287,
+        "end_second": 288,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "財劃法之後中央將大筆預算撥給地方",
+        "stt_original": "採劃法之後的中央將大筆預算撥給地方,",
+        "start_second": 288,
+        "end_second": 290,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "台北上海雙城論壇",
+        "stt_original": "台北上海雙城論壇",
+        "start_second": 293,
+        "end_second": 326,
+        "duration": 34
+    },
+    {
+        "ocr_ground_truth": "9 月23日",
+        "stt_original": "9月25、26日",
+        "start_second": 1,
+        "end_second": 9,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "的確跟兩份合作備忘錄的三方磋商有關",
+        "stt_original": "的確跟兩份合作備忘錄的三方磋商有關。",
+        "start_second": 328,
+        "end_second": 334,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "不一定是(只有)陸委會",
+        "stt_original": "不一定是陸委會",
+        "start_second": 334,
+        "end_second": 335,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "然後另外分論壇的部分",
+        "stt_original": "然後另外一單分論壇的部分",
+        "start_second": 334,
+        "end_second": 335,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "促進兩城市之間的交流以及治理而已",
+        "stt_original": "其實也是為了促進兩岸城市之間的交流以及治理而已",
+        "start_second": 341,
+        "end_second": 341,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "擬定完應該也要送到市議會來讓議員監督",
+        "stt_original": "那你訂完應該也要送到市議會來讓議員來監督",
+        "start_second": 351,
+        "end_second": 359,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "被點名技術性刁難的陸委會也出面澄清",
+        "stt_original": "現時喊卡被點名技術性刁難的陸委會也出面澄清",
+        "start_second": 369,
+        "end_second": 375,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "到底是槍械彈藥還是人為因素",
+        "stt_original": "到底是槍械彈藥還是人為因素",
+        "start_second": 410,
+        "end_second": 418,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "土兵全副武裝 頭戴鋼盔採臥射姿勢",
+        "stt_original": "士兵全副武裝頭戴鋼盔採臥射姿勢進行打靶訓練",
+        "start_second": 418,
+        "end_second": 422,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "日期",
+        "stt_original": "日前",
+        "start_second": 1,
+        "end_second": 9,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "日前一名吳小姐在社群平台",
+        "stt_original": "一名吳小姐在社群平台",
+        "start_second": 422,
+        "end_second": 440,
+        "duration": 19
+    },
+    {
+        "ocr_ground_truth": "詐騙集團提供假的超商交貨便糸統交易",
+        "stt_original": "詐騙集團提供假的超商交貨幣交系統交易",
+        "start_second": 440,
+        "end_second": 447,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "搶搭換機潮便宜賣舊機 但小心背後有詐",
+        "stt_original": "也有不少貼文強大換機潮便宜賣救機但小心背後有詐",
+        "start_second": 448,
+        "end_second": 448,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "那民眾想要說比市價低",
+        "stt_original": "民眾想要說比市價低或者是以",
+        "start_second": 448,
+        "end_second": 465,
+        "duration": 18
+    },
+    {
+        "ocr_ground_truth": "魚的體表是會有黏液的",
+        "stt_original": "這幾表是會有黏液",
+        "start_second": 507,
+        "end_second": 508,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "進行孵化盒的研究",
+        "stt_original": "進行孵化合的研究",
+        "start_second": 508,
+        "end_second": 508,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "發現合歡溪的孵化率很好",
+        "stt_original": "發現和歡溪的孵化率很好",
+        "start_second": 508,
+        "end_second": 508,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "比較上游的地方是可以跟合歡溪比較",
+        "stt_original": "4號吧以上比較上游的地方是可以跟和歡溪比較",
+        "start_second": 508,
+        "end_second": 508,
+        "duration": 1
+    }
+]

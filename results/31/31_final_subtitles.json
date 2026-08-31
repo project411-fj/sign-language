@@ -1,0 +1,632 @@
+[
+    {
+        "ocr_ground_truth": "首先來關心又傳出溺水意外",
+        "stt_original": "首先來關心,又傳出了溺水意外。",
+        "start_second": 10,
+        "end_second": 13,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "地點是在台南南化的秘境 千層岩瀑布",
+        "stt_original": "地點是在台南南化的祕境,千層岩瀑布。",
+        "start_second": 13,
+        "end_second": 29,
+        "duration": 17
+    },
+    {
+        "ocr_ground_truth": "蓋在那個框框的中間嘛",
+        "stt_original": "蓋在那個方方的中間嘛,",
+        "start_second": 153,
+        "end_second": 160,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "用它的章嘛",
+        "stt_original": "用他的章嘛,",
+        "start_second": 153,
+        "end_second": 160,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "中選會則提醒",
+        "stt_original": "中選會則提醒,",
+        "start_second": 182,
+        "end_second": 183,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "也禁止攜帶手機及攝影器材進入投票所",
+        "stt_original": "也禁止攜帶手機及攝影器材進入投票所,",
+        "start_second": 183,
+        "end_second": 186,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "更不能把選票帶出",
+        "stt_original": "更不能把選票帶出,",
+        "start_second": 183,
+        "end_second": 186,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "否則恐將面臨刑責",
+        "stt_original": "否則恐將面臨刑責。",
+        "start_second": 183,
+        "end_second": 186,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "台北報導",
+        "stt_original": "臺北報導",
+        "start_second": 494,
+        "end_second": 530,
+        "duration": 37
+    },
+    {
+        "ocr_ground_truth": "從學習上的學生學習考量",
+        "stt_original": "從學習上的學生學習考量,",
+        "start_second": 211,
+        "end_second": 216,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "就是一直到年底",
+        "stt_original": "就是一直到年底,",
+        "start_second": 226,
+        "end_second": 226,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "那其實是不恰當的",
+        "stt_original": "那其實是不恰當的。",
+        "start_second": 226,
+        "end_second": 226,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "他的聘期的部分要提前處理",
+        "stt_original": "他的聘期的部分要提前處理,",
+        "start_second": 226,
+        "end_second": 229,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "甚至有些是2/1退休的老師",
+        "stt_original": "甚至有些是二月一號退休的老師,",
+        "start_second": 226,
+        "end_second": 229,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "台北報導",
+        "stt_original": "台北報導。",
+        "start_second": 494,
+        "end_second": 530,
+        "duration": 37
+    },
+    {
+        "ocr_ground_truth": "大量臉書社團被無預警停用",
+        "stt_original": "大量臉書社團被無預警停用。",
+        "start_second": 235,
+        "end_second": 237,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "大量臉書社團被無預警停用",
+        "stt_original": "大量臉書社團遭到無預警停用。",
+        "start_second": 235,
+        "end_second": 237,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "我們的社團被臉書系統判定說",
+        "stt_original": "我們的社團被臉書的系統判定說,",
+        "start_second": 243,
+        "end_second": 266,
+        "duration": 24
+    },
+    {
+        "ocr_ground_truth": "有跟危險組織有相關",
+        "stt_original": "有跟危險組織有相關,",
+        "start_second": 243,
+        "end_second": 266,
+        "duration": 24
+    },
+    {
+        "ocr_ground_truth": "直接進行了停權",
+        "stt_original": "然後直接進行了停權。",
+        "start_second": 243,
+        "end_second": 266,
+        "duration": 24
+    },
+    {
+        "ocr_ground_truth": "算是少數的大家的共同平台",
+        "stt_original": "算是少數的大家的共同平台。",
+        "start_second": 266,
+        "end_second": 267,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "這其實都是有可能造成誤刪",
+        "stt_original": "這其實都是有可能造成誤刪的。",
+        "start_second": 267,
+        "end_second": 267,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "台北報導",
+        "stt_original": "台北報導。",
+        "start_second": 494,
+        "end_second": 530,
+        "duration": 37
+    },
+    {
+        "ocr_ground_truth": "最高可罰300萬元",
+        "stt_original": "最高可以罰300萬元,",
+        "start_second": 301,
+        "end_second": 310,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "不過衛福部食藥署提醒",
+        "stt_original": "不過貴婦不時要數提醒,",
+        "start_second": 299,
+        "end_second": 299,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "想帶回台灣有限量規定",
+        "stt_original": "想帶回台灣有限量規定,",
+        "start_second": 299,
+        "end_second": 300,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "而且只限個人自用",
+        "stt_original": "而且限個人自由,",
+        "start_second": 283,
+        "end_second": 300,
+        "duration": 18
+    },
+    {
+        "ocr_ground_truth": "限自用不得販售",
+        "stt_original": "利用不得販售,",
+        "start_second": 283,
+        "end_second": 299,
+        "duration": 17
+    },
+    {
+        "ocr_ground_truth": "如果有轉售行為",
+        "stt_original": "如果有轉售行為,",
+        "start_second": 301,
+        "end_second": 310,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "最高可罰300萬元",
+        "stt_original": "最高可開罰300萬元。",
+        "start_second": 301,
+        "end_second": 310,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "不是藥商就是不能執行藥商的業務",
+        "stt_original": "就是不能執行藥商的業務,",
+        "start_second": 311,
+        "end_second": 312,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "那會違反藥事法27條",
+        "stt_original": "那會違反藥食法27條,",
+        "start_second": 311,
+        "end_second": 312,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "此外食藥署提醒",
+        "stt_original": "食藥署提醒,",
+        "start_second": 312,
+        "end_second": 314,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "台北報導",
+        "stt_original": "台北報導。",
+        "start_second": 494,
+        "end_second": 530,
+        "duration": 37
+    },
+    {
+        "ocr_ground_truth": "後門無號誌的路口試辦",
+        "stt_original": "后门无耗制的路口试办",
+        "start_second": 346,
+        "end_second": 347,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "路口四個角落都會設置放旗處",
+        "stt_original": "路口四个角落都会设置放骑处",
+        "start_second": 347,
+        "end_second": 347,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "方便重複使用",
+        "stt_original": "方便重复使用",
+        "start_second": 347,
+        "end_second": 347,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "市府表示目前進入規劃設計階段",
+        "stt_original": "市府表示目前进入规划设计阶段",
+        "start_second": 347,
+        "end_second": 347,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "造型也在廣納意見",
+        "stt_original": "旗帜颜色 造型也在广纳意见",
+        "start_second": 347,
+        "end_second": 347,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "為了鼓勵雲縣內許多偏鄉地區民眾",
+        "stt_original": "为了鼓励云林县内许多偏乡地区民众",
+        "start_second": 370,
+        "end_second": 370,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "常因交通不便回院診斷",
+        "stt_original": "常因交通不便回院诊疗",
+        "start_second": 370,
+        "end_second": 370,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "加上許多偏鄉大眾運輸不普及",
+        "stt_original": "加上许多偏乡大众运输不普及",
+        "start_second": 376,
+        "end_second": 377,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "與獨居長輩多",
+        "stt_original": "以及独居长辈多",
+        "start_second": 376,
+        "end_second": 377,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "可透過癌症診斷交通費補助",
+        "stt_original": "可透过癌症诊断交通费补助",
+        "start_second": 377,
+        "end_second": 378,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "提高民眾早期治療的意願",
+        "stt_original": "提高民众早期治疗的意愿",
+        "start_second": 378,
+        "end_second": 378,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "2015年6月27號那天",
+        "stt_original": "2015年6月27号",
+        "start_second": 429,
+        "end_second": 430,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "現在已經可以獨立生活",
+        "stt_original": "现在已经可以独立生活",
+        "start_second": 407,
+        "end_second": 428,
+        "duration": 22
+    },
+    {
+        "ocr_ground_truth": "除了感謝曾經幫助過他的醫護人員",
+        "stt_original": "除了感谢当年救治他的医护人员",
+        "start_second": 442,
+        "end_second": 445,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "因為我還那麼年輕",
+        "stt_original": "因为我还那么年轻",
+        "start_second": 428,
+        "end_second": 428,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "那心裡面當然也會有不甘心",
+        "stt_original": "那心里面当然也会有不甘心",
+        "start_second": 428,
+        "end_second": 428,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "他是32歲的黃博煒",
+        "stt_original": "他是32岁的黄博伟",
+        "start_second": 428,
+        "end_second": 429,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "也是八仙塵爆中",
+        "stt_original": "也是八仙晨爆中",
+        "start_second": 428,
+        "end_second": 429,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "唯一截去四肢還能存活的患者",
+        "stt_original": "唯一截去四肢还能存活的患者",
+        "start_second": 428,
+        "end_second": 429,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "被醫界視為\"奇蹟",
+        "stt_original": "被医界视为奇迹",
+        "start_second": 429,
+        "end_second": 430,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "2015年6月27號那天",
+        "stt_original": "2015年6月27号那天",
+        "start_second": 429,
+        "end_second": 430,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "當時連醫療團隊都沒有把握",
+        "stt_original": "当时连医疗团队都没有把握",
+        "start_second": 430,
+        "end_second": 430,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "能將他從死神手裡搶救回來",
+        "stt_original": "能将他从死神手里抢救回来",
+        "start_second": 430,
+        "end_second": 430,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "同一個部位的皮膚取了4次(植皮)",
+        "stt_original": "从一个部位的皮肤取四次",
+        "start_second": 430,
+        "end_second": 433,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "取到後來皮膚已經取不下來了",
+        "stt_original": "取到后来皮肤已经起不下来了",
+        "start_second": 430,
+        "end_second": 433,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "因為薄到已經沒有皮可以取了",
+        "stt_original": "因为薄大已经没有皮可以取了",
+        "start_second": 433,
+        "end_second": 440,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "我們還是可以去創造很多美好的回憶",
+        "stt_original": "还是可以去创造很多美好的回忆",
+        "start_second": 440,
+        "end_second": 440,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "黃博煒將自己的心路歷程",
+        "stt_original": "黄博伟将自己的心路历程",
+        "start_second": 440,
+        "end_second": 442,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "除了感謝曾經幫助過他的醫護人員",
+        "stt_original": "除了感谢曾经帮助过他的医护人员",
+        "start_second": 442,
+        "end_second": 445,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "現在也常應邀前往公私企業單位演講",
+        "stt_original": "现在也常应邀前往公司企业单位演讲",
+        "start_second": 442,
+        "end_second": 445,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "台北報導",
+        "stt_original": "台北报导",
+        "start_second": 494,
+        "end_second": 530,
+        "duration": 37
+    },
+    {
+        "ocr_ground_truth": "(有沒有要擴大你的規劃的進度如何)",
+        "stt_original": "有没有要扩大你的规划的进度如何",
+        "start_second": 482,
+        "end_second": 490,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "列為未來十年空品管理的重點方向",
+        "stt_original": "列为未来十年空瓶管理的重点方向",
+        "start_second": 490,
+        "end_second": 494,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "討論如何實現停火與真正和平",
+        "stt_original": "双方讨论如何实现停火与真正和平",
+        "start_second": 537,
+        "end_second": 541,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "與進一步制裁俄國等問題",
+        "stt_original": "以及制裁俄国等问题",
+        "start_second": 556,
+        "end_second": 561,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "討論如何實現停火與真正和平",
+        "stt_original": "讨论如何实现停火与真正和平",
+        "start_second": 537,
+        "end_second": 541,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "澤倫斯基一改先前在白宮會晤時的軍裝造型",
+        "stt_original": "泽伦斯基一改先前在白宫会晤时的军装造型",
+        "start_second": 541,
+        "end_second": 549,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "穿上深色西裝出席次次北約盛會",
+        "stt_original": "穿上深色西装出席本次北约盛会",
+        "start_second": 541,
+        "end_second": 549,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "鳥克蘭依舊是各個盟國關注的重點",
+        "stt_original": "乌克兰依旧是各个盟国关注的重点",
+        "start_second": 549,
+        "end_second": 550,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "鳥克蘭總統府官員表示",
+        "stt_original": "会谈后乌克兰总统府官员表示",
+        "start_second": 552,
+        "end_second": 556,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "澤倫斯基對此次川澤會很滿意",
+        "stt_original": "泽伦斯基对此次川泽会很满意",
+        "start_second": 556,
+        "end_second": 561,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "川普隨後在記者會上指出",
+        "stt_original": "川普随后在记者会上指出",
+        "start_second": 561,
+        "end_second": 563,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "希望俄鳥衝突能得到解決",
+        "stt_original": "希望俄乌冲突能得到解决",
+        "start_second": 561,
+        "end_second": 563,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "還提到有可能提供更多軍事援助",
+        "stt_original": "还提到有可能提供更多军事援助",
+        "start_second": 563,
+        "end_second": 567,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "包括愛國者飛彈",
+        "stt_original": "包括爱国者飞弹",
+        "start_second": 563,
+        "end_second": 567,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "澤倫斯基除了與川普會談",
+        "stt_original": "泽伦斯基除了与川普会谈",
+        "start_second": 585,
+        "end_second": 589,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "還和北約盟國領袖會面",
+        "stt_original": "还和北约盟国领袖会面",
+        "start_second": 585,
+        "end_second": 589,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "爭取持續軍援與加入歐盟進程",
+        "stt_original": "争取持续军援与加入欧盟进程",
+        "start_second": 589,
+        "end_second": 592,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "川普也指出 蒲亭很難對付",
+        "stt_original": "川普也指出普丁很难对付",
+        "start_second": 603,
+        "end_second": 607,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "是目前最難說服終結戰爭的領導人",
+        "stt_original": "是目前最难说服终结战争的领导人",
+        "start_second": 603,
+        "end_second": 607,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "熱帶性低氣壓生成",
+        "stt_original": "又有热带性低气压生成",
+        "start_second": 620,
+        "end_second": 636,
+        "duration": 17
+    },
+    {
+        "ocr_ground_truth": "菲律賓東方海面的低氣壓",
+        "stt_original": "菲律宾东方海面",
+        "start_second": 636,
+        "end_second": 653,
+        "duration": 18
+    },
+    {
+        "ocr_ground_truth": "預估是在週末之後",
+        "stt_original": "那预估是在周末之后",
+        "start_second": 656,
+        "end_second": 656,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "菲律賓東方海面的低氣壓",
+        "stt_original": "菲律宾东方海面上",
+        "start_second": 636,
+        "end_second": 653,
+        "duration": 18
+    },
+    {
+        "ocr_ground_truth": "低氣壓有發展的機會",
+        "stt_original": "有发展的机会",
+        "start_second": 656,
+        "end_second": 666,
+        "duration": 11
+    },
+    {
+        "ocr_ground_truth": "那個時候的預報資料",
+        "stt_original": "那个时候的预报资料",
+        "start_second": 666,
+        "end_second": 667,
+        "duration": 2
+    }
+]

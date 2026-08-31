@@ -1,0 +1,1024 @@
+[
+    {
+        "ocr_ground_truth": "前民眾黨主席 柯文哲",
+        "stt_original": "終於盼到前民眾黨主席柯文哲,",
+        "start_second": 51,
+        "end_second": 68,
+        "duration": 18
+    },
+    {
+        "ocr_ground_truth": "身邊則有妻子陳佩琪",
+        "stt_original": "身邊則有妻子陳佩琪,",
+        "start_second": 54,
+        "end_second": 56,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "檢察官你們查了-年 到底查到什麼",
+        "stt_original": "檢察官,你們查了一年到底查到什麼?",
+        "start_second": 56,
+        "end_second": 68,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "什麼都沒查到",
+        "stt_original": "什麼都沒查到。",
+        "start_second": 56,
+        "end_second": 68,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "民進黨作夢都沒有想到",
+        "stt_original": "民進黨做夢都沒有想到,",
+        "start_second": 56,
+        "end_second": 68,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "獲得7千萬交保的他",
+        "stt_original": "獲得七千萬交保的他,",
+        "start_second": 68,
+        "end_second": 69,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "面對法院裁定",
+        "stt_original": "面對法院裁定,",
+        "start_second": 68,
+        "end_second": 69,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "一度表態需再深思",
+        "stt_original": "一度表態虛在神思,",
+        "start_second": 68,
+        "end_second": 69,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "批評檢察官摧毀司法信任度",
+        "stt_original": "批評檢察官摧毀司法信任度,",
+        "start_second": 69,
+        "end_second": 74,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "被羈押禁見約一年時間",
+        "stt_original": "被羈押進監約一年時間,",
+        "start_second": 74,
+        "end_second": 78,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "柯文哲講起看守所生活",
+        "stt_original": "柯文哲講起看守所生活,",
+        "start_second": 74,
+        "end_second": 78,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "自嘲是欽差要犯",
+        "stt_original": "自嘲是青菜要飯,",
+        "start_second": 74,
+        "end_second": 78,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "有保健收容人的舍房空間",
+        "stt_original": "北京則回應有保健收容人的社防空間,",
+        "start_second": 78,
+        "end_second": 78,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "光線等",
+        "stt_original": "光線等,",
+        "start_second": 78,
+        "end_second": 78,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "只是對於禁見被告",
+        "stt_original": "只是對於進鑒被告,",
+        "start_second": 78,
+        "end_second": 78,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "會採取必要區隔措施",
+        "stt_original": "會採取必要區隔措施。",
+        "start_second": 78,
+        "end_second": 78,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "台北地院排定9號 審理京華城等案",
+        "stt_original": "排定9號審理金華城等案,",
+        "start_second": 79,
+        "end_second": 79,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "柯文哲8號晚間7點左右",
+        "stt_original": "柯文哲昨天晚上7點左右,",
+        "start_second": 94,
+        "end_second": 95,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "支持者高喊\"阿北加油\"等口號",
+        "stt_original": "支持者高喊阿伯加油等口號,",
+        "start_second": 94,
+        "end_second": 95,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "柯文哲8號晚間7點左右",
+        "stt_original": "柯文哲8號晚間7點左右,",
+        "start_second": 94,
+        "end_second": 95,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "走出新竹老家大門",
+        "stt_original": "走出新竹老家大門,",
+        "start_second": 94,
+        "end_second": 95,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "讀報時間",
+        "stt_original": "讀報時間,",
+        "start_second": 96,
+        "end_second": 162,
+        "duration": 67
+    },
+    {
+        "ocr_ground_truth": "際半導體展明天登場",
+        "stt_original": "國際半導體展明天登場,",
+        "start_second": 162,
+        "end_second": 176,
+        "duration": 15
+    },
+    {
+        "ocr_ground_truth": "台股昨天開高震盪",
+        "stt_original": "台股昨天開高震盪,",
+        "start_second": 176,
+        "end_second": 180,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "內近期將舉辦國際半導體展",
+        "stt_original": "國內近期將舉辦國際半導體展,",
+        "start_second": 185,
+        "end_second": 189,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "台北航太暨國防展等",
+        "stt_original": "台北航太暨國防展等,",
+        "start_second": 185,
+        "end_second": 189,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "也是市場觀察資金動能的重要指標",
+        "stt_original": "也是市場觀察資金動能的重要指標。",
+        "start_second": 189,
+        "end_second": 190,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "針對美國媒體報導",
+        "stt_original": "針對美國媒體報導,",
+        "start_second": 190,
+        "end_second": 194,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "或者你能不能掌握到",
+        "stt_original": "或者你能不能掌握到有好國家,",
+        "start_second": 194,
+        "end_second": 195,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "也要追求穩定及永續",
+        "stt_original": "也要追求穩定及永續,",
+        "start_second": 195,
+        "end_second": 195,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "透過自主研發與國際合作並行",
+        "stt_original": "透過自主研發與國際合作並行,",
+        "start_second": 195,
+        "end_second": 196,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "才能確保供應鏈的韌性",
+        "stt_original": "才能確保供應鏈的韌性。",
+        "start_second": 195,
+        "end_second": 196,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "近期有民眾反映",
+        "stt_original": "近期有民眾反映,",
+        "start_second": 229,
+        "end_second": 234,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "出售原有房屋時間拉長",
+        "stt_original": "出售原有房屋時間拉長,",
+        "start_second": 229,
+        "end_second": 234,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "央行宣布調整 實質換屋自住者",
+        "stt_original": "央行宣布調整實質換屋自住者,",
+        "start_second": 234,
+        "end_second": 236,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "出售原有房屋時間拉長",
+        "stt_original": "出售原有房屋的時間,",
+        "start_second": 229,
+        "end_second": 234,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "因為央行已經喪失了他的獨立性",
+        "stt_original": "因為央行已經喪失它的獨立性,",
+        "start_second": 236,
+        "end_second": 241,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "他為了要解決的是",
+        "stt_original": "它為了要解決的是,",
+        "start_second": 236,
+        "end_second": 241,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "就是建商給政府的壓力",
+        "stt_original": "就是建商給政府的壓力,",
+        "start_second": 241,
+        "end_second": 242,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "當然就是他們守不住啦",
+        "stt_original": "當然就是他們守不住啦。",
+        "start_second": 241,
+        "end_second": 242,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "未來銀行辦理新青安貸款",
+        "stt_original": "未來銀行辦理新清安貸款,",
+        "start_second": 242,
+        "end_second": 243,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "不再受到30%上限的約束",
+        "stt_original": "不再受到30%上限的約束,",
+        "start_second": 242,
+        "end_second": 243,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "個人雖然會覺得誘因變大",
+        "stt_original": "個人雖然會覺得又應變大,",
+        "start_second": 243,
+        "end_second": 243,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "但是考量到一些現實面的因素",
+        "stt_original": "但是考量到些現實面的因素,",
+        "start_second": 243,
+        "end_second": 243,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "專家分析",
+        "stt_original": "專家分析,",
+        "start_second": 243,
+        "end_second": 244,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "行政院放寬不動產放款天條",
+        "stt_original": "行政院放寬不動產放款天條,",
+        "start_second": 243,
+        "end_second": 244,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "加上央行也宣布延長",
+        "stt_original": "加上央行也宣布延長,",
+        "start_second": 244,
+        "end_second": 244,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "實質換屋自住的出售原有房屋期限",
+        "stt_original": "實質換屋自住的出售原有房屋期限,",
+        "start_second": 244,
+        "end_second": 244,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "主計總處公布",
+        "stt_original": "主席總處統計,",
+        "start_second": 273,
+        "end_second": 273,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "勞保潛藏負債",
+        "stt_original": "勞保錢償負債,",
+        "start_second": 244,
+        "end_second": 273,
+        "duration": 30
+    },
+    {
+        "ocr_ground_truth": "專家分析",
+        "stt_original": "專家分析,",
+        "start_second": 243,
+        "end_second": 244,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "勞保破產疑慮加大",
+        "stt_original": "勞保破產疑慮加大,",
+        "start_second": 273,
+        "end_second": 273,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "主計總處公布",
+        "stt_original": "主席總處公布,",
+        "start_second": 273,
+        "end_second": 347,
+        "duration": 75
+    },
+    {
+        "ocr_ground_truth": "115年度中央政府總預算",
+        "stt_original": "115年度中央政府總預算,",
+        "start_second": 273,
+        "end_second": 273,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "統計指出",
+        "stt_original": "通緝指出,",
+        "start_second": 273,
+        "end_second": 273,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "勞保潛藏負債",
+        "stt_original": "勞保錢償債務,",
+        "start_second": 244,
+        "end_second": 273,
+        "duration": 30
+    },
+    {
+        "ocr_ground_truth": "勞保潛藏負債",
+        "stt_original": "勞保錢償負債暴增,",
+        "start_second": 244,
+        "end_second": 264,
+        "duration": 21
+    },
+    {
+        "ocr_ground_truth": "專家分析",
+        "stt_original": "專家分析,",
+        "start_second": 243,
+        "end_second": 244,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "專家分析主要和人口結構高齡化",
+        "stt_original": "主要和人口結構高齡化,",
+        "start_second": 273,
+        "end_second": 274,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "少子化有最大關聯",
+        "stt_original": "少子化有最大關聯,",
+        "start_second": 273,
+        "end_second": 274,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "整體支出成長速度遠大於收入",
+        "stt_original": "整體支出成長速度遠大於收入。",
+        "start_second": 274,
+        "end_second": 274,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "專家分析",
+        "stt_original": "專家認為,",
+        "start_second": 243,
+        "end_second": 244,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "難逃修法改革",
+        "stt_original": "難逃修法改革,",
+        "start_second": 274,
+        "end_second": 275,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "不過同時也需要\"主權基金",
+        "stt_original": "不過同時也需要主權基金,",
+        "start_second": 275,
+        "end_second": 275,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "支應需要的資金",
+        "stt_original": "指引需要的資金,",
+        "start_second": 275,
+        "end_second": 275,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "發現青少年使用鎮靜安眠藥的比率",
+        "stt_original": "青少年使用鎮靜安眠藥的比例,",
+        "start_second": 308,
+        "end_second": 311,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "四年內從0.42%上升到0.80% 幾乎鄱倍",
+        "stt_original": "4年內從0.42%上升到0.80%,",
+        "start_second": 284,
+        "end_second": 288,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "可能會陷入藥物依賴",
+        "stt_original": "可能會陷入藥物依賴。",
+        "start_second": 293,
+        "end_second": 306,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "但在成長階段服用",
+        "stt_original": "但是在成長階段使用,",
+        "start_second": 315,
+        "end_second": 317,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "夜深了 卻沒有辦法闔眼",
+        "stt_original": "夜深了卻沒有辦法合眼,",
+        "start_second": 308,
+        "end_second": 308,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "這是許多飽受失眠之苦的患者心聲",
+        "stt_original": "這是許多飽受失眠之苦的患者心聲。",
+        "start_second": 308,
+        "end_second": 308,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "這是許多飽受失眠之苦的患者心聲",
+        "stt_original": "這是許多飽受失眠之苦的患者心聲。",
+        "start_second": 308,
+        "end_second": 308,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "衛院分析2014與2018年數據",
+        "stt_original": "國衛院分析2014與2018年數據,",
+        "start_second": 308,
+        "end_second": 311,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "發現青少年使用鎮靜安眠藥的比率",
+        "stt_original": "少年使用正經安眠藥的比率,",
+        "start_second": 308,
+        "end_second": 311,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "衛院副院長",
+        "stt_original": "國衛院副院長,",
+        "start_second": 311,
+        "end_second": 314,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "神經及醫學中心主任陳為堅認為",
+        "stt_original": "同時也是神經及醫學中心主任陳維堅認為,",
+        "start_second": 311,
+        "end_second": 314,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "他的生活型態改變有關",
+        "stt_original": "可能跟他的生活形態改變有關。",
+        "start_second": 314,
+        "end_second": 315,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "他的生活型態改變有關",
+        "stt_original": "可能跟他的生活形態改變有關。",
+        "start_second": 314,
+        "end_second": 315,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "值得注意的是",
+        "stt_original": "值得注意的是,",
+        "start_second": 315,
+        "end_second": 315,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "青少年的非醫療使用率持續上升",
+        "stt_original": "青少年的非醫療使用率持續上升,",
+        "start_second": 315,
+        "end_second": 315,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "睡眠不足",
+        "stt_original": "睡眠不足,",
+        "start_second": 315,
+        "end_second": 315,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "陷入對安眠藥的依賴",
+        "stt_original": "陷入對安眠藥的依賴。",
+        "start_second": 315,
+        "end_second": 317,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "但在成長階段服用",
+        "stt_original": "但在成長階段服用,",
+        "start_second": 315,
+        "end_second": 317,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "關於鎮靜安眠藥的非醫療使用",
+        "stt_original": "正經安眠藥的非醫藥使用,",
+        "start_second": 288,
+        "end_second": 288,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "這樣的情況並不侷限在青少年",
+        "stt_original": "這樣的情況並不局限在青少年、",
+        "start_second": 317,
+        "end_second": 317,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "專家陳為堅指出",
+        "stt_original": "專家陳維堅指出,",
+        "start_second": 317,
+        "end_second": 320,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "從青少年到女性的藥物依賴",
+        "stt_original": "從青少年到女性的藥物依賴,",
+        "start_second": 320,
+        "end_second": 321,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "都反映出生活壓力下的隱憂",
+        "stt_original": "都反映出生活壓力下的隱憂,",
+        "start_second": 320,
+        "end_second": 321,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "社會更需要完善的心理支持",
+        "stt_original": "社會更需要完善的心理支持",
+        "start_second": 321,
+        "end_second": 321,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "和醫療資源",
+        "stt_original": "和醫療資源、",
+        "start_second": 321,
+        "end_second": 321,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "衛教 才能夠降低濫用風險",
+        "stt_original": "衛教才能夠降低濫用風險。",
+        "start_second": 321,
+        "end_second": 321,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "除了小吃 南部知名連鎖速食店",
+        "stt_original": "南部知名連鎖速食店",
+        "start_second": 347,
+        "end_second": 348,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "主計總處公布",
+        "stt_original": "根據主計總署公佈,",
+        "start_second": 273,
+        "end_second": 347,
+        "duration": 75
+    },
+    {
+        "ocr_ground_truth": "部份品項微幅調漲5元到10元",
+        "stt_original": "為幅調漲5元到10元。",
+        "start_second": 347,
+        "end_second": 347,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "除了小吃 南部知名連鎖速食店",
+        "stt_original": "南部知名連鎖素食店",
+        "start_second": 347,
+        "end_second": 348,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "丹丹漢堡也要在12日漲價",
+        "stt_original": "蛋蛋漢堡也要在12日漲價。",
+        "start_second": 347,
+        "end_second": 348,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "店家表示受到原物料",
+        "stt_original": "店家表示受到原物料人工",
+        "start_second": 348,
+        "end_second": 348,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "人工與營運成本逐年上升的影響",
+        "stt_original": "與營運成本逐年上升的影響。",
+        "start_second": 348,
+        "end_second": 348,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "它數據上看起來還不錯",
+        "stt_original": "數據上看起來還不錯,",
+        "start_second": 348,
+        "end_second": 356,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "各種商品服務加權平均的結果",
+        "stt_original": "各種商品服務加權平均的結果,",
+        "start_second": 356,
+        "end_second": 357,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "這波明顯原物料漲幅",
+        "stt_original": "這波明顯原物料漲幅",
+        "start_second": 356,
+        "end_second": 357,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "一支漂亮的安打",
+        "stt_original": "一支漂亮的安打",
+        "start_second": 377,
+        "end_second": 378,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "成功站上一壘",
+        "stt_original": "成功戰上一壘",
+        "start_second": 377,
+        "end_second": 378,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "戰績2勝1負的我國代表隊",
+        "stt_original": "戰績2勝1負的我國代表隊",
+        "start_second": 377,
+        "end_second": 378,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "雖然9號還會對上德國隊",
+        "stt_original": "虽然九号还会对上德国队",
+        "start_second": 379,
+        "end_second": 379,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "而上屆賽事",
+        "stt_original": "而上届赛事",
+        "start_second": 381,
+        "end_second": 381,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "日本奪冠",
+        "stt_original": "日本夺冠",
+        "start_second": 381,
+        "end_second": 381,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "我國亞軍",
+        "stt_original": "我国亚军",
+        "start_second": 381,
+        "end_second": 381,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "南韓季軍",
+        "stt_original": "南韩季军",
+        "start_second": 381,
+        "end_second": 381,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "美國只有殿軍",
+        "stt_original": "美国只有点军",
+        "start_second": 381,
+        "end_second": 381,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "張梓嘉 綜合報導",
+        "stt_original": "陈嘉欣张子佳综合报道",
+        "start_second": 381,
+        "end_second": 382,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "根據趕往現場的醫護人員",
+        "stt_original": "根据赶往现场的医护人员",
+        "start_second": 403,
+        "end_second": 403,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "現場到處都是碎玻璃",
+        "stt_original": "现场到处都是碎玻璃",
+        "start_second": 403,
+        "end_second": 403,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "傷者倒臥在公車站附近的馬路上",
+        "stt_original": "伤者倒卧在公车站附近的马路上",
+        "start_second": 403,
+        "end_second": 403,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "跟人行道昏迷不醒",
+        "stt_original": "跟人行道昏迷不醒",
+        "start_second": 403,
+        "end_second": 403,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "來自約旦河西岸",
+        "stt_original": "来自约旦河西岸",
+        "start_second": 403,
+        "end_second": 404,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "沒有前科",
+        "stt_original": "没有前科",
+        "start_second": 403,
+        "end_second": 404,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "8號當晚",
+        "stt_original": "8号当晚",
+        "start_second": 417,
+        "end_second": 417,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "巴勒斯坦衛生部表示",
+        "stt_original": "巴勒斯坦卫生部表示",
+        "start_second": 417,
+        "end_second": 417,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "有2名14歲巴勒斯坦少年",
+        "stt_original": "有两名14岁巴勒斯坦少年",
+        "start_second": 417,
+        "end_second": 417,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "在約旦河西岸城市\"哲寧",
+        "stt_original": "在约旦河西岸城市哲宁",
+        "start_second": 417,
+        "end_second": 418,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "遭以色列軍隊槍殺",
+        "stt_original": "遭以色列军队枪杀",
+        "start_second": 417,
+        "end_second": 418,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "從那時候開始",
+        "stt_original": "从那时候开始",
+        "start_second": 421,
+        "end_second": 422,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "以色列安全部隊",
+        "stt_original": "以色列安全部队",
+        "start_second": 421,
+        "end_second": 422,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "梵蒂岡羅馬天主教教宗良十四世",
+        "stt_original": "梵蒂冈罗马天主教教宗",
+        "start_second": 448,
+        "end_second": 452,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "良十四世",
+        "stt_original": "梁十四世",
+        "start_second": 455,
+        "end_second": 458,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "梵蒂岡羅馬天主教教宗良十四世",
+        "stt_original": "梵蒂冈罗马天主教教宗",
+        "start_second": 448,
+        "end_second": 452,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "小時候隨著父母移居到米蘭",
+        "stt_original": "小时候随着父母移居到米兰",
+        "start_second": 452,
+        "end_second": 455,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "2020年",
+        "stt_original": "2020年",
+        "start_second": 244,
+        "end_second": 273,
+        "duration": 30
+    },
+    {
+        "ocr_ground_truth": "罹患罕見胰臟病的7歲男孩",
+        "stt_original": "罹患罹患一藏病的七岁男孩",
+        "start_second": 458,
+        "end_second": 458,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "在阿庫提斯墓前祈禱之後康復",
+        "stt_original": "由他的母亲在阿库提斯墓前祈祷之后康复",
+        "start_second": 458,
+        "end_second": 459,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "這2個奇蹟都獲得教廷的認可",
+        "stt_original": "这两个奇迹都获得教廷的认可",
+        "start_second": 459,
+        "end_second": 460,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "而另一名封聖的義大利青年\"弗拉薩蒂\"",
+        "stt_original": "而另一名丰盛的意大利青年",
+        "start_second": 460,
+        "end_second": 465,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "以熱心幫助窮人跟弱勢族群聞名",
+        "stt_original": "以热心帮助穷人跟弱势族群文明",
+        "start_second": 460,
+        "end_second": 465,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "因為小兒麻痺症去世",
+        "stt_original": "却在24岁因为小儿麻痹症去世",
+        "start_second": 465,
+        "end_second": 468,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "除了封聖儀式",
+        "stt_original": "除了丰盛仪式",
+        "start_second": 468,
+        "end_second": 468,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "舉行朝聖活動",
+        "stt_original": "举行朝圣活动",
+        "start_second": 468,
+        "end_second": 469,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "多元化教徒朝聖團的重要象徵",
+        "stt_original": "成了梵蒂冈第一个多元化教徒朝圣团的重要象征",
+        "start_second": 468,
+        "end_second": 469,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "這次活動 是由義大利協會\"約拿單之帳\"主辦",
+        "stt_original": "这次活动是由意大利协会约拿丹之正主办",
+        "start_second": 469,
+        "end_second": 470,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "是天主教會禧年活動之-",
+        "stt_original": "是天主教会新年活动之一",
+        "start_second": 469,
+        "end_second": 470,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "期望能推動信徒之間擁有更大的包容性",
+        "stt_original": "希望能够推动信徒之间拥有更大的包容性",
+        "start_second": 470,
+        "end_second": 471,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "而參與活動的信徒們來自約20國家",
+        "stt_original": "而参与活动的信徒们来自于约二十个国家",
+        "start_second": 470,
+        "end_second": 471,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "沒有安排與教宗良十四世會面",
+        "stt_original": "虽然活动中没有安排与教宗梁十四世会面",
+        "start_second": 471,
+        "end_second": 472,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "讓他們感受到更多能被接納的重要訊號",
+        "stt_original": "这次的活动让他们感受到更多能被接纳的重要讯号",
+        "start_second": 472,
+        "end_second": 473,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "但也表示 不會推翮前教宗方濟各",
+        "stt_original": "但也表示不会推翻前教宗房济各",
+        "start_second": 474,
+        "end_second": 476,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "在2023年允許神父為同性伴侶祝福的決策",
+        "stt_original": "在二零二三年允许神父为同性伴侣祝福的决策",
+        "start_second": 474,
+        "end_second": 476,
+        "duration": 3
+    }
+]

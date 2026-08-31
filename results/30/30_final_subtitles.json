@@ -1,0 +1,513 @@
+[
+    {
+        "ocr_ground_truth": "是否會直接介入攻擊伊朗",
+        "stt_original": "是否會直接介入攻擊伊朗,",
+        "start_second": 27,
+        "end_second": 31,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "期間美國以核議題對伊朗軟硬兼施",
+        "stt_original": "期間美國以核議題對伊朗軟硬兼施,",
+        "start_second": 31,
+        "end_second": 34,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "對以色列軍火轉移及防禦部署跟情報分享",
+        "stt_original": "對以色列軍火轉移及防禦部署跟情報分享,",
+        "start_second": 31,
+        "end_second": 34,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "享",
+        "stt_original": "讲",
+        "start_second": 556,
+        "end_second": 558,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "總統府已召開國安高層會議",
+        "stt_original": "总统府召开国安高层会议",
+        "start_second": 73,
+        "end_second": 73,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "外交部長 林佳龍",
+        "stt_original": "外交部长林佳龙证实",
+        "start_second": 79,
+        "end_second": 124,
+        "duration": 46
+    },
+    {
+        "ocr_ground_truth": "不過已陸續協助有需要的台人",
+        "stt_original": "不过已经陆续协助有需要的",
+        "start_second": 91,
+        "end_second": 96,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "外交部長 林佳龍",
+        "stt_original": "对此外交部长林佳龙透露",
+        "start_second": 79,
+        "end_second": 124,
+        "duration": 46
+    },
+    {
+        "ocr_ground_truth": "總統府已召開國安高層會議",
+        "stt_original": "总统府已召开国安高层会议",
+        "start_second": 73,
+        "end_second": 73,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "擬定相關因應措施",
+        "stt_original": "拟定相关因应措施",
+        "start_second": 73,
+        "end_second": 73,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "油價跟物價可能受到戰爭的影響",
+        "stt_original": "油价跟物价可能受到战争的影响",
+        "start_second": 73,
+        "end_second": 79,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "那政府都有密切地關注",
+        "stt_original": "那政府都有密切的关注",
+        "start_second": 73,
+        "end_second": 79,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "也針對這個做出各種應變的計畫",
+        "stt_original": "也针对这个做出各种应变的计划",
+        "start_second": 79,
+        "end_second": 86,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "政府緊盯國際情勢",
+        "stt_original": "政府紧盯国际情势",
+        "start_second": 86,
+        "end_second": 90,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "各個部會必須要共同提高警覺",
+        "stt_original": "各个部会必须要共同提高警觉",
+        "start_second": 86,
+        "end_second": 90,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "必要的話要適時的採取各項措施",
+        "stt_original": "必要的话要适时的采取各项措施",
+        "start_second": 90,
+        "end_second": 91,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "我駐以色列代表處以及代表官邸",
+        "stt_original": "指出我驻以色列代表处及代表官邸",
+        "start_second": 58,
+        "end_second": 73,
+        "duration": 16
+    },
+    {
+        "ocr_ground_truth": "不過已陸續協助有需要的台人",
+        "stt_original": "不过以陆续协助有需要的台人",
+        "start_second": 91,
+        "end_second": 96,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "離開以色列與伊朗",
+        "stt_original": "离开以色列与伊朗",
+        "start_second": 96,
+        "end_second": 100,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "現在有3位他們已經從陸路到土耳其去了",
+        "stt_original": "他们已经从陆路到土耳其去了",
+        "start_second": 104,
+        "end_second": 111,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "他們(國人)是學生",
+        "stt_original": "他们是学生",
+        "start_second": 111,
+        "end_second": 113,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "所以他們彼此因為熟識",
+        "stt_original": "所以他们彼此因为熟识",
+        "start_second": 113,
+        "end_second": 124,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "影響到許多要赴美留學的台灣學生",
+        "stt_original": "影响到许多要赴美留学的台湾学生",
+        "start_second": 124,
+        "end_second": 127,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "綜旨報導",
+        "stt_original": "综合报道",
+        "start_second": 219,
+        "end_second": 245,
+        "duration": 27
+    },
+    {
+        "ocr_ground_truth": "廠商允支付賠償金",
+        "stt_original": "厂商也同意支付赔偿金",
+        "start_second": 245,
+        "end_second": 251,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "所以呢 市場在擔心說",
+        "stt_original": "所以呢市场在担心说有第八波",
+        "start_second": 284,
+        "end_second": 284,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "但市場關注新台幣從這週一開始",
+        "stt_original": "但市场关注新台币从这周一开始收盘价",
+        "start_second": 286,
+        "end_second": 288,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "引起出口商憂慮新台幣升值帶來的衝擊",
+        "stt_original": "引起出口商忧虑新台币升值带来的冲击",
+        "start_second": 288,
+        "end_second": 289,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "哀號遍野他只是講到一面而已",
+        "stt_original": "他只是讲到一面而已",
+        "start_second": 289,
+        "end_second": 298,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "進口也是可以抵銷(出口)的啦",
+        "stt_original": "进口也是可以抵消的",
+        "start_second": 298,
+        "end_second": 299,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "新台幣的利弊可互相可部分的互抵",
+        "stt_original": "新台币利率可互相 可部分的互抵",
+        "start_second": 298,
+        "end_second": 299,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "而並不是單方面的不利影響",
+        "stt_original": "并不是单方面的不利影响",
+        "start_second": 299,
+        "end_second": 301,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "不過央行總裁楊金龍認為要從長期來看",
+        "stt_original": "不过央行总裁杨金龙认为要从长期来看",
+        "start_second": 301,
+        "end_second": 302,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "楊金龍指出穩定匯市是央行的職責",
+        "stt_original": "杨金龙指出稳定汇市是央行的职责",
+        "start_second": 323,
+        "end_second": 323,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "希望出口廠商包含外資及媒體",
+        "stt_original": "希望出口厂商包含外资及媒体能一起协助",
+        "start_second": 323,
+        "end_second": 323,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "公視",
+        "stt_original": "公示",
+        "start_second": 1,
+        "end_second": 556,
+        "duration": 556
+    },
+    {
+        "ocr_ground_truth": "網購族要注意了",
+        "stt_original": "提醒网购族要注意了",
+        "start_second": 327,
+        "end_second": 329,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "易利委\"發布重要通知",
+        "stt_original": "Easyway 益利委发布了重要通知",
+        "start_second": 329,
+        "end_second": 334,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "有鑑於不法集團冒名包裹問題嚴重",
+        "stt_original": "有鉴于不法集团冒名包裹问题严重",
+        "start_second": 334,
+        "end_second": 336,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "就請關貿公司要去評估一下",
+        "stt_original": "请官方公司要去评估一下封锁",
+        "start_second": 352,
+        "end_second": 352,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "主要是因為冒名包裹問題嚴重",
+        "stt_original": "主管机关解释主要是因为冒名包裹问题严重",
+        "start_second": 352,
+        "end_second": 352,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "海關曾查獲多起違禁物品進口",
+        "stt_original": "海关曾查获多起违禁物品进口或申报不服品",
+        "start_second": 352,
+        "end_second": 353,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "專家則建議如果是長期旅居海外",
+        "stt_original": "专家则建议如果是长期旅居海外",
+        "start_second": 366,
+        "end_second": 367,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "請親友在國內擔任報關人",
+        "stt_original": "请亲友在国内担任报关人",
+        "start_second": 366,
+        "end_second": 367,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "或是改以紙本申報都可解決",
+        "stt_original": "或是该以纸本申报都可解决",
+        "start_second": 367,
+        "end_second": 367,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "短期出國民眾則等回國後再申報最簡便",
+        "stt_original": "短期民众出国则等回国后再申报最简便",
+        "start_second": 367,
+        "end_second": 367,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "有運動習慣",
+        "stt_original": "有运动习惯",
+        "start_second": 397,
+        "end_second": 398,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "16歲的郭同學和朋友一起到運動中心重訓",
+        "stt_original": "十六岁的郭同学和朋友一起到运动中心重训",
+        "start_second": 397,
+        "end_second": 398,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "就會去扣到你的動滋券",
+        "stt_original": "就可以去 就会去扣到你的动资券",
+        "start_second": 399,
+        "end_second": 400,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "此外大學暑假辦理運動營隊也可以抵用",
+        "stt_original": "大学暑假办理运动营队也能抵用",
+        "start_second": 390,
+        "end_second": 397,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "因為抵用它非得一定要開立發票",
+        "stt_original": "因为抵用他非得一定要开立发票",
+        "start_second": 400,
+        "end_second": 400,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "可能就是有些顧慮",
+        "stt_original": "可能就是有一些顾虑",
+        "start_second": 400,
+        "end_second": 400,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "也都沒有參與進來",
+        "stt_original": "也都没有参与进来",
+        "start_second": 400,
+        "end_second": 400,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "希望藉由擴大適用",
+        "stt_original": "希望藉由扩大",
+        "start_second": 400,
+        "end_second": 401,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "與跨域跨部會合作的方案來提升",
+        "stt_original": "适用与跨域跨部会合作的方案来提升",
+        "start_second": 400,
+        "end_second": 401,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "澎湖七美海域的外來種棘冠海星",
+        "stt_original": "澎湖青梅海域的外来种 极冠海星",
+        "start_second": 401,
+        "end_second": 416,
+        "duration": 16
+    },
+    {
+        "ocr_ground_truth": "恐怕會影響當地的珊瑚生態",
+        "stt_original": "恐怕会影响到当地的珊瑚生态",
+        "start_second": 416,
+        "end_second": 424,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "田納西州禁止未成年跨性別者",
+        "stt_original": "支持田纳西州禁止未成年跨性别者",
+        "start_second": 453,
+        "end_second": 462,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "引發全國關注",
+        "stt_original": "引发全国关注",
+        "start_second": 462,
+        "end_second": 467,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "這形同為其他州的禁令也開了保護傘",
+        "stt_original": "这形同为其他州的禁令也开了保护伞",
+        "start_second": 467,
+        "end_second": 471,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "讓跨性別族群非常失望",
+        "stt_original": "让跨性别族群非常失望",
+        "start_second": 471,
+        "end_second": 472,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "本案是由3名田納西州跨性別青少年",
+        "stt_original": "本案是由三名田纳西州跨性别青少年",
+        "start_second": 473,
+        "end_second": 476,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "與家人和醫師提起",
+        "stt_original": "与家人和医师所提起",
+        "start_second": 473,
+        "end_second": 476,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "指控禁令違反了美國憲法的平等保護條款",
+        "stt_original": "指控禁令违反了美国宪法的平等保护条款",
+        "start_second": 476,
+        "end_second": 486,
+        "duration": 11
+    },
+    {
+        "ocr_ground_truth": "最高法院的表決反映出保守派的絕對優勢",
+        "stt_original": "最高法院的表决反映出保守派的绝对优势",
+        "start_second": 476,
+        "end_second": 486,
+        "duration": 11
+    },
+    {
+        "ocr_ground_truth": "主要考量的是年齡與醫療用途",
+        "stt_original": "主要考量是年龄与医疗的用途",
+        "start_second": 486,
+        "end_second": 489,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "3位自由派大法官則認為",
+        "stt_original": "三位自由派大法官则认为",
+        "start_second": 489,
+        "end_second": 495,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "包括將跨性別者踢出軍隊",
+        "stt_original": "包括将跨性别者踢出军队",
+        "start_second": 495,
+        "end_second": 497,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "將性別定義為男性跟女性兩種",
+        "stt_original": "将性别定义为男性跟女性两种",
+        "start_second": 495,
+        "end_second": 497,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "原本對外開放的活動將暫時停止",
+        "stt_original": "原本都在开放的活动将会暂时停止",
+        "start_second": 507,
+        "end_second": 514,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "任內改名為現在的青瓦台",
+        "stt_original": "尹普善任内改名为现在的青瓦台",
+        "start_second": 514,
+        "end_second": 515,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "最後到接待外國元首的迎賓館",
+        "stt_original": "最后到接待外国元首的迎宾馆",
+        "start_second": 515,
+        "end_second": 518,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "遭憲法法庭裁定違憲",
+        "stt_original": "遭到宪法法庭裁定违宪",
+        "start_second": 528,
+        "end_second": 528,
+        "duration": 1
+    }
+]

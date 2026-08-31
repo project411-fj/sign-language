@@ -1,0 +1,464 @@
+[
+    {
+        "ocr_ground_truth": "沒辦法擋得下來 現階段一直在搶修",
+        "stt_original": "沒辦法擋得下來,現階段一直在調修。",
+        "start_second": 48,
+        "end_second": 48,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "今天週一也是連假結束日",
+        "stt_original": "今天周一也是廉價結束日",
+        "start_second": 58,
+        "end_second": 59,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "由於可能會有大量志工回程返家",
+        "stt_original": "由於可能會有大量職工回城返家",
+        "start_second": 58,
+        "end_second": 59,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "趁著教師節連假",
+        "stt_original": "趁著教師節廉價",
+        "start_second": 60,
+        "end_second": 80,
+        "duration": 21
+    },
+    {
+        "ocr_ground_truth": "總統賴清德下令增派國軍",
+        "stt_original": "總統萊清德下令增派國軍",
+        "start_second": 80,
+        "end_second": 91,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "光復鄉的敦厚路災情嚴重",
+        "stt_original": "光復鄉的敦厚路災情嚴重",
+        "start_second": 91,
+        "end_second": 91,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "別的地方都差不多了",
+        "stt_original": "別的地方都差不多了",
+        "start_second": 91,
+        "end_second": 91,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "我們這邊到現在已經第4天了",
+        "stt_original": "我們這邊到現在已經第四天了",
+        "start_second": 91,
+        "end_second": 91,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "問題是我們連代步的工具都沒有",
+        "stt_original": "問題是我們連代步的那個工具都沒有",
+        "start_second": 91,
+        "end_second": 94,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "我們現在有幾個部落反映就是",
+        "stt_original": "我們現在有幾個部落反應就是",
+        "start_second": 94,
+        "end_second": 95,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "我們協助的志工有點偏少",
+        "stt_original": "協助的志工有點偏少",
+        "start_second": 94,
+        "end_second": 95,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "中央緊急開設分配站調度",
+        "stt_original": "中央緊急開設分配佔調度",
+        "start_second": 95,
+        "end_second": 95,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "但原民會坦言",
+        "stt_original": "但原民會坦言",
+        "start_second": 95,
+        "end_second": 95,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "偏遠災區的人力投入 相對不足",
+        "stt_original": "偏遠災區的人力投入相對不足",
+        "start_second": 95,
+        "end_second": 95,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "一直不斷地鏟土所造成的扭傷",
+        "stt_original": "一直不斷的殘土之後造成的扭傷",
+        "start_second": 96,
+        "end_second": 99,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "因為天氣太熱 有一些熱傷害",
+        "stt_original": "大部分都是因為天氣太熱了有一些熱傷害",
+        "start_second": 99,
+        "end_second": 99,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "但連假已接近尾聲",
+        "stt_original": "但連家已接近尾聲",
+        "start_second": 99,
+        "end_second": 99,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "到明天(9/29)才會離開",
+        "stt_original": "到明天才會離開",
+        "start_second": 99,
+        "end_second": 101,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "(就整個連假都在這邊) 對 對 對",
+        "stt_original": "就整個連下都在這邊",
+        "start_second": 99,
+        "end_second": 101,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "花蓮光復鄉救災行動持續",
+        "stt_original": "花蓮光復救災行動持續",
+        "start_second": 129,
+        "end_second": 130,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "由於災區現況充滿積水及淤泥",
+        "stt_original": "而由於災區現況充滿積水以及淤泥",
+        "start_second": 116,
+        "end_second": 128,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "花蓮光復鄉救災行動持續",
+        "stt_original": "花蓮光復鄉救災行動持續",
+        "start_second": 129,
+        "end_second": 130,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "28日上午高雄市消防局特搜隊接獲求救",
+        "stt_original": "28日上午高雄市消防局特搜隊接獲求救",
+        "start_second": 129,
+        "end_second": 130,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "也協調國軍花蓮總醫院開設臨時醫療站",
+        "stt_original": "國軍第二作戰區也協調國軍花蓮總醫院開設臨時醫療站",
+        "start_second": 135,
+        "end_second": 135,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "那些廚餘之類的東西",
+        "stt_original": "那些廚餘之類的東西會導致",
+        "start_second": 135,
+        "end_second": 136,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "軍也出動大約80名化學兵支援",
+        "stt_original": "國軍也出動大約80名化學兵支援",
+        "start_second": 136,
+        "end_second": 139,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "務必以手套避免皮膚接觸淤泥",
+        "stt_original": "醫師提醒務必戴手套避免皮膚接觸淤泥",
+        "start_second": 140,
+        "end_second": 140,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "另外在結束打掃後應該徹底清潔全身",
+        "stt_original": "另外在結束打掃後應該徹底清潔全身",
+        "start_second": 140,
+        "end_second": 141,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "而適逢聯合國大會總辯論進行期間",
+        "stt_original": "而適逢聯合國大會總辯論進行期間",
+        "start_second": 251,
+        "end_second": 251,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "友邦持續發聲挺台",
+        "stt_original": "友邦持續發聲挺台",
+        "start_second": 251,
+        "end_second": 251,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "苗栗通霄火力發電廠的4號舊機組煙凶",
+        "stt_original": "苗栗通宵電廠的四號機組大煙囪",
+        "start_second": 308,
+        "end_second": 308,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "在之前還被偷渡客",
+        "stt_original": "在之前還被偷渡客",
+        "start_second": 307,
+        "end_second": 308,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "當成是來到台灣的上岸指引",
+        "stt_original": "當成是來到台灣的上岸指引",
+        "start_second": 307,
+        "end_second": 308,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "苗栗通霄火力發電廠的4號舊機組煙凶",
+        "stt_original": "苗栗通宵火力發電廠的四號舊機組煙囪",
+        "start_second": 308,
+        "end_second": 308,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "在24日突然發出公告",
+        "stt_original": "在24日突然发出公告",
+        "start_second": 335,
+        "end_second": 336,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "截至27日上午9點",
+        "stt_original": "截至27日上午9点",
+        "start_second": 336,
+        "end_second": 336,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "已經收到738件相關消費申訴",
+        "stt_original": "738件相关消费申诉",
+        "start_second": 336,
+        "end_second": 336,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "因資金周轉困難導致薪資短缺'進而",
+        "stt_original": "因资金周转困难导致薪资短缺",
+        "start_second": 336,
+        "end_second": 336,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "業者則強調目前尚未進入破產或清算",
+        "stt_original": "也强调目前尚未进入破产",
+        "start_second": 323,
+        "end_second": 329,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "產或清算程序",
+        "stt_original": "或清算程序",
+        "start_second": 336,
+        "end_second": 336,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "正在積極爭取股東資",
+        "stt_original": "正在积极争取股东资金益助",
+        "start_second": 336,
+        "end_second": 336,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "存在會員信託專戶",
+        "stt_original": "存在会员信托专户",
+        "start_second": 336,
+        "end_second": 336,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "另外昨天教師節",
+        "stt_original": "另外昨天教师节",
+        "start_second": 363,
+        "end_second": 372,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "另外昨天教師節",
+        "stt_original": "就在昨天教师节",
+        "start_second": 363,
+        "end_second": 372,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "有部分老師前往教育部抗議",
+        "stt_original": "有部分老师前往教育部抗议",
+        "start_second": 372,
+        "end_second": 373,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "呼籲應該廢除",
+        "stt_original": "呼吁应该废除",
+        "start_second": 372,
+        "end_second": 373,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "年底前會提出校事會議精進方案",
+        "stt_original": "年底前会提出校室会议",
+        "start_second": 373,
+        "end_second": 373,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "合理漲幅應該接近4%",
+        "stt_original": "合理涨幅应该接近4%",
+        "start_second": 373,
+        "end_second": 375,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "還有最低工資連續10年調漲",
+        "stt_original": "最低工资连续10年调涨",
+        "start_second": 352,
+        "end_second": 376,
+        "duration": 25
+    },
+    {
+        "ocr_ground_truth": "預估有近247萬名勞工受惠",
+        "stt_original": "预估有近247万名老公受贿",
+        "start_second": 375,
+        "end_second": 376,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "內政部推動\"虛坪改革\"",
+        "stt_original": "内政部推动需评改革",
+        "start_second": 336,
+        "end_second": 352,
+        "duration": 17
+    },
+    {
+        "ocr_ground_truth": "綜合報導",
+        "stt_original": "记者综合报道",
+        "start_second": 376,
+        "end_second": 393,
+        "duration": 18
+    },
+    {
+        "ocr_ground_truth": "想說年紀已經有了",
+        "stt_original": "讲说年纪已经有了",
+        "start_second": 393,
+        "end_second": 395,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "就來嘗試一次看看吧",
+        "stt_original": "来尝试一次看看吗",
+        "start_second": 393,
+        "end_second": 395,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "而前總統馬英九",
+        "stt_original": "而前总统马英九",
+        "start_second": 395,
+        "end_second": 398,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "今年也是第12度參加",
+        "stt_original": "今年是第12度参加",
+        "start_second": 395,
+        "end_second": 398,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "下水前還向民眾表示",
+        "stt_original": "75岁的他下水前还向民众表示",
+        "start_second": 395,
+        "end_second": 398,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "自己的身體沒問題",
+        "stt_original": "自己的身体没问题",
+        "start_second": 398,
+        "end_second": 402,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "不料卻差點踩空",
+        "stt_original": "不掉却差点踩空",
+        "start_second": 398,
+        "end_second": 402,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "總共有24736位的泳者報名",
+        "stt_original": "总共有24736位的勇者报名",
+        "start_second": 402,
+        "end_second": 408,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "還留下一二壘有人的危機",
+        "stt_original": "还留下120友人的危机",
+        "start_second": 428,
+        "end_second": 428,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "表現亮眼的游擊手林雨力",
+        "stt_original": "表现亮眼的游击手林雨莉",
+        "start_second": 428,
+        "end_second": 429,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "獲選賽會最佳防守球員",
+        "stt_original": "获选赛会最佳防守球员",
+        "start_second": 428,
+        "end_second": 429,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "原本主辦單位預估會有1萬人到場",
+        "stt_original": "人们主办单位预估会有一万人到场",
+        "start_second": 462,
+        "end_second": 462,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "並下令對意外進行調查",
+        "stt_original": "并下令对意外进行调查",
+        "start_second": 463,
+        "end_second": 463,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "靳元慶 編譯",
+        "stt_original": "接远请编译",
+        "start_second": 463,
+        "end_second": 468,
+        "duration": 6
+    }
+]

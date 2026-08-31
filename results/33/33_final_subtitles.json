@@ -1,0 +1,387 @@
+[
+    {
+        "ocr_ground_truth": "現在台灣附近的海面上總共有三個颱風",
+        "stt_original": "首先來關心,現在台灣附近的海面上,一共有三個颱風,",
+        "start_second": 12,
+        "end_second": 15,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "以在台灣東方的范斯高對台灣影響比較大",
+        "stt_original": "以在台灣東方的泛絲高對台灣影響較大。",
+        "start_second": 15,
+        "end_second": 26,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "今天從北到南會有明顯雨勢",
+        "stt_original": "今天是從北到南會有明顯的雨勢。",
+        "start_second": 26,
+        "end_second": 29,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "726大罷免倒數1天",
+        "stt_original": "726大罢免倒数一天",
+        "start_second": 140,
+        "end_second": 155,
+        "duration": 16
+    },
+    {
+        "ocr_ground_truth": "新北市長侯友宜24號晚間",
+        "stt_original": "西北市长侯友宜24号晚间",
+        "start_second": 165,
+        "end_second": 169,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "先來到中和區幫自家立委張智倫站台拉票",
+        "stt_original": "先来到中和区帮自家立委张志伦站台拉票",
+        "start_second": 165,
+        "end_second": 169,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "沒有嘛",
+        "stt_original": "没有嘛",
+        "start_second": 169,
+        "end_second": 172,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "726罷免投票最後倒數",
+        "stt_original": "726罢免投票最后倒数",
+        "start_second": 172,
+        "end_second": 178,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "立法院長 韓國瑜",
+        "stt_original": "24号合体立法院长韩国瑜",
+        "start_second": 179,
+        "end_second": 181,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "力催不同意罷免票",
+        "stt_original": "宿美力催不同意罢免票",
+        "start_second": 178,
+        "end_second": 178,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "王鴻薇委員是打不扁的",
+        "stt_original": "王洪威委员是打不扁的 压不扁的",
+        "start_second": 178,
+        "end_second": 179,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "所以民進黨成功 要聽媽媽的話",
+        "stt_original": "所以民进党成功要听妈妈的话",
+        "start_second": 179,
+        "end_second": 181,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "而是人民依法監督",
+        "stt_original": "而是人民依法监督制度",
+        "start_second": 190,
+        "end_second": 192,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "制度自我修復的正當行動",
+        "stt_original": "自我修复的正当行动",
+        "start_second": 190,
+        "end_second": 192,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "力催不同意罷免票",
+        "stt_original": "力催同意罢免票",
+        "start_second": 178,
+        "end_second": 178,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "發現這次部分罷免投開票所地點較偏僻",
+        "stt_original": "这次部分罢免投开票所地点",
+        "start_second": 218,
+        "end_second": 218,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "共設置5947處投票所",
+        "stt_original": "共设置5947处投票所",
+        "start_second": 226,
+        "end_second": 226,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "中選會也說明726投開票結束後",
+        "stt_original": "中选会也说明7月6头开票结束后",
+        "start_second": 247,
+        "end_second": 248,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "中選會8月1號才會審定計票結果",
+        "stt_original": "中选会8月1号才会审定计票结果",
+        "start_second": 247,
+        "end_second": 248,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "台南市災區清出大量廢棄物和家具",
+        "stt_original": "台南市灾区清除了大量的废弃物",
+        "start_second": 251,
+        "end_second": 256,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "陳家瑜",
+        "stt_original": "和家具",
+        "start_second": 397,
+        "end_second": 412,
+        "duration": 16
+    },
+    {
+        "ocr_ground_truth": "環保局設了46個垃圾暫置區",
+        "stt_original": "环保局设了46个垃圾站址区",
+        "start_second": 256,
+        "end_second": 259,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "但是卻有民眾在這裡",
+        "stt_original": "但是却有民众",
+        "start_second": 259,
+        "end_second": 269,
+        "duration": 11
+    },
+    {
+        "ocr_ground_truth": "因此市府決定陸續關閉",
+        "stt_original": "因此市府决定陆续关闭",
+        "start_second": 269,
+        "end_second": 275,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "臨時堆置場出現石棉瓦等有害物質混入",
+        "stt_original": "臨時堆置場出現了石棉瓦等有害的",
+        "start_second": 276,
+        "end_second": 278,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "今年初全台急診壅塞",
+        "stt_original": "今年初 全台急診擁捨",
+        "start_second": 278,
+        "end_second": 294,
+        "duration": 17
+    },
+    {
+        "ocr_ground_truth": "地點選在急診壅塞醫院附近",
+        "stt_original": "計畫在急診擁捨的醫院附近",
+        "start_second": 317,
+        "end_second": 318,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "利用診所或是小型醫院人員值班",
+        "stt_original": "利用診所或是小型醫院人員值班",
+        "start_second": 294,
+        "end_second": 307,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "收治檢傷分類四五級輕症病人",
+        "stt_original": "收治減傷分類四五級的輕症病人",
+        "start_second": 308,
+        "end_second": 308,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "希望落實分級醫療",
+        "stt_original": "希望落實分級醫療",
+        "start_second": 308,
+        "end_second": 308,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "目前初步構想假日急症中心",
+        "stt_original": "目前初步構想假日急診中心地點",
+        "start_second": 317,
+        "end_second": 318,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "地點選在急診壅塞醫院附近",
+        "stt_original": "會選在急診擁捨醫院附近",
+        "start_second": 317,
+        "end_second": 318,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "開診時間每天早上八點至午夜十二點",
+        "stt_original": "為每天早上八點至五月十二點",
+        "start_second": 320,
+        "end_second": 320,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "如果是在原來壅塞的醫院裡面",
+        "stt_original": "如果是在原來擁捨的醫院裡面",
+        "start_second": 320,
+        "end_second": 335,
+        "duration": 16
+    },
+    {
+        "ocr_ground_truth": "區隔一個明顯的地方",
+        "stt_original": "區隔一個明顯的地方",
+        "start_second": 320,
+        "end_second": 335,
+        "duration": 16
+    },
+    {
+        "ocr_ground_truth": "為了提升醫護人員輪班意願",
+        "stt_original": "為了提升醫護人員輪班意願",
+        "start_second": 335,
+        "end_second": 336,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "健保署強調將採包裹式給付",
+        "stt_original": "健保署強調將採包裹式急付",
+        "start_second": 335,
+        "end_second": 336,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "後續更詳細規劃將擇期公布",
+        "stt_original": "後續更詳細規劃將則其公佈",
+        "start_second": 336,
+        "end_second": 337,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "陳玉秀(7/24)上午首度赴立法院報告",
+        "stt_original": "陳玉秀上午首度副立法院報告",
+        "start_second": 370,
+        "end_second": 370,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "上半年根據移民署入境資料",
+        "stt_original": "上半年根據移民署入境資料",
+        "start_second": 370,
+        "end_second": 370,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "較去年同期成長百分之十",
+        "stt_original": "較去年同期有成長的百分之十",
+        "start_second": 370,
+        "end_second": 370,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "來台市場結構以東北亞",
+        "stt_original": "來臺市場結構以東北亞",
+        "start_second": 370,
+        "end_second": 370,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "新南向及其他市場各佔約三成多",
+        "stt_original": "新南向以及其他市場各佔約三十萬人次",
+        "start_second": 370,
+        "end_second": 370,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "有多少是相關的人員",
+        "stt_original": "有多少是相關的人員",
+        "start_second": 370,
+        "end_second": 370,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "統計方式是跟全球一致的",
+        "stt_original": "統計方式是跟全球一致的",
+        "start_second": 370,
+        "end_second": 381,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "所以標準上面是大家都是一樣的計算方式",
+        "stt_original": "所以標準上面是大家都是一樣的計算方式",
+        "start_second": 370,
+        "end_second": 381,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "對關心觀光旅遊的業者跟國人來說是無法交代",
+        "stt_original": "對關心觀光旅遊的業者跟國人來說是無法交代",
+        "start_second": 381,
+        "end_second": 384,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "觀光署表示今年仍以千萬旅客來台為目標努力",
+        "stt_original": "今年仍以千萬旅客來臺為目標努力",
+        "start_second": 384,
+        "end_second": 386,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "九百萬達標應該沒有問題",
+        "stt_original": "九百萬達標應該沒有問題",
+        "start_second": 384,
+        "end_second": 386,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "現在旅宿業狀況確實不好",
+        "stt_original": "陳士凱坦言 旅宿業狀況確實不好",
+        "start_second": 386,
+        "end_second": 390,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "至於如何吸引入境旅客",
+        "stt_original": "據如何吸引入境旅客",
+        "start_second": 411,
+        "end_second": 412,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "最後從台灣搭機返回歐美",
+        "stt_original": "最後從臺灣搭機返回歐美",
+        "start_second": 412,
+        "end_second": 412,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "這也是可以耕耘的新客層",
+        "stt_original": "這也是可以耕耘的新課程",
+        "start_second": 412,
+        "end_second": 412,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "已有11人不幸喪生",
+        "stt_original": "已經有十一人不幸喪生",
+        "start_second": 440,
+        "end_second": 440,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "另有10多人受傷",
+        "stt_original": "另有十多人受傷",
+        "start_second": 440,
+        "end_second": 440,
+        "duration": 1
+    }
+]

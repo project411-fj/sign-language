@@ -1,0 +1,415 @@
+[
+    {
+        "ocr_ground_truth": "行政院",
+        "stt_original": "到行政院",
+        "start_second": 155,
+        "end_second": 301,
+        "duration": 147
+    },
+    {
+        "ocr_ground_truth": "面對藍白縣市首長 前一天合體向中央喊話",
+        "stt_original": "面对蓝白县市首长前一天合体",
+        "start_second": 174,
+        "end_second": 180,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "總統賴清德11號隔空回應",
+        "stt_original": "赵耐金德11号隔空回应",
+        "start_second": 174,
+        "end_second": 180,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "在野黨所主導的財劃法修法",
+        "stt_original": "在野党所主导的财化法修法",
+        "start_second": 180,
+        "end_second": 184,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "之所以鑄成大錯",
+        "stt_original": "之所以促成大错",
+        "start_second": 180,
+        "end_second": 184,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "有地方包圍中央的心態",
+        "stt_original": "有地方包围中央的心态",
+        "start_second": 184,
+        "end_second": 192,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "雙方能夠秉持善意 把這財劃法",
+        "stt_original": "双方能够秉持善意",
+        "start_second": 222,
+        "end_second": 229,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "我們一定要帶著民眾的心聲跟民意",
+        "stt_original": "我们一定要带着民众的心声跟民意",
+        "start_second": 229,
+        "end_second": 229,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "來跟中央來反應",
+        "stt_original": "来跟中央来反映",
+        "start_second": 229,
+        "end_second": 229,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "目前六都市長中",
+        "stt_original": "目前六度市长中",
+        "start_second": 229,
+        "end_second": 233,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "台南都已回應會出席",
+        "stt_original": "新北桃园台南都以回应会出席",
+        "start_second": 229,
+        "end_second": 233,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "而國民黨團則坦言",
+        "stt_original": "而国民党团则坦言",
+        "start_second": 233,
+        "end_second": 235,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "'財劃法\"中統籌分配稅款的公式有小瑕疵",
+        "stt_original": "财化法中统筹分配税款的公示",
+        "start_second": 233,
+        "end_second": 235,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "是普發現金的發放經費",
+        "stt_original": "是普发现金的发放经费",
+        "start_second": 296,
+        "end_second": 296,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "財政部也正和數發部",
+        "stt_original": "财政部也正和",
+        "start_second": 296,
+        "end_second": 296,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "來整備相關的係統",
+        "stt_original": "抒发部来准备相关的系统",
+        "start_second": 296,
+        "end_second": 296,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "這回則預計採取登記入帳",
+        "stt_original": "这回则预计采取登记入账ATM领线",
+        "start_second": 296,
+        "end_second": 297,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "直接入帳 郵局領現 造冊發放五大方式",
+        "stt_original": "直接入账邮局领线造册发放五大方式",
+        "start_second": 296,
+        "end_second": 297,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "經濟部長 龔明鑫",
+        "stt_original": "经济部长龚明信也强调",
+        "start_second": 45,
+        "end_second": 52,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "海巡就觀察到有不少的中國\"權宜輪\"",
+        "stt_original": "就观察到有不少的中国权宜轮",
+        "start_second": 317,
+        "end_second": 330,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "採購無人機反制中共威脅",
+        "stt_original": "采购无人机应对中共的袭扰",
+        "start_second": 334,
+        "end_second": 334,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "確認周遭沒有可疑船隻",
+        "stt_original": "确认周遭没有可疑船只",
+        "start_second": 330,
+        "end_second": 330,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "近來成為海巡的重要任務之-",
+        "stt_original": "近来成为海巡的重要任务之一",
+        "start_second": 330,
+        "end_second": 332,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "造成你整個台灣社會的一些不安",
+        "stt_original": "造成你整个整个台湾社会的一些不安",
+        "start_second": 332,
+        "end_second": 334,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "採購無人機反制中共威脅",
+        "stt_original": "采购无人机反制中共威胁",
+        "start_second": 334,
+        "end_second": 334,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "管碧玲表示會在全島配置熱像儀",
+        "stt_original": "关闭令表示会在全道配置热像仪",
+        "start_second": 338,
+        "end_second": 340,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "大幅提升海空偵蒐能力",
+        "stt_original": "大幅提升海空侦搜能力",
+        "start_second": 340,
+        "end_second": 343,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "另外教育部則是發函各大專院校",
+        "stt_original": "另外教育部则是发函各大专院校",
+        "start_second": 365,
+        "end_second": 378,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "這位應志宏先生 他現在是",
+        "stt_original": "这位应志宏先生",
+        "start_second": 378,
+        "end_second": 385,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "梁文傑也藉此呼籲對岸",
+        "stt_original": "梁文杰也借此呼吁对岸",
+        "start_second": 385,
+        "end_second": 386,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "別常常收容犯罪分子",
+        "stt_original": "别常常收容犯罪分子",
+        "start_second": 385,
+        "end_second": 386,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "不利兩岸正常交流",
+        "stt_original": "不利两岸正常交流",
+        "start_second": 385,
+        "end_second": 386,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "是不是有明確的專業交流主題的內容",
+        "stt_original": "是不是有明确的专业交流主题的内容",
+        "start_second": 386,
+        "end_second": 387,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "還是只是吃喝玩樂",
+        "stt_original": "还是只是吃喝玩乐",
+        "start_second": 386,
+        "end_second": 387,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "公務人員赴港澳 除了行前通報",
+        "stt_original": "公务人员赴港澳除了行前通报",
+        "start_second": 387,
+        "end_second": 388,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "完成人事差勤登錄作業",
+        "stt_original": "完成人事拆请登录作为",
+        "start_second": 387,
+        "end_second": 388,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "或是國安人員活動的大本營",
+        "stt_original": "或是国安人员的活动的活动的大本营",
+        "start_second": 388,
+        "end_second": 393,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "但是我相信我們的公務人員",
+        "stt_original": "但是我相信我们的公务人员都有都要",
+        "start_second": 393,
+        "end_second": 399,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "都應該要有這樣的警覺性",
+        "stt_original": "都应该要有这样的警觉性",
+        "start_second": 393,
+        "end_second": 399,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "車輛往來通行",
+        "stt_original": "车辆往来通行",
+        "start_second": 430,
+        "end_second": 430,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "尼泊爾逐漸恢復平靜",
+        "stt_original": "尼泊尔逐渐恢复平静",
+        "start_second": 430,
+        "end_second": 430,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "綜合報導",
+        "stt_original": "综合报导",
+        "start_second": 249,
+        "end_second": 251,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "像是善用\"票根經濟\"",
+        "stt_original": "可以善用票跟经济",
+        "start_second": 490,
+        "end_second": 490,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "璀璨花火點亮夜空",
+        "stt_original": "璀璨火花点亮夜空",
+        "start_second": 465,
+        "end_second": 465,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "去年雙十國慶煙火",
+        "stt_original": "去年双十国庆烟火",
+        "start_second": 465,
+        "end_second": 465,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "在雲林虎尾舉辦",
+        "stt_original": "在云林湖尾举办",
+        "start_second": 465,
+        "end_second": 465,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "帶動當地旅宿訂房",
+        "stt_original": "带动当地旅宿订房",
+        "start_second": 465,
+        "end_second": 465,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "未來將會舉辦很多夜間活動",
+        "stt_original": "未来将会举办很多夜间活动",
+        "start_second": 465,
+        "end_second": 466,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "我們辦的活動",
+        "stt_original": "我们办的活动",
+        "start_second": 466,
+        "end_second": 472,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "或者是你像我們在東部",
+        "stt_original": "或者是你像我们在东部",
+        "start_second": 472,
+        "end_second": 474,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "我們有一個東海岸的活動",
+        "stt_original": "我们有一个那个东海岸的活动",
+        "start_second": 472,
+        "end_second": 474,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "那就看月亮",
+        "stt_original": "那就看月亮",
+        "start_second": 474,
+        "end_second": 476,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "以月亮作為主題",
+        "stt_original": "以月亮作为主题",
+        "start_second": 474,
+        "end_second": 476,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "還有別的設施可以玩",
+        "stt_original": "还有别的设施可以玩",
+        "start_second": 476,
+        "end_second": 478,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "方式",
+        "stt_original": "像是",
+        "start_second": 287,
+        "end_second": 296,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "像是善用\"票根經濟\"",
+        "stt_original": "善用票根经济",
+        "start_second": 490,
+        "end_second": 490,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "憑票打折 進行異業合作",
+        "stt_original": "凭票打折进行一夜合作",
+        "start_second": 490,
+        "end_second": 490,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "倉鼠所承受的心理恐懼及身體痛苦",
+        "stt_original": "仓鼠所承受的心理恐惧",
+        "start_second": 516,
+        "end_second": 535,
+        "duration": 20
+    },
+    {
+        "ocr_ground_truth": "乃至其死亡 非一般情境下之人所能想像",
+        "stt_original": "非一般情境下之人所能想象",
+        "start_second": 516,
+        "end_second": 535,
+        "duration": 20
+    }
+]

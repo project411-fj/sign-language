@@ -1,0 +1,597 @@
+[
+    {
+        "ocr_ground_truth": "過去兩個禮拜已經發生超過900起地震",
+        "stt_original": "過去兩個禮拜,已經發生超過900起地震。",
+        "start_second": 41,
+        "end_second": 42,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "學者認為雖然依照目前科學能力",
+        "stt_original": "學者認為,雖然依照目前的科學能力,",
+        "start_second": 31,
+        "end_second": 41,
+        "duration": 11
+    },
+    {
+        "ocr_ground_truth": "日本南部鹿兒島外海的吐噶喇群島",
+        "stt_original": "日本南部洛爾島外海的兔嘎拉群島,",
+        "start_second": 41,
+        "end_second": 42,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "過去兩個禮拜已經發生超過900起地震",
+        "stt_original": "過去兩個禮拜,已經發生超過900起地震。",
+        "start_second": 41,
+        "end_second": 42,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "南海海槽中間這邊",
+        "stt_original": "南海橋中間這邊。",
+        "start_second": 42,
+        "end_second": 44,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "它是不會有地震的",
+        "stt_original": "它是不會有地震的。",
+        "start_second": 44,
+        "end_second": 46,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "進到城市後受到地形起伏的影響",
+        "stt_original": "進到城市後受到地形起伏的影響,",
+        "start_second": 46,
+        "end_second": 47,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "也會讓海嘯的傳播路徑和高度發生變化",
+        "stt_original": "也會讓海嘯的傳播路徑和高度發生變化。",
+        "start_second": 46,
+        "end_second": 47,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "這個南海海槽大地震的話",
+        "stt_original": "在南海海嘯的大地震的話,",
+        "start_second": 47,
+        "end_second": 52,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "那到了內陸之後",
+        "stt_original": "那到了內陸之後呢,",
+        "start_second": 52,
+        "end_second": 65,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "警方調查這名救護車駕駛竟然沒有駕照",
+        "stt_original": "這一名救護車駕駛竟然沒有駕照,",
+        "start_second": 81,
+        "end_second": 92,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "現場已舉發違規",
+        "stt_original": "現場已舉發違規。",
+        "start_second": 92,
+        "end_second": 95,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "即使新北衛生局表示",
+        "stt_original": "即使新北衛生局表示,",
+        "start_second": 95,
+        "end_second": 96,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "每年都會查核人員與車輛配置",
+        "stt_original": "每年都會查核人員及車輛配置,",
+        "start_second": 95,
+        "end_second": 96,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "也會不定期抽查救護車執勤是否符合規範",
+        "stt_original": "也會不定期抽查救護車執勤是否符合規範,",
+        "start_second": 96,
+        "end_second": 98,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "讀報時間",
+        "stt_original": "賭報時間,",
+        "start_second": 98,
+        "end_second": 177,
+        "duration": 80
+    },
+    {
+        "ocr_ground_truth": "屏東地檢署偵辦",
+        "stt_original": "屏東地檢署偵辦,",
+        "start_second": 177,
+        "end_second": 196,
+        "duration": 20
+    },
+    {
+        "ocr_ground_truth": "訊後黨中央組發會副主委黃碧雲",
+        "stt_original": "訊後黨中央組發會副主委黃碧雲,",
+        "start_second": 196,
+        "end_second": 209,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "訊後黨中央組發會副主委黃碧雲",
+        "stt_original": "國民黨中央組發會副主委黃碧雲,",
+        "start_second": 196,
+        "end_second": 209,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "訊後黨中央組發會副主委黃碧雲",
+        "stt_original": "國民黨中央組發會副主委黃碧雲,",
+        "start_second": 196,
+        "end_second": 209,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "全案起因於連署名冊出現已故亡者",
+        "stt_original": "全案起因於連署名冊出現已故亡者,",
+        "start_second": 209,
+        "end_second": 209,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "伍麗華也曾在臉書揭露",
+        "stt_original": "吳麗華也曾在臉書揭露,",
+        "start_second": 209,
+        "end_second": 209,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "屏東地檢署在1日搜索國民黨花蓮 台東",
+        "stt_original": "屏東地檢署在1日搜索國民黨花蓮、",
+        "start_second": 209,
+        "end_second": 209,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "南投等縣市黨部",
+        "stt_original": "台東南投等縣市黨部,",
+        "start_second": 209,
+        "end_second": 209,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "也搜索黃碧雲 李得全住處",
+        "stt_original": "也搜索黃碧雲李德權住處,",
+        "start_second": 209,
+        "end_second": 210,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "認定涉案黨工涉偽造文書等罪嫌",
+        "stt_original": "認定涉案黨公社偽造文書等罪嫌,",
+        "start_second": 209,
+        "end_second": 210,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "完全以手語溝通為主的聽障學生",
+        "stt_original": "主要提供給完全以手語溝通為主的聽障學生,",
+        "start_second": 241,
+        "end_second": 245,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "小芳會口語不符合標準",
+        "stt_original": "小方會口語不符合標準。",
+        "start_second": 245,
+        "end_second": 246,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "提供手語翮譯服務",
+        "stt_original": "提供手語翻譯服務,",
+        "start_second": 255,
+        "end_second": 255,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "讓她能夠理解課程的內容",
+        "stt_original": "讓他能夠理解課程的內容。",
+        "start_second": 255,
+        "end_second": 255,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "完全以手語溝通為主的聽障學生",
+        "stt_original": "主要提供給完全以手語溝通為主的聽障學生,",
+        "start_second": 241,
+        "end_second": 245,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "並尊重專家會議討論結果",
+        "stt_original": "並尊重專家會議討論結果,",
+        "start_second": 256,
+        "end_second": 257,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "因此不會更改原答案",
+        "stt_original": "因此不會更改原答案。",
+        "start_second": 256,
+        "end_second": 257,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "牛暄文 張梓嘉 謝其文 台北報導",
+        "stt_original": "牛軒文、張子嘉、謝其文,",
+        "start_second": 257,
+        "end_second": 279,
+        "duration": 23
+    },
+    {
+        "ocr_ground_truth": "之前高雄捐血送烤雞吸引民眾大排長龍",
+        "stt_original": "之前高雄捐血送烤雞吸引民眾大排長龍,",
+        "start_second": 285,
+        "end_second": 291,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "健康標準發布至今已經19年沒修",
+        "stt_original": "健康標準發布至今已經19年沒修,",
+        "start_second": 298,
+        "end_second": 300,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "食藥署2日公布捐血者健康標準修正條文",
+        "stt_original": "食藥署2日公佈捐血者健康標準修正條文。",
+        "start_second": 298,
+        "end_second": 300,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "根管治療 植牙者 7天內必須暫停捐血",
+        "stt_original": "曾在牙科洗牙、拔牙跟管治療指壓者7天內必須暫停捐血。",
+        "start_second": 300,
+        "end_second": 300,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "未來也會持續關注國際科學研究及法規進展",
+        "stt_original": "未來也會持續關注國際科學研究及法規進展,適時演繹修正。",
+        "start_second": 301,
+        "end_second": 302,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "台灣智慧醫療有重大突破",
+        "stt_original": "台灣智慧醫療有重大突破",
+        "start_second": 303,
+        "end_second": 312,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "突破傳統臨床觀察的限制",
+        "stt_original": "突破傳統臨床觀察的限制,",
+        "start_second": 317,
+        "end_second": 325,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "準確率超過九成",
+        "stt_original": "準確率超過九成。",
+        "start_second": 325,
+        "end_second": 332,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "它就可以做完整個影像的分析",
+        "stt_original": "這個十幾秒它就可以做完整個的影像的分析。",
+        "start_second": 343,
+        "end_second": 348,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "突破傳統臨床觀察的限制",
+        "stt_original": "不僅突破傳統臨床觀察的限制,",
+        "start_second": 317,
+        "end_second": 325,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "日前已經榮獲國家新創獎等多個獎項",
+        "stt_original": "日前已經榮獲國家新創獎等多個獎項,",
+        "start_second": 348,
+        "end_second": 352,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "並取得多國專利",
+        "stt_original": "並取得多國專利,",
+        "start_second": 348,
+        "end_second": 352,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "造福更多精神疾病患者",
+        "stt_original": "造福更多精神疾病患者。",
+        "start_second": 352,
+        "end_second": 357,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "台北市的萬華也有街友",
+        "stt_original": "台北市的萬華也有街友,",
+        "start_second": 365,
+        "end_second": 366,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "帶人們探訪城市裡不一樣的風景",
+        "stt_original": "帶人們探訪城市裡不一樣的風景。",
+        "start_second": 366,
+        "end_second": 376,
+        "duration": 11
+    },
+    {
+        "ocr_ground_truth": "好我們往這邊走",
+        "stt_original": "好,我們往這邊走。",
+        "start_second": 376,
+        "end_second": 376,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "總是戴著紳土帽的梁兄",
+        "stt_original": "總是戴著紳士帽的梁雄,",
+        "start_second": 376,
+        "end_second": 378,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "曾經擔任議員助理長達16年",
+        "stt_original": "曾經擔任藝人助理長達16年,",
+        "start_second": 376,
+        "end_second": 378,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "新冠疫情期間人力需求大幅下降",
+        "stt_original": "新冠疫情期間,人力需求大幅下降,",
+        "start_second": 378,
+        "end_second": 379,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "但是仍然在街遊擔任導覽員",
+        "stt_original": "但是仍然在街遊擔任導覽員,",
+        "start_second": 379,
+        "end_second": 380,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "分享過去在街頭的生活點滴",
+        "stt_original": "分享過去在街頭的生活點滴。",
+        "start_second": 379,
+        "end_second": 380,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "以維持生活必要開銷",
+        "stt_original": "以維持生活的必要開銷。",
+        "start_second": 380,
+        "end_second": 381,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "而這裡就是業者招攬他們的地方",
+        "stt_original": "而這裡就是業者招攬他們的地方。",
+        "start_second": 380,
+        "end_second": 381,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "當年提出構想的是一位女工程師",
+        "stt_original": "當年提出構想的是一位女工程師。",
+        "start_second": 381,
+        "end_second": 382,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "如今計畫已經執行十多年",
+        "stt_original": "如今計畫已經執行十多年,",
+        "start_second": 382,
+        "end_second": 383,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "更難以向別人敞開內心",
+        "stt_original": "會更難以向別人敞開內心。",
+        "start_second": 384,
+        "end_second": 384,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "而擔任導覽員是一個自我覺醒的經驗",
+        "stt_original": "而擔任導覽員是一個自我覺醒的經驗,",
+        "start_second": 384,
+        "end_second": 384,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "不只述說自己的故事",
+        "stt_original": "不只述說自己的故事,",
+        "start_second": 384,
+        "end_second": 385,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "更珍貴的是與社會的交流",
+        "stt_original": "更珍貴的是與社會的交流。",
+        "start_second": 384,
+        "end_second": 385,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "彰化縣田中鎮八卦山區的養蜂場",
+        "stt_original": "漲化縣田中鎮,八卦山區的養蜂場,",
+        "start_second": 406,
+        "end_second": 406,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "用吸蟲管將蟲子取出放進養蟲箱",
+        "stt_original": "用吸蟲管將蟲子取出,放進養蟲箱。",
+        "start_second": 406,
+        "end_second": 406,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "農業部苗栗農改場研究人員小心冀冀觀察",
+        "stt_original": "農業部苗栗農給場研究人員小心翼翼觀察,",
+        "start_second": 406,
+        "end_second": 406,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "這是令蜂農聞之色變的外來種蜂箱小甲蟲",
+        "stt_original": "這是令蜂農聞之色變的外來種,",
+        "start_second": 406,
+        "end_second": 406,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "彰化縣田中鎮八卦山區的養蜂場",
+        "stt_original": "漲化縣田中鎮八卦山區的養蜂場,",
+        "start_second": 406,
+        "end_second": 406,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "目前全國已有14處蜂場通報受害",
+        "stt_original": "至今年六月,全國已有十四處蜂場通報受害,",
+        "start_second": 397,
+        "end_second": 405,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "已建議蜂農依照農業部指引調配餌劑",
+        "stt_original": "以建議蜂農依照農業部指引,",
+        "start_second": 406,
+        "end_second": 407,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "在蜂箱內外以瓦楞板等工具自製陷阱",
+        "stt_original": "調配耳機在蜂箱內外以瓦楞板等工具自製陷阱,",
+        "start_second": 406,
+        "end_second": 407,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "餵食人工蜂糧三天內有剩餘要清除",
+        "stt_original": "為使人工蜂糧三天內有剩餘要清除,",
+        "start_second": 407,
+        "end_second": 408,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "提醒蜂農加強巡視才能有效防堵擴散",
+        "stt_original": "提醒蜂農加強巡視,才能有效防堵擴散。",
+        "start_second": 407,
+        "end_second": 408,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "美國總統川普前往佛州新建的",
+        "stt_original": "美國總統川普前往佛州興建的鱷魚惡魔島,",
+        "start_second": 408,
+        "end_second": 424,
+        "duration": 17
+    },
+    {
+        "ocr_ground_truth": "美國總統川普前往佛州新建的",
+        "stt_original": "美國總統川普前往佛州興建的鱷魚惡魔島,",
+        "start_second": 408,
+        "end_second": 424,
+        "duration": 17
+    },
+    {
+        "ocr_ground_truth": "川普聲稱 唯一離開辦法只有\"驅逐出境'",
+        "stt_original": "川普表示,唯一離開的辦法只有驅逐出境。",
+        "start_second": 424,
+        "end_second": 453,
+        "duration": 30
+    },
+    {
+        "ocr_ground_truth": "以及印地安原住民文化保留地",
+        "stt_original": "與印第安原住民文化保留地,",
+        "start_second": 476,
+        "end_second": 478,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "已經有兩個環保團體",
+        "stt_original": "已經有兩個環保團體對於聯邦",
+        "start_second": 476,
+        "end_second": 478,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "這個新設施一年營運成本為4億5千萬美元",
+        "stt_original": "這個新設施一年營運成本為4億5000萬美元,",
+        "start_second": 445,
+        "end_second": 449,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "為了宣傳這座新設施",
+        "stt_original": "為了宣傳這座新設施,",
+        "start_second": 469,
+        "end_second": 471,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "仇恨不會讓我們偉大的標語示威抗議",
+        "stt_original": "仇恨不會讓我們偉大的標語,",
+        "start_second": 475,
+        "end_second": 475,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "以及印地安原住民文化保留地",
+        "stt_original": "以及印第安原住民文化保留地。",
+        "start_second": 476,
+        "end_second": 478,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "指他們沒有依法進行環評",
+        "stt_original": "指他們沒有依法進行環評,",
+        "start_second": 478,
+        "end_second": 478,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "也沒有諮詢大眾的意見",
+        "stt_original": "也沒有諮詢大眾的意見。",
+        "start_second": 478,
+        "end_second": 479,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "關心天氣",
+        "stt_original": "關心天氣,",
+        "start_second": 480,
+        "end_second": 508,
+        "duration": 29
+    }
+]

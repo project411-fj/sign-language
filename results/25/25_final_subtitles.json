@@ -1,0 +1,583 @@
+[
+    {
+        "ocr_ground_truth": "警方動用催淚彈 橡膠子彈驅離民眾",
+        "stt_original": "警方動用催淚彈、橡膠子彈驅離民眾。",
+        "start_second": 186,
+        "end_second": 187,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "2019年6月12日為了反對逃犯條例修訂草案",
+        "stt_original": "2019年6月12日,在香港為了反對逃犯條例修訂草案,",
+        "start_second": 147,
+        "end_second": 175,
+        "duration": 29
+    },
+    {
+        "ocr_ground_truth": "從沒想過那個自由的國度",
+        "stt_original": "從沒想過,那是個自由的國度。",
+        "start_second": 187,
+        "end_second": 187,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "從沒想過那個自由的國度",
+        "stt_original": "從沒想過,那是個自由的國度。",
+        "start_second": 187,
+        "end_second": 187,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "黎智英從2020年12月被關押至今",
+        "stt_original": "从2020年12月被关押至今",
+        "start_second": 188,
+        "end_second": 188,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "授予他榮譽公民的身份",
+        "stt_original": "授予他荣誉功名的身份",
+        "start_second": 188,
+        "end_second": 188,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "下",
+        "stt_original": "下",
+        "start_second": 313,
+        "end_second": 315,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "鑑識人員入內採證",
+        "stt_original": "见识人员入内采证",
+        "start_second": 218,
+        "end_second": 218,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "釐清事發原因",
+        "stt_original": "厘清事发原因",
+        "start_second": 218,
+        "end_second": 218,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "警方獲報到場上前壓制",
+        "stt_original": "警方获报到场上前压制",
+        "start_second": 218,
+        "end_second": 218,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "沒想到卻傳出槍響",
+        "stt_original": "没想到却传出枪响",
+        "start_second": 218,
+        "end_second": 218,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "嫌犯也應聲倒地",
+        "stt_original": "嫌犯也应声倒地",
+        "start_second": 218,
+        "end_second": 218,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "警察說了好幾聲坐下這樣子",
+        "stt_original": "警察说好几声作下这样子",
+        "start_second": 218,
+        "end_second": 220,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "犯人好像是往裡面衝",
+        "stt_original": "犯人好像是往里面冲",
+        "start_second": 218,
+        "end_second": 220,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "包含被控使用中製產品",
+        "stt_original": "包含被控使用中国剧的产品",
+        "start_second": 226,
+        "end_second": 237,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "世壯運發言人說明契約",
+        "stt_original": "市状运发言人说明",
+        "start_second": 237,
+        "end_second": 251,
+        "duration": 15
+    },
+    {
+        "ocr_ground_truth": "台北市資訊局被質疑",
+        "stt_original": "台北市资讯局被质疑",
+        "start_second": 251,
+        "end_second": 253,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "長年把各項標案都給特定廠商",
+        "stt_original": "常年把各项标案都给特定厂商",
+        "start_second": 251,
+        "end_second": 253,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "甚至爭議還不止這-件",
+        "stt_original": "甚至争议还不止这一件",
+        "start_second": 253,
+        "end_second": 253,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "世壯運發言人說明契約",
+        "stt_original": "市状运发言人说明",
+        "start_second": 237,
+        "end_second": 251,
+        "duration": 15
+    },
+    {
+        "ocr_ground_truth": "並無檢調介入偵辦",
+        "stt_original": "并无检调介入侦办",
+        "start_second": 262,
+        "end_second": 262,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "而截至目前北檢也尚未接獲告發",
+        "stt_original": "而截至目前北京也尚未接获告发",
+        "start_second": 262,
+        "end_second": 263,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "是金融投資產業領域 企業",
+        "stt_original": "是金融投资产业领域",
+        "start_second": 270,
+        "end_second": 274,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "公眾人物都有",
+        "stt_original": "公众人物都有",
+        "start_second": 274,
+        "end_second": 277,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "報查詢網",
+        "stt_original": "通报查询网",
+        "start_second": 263,
+        "end_second": 270,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "警方上門逮人",
+        "stt_original": "警方上门逮人",
+        "start_second": 295,
+        "end_second": 296,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "還把好幾台電腦主機帶走",
+        "stt_original": "还把好几台电脑主机带走",
+        "start_second": 295,
+        "end_second": 296,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "上百名受害者遍布全台",
+        "stt_original": "上百名受害者遍布全台",
+        "start_second": 300,
+        "end_second": 300,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "總財損超過1300萬",
+        "stt_original": "总财损超过1300万",
+        "start_second": 300,
+        "end_second": 300,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "因為天上就不會掉餡餅",
+        "stt_original": "因为天上就不会掉馅饼啊",
+        "start_second": 300,
+        "end_second": 301,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "為什麼會相信呢",
+        "stt_original": "为什么会相信啊",
+        "start_second": 300,
+        "end_second": 301,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "但是我們外面的人來看",
+        "stt_original": "但是我们外面的人来看",
+        "start_second": 301,
+        "end_second": 303,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "會覺得這是很奇怪的事情",
+        "stt_original": "会觉得这是很奇怪的事情",
+        "start_second": 301,
+        "end_second": 303,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "網路是現代人不可或缺的生活工具",
+        "stt_original": "网路是现代人不可或缺的生活工具",
+        "start_second": 303,
+        "end_second": 306,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "卻也成為詐騙陷阱的溫床",
+        "stt_original": "却也成为诈骗陷阱的温床",
+        "start_second": 303,
+        "end_second": 306,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "網路詐騙通報查詢網",
+        "stt_original": "建制网路诈骗通报查询网",
+        "start_second": 270,
+        "end_second": 295,
+        "duration": 26
+    },
+    {
+        "ocr_ground_truth": "最常被仿冒的公眾八物",
+        "stt_original": "最常被伪冒的公众",
+        "start_second": 280,
+        "end_second": 315,
+        "duration": 36
+    },
+    {
+        "ocr_ground_truth": "主要還是在這個金融投資產業領域",
+        "stt_original": "主要还是在这个金融投资产业领域",
+        "start_second": 306,
+        "end_second": 313,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "已經都已經跳出這20名以外",
+        "stt_original": "都已经跳出这20名以外",
+        "start_second": 313,
+        "end_second": 315,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "是交由警政署來處理",
+        "stt_original": "是交由警政署来处理",
+        "start_second": 326,
+        "end_second": 327,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "已經從去年5月每週3萬多筆",
+        "stt_original": "已经从去年5月每周3万多笔",
+        "start_second": 327,
+        "end_second": 327,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "近期下降到每週不到千件",
+        "stt_original": "近期下降到每周不到千件",
+        "start_second": 327,
+        "end_second": 327,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "行政院長卓榮泰也指示內政部",
+        "stt_original": "行政院长卓荣泰也指示",
+        "start_second": 327,
+        "end_second": 332,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "法務部跟金管會等相關部會合力",
+        "stt_original": "内政部、法务部跟金管会等相关部会",
+        "start_second": 327,
+        "end_second": 332,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "文史法政這樣的選擇上",
+        "stt_original": "文史 法证这样的选择上",
+        "start_second": 362,
+        "end_second": 364,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "分發入學招生名額未定",
+        "stt_original": "分发入学招生名额未定",
+        "start_second": 364,
+        "end_second": 367,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "要拚分科還是平常心",
+        "stt_original": "要拼分科还是平常心",
+        "start_second": 364,
+        "end_second": 367,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "所以不進入分發",
+        "stt_original": "所以不进入分发",
+        "start_second": 367,
+        "end_second": 370,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "沒有分發的問題",
+        "stt_original": "没有分发问题",
+        "start_second": 367,
+        "end_second": 370,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "沈志明 台北報導",
+        "stt_original": "沈志明台北报导",
+        "start_second": 458,
+        "end_second": 474,
+        "duration": 17
+    },
+    {
+        "ocr_ground_truth": "要求幫忙找座位",
+        "stt_original": "要求帮忙找座位",
+        "start_second": 396,
+        "end_second": 398,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "還說請站務員拿輪椅",
+        "stt_original": "还说请站务员拿轮椅",
+        "start_second": 396,
+        "end_second": 398,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "比較密集人潮的時候不適合",
+        "stt_original": "比较密集人潮的时候",
+        "start_second": 398,
+        "end_second": 399,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "例如北市部分低底盤公車",
+        "stt_original": "例如北市部分低底盘公车",
+        "start_second": 400,
+        "end_second": 402,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "就設置有固定在車廂內的摺疊椅",
+        "stt_original": "就设置有固定在车厢内的折叠椅",
+        "start_second": 402,
+        "end_second": 402,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "交通平權大倒退",
+        "stt_original": "交通平权大倒退",
+        "start_second": 426,
+        "end_second": 433,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "亞帕運國手劉文章上個車",
+        "stt_original": "亚帕运国手刘文璋上个车",
+        "start_second": 430,
+        "end_second": 430,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "得要先來個重量訓練",
+        "stt_original": "得要先来个重量训练",
+        "start_second": 430,
+        "end_second": 430,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "先慢慢把身體移動到座位上再側身",
+        "stt_original": "先慢慢把身体移动到座位上",
+        "start_second": 430,
+        "end_second": 431,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "但每次停車前卻要先祈禱",
+        "stt_original": "但每次停车前却要先祈祷",
+        "start_second": 431,
+        "end_second": 431,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "他就停這個車位",
+        "stt_original": "他就停这个车位",
+        "start_second": 431,
+        "end_second": 431,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "在立委陪同下舉行記者會",
+        "stt_original": "上午在立委陪同下举行记者会",
+        "start_second": 431,
+        "end_second": 432,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "指控目前身障專用停車位",
+        "stt_original": "指控目前身障专用停车位",
+        "start_second": 432,
+        "end_second": 432,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "根本都被領有身障識別證的家屬停走",
+        "stt_original": "根本都被领有身障识别证的家属停走",
+        "start_second": 432,
+        "end_second": 432,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "定要有載送的事實",
+        "stt_original": "一定要有载送的事实",
+        "start_second": 432,
+        "end_second": 433,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "因為每個身障朋友需求不同",
+        "stt_original": "因为每个身障朋友需求不同",
+        "start_second": 432,
+        "end_second": 433,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "但若是讓家屬濫用",
+        "stt_original": "但若是让家属滥用",
+        "start_second": 433,
+        "end_second": 433,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "貪圖方便停車",
+        "stt_original": "谈图方便停车",
+        "start_second": 433,
+        "end_second": 433,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "交通平權大倒退",
+        "stt_original": "只会让交通平权大倒退",
+        "start_second": 426,
+        "end_second": 433,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "徐榮駿 綜合報導",
+        "stt_original": "徐荣俊综合报导",
+        "start_second": 433,
+        "end_second": 434,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "極限登山家 呂忠翰",
+        "stt_original": "登山家吕忠翰",
+        "start_second": 457,
+        "end_second": 457,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "並成功無氧攻頂",
+        "stt_original": "并且成功地无氧供顶",
+        "start_second": 445,
+        "end_second": 449,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "拿下個人第10座8千米高峰",
+        "stt_original": "拿下个人第十座八千米高峰",
+        "start_second": 449,
+        "end_second": 456,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "心理壓力對很多人來說是會蠻震撼的",
+        "stt_original": "心理压力对很多人来说是会蛮震撼的",
+        "start_second": 457,
+        "end_second": 457,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "不管是很多外國朋友離開",
+        "stt_original": "不管是很多外国朋友离开",
+        "start_second": 457,
+        "end_second": 457,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "2024年張元植在法國山區意外墜落身亡",
+        "stt_original": "2024年张元职在法国山区意外坠落身亡",
+        "start_second": 457,
+        "end_second": 457,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "2024年張元植在法國山區意外墜落身亡",
+        "stt_original": "2024年张元职在法国山区意外坠落身亡",
+        "start_second": 457,
+        "end_second": 457,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "2024年張元植在法國山區意外墜落身亡",
+        "stt_original": "2024年张元职在法国山区意外坠落身亡",
+        "start_second": 457,
+        "end_second": 457,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "2024年張元植在法國山區意外墜落身亡",
+        "stt_original": "2024年张元职在法国山区意外坠落身亡",
+        "start_second": 457,
+        "end_second": 457,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "呂忠翰一度難以平復",
+        "stt_original": "吕忠翰一度难以平复",
+        "start_second": 457,
+        "end_second": 457,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "他說今年決定回到道拉吉里",
+        "stt_original": "他说今年决定回到道拉吉里感触很多",
+        "start_second": 457,
+        "end_second": 458,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "並成功無氧攻頂",
+        "stt_original": "最终才能成功无氧公顶",
+        "start_second": 445,
+        "end_second": 449,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "所以你永遠要讓自己保持在",
+        "stt_original": "所以你永远要让自己保持在你的体能",
+        "start_second": 458,
+        "end_second": 458,
+        "duration": 1
+    }
+]

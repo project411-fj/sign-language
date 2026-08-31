@@ -1,0 +1,520 @@
+[
+    {
+        "ocr_ground_truth": "台北地院15號上午重開羈押庭",
+        "stt_original": "臺北地院昨天上午重開羈押庭,",
+        "start_second": 44,
+        "end_second": 44,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "但檢方抗告成功",
+        "stt_original": "但檢方抗告成功,",
+        "start_second": 44,
+        "end_second": 44,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "台北地院15號上午重開羈押庭",
+        "stt_original": "臺北地院15號上午重開羈押庭,",
+        "start_second": 44,
+        "end_second": 44,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "庭訊約2小時裡",
+        "stt_original": "庭訓大約兩小時裡,",
+        "start_second": 44,
+        "end_second": 44,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "身旁的陳佩琪也是滿臉笑容 揮手致意",
+        "stt_original": "身旁的陳佩琪也是滿臉笑容,",
+        "start_second": 45,
+        "end_second": 47,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "同樣被撤銷交保裁定",
+        "stt_original": "同樣被撤銷交保裁定,",
+        "start_second": 47,
+        "end_second": 49,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "維持3000萬交保裁定",
+        "stt_original": "維持3000萬交保裁定,",
+        "start_second": 49,
+        "end_second": 50,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "不過北院裁定之後半小時 北檢就表示",
+        "stt_original": "不過北院裁定之後半小時,",
+        "start_second": 50,
+        "end_second": 50,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "許家瑞 鍾建剛 綜合報導",
+        "stt_original": "鍾建剛綜合報導。",
+        "start_second": 50,
+        "end_second": 51,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "昨天檢方再起訴包含調查官等4個人",
+        "stt_original": "昨天檢方再起訴包含調查官等4人。",
+        "start_second": 76,
+        "end_second": 81,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "調查局調查班結業典禮上",
+        "stt_original": "調查局調查班結業典禮上,",
+        "start_second": 81,
+        "end_second": 81,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "因涉嫌勾結下游開發公司",
+        "stt_original": "因涉嫌勾結下游開發公司,",
+        "start_second": 100,
+        "end_second": 100,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "許政俊 台南報導",
+        "stt_original": "許振俊,台南報導。",
+        "start_second": 100,
+        "end_second": 166,
+        "duration": 67
+    },
+    {
+        "ocr_ground_truth": "美國將持續支持台灣",
+        "stt_original": "美國將持續支持台灣。",
+        "start_second": 166,
+        "end_second": 177,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "美國和中國在馬德里的貿易會談",
+        "stt_original": "美国和中国在马德里的贸易会谈",
+        "start_second": 177,
+        "end_second": 188,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "美國財政部長 貝森特",
+        "stt_original": "美国财政部长贝森特说",
+        "start_second": 215,
+        "end_second": 230,
+        "duration": 16
+    },
+    {
+        "ocr_ground_truth": "將轉由美國控制所有權",
+        "stt_original": "将转由美国控制所有权",
+        "start_second": 195,
+        "end_second": 199,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "來看我們的報導",
+        "stt_original": "来看我们的报道",
+        "start_second": 199,
+        "end_second": 201,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "轉移到美國控制之下",
+        "stt_original": "所有权转移到美国控制之下",
+        "start_second": 201,
+        "end_second": 209,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "美國財政部長 貝森特",
+        "stt_original": "美国财政部长贝森特表示",
+        "start_second": 215,
+        "end_second": 230,
+        "duration": 16
+    },
+    {
+        "ocr_ground_truth": "中國在意中國特色",
+        "stt_original": "中国在意中国特色",
+        "start_second": 209,
+        "end_second": 215,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "認為這是一種軟實力",
+        "stt_original": "认为这是一种软实力",
+        "start_second": 209,
+        "end_second": 215,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "而美國在意的是國安問題",
+        "stt_original": "而美国在意的是国安问题",
+        "start_second": 209,
+        "end_second": 215,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "中國表示雙方以合作方式",
+        "stt_original": "中国表示双方以合作方式",
+        "start_second": 230,
+        "end_second": 234,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "減少投資障礙",
+        "stt_original": "减少投资障碍",
+        "start_second": 230,
+        "end_second": 234,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "促進經貿達成了基本框架共識",
+        "stt_original": "促进经贸达成了基本框架共识",
+        "start_second": 234,
+        "end_second": 240,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "這個用詞跟美方的用詞有些許不同",
+        "stt_original": "这个用词跟美方的用词有些许不同",
+        "start_second": 234,
+        "end_second": 240,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "中方一貫反對將科技和經貿問題",
+        "stt_original": "中方一贯反对将科技和经贸问题",
+        "start_second": 246,
+        "end_second": 248,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "政治化工具化武器化",
+        "stt_original": "政治化 工具化 武器化",
+        "start_second": 248,
+        "end_second": 254,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "政治化工具化武器化",
+        "stt_original": "政治化 工具化 武器化",
+        "start_second": 248,
+        "end_second": 254,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "政治化工具化武器化",
+        "stt_original": "政治化 工具化 武器化",
+        "start_second": 248,
+        "end_second": 254,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "絕不會以犧牲原則立場",
+        "stt_original": "绝不会以牺牲原则立场",
+        "start_second": 254,
+        "end_second": 256,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "企業利益和國際公平正義為代價",
+        "stt_original": "企业利益和国际公平正义为代价",
+        "start_second": 256,
+        "end_second": 263,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "在長期僵持且緊張的美中貿易談判中",
+        "stt_original": "在长期僵持且紧张的美中贸易谈判中",
+        "start_second": 263,
+        "end_second": 264,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "高雄興達電廠火警事故後",
+        "stt_original": "发生高雄兴达电厂火警事故之后",
+        "start_second": 274,
+        "end_second": 276,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "不僅讓單車族外套反穿防曬",
+        "stt_original": "不仅让单车族外套反穿防晒",
+        "start_second": 305,
+        "end_second": 306,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "還有上班族也拿起文件遮陽",
+        "stt_original": "还有上班族也拿起文件遮阳",
+        "start_second": 305,
+        "end_second": 306,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "不過中央氣象署表示",
+        "stt_original": "波中央气象署表示",
+        "start_second": 306,
+        "end_second": 315,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "週二北台灣仍有機會出現高溫",
+        "stt_original": "中俄北台湾仍有机会出现高温",
+        "start_second": 306,
+        "end_second": 315,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "中共擾台動作頻頻",
+        "stt_original": "中共扰台动作频频",
+        "start_second": 326,
+        "end_second": 338,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "最後在巡防艇的併行監控下轉向離開",
+        "stt_original": "最后在巡防艇的并行监控下",
+        "start_second": 338,
+        "end_second": 352,
+        "duration": 15
+    },
+    {
+        "ocr_ground_truth": "最後在巡防艇的併行監控下轉向離開",
+        "stt_original": "最后在巡防艇的并行监控下",
+        "start_second": 338,
+        "end_second": 352,
+        "duration": 15
+    },
+    {
+        "ocr_ground_truth": "企圖進入環礁違法捕撈",
+        "stt_original": "企图进入环礁违法捕捞",
+        "start_second": 354,
+        "end_second": 355,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "海巡調度臚艇順利包抄登檢查扣",
+        "stt_original": "海巡调度舰艇顺利包抽登舰查扣",
+        "start_second": 354,
+        "end_second": 355,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "成功於東沙島東北方8.3涅",
+        "stt_original": "成功于东沙岛东北方八点三里",
+        "start_second": 355,
+        "end_second": 357,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "雙方還在社群平台發言互嚐",
+        "stt_original": "双方还在社群平台发言互呛",
+        "start_second": 393,
+        "end_second": 394,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "除了啟動校安通報",
+        "stt_original": "除了启动校安通报",
+        "start_second": 394,
+        "end_second": 394,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "傷人的男學生也前往警局製作筆錄",
+        "stt_original": "伤人的男学生也前往警局制作笔录",
+        "start_second": 394,
+        "end_second": 394,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "在網路上面得到實質解決",
+        "stt_original": "他没有办法在网路上面得到实质的解决",
+        "start_second": 394,
+        "end_second": 400,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "然而青銀共居至今仍處於試辦狀態",
+        "stt_original": "然而轻盈共居至今仍处于事半状态",
+        "start_second": 436,
+        "end_second": 439,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "且在疫情後學生遷入狀況下滑",
+        "stt_original": "且在疫情后学生迁入状况下滑",
+        "start_second": 436,
+        "end_second": 439,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "由於長者居住選擇越來越多元",
+        "stt_original": "由于长者居住选择越来越多元",
+        "start_second": 439,
+        "end_second": 439,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "台北報導",
+        "stt_original": "台北报导",
+        "start_second": 439,
+        "end_second": 450,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "這座大橋是國內",
+        "stt_original": "这座大桥是国内首度",
+        "start_second": 450,
+        "end_second": 468,
+        "duration": 19
+    },
+    {
+        "ocr_ground_truth": "讓歷經多年規劃及7度流標的淡江大橋計劃",
+        "stt_original": "让历经多年规划及七度流标的淡江大桥计划",
+        "start_second": 468,
+        "end_second": 468,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "終於來到關鍵里程碑",
+        "stt_original": "终于来到关键里程碑",
+        "start_second": 468,
+        "end_second": 468,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "所以我們有別於以往就先進行",
+        "stt_original": "所以我们有别于以往就先进行一个船运",
+        "start_second": 468,
+        "end_second": 470,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "船運跟起吊的一個作業",
+        "stt_original": "跟起吊的一个作业",
+        "start_second": 468,
+        "end_second": 470,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "截至15號傍晚 閉合節塊已經十分接近橋面",
+        "stt_original": "闭合结块已经十分接近桥面",
+        "start_second": 470,
+        "end_second": 470,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "極樂世界也有入圍人文紀實節目",
+        "stt_original": "也有入围人文纪实节目",
+        "start_second": 496,
+        "end_second": 504,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "入圍比例90%",
+        "stt_original": "入围比例高达90%",
+        "start_second": 496,
+        "end_second": 504,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "迷你劇集則由星空下的黑潮島嶼",
+        "stt_original": "迷你剧集则由星空下的黑潮岛屿",
+        "start_second": 504,
+        "end_second": 505,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "及聽海湧分別入圍16及15項最多",
+        "stt_original": "及天海泳分别入围16集15项最多",
+        "start_second": 504,
+        "end_second": 505,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "所以呢 在後來大家討論了很久",
+        "stt_original": "所以在后来大家讨论了很久",
+        "start_second": 505,
+        "end_second": 505,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "覺得女主角都太優秀了",
+        "stt_original": "觉得女主角都太优秀了",
+        "start_second": 505,
+        "end_second": 505,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "同樣入圍的還有小姐不熙娣的主持人",
+        "stt_original": "同样入围的海尔小姐布西蒂的主持人",
+        "start_second": 505,
+        "end_second": 505,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "小$和派翠克",
+        "stt_original": "小S和派翠克",
+        "start_second": 505,
+        "end_second": 505,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "戲劇類評審委員會主任委員 柴智屏",
+        "stt_original": "节目类评审委员会主任委员刘松透露",
+        "start_second": 505,
+        "end_second": 513,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "第一次演戲就以混沌少年時",
+        "stt_original": "第一次演戏就以《混沌少年时》",
+        "start_second": 563,
+        "end_second": 582,
+        "duration": 20
+    },
+    {
+        "ocr_ground_truth": "榮獲艾美獎迷你影集最佳男配角的肯定",
+        "stt_original": "荣获艾美奖迷你影集最佳男配角的肯定",
+        "start_second": 563,
+        "end_second": 582,
+        "duration": 20
+    },
+    {
+        "ocr_ground_truth": "而榮獲13項提名的匹茲堡醫魂",
+        "stt_original": "而荣获13项提名的匹兹堡伊魂",
+        "start_second": 583,
+        "end_second": 590,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "其中出道26年",
+        "stt_original": "其中出道26年",
+        "start_second": 590,
+        "end_second": 594,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "曾演出急診室的故事的諾亞懷利",
+        "stt_original": "曾演出急诊室的故事的诺亚·怀利",
+        "start_second": 590,
+        "end_second": 594,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "成為史上第一位獲得這個獎項的黑人演員",
+        "stt_original": "成为史上第一位获得这个奖项的黑人演员",
+        "start_second": 603,
+        "end_second": 624,
+        "duration": 22
+    }
+]

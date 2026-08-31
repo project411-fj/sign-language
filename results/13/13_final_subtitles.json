@@ -1,0 +1,541 @@
+[
+    {
+        "ocr_ground_truth": "823核三重啟公投本週六將要登場",
+        "stt_original": "首先來關心,823和3重啟公投,本週六將要登場。",
+        "start_second": 10,
+        "end_second": 38,
+        "duration": 29
+    },
+    {
+        "ocr_ground_truth": "而昨天朝野立委也到核三廠考察",
+        "stt_original": "而昨天,朝野立委也到了核三廠考察。",
+        "start_second": 38,
+        "end_second": 51,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "沒有想到卻被國民黨發言人楊智仔一飲而盡",
+        "stt_original": "但卻被國民黨發言人楊志愚一飲而盡。",
+        "start_second": 52,
+        "end_second": 52,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "就像一個戰土沒有選擇戰場的權利",
+        "stt_original": "就像一個戰士沒有選擇戰場的權利",
+        "start_second": 326,
+        "end_second": 326,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "並從25號正式上任",
+        "stt_original": "並從25號甚至上任",
+        "start_second": 329,
+        "end_second": 333,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "而副秘書長除了現任的何博文",
+        "stt_original": "而副秘書長除了現任的何柏文",
+        "start_second": 329,
+        "end_second": 333,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "另一個空缺 在賴清德欽點下",
+        "stt_original": "另一個空缺在賴清德清點下",
+        "start_second": 333,
+        "end_second": 339,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "將由民進黨民調中心前主任鄭俊昇接任",
+        "stt_original": "將由民進黨民調中心前主任",
+        "start_second": 333,
+        "end_second": 339,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "但除了黨務",
+        "stt_original": "但除了黨務",
+        "start_second": 339,
+        "end_second": 343,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "賴政府內閣異動消息同樣頻傳",
+        "stt_original": "賴政府內閣異動消息同樣頻傳",
+        "start_second": 339,
+        "end_second": 343,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "經濟部長 郭智輝",
+        "stt_original": "尤其經濟部長郭志輝",
+        "start_second": 236,
+        "end_second": 363,
+        "duration": 128
+    },
+    {
+        "ocr_ground_truth": "更多次遭點名是更換名單\"海嘯第一排\"",
+        "stt_original": "更多次遭點名是更換名單",
+        "start_second": 343,
+        "end_second": 348,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "他本人似乎看得很開",
+        "stt_original": "他本人似乎看得很開",
+        "start_second": 348,
+        "end_second": 351,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "改組與否 這個對我來講",
+        "stt_original": "改組與否 這個對我來講是",
+        "start_second": 351,
+        "end_second": 363,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "是沒有什麼特別的關係",
+        "stt_original": "沒有什麼特別的關係",
+        "start_second": 351,
+        "end_second": 363,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "真的總統要拿出魄力",
+        "stt_original": "真的總統要拿出魄力",
+        "start_second": 363,
+        "end_second": 363,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "展現改變的決心",
+        "stt_original": "展現改變的決心",
+        "start_second": 363,
+        "end_second": 363,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "就連郭智輝也虧自己",
+        "stt_original": "就連郭志輝也虧自己",
+        "start_second": 363,
+        "end_second": 367,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "如今內閣改組箭在弦上",
+        "stt_original": "如今內閣改組建在弦上",
+        "start_second": 367,
+        "end_second": 372,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "但面對外界點兵點將",
+        "stt_original": "但面對外界點兵點將",
+        "start_second": 367,
+        "end_second": 372,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "謝政霖 台北-新北報導",
+        "stt_original": "謝震林 台北新北報導",
+        "start_second": 375,
+        "end_second": 378,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "超過一半已完工或是施工中",
+        "stt_original": "超過一半完工或正在施工當中",
+        "start_second": 416,
+        "end_second": 416,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "有些還蓋著帆布",
+        "stt_original": "有些還蓋著帆布",
+        "start_second": 413,
+        "end_second": 413,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "一是會修紅磚瓦的師傅不多",
+        "stt_original": "一是會修紅磚瓦的師傅不多",
+        "start_second": 413,
+        "end_second": 414,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "決定自行修繕",
+        "stt_original": "決定自行修繕",
+        "start_second": 414,
+        "end_second": 414,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "你看啦",
+        "stt_original": "你看啦",
+        "start_second": 415,
+        "end_second": 415,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "災害已經過一個半月了",
+        "stt_original": "這災害一定過個半月啦",
+        "start_second": 415,
+        "end_second": 415,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "他到時 他們到這時候才來媒合廠商啦",
+        "stt_original": "他們到時候就來媒合廠商啦",
+        "start_second": 415,
+        "end_second": 415,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "超過一半已完工或是施工中",
+        "stt_original": "超過一半已完工或是施工中",
+        "start_second": 416,
+        "end_second": 416,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "目前已核發超過6億慰助金",
+        "stt_original": "目前已核發超過六億位住金",
+        "start_second": 416,
+        "end_second": 418,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "核撥率超過7成",
+        "stt_original": "合撥率超過七成",
+        "start_second": 416,
+        "end_second": 418,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "市府也宣布加班費不受原有3個月",
+        "stt_original": "市府也宣布加班費不受",
+        "start_second": 418,
+        "end_second": 418,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "近期颱風接連重創中南部",
+        "stt_original": "近期颱風接連重創中南部",
+        "start_second": 418,
+        "end_second": 452,
+        "duration": 35
+    },
+    {
+        "ocr_ground_truth": "因此今年罕見啟動\"北血南送\"",
+        "stt_original": "今年罕見地啟動了北血南送",
+        "start_second": 452,
+        "end_second": 452,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "調撥數千袋血液救急",
+        "stt_original": "緊急調撥數千袋的血液來救急",
+        "start_second": 452,
+        "end_second": 452,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "有些人已養成定期捐血習慣",
+        "stt_original": "有些人已經養成定期捐血習慣",
+        "start_second": 443,
+        "end_second": 445,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "認為捐血不僅能幫助別人",
+        "stt_original": "認為捐血不僅能幫助別人",
+        "start_second": 443,
+        "end_second": 445,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "然後身體會重新造血",
+        "stt_original": "然後身體會重新造血",
+        "start_second": 445,
+        "end_second": 450,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "根據血液基金會統計",
+        "stt_original": "根據血液基金會統計",
+        "start_second": 450,
+        "end_second": 451,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "全台每日用血需求量約6626袋",
+        "stt_original": "全台每日用血需求量大約6626袋",
+        "start_second": 450,
+        "end_second": 451,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "主要用於各大醫院提供輸血所需",
+        "stt_original": "主要用於各大醫院提供輸血所需",
+        "start_second": 451,
+        "end_second": 452,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "近期颱風接連重創中南部",
+        "stt_original": "但是近期颱風激凌重創中南部",
+        "start_second": 418,
+        "end_second": 452,
+        "duration": 35
+    },
+    {
+        "ocr_ground_truth": "因此今年罕見啟動\"北血南送\"",
+        "stt_original": "因此今年罕見啟動北血南送",
+        "start_second": 452,
+        "end_second": 452,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "調撥數千袋血液救急",
+        "stt_original": "調撥數千袋血液救急",
+        "start_second": 452,
+        "end_second": 452,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "像現在在缺 我知道",
+        "stt_original": "像現在最缺 我知道",
+        "start_second": 452,
+        "end_second": 460,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "像中南部最缺的就是0型",
+        "stt_original": "像中南部最缺就是O型",
+        "start_second": 452,
+        "end_second": 460,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "台中海洋館將在21號展開試營運",
+        "stt_original": "台中海洋館今天將要開始試營運",
+        "start_second": 480,
+        "end_second": 483,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "可以成為海線觀光亮點",
+        "stt_original": "可以成為海線觀光亮點",
+        "start_second": 469,
+        "end_second": 479,
+        "duration": 11
+    },
+    {
+        "ocr_ground_truth": "彷彿沉浸在深海欣賞水母",
+        "stt_original": "彷彿沉浸在深海欣賞水母",
+        "start_second": 479,
+        "end_second": 480,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "這些都是台中海洋館的指標景點",
+        "stt_original": "這些都是台中海洋館的指標景點",
+        "start_second": 479,
+        "end_second": 480,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "20種以上的水母種類)",
+        "stt_original": "只超過20種以上的水母種類",
+        "start_second": 480,
+        "end_second": 480,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "台中海洋館將在21號展開試營運",
+        "stt_original": "台中海洋館將在21號展開試營運",
+        "start_second": 480,
+        "end_second": 483,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "這項耗時14年",
+        "stt_original": "這項耗時14年",
+        "start_second": 480,
+        "end_second": 483,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "歷經三任市長的建設",
+        "stt_original": "歷經三任市長的建設",
+        "start_second": 480,
+        "end_second": 483,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "讓民眾可以近距離觀察生物",
+        "stt_original": "讓民眾可以近距離觀察生物",
+        "start_second": 483,
+        "end_second": 484,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "像是企鵝館就可從3口面向",
+        "stt_original": "像是企鵝館就可從3D面向",
+        "start_second": 483,
+        "end_second": 484,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "也要作出更大的區別性",
+        "stt_original": "也要做出更大的區別性",
+        "start_second": 484,
+        "end_second": 486,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "是許多客人念念不忘的好滋味",
+        "stt_original": "是許多客人念念不忘的好滋味",
+        "start_second": 516,
+        "end_second": 518,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "為了調出這碗皮蛋醬的獨門比例",
+        "stt_original": "為了調出這碗皮蛋醬的獨門比例",
+        "start_second": 516,
+        "end_second": 518,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "才找到最滿意的味道",
+        "stt_original": "才找到最滿意的味道",
+        "start_second": 518,
+        "end_second": 519,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "味道很傳統",
+        "stt_original": "味道很傳統",
+        "start_second": 519,
+        "end_second": 523,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "好像是用了中藥下去滷的吧",
+        "stt_original": "好像是用了中藥下去滷的吧",
+        "start_second": 519,
+        "end_second": 523,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "以前我和聾人朋友3個人一起開酒吧",
+        "stt_original": "以前我和龍仁朋友三個人一起開酒吧",
+        "start_second": 523,
+        "end_second": 524,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "名字叫做雲手酒吧",
+        "stt_original": "名字叫做雲手酒吧",
+        "start_second": 523,
+        "end_second": 524,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "轉而靠著以前在麵店打工的經驗",
+        "stt_original": "轉而靠著以前在麵店打工的經驗",
+        "start_second": 524,
+        "end_second": 524,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "開始店裡的員工都是聾人",
+        "stt_original": "一開始店裡的員工都是龍人",
+        "start_second": 524,
+        "end_second": 525,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "但有時候會遇到和顧客溝通不便的情況",
+        "stt_original": "但有時候會遇到和顧客溝通不便的情況",
+        "start_second": 524,
+        "end_second": 525,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "為了讓點餐更順利",
+        "stt_original": "為了讓點餐更順利",
+        "start_second": 525,
+        "end_second": 525,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "他也請來對手語有興趣的聽人員工幫忙",
+        "stt_original": "他也請來對手語有興趣的聽人員工幫忙",
+        "start_second": 525,
+        "end_second": 525,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "把紙條給他",
+        "stt_original": "把紙條給他",
+        "start_second": 525,
+        "end_second": 525,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "甚至還會用手語比謝謝",
+        "stt_original": "甚至還會用手語筆謝謝",
+        "start_second": 525,
+        "end_second": 525,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "這家藏在台南巷弄裡的小麵店",
+        "stt_original": "這家藏在台南巷弄裡的小麵店",
+        "start_second": 525,
+        "end_second": 525,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "用最平實的方式 傳遞了最暖的心意",
+        "stt_original": "用最平時的方式傳遞了最暖的心意",
+        "start_second": 525,
+        "end_second": 525,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "明天(8/21)之後天氣水氣將會逐漸地減少",
+        "stt_original": "明天之後天氣水氣將會逐漸的減少",
+        "start_second": 548,
+        "end_second": 551,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "山區的話還是有些局部大雨發生的情況",
+        "stt_original": "山區的話還是有些局部大雨發生的情況",
+        "start_second": 548,
+        "end_second": 551,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "有8人遭瘋狗浪捲入海中喪命",
+        "stt_original": "有八人遭風口浪捲入海中喪命",
+        "start_second": 551,
+        "end_second": 551,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "是有史以來最嚴重的瘋狗浪奪命事故",
+        "stt_original": "是有史以來最嚴重的風口浪",
+        "start_second": 551,
+        "end_second": 551,
+        "duration": 1
+    }
+]

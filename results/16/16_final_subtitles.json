@@ -1,0 +1,667 @@
+[
+    {
+        "ocr_ground_truth": "中央政府明年在中央政府總預算",
+        "stt_original": "中央政府明年在中央政府总预算再加上特别预算",
+        "start_second": 58,
+        "end_second": 79,
+        "duration": 22
+    },
+    {
+        "ocr_ground_truth": "行政院長卓榮泰指出",
+        "stt_original": "行政院长卓荣泰强调",
+        "start_second": 56,
+        "end_second": 57,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "中央政府明年在中央政府總預算",
+        "stt_original": "而行政院会通过明年度中央政府总预算",
+        "start_second": 58,
+        "end_second": 79,
+        "duration": 22
+    },
+    {
+        "ocr_ground_truth": "個就是海巡署的特別預算76億",
+        "stt_original": "一个就是海巡署的特别预算七十六亿",
+        "start_second": 125,
+        "end_second": 129,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "以及獲得必要的保養維護",
+        "stt_original": "以及获得必要的保养维护",
+        "start_second": 143,
+        "end_second": 144,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "目前可以說是軍購採購的高峰期",
+        "stt_original": "可以说是军购采购的高峰期",
+        "start_second": 144,
+        "end_second": 150,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "隨著新式裝備的導入之後",
+        "stt_original": "随着新式装备的导入之后",
+        "start_second": 144,
+        "end_second": 150,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "中國為了紀念二戰結束80週年",
+        "stt_original": "中国为了纪念二战结束八十周年",
+        "start_second": 249,
+        "end_second": 272,
+        "duration": 24
+    },
+    {
+        "ocr_ground_truth": "中國為了紀念二戰結束80週年",
+        "stt_original": "中国为了纪念二战结束八十周年",
+        "start_second": 249,
+        "end_second": 272,
+        "duration": 24
+    },
+    {
+        "ocr_ground_truth": "其中有部分是第一次對外亮相",
+        "stt_original": "其中有部分武器是首次对外亮相",
+        "start_second": 280,
+        "end_second": 280,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "整個閱兵儀式預計將持續70分鐘",
+        "stt_original": "整个阅兵仪式预计将持续70分钟,",
+        "start_second": 276,
+        "end_second": 278,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "目前已經進行了兩次彩排",
+        "stt_original": "目前已经进行了两次彩排。",
+        "start_second": 276,
+        "end_second": 278,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "人民解放軍近年來迅速現代化",
+        "stt_original": "人民解放军近年来迅速现代化,",
+        "start_second": 278,
+        "end_second": 280,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "官方表示這次將會集中展示中共的新裝備",
+        "stt_original": "官方表示这次将会集中展示中共的新装备,",
+        "start_second": 278,
+        "end_second": 280,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "其中有部分是第一次對外亮相",
+        "stt_original": "其中有部分是第一次对外两下。",
+        "start_second": 280,
+        "end_second": 280,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "核三廠重啟公投將在23日登場",
+        "stt_original": "核三重启公投,明天登场。",
+        "start_second": 311,
+        "end_second": 312,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "批評風力和太陽能發電是世紀最大騙局",
+        "stt_original": "批评风力和太阳能发电是世纪最大,",
+        "start_second": 303,
+        "end_second": 311,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "核三廠重啟公投將在23日登場",
+        "stt_original": "核三厂重启公投将在23号登场。",
+        "start_second": 311,
+        "end_second": 312,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "力推重啟核三的民眾黨也透露",
+        "stt_original": "力推重启核三的民众党也透露,",
+        "start_second": 312,
+        "end_second": 312,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "將規劃快閃活動從南到北大串連",
+        "stt_original": "将规划快闪活动从南到北大串联。",
+        "start_second": 312,
+        "end_second": 312,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "黨主席黃國昌率領黨公職啟動車掃宣傳",
+        "stt_original": "总统主席黄国昌率领党公职启动车扫宣传,",
+        "start_second": 312,
+        "end_second": 313,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "針對經濟部前幾天在臉書表示",
+        "stt_original": "针对经济部前几天在脸书表示,",
+        "start_second": 312,
+        "end_second": 313,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "黃國昌不以為然",
+        "stt_original": "黄国昌不以为然。",
+        "start_second": 313,
+        "end_second": 314,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "只是力挺核三重啟的和碩董事長童子賢",
+        "stt_original": "只是力挺核三重旗的核说董事长佟子贤并不认同,",
+        "start_second": 314,
+        "end_second": 314,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "但也點出綠能在台灣發展的困境",
+        "stt_original": "但也点出绿能在台湾发展的困境。",
+        "start_second": 314,
+        "end_second": 314,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "強調台灣真正需要的是加速能源轉型",
+        "stt_original": "民间团体再度集结强调台湾真正需要的是加速能源转型。",
+        "start_second": 314,
+        "end_second": 315,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "更主張死刑釋憲案後已經難以判死",
+        "stt_original": "更主张死刑事先案后已经难以判死,",
+        "start_second": 373,
+        "end_second": 379,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "重刑犯大多面臨無期徒刑",
+        "stt_original": "重刑犯大多面临无期徒刑,",
+        "start_second": 373,
+        "end_second": 379,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "但下一階就跳到死刑",
+        "stt_original": "但下一阶就跳到死刑,",
+        "start_second": 379,
+        "end_second": 395,
+        "duration": 17
+    },
+    {
+        "ocr_ground_truth": "(為了台灣爭口氣)",
+        "stt_original": "为了台湾生口气!",
+        "start_second": 406,
+        "end_second": 407,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "則是提出刪除現行羈押事由的勾串共犯或證人",
+        "stt_original": "有意删除三大羁押室友中的勾串共犯或证人。",
+        "start_second": 345,
+        "end_second": 351,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "倒是對於白營提案嚴正表示反對",
+        "stt_original": "倒是对于白颖提案严正表示反对,",
+        "start_second": 418,
+        "end_second": 422,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "就怕嚴重衝擊偵查效能",
+        "stt_original": "就怕严重冲击侦查效能。",
+        "start_second": 418,
+        "end_second": 422,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "國家安全 經濟命脈的共諜案",
+        "stt_original": "国家安全经济密埋的共谍案,",
+        "start_second": 422,
+        "end_second": 430,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "勾串共犯或證人的高度風險",
+        "stt_original": "勾串共犯或证人的高度风险,",
+        "start_second": 430,
+        "end_second": 443,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "法務部亮數據",
+        "stt_original": "法务部量数据,",
+        "start_second": 443,
+        "end_second": 446,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "鄭銘謙又這麼急的出來",
+        "stt_original": "郑明谦又这么急的,",
+        "start_second": 447,
+        "end_second": 453,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "當民進黨的打手",
+        "stt_original": "出来当民进党的打手,",
+        "start_second": 453,
+        "end_second": 456,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "法務部有沒有基本的羞恥",
+        "stt_original": "有没有基本的羞耻,",
+        "start_second": 453,
+        "end_second": 456,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "丟不丟臉",
+        "stt_original": "丢不丢脸啊?",
+        "start_second": 453,
+        "end_second": 456,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "配合做政治操作",
+        "stt_original": "配合做政治操作,",
+        "start_second": 456,
+        "end_second": 458,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "都已提前受到各界矚目",
+        "stt_original": "都已提前受到各界关注。",
+        "start_second": 458,
+        "end_second": 461,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "另外每個人的基本生活費",
+        "stt_original": "每个人的基本生活费,",
+        "start_second": 489,
+        "end_second": 497,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "也從12萬調高到18萬元",
+        "stt_original": "也会从12万调高到18万,",
+        "start_second": 513,
+        "end_second": 523,
+        "duration": 11
+    },
+    {
+        "ocr_ground_truth": "為了減輕民眾的負擔",
+        "stt_original": "为了减轻民众的负担,",
+        "start_second": 512,
+        "end_second": 513,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "行政院長卓榮泰指出",
+        "stt_original": "行政院长卓荣泰宣布,",
+        "start_second": 56,
+        "end_second": 57,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "另外明年起綜合所得稅申報",
+        "stt_original": "明年起综合所得税申报,",
+        "start_second": 513,
+        "end_second": 513,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "個人基本生活費也將調高3000元",
+        "stt_original": "个人基本生活费也将调高3000元。",
+        "start_second": 513,
+        "end_second": 513,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "一家四口試算",
+        "stt_original": "以一家四口市算,",
+        "start_second": 513,
+        "end_second": 513,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "還有每年通膨持續地增加",
+        "stt_original": "还有每年通膨持续的增加,",
+        "start_second": 513,
+        "end_second": 513,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "其實上班族真的還滿無感的",
+        "stt_original": "其实上班族真的还蛮无感的。",
+        "start_second": 513,
+        "end_second": 513,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "也從12萬調高到18萬元",
+        "stt_original": "也从12万调高到18万元,",
+        "start_second": 513,
+        "end_second": 513,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "最快明年5月報稅的時候就能適用",
+        "stt_original": "最快明年5月报税的时候就能适用。",
+        "start_second": 513,
+        "end_second": 514,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "對一個長炤家庭來講的話",
+        "stt_original": "对一个长照家庭来讲的话,",
+        "start_second": 514,
+        "end_second": 518,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "但是政府從12萬調高到18萬",
+        "stt_original": "但是政府从12万调到18万,",
+        "start_second": 518,
+        "end_second": 523,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "政府期盼明年上路的減稅政策",
+        "stt_original": "政府期盼明年上午的减税政策,",
+        "start_second": 523,
+        "end_second": 523,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "能藉此增加民眾可支配所得",
+        "stt_original": "能借此增加民众可支配所得,",
+        "start_second": 523,
+        "end_second": 523,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "此外為了維護車廂寧靜",
+        "stt_original": "而此外,为了要维护车厢的宁静,",
+        "start_second": 544,
+        "end_second": 552,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "乘客接聽電話要到列車玄關",
+        "stt_original": "乘客接听电话要到列车玄关,",
+        "start_second": 552,
+        "end_second": 567,
+        "duration": 16
+    },
+    {
+        "ocr_ground_truth": "若勸導不聽",
+        "stt_original": "如果圈道不听,",
+        "start_second": 566,
+        "end_second": 567,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "就算是平日上午非通懃時間",
+        "stt_original": "就算是平日上午非通勤时间,",
+        "start_second": 560,
+        "end_second": 561,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "搭乘高鐵的旅客也是絡繹不絕",
+        "stt_original": "搭乘高铁的旅客也是络绎不绝。",
+        "start_second": 560,
+        "end_second": 561,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "尖峰時段自由座車廂擁擠",
+        "stt_original": "尖峰时段自由坐车厢拥挤,",
+        "start_second": 562,
+        "end_second": 562,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "我是滿支持他們在這種量的控制上",
+        "stt_original": "我是蛮支持他们在这种量的控制上,",
+        "start_second": 562,
+        "end_second": 564,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "安全控制上還是應該要多留意",
+        "stt_original": "安全控制上还是应该要多留意。",
+        "start_second": 562,
+        "end_second": 564,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "新車上路前旅客量仍不斷增加",
+        "stt_original": "新车上路前,旅客量仍不断增加,",
+        "start_second": 564,
+        "end_second": 566,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "因應即將到來的九 十月共4個連假",
+        "stt_original": "因即将到来的90月共4个廉价,",
+        "start_second": 564,
+        "end_second": 566,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "此外為了維護車廂寧靜",
+        "stt_original": "另外维护车厢宁静,",
+        "start_second": 544,
+        "end_second": 552,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "若勸導不聽",
+        "stt_original": "若劝导不听,",
+        "start_second": 566,
+        "end_second": 567,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "在南投的山上",
+        "stt_original": "在南投的山上,",
+        "start_second": 567,
+        "end_second": 607,
+        "duration": 41
+    },
+    {
+        "ocr_ground_truth": "不是農藥",
+        "stt_original": "这不是农药,",
+        "start_second": 607,
+        "end_second": 607,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "而是他親手製作的生物酵素",
+        "stt_original": "而是他亲手制作的生物酵素。",
+        "start_second": 607,
+        "end_second": 607,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "只能夠四處請教 報名課程",
+        "stt_original": "只能够四处请教报名课程,",
+        "start_second": 607,
+        "end_second": 607,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "從土壤檢測",
+        "stt_original": "从土壤检测,",
+        "start_second": 607,
+        "end_second": 609,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "肥料製作",
+        "stt_original": "肥料制作,",
+        "start_second": 607,
+        "end_second": 609,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "每一步他都親自摸索",
+        "stt_original": "每一步他都亲自摸索,",
+        "start_second": 609,
+        "end_second": 610,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "只為讓作物在最自然的環境中成長",
+        "stt_original": "只为让作物在最自然的环境中,",
+        "start_second": 609,
+        "end_second": 610,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "來推廣農產品",
+        "stt_original": "来推广农产品。",
+        "start_second": 610,
+        "end_second": 610,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "在課堂上大家一邊動手做百香果果醬和蜜餞",
+        "stt_original": "大家一边动手做百香果果酱和蜜饯,",
+        "start_second": 610,
+        "end_second": 611,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "一邊品嚐",
+        "stt_original": "一边品尝。",
+        "start_second": 610,
+        "end_second": 611,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "探討真的有機農的做法",
+        "stt_original": "探讨真的有金融的做法,",
+        "start_second": 611,
+        "end_second": 612,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "對聽障者來說",
+        "stt_original": "对听障者来说,",
+        "start_second": 612,
+        "end_second": 612,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "每一次面對面交談都是額外的挑戰",
+        "stt_original": "每一次面对面交谈都是额外的挑战,",
+        "start_second": 612,
+        "end_second": 612,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "我們的農場環境有哪些動物",
+        "stt_original": "我们的农场环境有哪些动物。",
+        "start_second": 612,
+        "end_second": 613,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "對他來說農場不只是耕作的地方",
+        "stt_original": "农场不只是耕作的地方,",
+        "start_second": 613,
+        "end_second": 613,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "牛暄文",
+        "stt_original": "牛新闻,",
+        "start_second": 10,
+        "end_second": 610,
+        "duration": 601
+    },
+    {
+        "ocr_ground_truth": "而昨天最高溫出現在台北信義測站",
+        "stt_original": "最高温是出现在台北信义侧站,",
+        "start_second": 633,
+        "end_second": 644,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "很可能導致熱傷害",
+        "stt_original": "很可能会导致热伤害,",
+        "start_second": 674,
+        "end_second": 675,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "他當時的臉色非常蒼白",
+        "stt_original": "他当时的脸色非常苍白,",
+        "start_second": 659,
+        "end_second": 660,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "同事就先給他喝水",
+        "stt_original": "同事就先给他喝水,",
+        "start_second": 659,
+        "end_second": 660,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "而昨天最高溫出現在台北信義測站",
+        "stt_original": "而周四最高温就出现在台北市信义侧站,",
+        "start_second": 633,
+        "end_second": 644,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "很可能導致熱傷害",
+        "stt_original": "很可能导致热伤害,",
+        "start_second": 674,
+        "end_second": 675,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "醫師提醒三高患者是熱傷害高危險族群",
+        "stt_original": "医师提醒,三高患者是热伤害高危险族群,",
+        "start_second": 688,
+        "end_second": 688,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "因為本身體溫調節能力較差",
+        "stt_original": "因为本身体温调节能力较差,",
+        "start_second": 688,
+        "end_second": 688,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "賴淑敏 蔣龍祥 台北報導",
+        "stt_original": "公视新闻蜡水迷蒋龙翔,台北报导。",
+        "start_second": 688,
+        "end_second": 689,
+        "duration": 2
+    }
+]

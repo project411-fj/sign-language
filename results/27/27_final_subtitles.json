@@ -1,0 +1,331 @@
+[
+    {
+        "ocr_ground_truth": "因為我看那邊還有水",
+        "stt_original": "因為我看那邊還有水。",
+        "start_second": 74,
+        "end_second": 74,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "我知道",
+        "stt_original": "我知道。",
+        "start_second": 74,
+        "end_second": 74,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "所以我不 不建議",
+        "stt_original": "對,所以我不建議。",
+        "start_second": 74,
+        "end_second": 74,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "中正路與敦厚路口派出所旁泥濘",
+        "stt_original": "中正路與敦厚路口派出所旁泥泞約有20到30公分。",
+        "start_second": 74,
+        "end_second": 74,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "溫嘉楷 林敬倫 黃韻玲 鍾建剛 綜合報導",
+        "stt_original": "公視新聞,溫家凱、林靖倫、黃韻玲、鍾建剛綜合報導。",
+        "start_second": 77,
+        "end_second": 97,
+        "duration": 21
+    },
+    {
+        "ocr_ground_truth": "普發現金一萬預計最快10月發放",
+        "stt_original": "普發現金一萬元,最快預計十月發放。",
+        "start_second": 210,
+        "end_second": 231,
+        "duration": 22
+    },
+    {
+        "ocr_ground_truth": "普發現金一萬預計最快10月發放",
+        "stt_original": "普發現金一萬 最快十月發放",
+        "start_second": 210,
+        "end_second": 231,
+        "duration": 22
+    },
+    {
+        "ocr_ground_truth": "增加\"不領取\"選項的可行性",
+        "stt_original": "不領取選項的可行性",
+        "start_second": 251,
+        "end_second": 257,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "將延宕整體普發現金時程",
+        "stt_original": "將延宕整體普發現金時程",
+        "start_second": 257,
+        "end_second": 258,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "決議維持原有的領取管道",
+        "stt_original": "決議維持原有的領取管道",
+        "start_second": 258,
+        "end_second": 258,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "詐騙集團也看準時機",
+        "stt_original": "詐騙集團也看準時機",
+        "start_second": 258,
+        "end_second": 258,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "從8月普發現金議題發酵開始",
+        "stt_original": "從八月普發現金議題發酵開始",
+        "start_second": 258,
+        "end_second": 258,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "都是運用類似於政府官方網頁的帳號",
+        "stt_original": "都是運用類似於政府官方",
+        "start_second": 259,
+        "end_second": 259,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "軍方初步排除機械",
+        "stt_original": "軍方初步排除機械彈藥因素",
+        "start_second": 275,
+        "end_second": 288,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "台中成功嶺傳出打靶意外",
+        "stt_original": "臺中成功嶺傳出打靶意外",
+        "start_second": 288,
+        "end_second": 288,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "軍方也在23號下午對外說明",
+        "stt_original": "軍方也在二十三號下午對外說明",
+        "start_second": 288,
+        "end_second": 289,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "初步排除是機械以及彈藥出問題",
+        "stt_original": "初步排除是機械以及彈藥出了問題",
+        "start_second": 288,
+        "end_second": 289,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "我們經過聯保廠的檢查鑑定",
+        "stt_original": "我們經過聯保場的檢查",
+        "start_second": 289,
+        "end_second": 300,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "22號下午正在靶場",
+        "stt_original": "二十二號下午正在靶場",
+        "start_second": 300,
+        "end_second": 300,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "發現",
+        "stt_original": "保險",
+        "start_second": 260,
+        "end_second": 275,
+        "duration": 16
+    },
+    {
+        "ocr_ground_truth": "目前看起來的確是以學生居多",
+        "stt_original": "目前看起來的確是就是以學生屬於多",
+        "start_second": 333,
+        "end_second": 333,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "尤其國小國中比例非常非常高",
+        "stt_original": "尤其是小國中 比例非常非常高",
+        "start_second": 333,
+        "end_second": 333,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "疾管署表示預防流感最有效的方法",
+        "stt_original": "集團署表示預防流感最有效的方法",
+        "start_second": 351,
+        "end_second": 351,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "就是接種流感疫苗",
+        "stt_original": "就是接種流感疫苗",
+        "start_second": 351,
+        "end_second": 351,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "除了要加速通關的效率之外",
+        "stt_original": "除了要加速通關的效率之外",
+        "start_second": 384,
+        "end_second": 385,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "也要減少旅客手寫卡片的繁瑣程序",
+        "stt_original": "也要減少旅客手寫卡片的繁瑣程序",
+        "start_second": 384,
+        "end_second": 385,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "並協調各大海空運輸業者",
+        "stt_original": "並協調各大海空運輸",
+        "start_second": 398,
+        "end_second": 401,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "沒想到竟然是野生動物",
+        "stt_original": "沒想到竟然是山羌",
+        "start_second": 423,
+        "end_second": 423,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "就跟卡通一樣",
+        "stt_original": "就跟卡通一樣",
+        "start_second": 421,
+        "end_second": 421,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "民眾楊先生22號下午兩點多",
+        "stt_original": "民眾楊先生二十二號下午兩點多",
+        "start_second": 421,
+        "end_second": 423,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "在地下停車場直播中",
+        "stt_original": "在地下停車場直播中",
+        "start_second": 421,
+        "end_second": 423,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "原以為出現在鏡頭裡的動物是貓或狗",
+        "stt_original": "原以為出現在鏡頭裡的動物是貓或狗",
+        "start_second": 423,
+        "end_second": 423,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "沒想到竟然是野生動物",
+        "stt_original": "沒想到竟然是野生動物",
+        "start_second": 423,
+        "end_second": 423,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "台灣高鐵向日本採購12組新列車",
+        "stt_original": "臺灣高鐵向日本採購了十二組",
+        "start_second": 476,
+        "end_second": 480,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "廁所設置獨立洗手台",
+        "stt_original": "廁所設置獨立洗手台",
+        "start_second": 454,
+        "end_second": 456,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "在內裝部分充滿貼心設計",
+        "stt_original": "在內裝部分充滿貼心設計",
+        "start_second": 456,
+        "end_second": 457,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "車輛本身性能更有大突破",
+        "stt_original": "車輛本身性能更有大突破",
+        "start_second": 456,
+        "end_second": 457,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "那牠還有減少20%的剎車距離",
+        "stt_original": "那它還有減少20%的煞車距離",
+        "start_second": 461,
+        "end_second": 464,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "兼顧到安全這個功能",
+        "stt_original": "兼顧到安全這個功能",
+        "start_second": 464,
+        "end_second": 466,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "那相對的牠也有",
+        "stt_original": "那相對的它也有",
+        "start_second": 466,
+        "end_second": 467,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "增加一個自走電池的功能",
+        "stt_original": "一個自走電池的功能",
+        "start_second": 467,
+        "end_second": 470,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "牠可以讓我們在遇到緊急狀況的時候",
+        "stt_original": "它可以讓我們在遇到緊急狀況的時候",
+        "start_second": 470,
+        "end_second": 472,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "車間全包覆設計隔絕噪音",
+        "stt_original": "車間全包覆設計隔絕噪音",
+        "start_second": 476,
+        "end_second": 476,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "搭配減震器提升列車穩定度",
+        "stt_original": "搭配減震器提升列車穩定度",
+        "start_second": 476,
+        "end_second": 476,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "台灣高鐵向日本採購12組新列車",
+        "stt_original": "台灣高鐵向日本採購12組新列車",
+        "start_second": 476,
+        "end_second": 480,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "新車輛預計明年運抵台灣",
+        "stt_original": "新車輛預計明年運抵台灣",
+        "start_second": 485,
+        "end_second": 485,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "2027年下半年投入營運",
+        "stt_original": "2027年下半年投入營運",
+        "start_second": 485,
+        "end_second": 485,
+        "duration": 1
+    }
+]

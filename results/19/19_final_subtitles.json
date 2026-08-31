@@ -1,0 +1,478 @@
+[
+    {
+        "ocr_ground_truth": "所以在被告3人他們曾經",
+        "stt_original": "所以在被告三人,他們曾經…",
+        "start_second": 38,
+        "end_second": 57,
+        "duration": 20
+    },
+    {
+        "ocr_ground_truth": "首創帶長輩上班的計畫",
+        "stt_original": "首创带长辈上班的计划",
+        "start_second": 161,
+        "end_second": 173,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "到日炤中心工作",
+        "stt_original": "到日照中心工作",
+        "start_second": 173,
+        "end_second": 175,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "廣告揭開了炤顧者的壓力現實",
+        "stt_original": "广告揭开了照顾者的压力现实",
+        "start_second": 173,
+        "end_second": 173,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "解方也隨之而來",
+        "stt_original": "解放也随之而来",
+        "start_second": 173,
+        "end_second": 173,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "首創帶長輩上班的計畫",
+        "stt_original": "总会推动带长辈上班的计划",
+        "start_second": 161,
+        "end_second": 173,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "到日炤中心工作",
+        "stt_original": "到日照中心工作",
+        "start_second": 173,
+        "end_second": 175,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "既能安心炤護自己的家人",
+        "stt_original": "既能安心照顾自己的家人",
+        "start_second": 173,
+        "end_second": 175,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "長照3.0第一階段新制上路",
+        "stt_original": "长照3.0第一阶段新制",
+        "start_second": 142,
+        "end_second": 161,
+        "duration": 20
+    },
+    {
+        "ocr_ground_truth": "讓家庭炤顧者不再孤軍奮戰",
+        "stt_original": "让家庭照顾者不再孤军奋战",
+        "start_second": 184,
+        "end_second": 185,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "也期盼朝健康台灣的願景一步步邁進",
+        "stt_original": "也期盼朝健康台湾的愿景",
+        "start_second": 184,
+        "end_second": 185,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "依據我們科學的證據",
+        "stt_original": "依据我们科学的证据",
+        "start_second": 213,
+        "end_second": 223,
+        "duration": 11
+    },
+    {
+        "ocr_ground_truth": "但是這樣子的一個輻射",
+        "stt_original": "但是这样子的一个辐射",
+        "start_second": 223,
+        "end_second": 226,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "它是有可能在人體去累積的",
+        "stt_original": "它是有可能在人体去累积的",
+        "start_second": 223,
+        "end_second": 226,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "消基會批評政府應優先考量國人健康",
+        "stt_original": "政府应优先考量国人健康",
+        "start_second": 226,
+        "end_second": 228,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "對於全面取消日本福島食品限制",
+        "stt_original": "对于全面取消日本福岛食品限制",
+        "start_second": 226,
+        "end_second": 228,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "金管會邀集八大行庫開會",
+        "stt_original": "金管会邀集八大行库开会",
+        "start_second": 228,
+        "end_second": 245,
+        "duration": 18
+    },
+    {
+        "ocr_ground_truth": "金管會主委 彭金隆",
+        "stt_original": "金管会主委彭金龙",
+        "start_second": 278,
+        "end_second": 297,
+        "duration": 20
+    },
+    {
+        "ocr_ground_truth": "了解房貸承作狀況",
+        "stt_original": "了解房贷乘坐状况",
+        "start_second": 261,
+        "end_second": 266,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "再次強調政府全力支持首購族",
+        "stt_original": "政府全力支持手购足",
+        "start_second": 261,
+        "end_second": 266,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "彭金隆做出回應",
+        "stt_original": "彭金龙作出回应",
+        "start_second": 278,
+        "end_second": 278,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "來做一些滾動式的檢討",
+        "stt_original": "这个滚动式的检讨",
+        "start_second": 278,
+        "end_second": 297,
+        "duration": 20
+    },
+    {
+        "ocr_ground_truth": "央行回應管控是避免信用資源",
+        "stt_original": "管控是避免信用资源",
+        "start_second": 297,
+        "end_second": 298,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "游驗慈 郭俊麟 台北報導",
+        "stt_original": "由燕子 郭俊仁 英台报导",
+        "start_second": 301,
+        "end_second": 302,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "除了遭學校解聘",
+        "stt_original": "除了遭学校解聘",
+        "start_second": 329,
+        "end_second": 329,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "王龍韜",
+        "stt_original": "王荣涛",
+        "start_second": 334,
+        "end_second": 349,
+        "duration": 16
+    },
+    {
+        "ocr_ground_truth": "王威雄 雲林/台中報導",
+        "stt_original": "王威雄云林台中报道",
+        "start_second": 334,
+        "end_second": 349,
+        "duration": 16
+    },
+    {
+        "ocr_ground_truth": "那個一群狗10幾隻就衝過來",
+        "stt_original": "那个一群狗十几只就冲过来",
+        "start_second": 368,
+        "end_second": 371,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "不過動保團體認為",
+        "stt_original": "不过冻宝团体认为",
+        "start_second": 371,
+        "end_second": 372,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "遊蕩犬處理態度應一致",
+        "stt_original": "游荡犬处理态度应一致",
+        "start_second": 371,
+        "end_second": 372,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "包含機務車輛維修檢查員",
+        "stt_original": "台铁宣布张牧机物车辆维修检查员",
+        "start_second": 400,
+        "end_second": 400,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "希望吸引更多人才投入",
+        "stt_original": "希望吸引更多人才投入",
+        "start_second": 387,
+        "end_second": 399,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "是一個有一點吃力不討好的工作",
+        "stt_original": "是一个有点吃地不讨好的工作",
+        "start_second": 399,
+        "end_second": 400,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "包含機務車輛維修檢查員",
+        "stt_original": "包含机务车辆维修检察员",
+        "start_second": 400,
+        "end_second": 400,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "控制員僅開出2名正取",
+        "stt_original": "控制员仅开出两名证取",
+        "start_second": 400,
+        "end_second": 400,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "檢查員一口氣開出40名正取",
+        "stt_original": "检察员一口气开出四十名证取",
+        "start_second": 400,
+        "end_second": 400,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "以2026年底為完成目標",
+        "stt_original": "以2026年底为完成目标",
+        "start_second": 430,
+        "end_second": 430,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "原民台的新聞資料庫",
+        "stt_original": "公共媒体的新闻资料库",
+        "start_second": 430,
+        "end_second": 430,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "授權的可信資料",
+        "stt_original": "可授权的可信资料",
+        "start_second": 430,
+        "end_second": 430,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "以2026年底為完成目標",
+        "stt_original": "以2026年底为完成目标",
+        "start_second": 430,
+        "end_second": 430,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "每個媒體可以從新聞自律做起",
+        "stt_original": "每个媒体可以从新闻自律做起",
+        "start_second": 436,
+        "end_second": 436,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "讓台灣的新聞媒體可以重生",
+        "stt_original": "然后让台湾的新闻媒体可以重生",
+        "start_second": 436,
+        "end_second": 436,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "民主國家不能沒有言論自由",
+        "stt_original": "民主国家不能没有言论自由",
+        "start_second": 436,
+        "end_second": 449,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "提升新聞品質和公信力",
+        "stt_original": "提升新闻品质和公信力",
+        "start_second": 449,
+        "end_second": 451,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "促進媒體和民眾之間的良性溝通",
+        "stt_original": "媒体和民众之间的良性沟通",
+        "start_second": 449,
+        "end_second": 451,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "來自20多個國家地區的領導人齊聚",
+        "stt_original": "来自超过20个国家与地区的领导人",
+        "start_second": 488,
+        "end_second": 491,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "中國國家主席習近平在峰會",
+        "stt_original": "中国国家主席习近平",
+        "start_second": 496,
+        "end_second": 522,
+        "duration": 27
+    },
+    {
+        "ocr_ground_truth": "俄羅斯總統 蒲亭",
+        "stt_original": "与俄罗斯总统胡廷",
+        "start_second": 540,
+        "end_second": 547,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "象徵中俄印三大國加強合作",
+        "stt_original": "象征中俄印三大合作",
+        "start_second": 476,
+        "end_second": 488,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "來自20多個國家地區的領導人齊聚",
+        "stt_original": "来自20多个国家地区的领导人",
+        "start_second": 488,
+        "end_second": 491,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "進行第二天議程",
+        "stt_original": "齐聚进行第二天议程",
+        "start_second": 491,
+        "end_second": 496,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "此次峰會通過天津宣言",
+        "stt_original": "此次峰会通过天津宣言",
+        "start_second": 491,
+        "end_second": 496,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "規劃未來十年的合作戰略",
+        "stt_original": "规划未来十年的合作战略",
+        "start_second": 491,
+        "end_second": 496,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "涵蓋經濟 安全與多邊治理",
+        "stt_original": "涵盖经济安全与多边治理",
+        "start_second": 496,
+        "end_second": 502,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "中國國家主席習近平在峰會",
+        "stt_original": "中国国家主席习近平",
+        "start_second": 496,
+        "end_second": 522,
+        "duration": 27
+    },
+    {
+        "ocr_ground_truth": "拋出全球治理倡議",
+        "stt_original": "在峰会抛出全球治理倡议",
+        "start_second": 502,
+        "end_second": 506,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "不只俄羅斯總統蒲亭參與峰會",
+        "stt_original": "不只俄罗斯总统胡廷参与峰会",
+        "start_second": 517,
+        "end_second": 522,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "就連原先跟中國有邊境爭議的印度",
+        "stt_original": "就连原先跟中国有边境争议的",
+        "start_second": 517,
+        "end_second": 522,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "印度總理 莫迪",
+        "stt_original": "印度总理莫迪也出席",
+        "start_second": 532,
+        "end_second": 540,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "在美國關稅衝擊之際",
+        "stt_original": "在美国关税冲击之际",
+        "start_second": 530,
+        "end_second": 532,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "鳥克蘭外交部發聲明表示",
+        "stt_original": "乌克兰外交部发声明表示",
+        "start_second": 547,
+        "end_second": 550,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "蒲亭參與上合峰會並不能",
+        "stt_original": "普京参与上合峰会",
+        "start_second": 550,
+        "end_second": 554,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "改變俄羅斯的孤立現狀",
+        "stt_original": "并不能改变俄罗斯的孤立现状",
+        "start_second": 550,
+        "end_second": 554,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "反而凸顯其外交行動失敗",
+        "stt_original": "反而凸显其外交行动失败",
+        "start_second": 554,
+        "end_second": 556,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "其實國際上面的一個利益還是",
+        "stt_original": "其实国际上面的利益",
+        "start_second": 563,
+        "end_second": 569,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "峰會最後通過24份合作文件",
+        "stt_original": "峰会最后通过24份合作文件",
+        "start_second": 569,
+        "end_second": 573,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "展現抗衡美國的態勢",
+        "stt_original": "展现抗衡美国的态势",
+        "start_second": 569,
+        "end_second": 573,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "這場峰會難掩外交困境",
+        "stt_original": "这场峰会难掩外交困境",
+        "start_second": 573,
+        "end_second": 576,
+        "duration": 4
+    }
+]

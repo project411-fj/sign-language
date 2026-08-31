@@ -1,0 +1,415 @@
+[
+    {
+        "ocr_ground_truth": "不太敢想太遠的事情",
+        "stt_original": "不太敢想太遠的事情",
+        "start_second": 0,
+        "end_second": 0,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "因為我連明天會不會發病",
+        "stt_original": "因為我連明天會不會發病我都不知道",
+        "start_second": 0,
+        "end_second": 0,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "我先生他遇到這種狀況",
+        "stt_original": "我先生他遇到這種狀況",
+        "start_second": 0,
+        "end_second": 1,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "所以全台都有收到國家級警報",
+        "stt_original": "全台都收到了國家級警報",
+        "start_second": 45,
+        "end_second": 45,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "由於氣象署初估規模超過6.5",
+        "stt_original": "由於氣象署出估規模超過6.5",
+        "start_second": 45,
+        "end_second": 45,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "所以全台都有收到國家級警報",
+        "stt_original": "所以全臺都有收到國家級警報",
+        "start_second": 45,
+        "end_second": 45,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "大概70%的地震都發生在台灣東部這邊",
+        "stt_original": "大概70%的地震都發生在臺灣東部這邊",
+        "start_second": 56,
+        "end_second": 65,
+        "duration": 10
+    },
+    {
+        "ocr_ground_truth": "有待檢警進一步調查釐清",
+        "stt_original": "仍待檢警進一步釐清",
+        "start_second": 108,
+        "end_second": 109,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "台鐵又傳出旅客暴力",
+        "stt_original": "台鐵又傳出了旅客暴力",
+        "start_second": 109,
+        "end_second": 128,
+        "duration": 20
+    },
+    {
+        "ocr_ground_truth": "而這名男子也被鐵路警察當場逮捕",
+        "stt_original": "而這名男子也被鐵路警察當場逮捕",
+        "start_second": 128,
+        "end_second": 133,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "並已經啟動法律協助機制",
+        "stt_original": "並已經啟動法律協助機制",
+        "start_second": 133,
+        "end_second": 135,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "沒空解決台鐵安全",
+        "stt_original": "沒空解決臺鐵安全",
+        "start_second": 135,
+        "end_second": 136,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "不管分享或下載都可能觸犯國安法",
+        "stt_original": "不管是分享或下載都可能會觸犯國安法",
+        "start_second": 226,
+        "end_second": 241,
+        "duration": 16
+    },
+    {
+        "ocr_ground_truth": "不管分享或下載都可能觸犯國安法",
+        "stt_original": "不管是分享或下載都可能會觸犯國安法",
+        "start_second": 226,
+        "end_second": 241,
+        "duration": 16
+    },
+    {
+        "ocr_ground_truth": "不管分享或下載都可能觸犯國安法",
+        "stt_original": "不管是分享或下載都可能會觸犯國安法",
+        "start_second": 226,
+        "end_second": 241,
+        "duration": 16
+    },
+    {
+        "ocr_ground_truth": "甚至連\"紅軍\"也能選擇",
+        "stt_original": "甚至連紅軍也能選擇",
+        "start_second": 241,
+        "end_second": 244,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "不過10日卻遭香港警察國家安全處警告",
+        "stt_original": "不過時後卻到香港警察國家安全處警告",
+        "start_second": 241,
+        "end_second": 244,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "他可以讓下面的人不敢發聲",
+        "stt_original": "他可以令下面的人不敢發聲",
+        "start_second": 244,
+        "end_second": 244,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "似乎也想藉此達到逆統戰的效果",
+        "stt_original": "似乎也想藉此達到逆統戰的效果",
+        "start_second": 244,
+        "end_second": 245,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "台南知名的周氏蝦捲被民眾檢舉",
+        "stt_original": "臺南知名的周氏蝦捲被民眾檢舉",
+        "start_second": 245,
+        "end_second": 258,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "店家公開道歉",
+        "stt_original": "店家是公開道歉",
+        "start_second": 258,
+        "end_second": 271,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "強調嚴正處理這名員工",
+        "stt_original": "強調會嚴正處理這名員工",
+        "start_second": 258,
+        "end_second": 271,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "台南市衛生局人員11號一早",
+        "stt_original": "臺南市衛生局人員",
+        "start_second": 271,
+        "end_second": 274,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "將依食品安全衛生管理法",
+        "stt_original": "家居食品安全卫生管理法处",
+        "start_second": 274,
+        "end_second": 276,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "處新台幣6萬元以上",
+        "stt_original": "新台币六万元以上",
+        "start_second": 274,
+        "end_second": 276,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "2億元以下罰鍰",
+        "stt_original": "两亿元以下罚款",
+        "start_second": 274,
+        "end_second": 276,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "周氏蝦捲強調目前",
+        "stt_original": "周氏瞎卷强调",
+        "start_second": 276,
+        "end_second": 312,
+        "duration": 37
+    },
+    {
+        "ocr_ground_truth": "正嚴正處理涉事員工",
+        "stt_original": "目前正严正处理涉事员工",
+        "start_second": 276,
+        "end_second": 312,
+        "duration": 37
+    },
+    {
+        "ocr_ground_truth": "但陳其邁也強調",
+        "stt_original": "但陈琪曼也强调",
+        "start_second": 328,
+        "end_second": 330,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "其他3棟大樓正陸續改善中",
+        "stt_original": "其他三栋大楼正陆续改善中",
+        "start_second": 328,
+        "end_second": 330,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "影響他的心理的一個狀態",
+        "stt_original": "当然就会影响他的心理的一个状态",
+        "start_second": 360,
+        "end_second": 381,
+        "duration": 22
+    },
+    {
+        "ocr_ground_truth": "基金會表示也有家庭沒問題",
+        "stt_original": "基金会表示也有家庭没问题",
+        "start_second": 381,
+        "end_second": 381,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "孩子也出現施暴行為",
+        "stt_original": "孩子也出现施暴行为",
+        "start_second": 381,
+        "end_second": 381,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "台北報導",
+        "stt_original": "台北报导",
+        "start_second": 381,
+        "end_second": 410,
+        "duration": 30
+    },
+    {
+        "ocr_ground_truth": "大家可能印象比較深刻的是",
+        "stt_original": "大家可能印象比较深刻是",
+        "start_second": 410,
+        "end_second": 410,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "我前幾年代表中華隊的時候",
+        "stt_original": "我前几年代表中华队的时候",
+        "start_second": 410,
+        "end_second": 410,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "當下如何看待自己 周遭人的支持",
+        "stt_original": "当下如何看待自己周遭人的支持",
+        "start_second": 410,
+        "end_second": 410,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "郭泓志說能讓自己沒那麼多負面情緒",
+        "stt_original": "郭鸿志说能让自己没那么多人去看待自己",
+        "start_second": 410,
+        "end_second": 410,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "郭泓志說能讓自己沒那麼多負面情緒",
+        "stt_original": "郭鸿志说能让自己没那么多人去看待自己",
+        "start_second": 410,
+        "end_second": 410,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "郭泓志說能讓自己沒那麼多負面情緒",
+        "stt_original": "能让自己没那么多负面情绪",
+        "start_second": 410,
+        "end_second": 410,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "而自己的孩子目前讀國中",
+        "stt_original": "而自己的孩子目前读国中",
+        "start_second": 410,
+        "end_second": 410,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "身為家長當然關注網路霸凌議題",
+        "stt_original": "身为家长当然关注网络霸凌议题",
+        "start_second": 410,
+        "end_second": 410,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "新版幼兒教育及照顧法等",
+        "stt_original": "新版幼儿教育及照顾法等",
+        "start_second": 423,
+        "end_second": 450,
+        "duration": 28
+    },
+    {
+        "ocr_ground_truth": "新版幼兒教育及照顧法等",
+        "stt_original": "新版幼儿教育及照顾法",
+        "start_second": 423,
+        "end_second": 450,
+        "duration": 28
+    },
+    {
+        "ocr_ground_truth": "但事實上並不是 我們需要",
+        "stt_original": "但事实上并不是我们需要",
+        "start_second": 450,
+        "end_second": 450,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "家長想要知道到底發生什麼事情",
+        "stt_original": "家长想要知道到底发生什么事情",
+        "start_second": 450,
+        "end_second": 450,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "各方對於這個部分",
+        "stt_original": "各方对于这个部分",
+        "start_second": 451,
+        "end_second": 466,
+        "duration": 16
+    },
+    {
+        "ocr_ground_truth": "特別是有關這個調查的部分",
+        "stt_original": "特别是有关调查的部分",
+        "start_second": 451,
+        "end_second": 466,
+        "duration": 16
+    },
+    {
+        "ocr_ground_truth": "各界希望主管機關更嚴謹",
+        "stt_original": "各界希望主管机关更严谨",
+        "start_second": 466,
+        "end_second": 468,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "阻止憾事再發生",
+        "stt_original": "阻止憾事再发生",
+        "start_second": 466,
+        "end_second": 468,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "在英國倫敦舉行的美中經貿談判結束",
+        "stt_original": "在英国伦敦举行的美中经贸谈判",
+        "start_second": 510,
+        "end_second": 511,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "為期6個月的稀土出口許可",
+        "stt_original": "为期六个月的稀土出口许可",
+        "start_second": 489,
+        "end_second": 500,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "美國將依雙方同意的事項",
+        "stt_original": "美国将依双方同意的事项",
+        "start_second": 504,
+        "end_second": 510,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "讓中國學生就讀美國大學及學院",
+        "stt_original": "让中国学生就读美国大学及学院",
+        "start_second": 504,
+        "end_second": 510,
+        "duration": 7
+    },
+    {
+        "ocr_ground_truth": "在英國倫敦舉行的美中經貿談判結束",
+        "stt_original": "在英国伦敦举行的美中经贸谈判结束",
+        "start_second": 510,
+        "end_second": 511,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "美國總統川普在真實社群貼文",
+        "stt_original": "美国总统川普在真实社群贴文",
+        "start_second": 510,
+        "end_second": 511,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "表示跟中國的協議已完成",
+        "stt_original": "表示跟中国的协议已完成",
+        "start_second": 511,
+        "end_second": 521,
+        "duration": 11
+    },
+    {
+        "ocr_ground_truth": "我們希望這次倫敦會談取得的進展",
+        "stt_original": "我们希望这次伦敦会谈取得的进展",
+        "start_second": 521,
+        "end_second": 582,
+        "duration": 62
+    },
+    {
+        "ocr_ground_truth": "有另一個熱帶性低氣壓",
+        "stt_original": "有一个热带性低气压",
+        "start_second": 599,
+        "end_second": 617,
+        "duration": 19
+    }
+]

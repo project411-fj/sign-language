@@ -1,0 +1,800 @@
+[
+    {
+        "ocr_ground_truth": "耐心的測試著影印機",
+        "stt_original": "耐心的測試者影印機,",
+        "start_second": 35,
+        "end_second": 36,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "這位工作人員是自閉症星兒",
+        "stt_original": "這位工作人員是自閉症新兒,",
+        "start_second": 35,
+        "end_second": 36,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "可是程式設計的功力卻十分厲害",
+        "stt_original": "可是城市設計的功力卻十分厲害。",
+        "start_second": 36,
+        "end_second": 37,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "有些人他甚至還有辦法把一整個產品",
+        "stt_original": "有一些人他甚至還有辦法把一整個產品,",
+        "start_second": 37,
+        "end_second": 40,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "可是雇主如果涉及歧視",
+        "stt_original": "可是雇主如果涉及歧視,",
+        "start_second": 42,
+        "end_second": 42,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "捷克媒體最新報導",
+        "stt_original": "而捷克媒體最新報導,",
+        "start_second": 55,
+        "end_second": 87,
+        "duration": 33
+    },
+    {
+        "ocr_ground_truth": "副總統蕭美琴去年3月以副總統當選人身分",
+        "stt_original": "副總統蕭美琴去年3月以副總統當選人身份,",
+        "start_second": 71,
+        "end_second": 78,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "接受捷克議長韋德齊邀請",
+        "stt_original": "接受捷克議長維德齊邀請,",
+        "start_second": 71,
+        "end_second": 78,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "到捷克研究中國的智庫發表演說",
+        "stt_original": "到捷克研究中國的智庫發表演說,",
+        "start_second": 78,
+        "end_second": 80,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "只是她當時才下飛機 要前往布拉格市區",
+        "stt_original": "只是她當時才下飛機要前往布拉格市區,",
+        "start_second": 78,
+        "end_second": 80,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "就差點出車禍",
+        "stt_original": "就差點出車禍,",
+        "start_second": 80,
+        "end_second": 81,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "駕駛竟然是中國外交官",
+        "stt_original": "駕駛竟然是中國外交官,",
+        "start_second": 80,
+        "end_second": 81,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "引發喧然大波",
+        "stt_original": "引發軒然大波。",
+        "start_second": 80,
+        "end_second": 81,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "捷克媒體最新報導",
+        "stt_original": "根據捷克媒體最新報導,",
+        "start_second": 55,
+        "end_second": 87,
+        "duration": 33
+    },
+    {
+        "ocr_ground_truth": "包括人身監視",
+        "stt_original": "包括人身監視,",
+        "start_second": 88,
+        "end_second": 88,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "並試圖記錄她與捷克重要人物的會面",
+        "stt_original": "並試圖記錄她與捷克重要人物的會面。",
+        "start_second": 88,
+        "end_second": 88,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "捷克外交部曾召見中國大使表達關切",
+        "stt_original": "捷克外交部曾召見中國大使表達關切,",
+        "start_second": 88,
+        "end_second": 88,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "總統府全社會防衛韌性委員會",
+        "stt_original": "總統府全社會防衛任性委員會,",
+        "start_second": 158,
+        "end_second": 189,
+        "duration": 32
+    },
+    {
+        "ocr_ground_truth": "7月國家團結月",
+        "stt_original": "定謀7月為國家團結月,",
+        "start_second": 158,
+        "end_second": 189,
+        "duration": 32
+    },
+    {
+        "ocr_ground_truth": "另外也發布新版的防空避難指引",
+        "stt_original": "也發布了新版的防空避難指引。",
+        "start_second": 171,
+        "end_second": 216,
+        "duration": 46
+    },
+    {
+        "ocr_ground_truth": "總統府全社會防衛韌性委員會",
+        "stt_original": "總統府全社會防衛任性委員會第四次會議,",
+        "start_second": 158,
+        "end_second": 189,
+        "duration": 32
+    },
+    {
+        "ocr_ground_truth": "7月國家團結月",
+        "stt_original": "定謀7月為國家團結月,",
+        "start_second": 158,
+        "end_second": 189,
+        "duration": 32
+    },
+    {
+        "ocr_ground_truth": "因為漢光41號演習將登場外",
+        "stt_original": "因為漢光41號演習將登場外,",
+        "start_second": 189,
+        "end_second": 192,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "公視",
+        "stt_original": "同時,",
+        "start_second": 1,
+        "end_second": 541,
+        "duration": 541
+    },
+    {
+        "ocr_ground_truth": "讓民眾直接參與貼近生活情境的演習",
+        "stt_original": "讓民眾直接參與貼近生活情境的演習,",
+        "start_second": 214,
+        "end_second": 215,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "提升自我保衛意識",
+        "stt_original": "提升自我保衛意識。",
+        "start_second": 214,
+        "end_second": 215,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "完全配合中央政府一起合作",
+        "stt_original": "完全配合中央政府一起合作,",
+        "start_second": 215,
+        "end_second": 215,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "我們也希望民眾要遵守相關的",
+        "stt_original": "我們也希望民眾要遵守相關的平安法規定。",
+        "start_second": 215,
+        "end_second": 215,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "500人以上的防空避難室設施",
+        "stt_original": "將稽查可容納500人以上的防空避難式設施,",
+        "start_second": 215,
+        "end_second": 216,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "台北市長 蔣萬安",
+        "stt_original": "台北市長蔣萬表示,",
+        "start_second": 215,
+        "end_second": 215,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "另外也發布新版的防空避難指引",
+        "stt_original": "內政部也將發布新版的防空避難指引,",
+        "start_second": 171,
+        "end_second": 184,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "避開門窗與外牆",
+        "stt_original": "建議避開門窗與外牆,",
+        "start_second": 216,
+        "end_second": 221,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "躲在距爆炸源至少兩道牆後方",
+        "stt_original": "躲在據報炸源至少兩道牆後方,",
+        "start_second": 216,
+        "end_second": 216,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "保持趴下",
+        "stt_original": "並保持趴下,",
+        "start_second": 216,
+        "end_second": 220,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "嘴巴微張",
+        "stt_original": "嘴巴偽裝,",
+        "start_second": 216,
+        "end_second": 216,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "室內優於室外",
+        "stt_original": "室內優於室外,",
+        "start_second": 216,
+        "end_second": 220,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "避開門窗與外牆",
+        "stt_original": "避開門窗與外牆,",
+        "start_second": 216,
+        "end_second": 221,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "遠離易碎物品物品",
+        "stt_original": "遠離易碎物品。",
+        "start_second": 216,
+        "end_second": 221,
+        "duration": 6
+    },
+    {
+        "ocr_ground_truth": "現在都是精準導引",
+        "stt_original": "現在都是精準導引,",
+        "start_second": 221,
+        "end_second": 228,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "比較大的緩衝時間去預防",
+        "stt_original": "比較大的緩衝時間去預防,",
+        "start_second": 221,
+        "end_second": 228,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "也大幅壓縮預警時間",
+        "stt_original": "也大幅壓縮預警時間,",
+        "start_second": 228,
+        "end_second": 228,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "快速找到適合場所避難的知識",
+        "stt_original": "快速找到適合場所避難的知識,",
+        "start_second": 228,
+        "end_second": 228,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "變得更加重要",
+        "stt_original": "變得更加重要。",
+        "start_second": 228,
+        "end_second": 228,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "台北報導",
+        "stt_original": "台北報導。",
+        "start_second": 42,
+        "end_second": 55,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "不過委外廠商出包已經不是第一次",
+        "stt_original": "不過委外廠商出包已經不是第一次,",
+        "start_second": 264,
+        "end_second": 265,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "台北報導",
+        "stt_original": "台北報導。",
+        "start_second": 42,
+        "end_second": 55,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "(判決)有比我們想像的高",
+        "stt_original": "有比我們想像的高,",
+        "start_second": 299,
+        "end_second": 299,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "其實也滿謝謝國民法官",
+        "stt_original": "那其實也蠻謝謝國民法官,",
+        "start_second": 299,
+        "end_second": 299,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "新北市交通事件裁決處表示",
+        "stt_original": "新北市交通事件裁決處表明,",
+        "start_second": 303,
+        "end_second": 303,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "新北公告以設籍新北市的民眾為主",
+        "stt_original": "新北公告以涉及新北市的民眾為主,",
+        "start_second": 303,
+        "end_second": 303,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "人力疏導等措施是否到位",
+        "stt_original": "人力疏導等措施是否到位,",
+        "start_second": 324,
+        "end_second": 327,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "也都考驗台中市府的應變能力",
+        "stt_original": "也都考驗台中市府的應變能力。",
+        "start_second": 324,
+        "end_second": 327,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "台中報導",
+        "stt_original": "台中報導。",
+        "start_second": 327,
+        "end_second": 439,
+        "duration": 113
+    },
+    {
+        "ocr_ground_truth": "刑事局展開專案",
+        "stt_original": "刑事局展開專案,",
+        "start_second": 334,
+        "end_second": 342,
+        "duration": 9
+    },
+    {
+        "ocr_ground_truth": "一個月內就找出了7萬3千個異常帳號",
+        "stt_original": "一個月內就找出了7萬3千個異常帳號,",
+        "start_second": 342,
+        "end_second": 344,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "陸續停權",
+        "stt_original": "陸續停權處理。",
+        "start_second": 327,
+        "end_second": 348,
+        "duration": 22
+    },
+    {
+        "ocr_ground_truth": "帳號變 [不明|",
+        "stt_original": "個人帳號變不明,",
+        "start_second": 327,
+        "end_second": 334,
+        "duration": 8
+    },
+    {
+        "ocr_ground_truth": "顯然就是詐騙集團",
+        "stt_original": "那顯然就是詐騙集團,",
+        "start_second": 348,
+        "end_second": 349,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "台北報導",
+        "stt_original": "台北報導。",
+        "start_second": 42,
+        "end_second": 55,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "醫師表示",
+        "stt_original": "醫師表示,",
+        "start_second": 394,
+        "end_second": 397,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "減壓手術",
+        "stt_original": "就要手術,",
+        "start_second": 394,
+        "end_second": 397,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "這位來自印尼的黃姓僑生",
+        "stt_original": "這位來自印尼的黃姓喬生,",
+        "start_second": 377,
+        "end_second": 380,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "受到脊椎側彎困擾長達7",
+        "stt_original": "受到脊椎側彎困擾,",
+        "start_second": 377,
+        "end_second": 380,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "但最近幾年感覺病情惡化",
+        "stt_original": "但最近幾年感覺病情惡化,",
+        "start_second": 380,
+        "end_second": 381,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "會呼吸會喘",
+        "stt_original": "因為呼吸會喘,",
+        "start_second": 381,
+        "end_second": 392,
+        "duration": 12
+    },
+    {
+        "ocr_ground_truth": "要睡覺的時候躺下來",
+        "stt_original": "要睡覺的時候躺下來,",
+        "start_second": 392,
+        "end_second": 394,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "都有呈現大角度的彎曲",
+        "stt_original": "都有呈現大角度的彎曲,",
+        "start_second": 394,
+        "end_second": 394,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "進而壓迫到心肺",
+        "stt_original": "進而壓迫到心肺。",
+        "start_second": 394,
+        "end_second": 394,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "醫師表示",
+        "stt_original": "醫師表示,",
+        "start_second": 394,
+        "end_second": 397,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "大多發生在青春期的青少年",
+        "stt_original": "大多發生在青春期的,",
+        "start_second": 397,
+        "end_second": 398,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "屬於脊椎體發育異常",
+        "stt_original": "屬於脊椎體發育異常,",
+        "start_second": 397,
+        "end_second": 398,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "內臟臟器消化的功能",
+        "stt_original": "內臟脹氣消化的功能,",
+        "start_second": 398,
+        "end_second": 410,
+        "duration": 13
+    },
+    {
+        "ocr_ground_truth": "醫師表示",
+        "stt_original": "醫師表示,",
+        "start_second": 394,
+        "end_second": 397,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "就應該以手術治療",
+        "stt_original": "就應該以手術來治療。",
+        "start_second": 413,
+        "end_second": 415,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "台中報導",
+        "stt_original": "台中報導。",
+        "start_second": 327,
+        "end_second": 439,
+        "duration": 113
+    },
+    {
+        "ocr_ground_truth": "入圍年度創新獎前五強",
+        "stt_original": "獲得了年度創新獎前五強。",
+        "start_second": 439,
+        "end_second": 440,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "現場有29家來自台灣的新創廠商",
+        "stt_original": "現場有29家來自台灣的新創廠商,",
+        "start_second": 439,
+        "end_second": 439,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "在巴黎舉行的新創與科技大會",
+        "stt_original": "在巴黎舉行的新創與科技大會,",
+        "start_second": 439,
+        "end_second": 439,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "從全世界2000多個公司脫穎而出",
+        "stt_original": "從全世界2000多個公司,",
+        "start_second": 439,
+        "end_second": 440,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "入圍年度創新獎前五強",
+        "stt_original": "入為年度創新獎前五強。",
+        "start_second": 439,
+        "end_second": 440,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "我們產品特色最主要是利用台灣的強項",
+        "stt_original": "最主要是利用台灣的強項,",
+        "start_second": 440,
+        "end_second": 456,
+        "duration": 17
+    },
+    {
+        "ocr_ground_truth": "也實際落地 優化海外零售業者的經營模式",
+        "stt_original": "優化海外零售業者的經營模式。",
+        "start_second": 456,
+        "end_second": 459,
+        "duration": 4
+    },
+    {
+        "ocr_ground_truth": "呈現細緻影像內容",
+        "stt_original": "呈現細緻影像內容,",
+        "start_second": 465,
+        "end_second": 467,
+        "duration": 3
+    },
+    {
+        "ocr_ground_truth": "台灣參展廠商",
+        "stt_original": "台灣新創廠商,",
+        "start_second": 459,
+        "end_second": 472,
+        "duration": 14
+    },
+    {
+        "ocr_ground_truth": "但過程中仍面臨資金與人才的缺口",
+        "stt_original": "仍面臨資金與人才的缺口,",
+        "start_second": 473,
+        "end_second": 473,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "以及市場規模",
+        "stt_original": "以及市場規模,",
+        "start_second": 473,
+        "end_second": 473,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "國際能見度的挑戰",
+        "stt_original": "國際能見度的挑戰。",
+        "start_second": 473,
+        "end_second": 473,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "公視國際記者",
+        "stt_original": "公視國際記者,",
+        "start_second": 439,
+        "end_second": 439,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "陳文政",
+        "stt_original": "陳文正,",
+        "start_second": 439,
+        "end_second": 439,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "冷心低壓通過",
+        "stt_original": "是冷心低壓通過。",
+        "start_second": 473,
+        "end_second": 493,
+        "duration": 21
+    },
+    {
+        "ocr_ground_truth": "而今天還是會有同樣的天氣型態",
+        "stt_original": "還是會有同樣的天氣形態。",
+        "start_second": 493,
+        "end_second": 503,
+        "duration": 11
+    },
+    {
+        "ocr_ground_truth": "冷心低壓通過",
+        "stt_original": "因為冷心低壓通過,",
+        "start_second": 473,
+        "end_second": 493,
+        "duration": 21
+    },
+    {
+        "ocr_ground_truth": "綜合報導",
+        "stt_original": "綜合報導。",
+        "start_second": 88,
+        "end_second": 88,
+        "duration": 1
+    },
+    {
+        "ocr_ground_truth": "接著提供您各地的氣象資料",
+        "stt_original": "接著提供您各地的氣象資料。",
+        "start_second": 531,
+        "end_second": 532,
+        "duration": 2
+    },
+    {
+        "ocr_ground_truth": "10",
+        "stt_original": "10,",
+        "start_second": 493,
+        "end_second": 503,
+        "duration": 11
+    },
+    {
+        "ocr_ground_truth": "2",
+        "stt_original": "2、",
+        "start_second": 394,
+        "end_second": 398,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "1",
+        "stt_original": "1,",
+        "start_second": 55,
+        "end_second": 541,
+        "duration": 487
+    },
+    {
+        "ocr_ground_truth": "1",
+        "stt_original": "1,",
+        "start_second": 55,
+        "end_second": 541,
+        "duration": 487
+    },
+    {
+        "ocr_ground_truth": "2",
+        "stt_original": "2,",
+        "start_second": 394,
+        "end_second": 398,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "2",
+        "stt_original": "2,",
+        "start_second": 394,
+        "end_second": 398,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "2",
+        "stt_original": "2,",
+        "start_second": 394,
+        "end_second": 398,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "2",
+        "stt_original": "2,",
+        "start_second": 394,
+        "end_second": 398,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "2",
+        "stt_original": "2,",
+        "start_second": 394,
+        "end_second": 398,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "2",
+        "stt_original": "2,",
+        "start_second": 394,
+        "end_second": 398,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "2",
+        "stt_original": "2,",
+        "start_second": 394,
+        "end_second": 398,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "2",
+        "stt_original": "2,",
+        "start_second": 394,
+        "end_second": 398,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "2",
+        "stt_original": "2,",
+        "start_second": 394,
+        "end_second": 398,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "2",
+        "stt_original": "2,",
+        "start_second": 394,
+        "end_second": 398,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "2",
+        "stt_original": "2,",
+        "start_second": 394,
+        "end_second": 398,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "2",
+        "stt_original": "2,",
+        "start_second": 394,
+        "end_second": 398,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "2",
+        "stt_original": "2,",
+        "start_second": 394,
+        "end_second": 398,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "2",
+        "stt_original": "2,",
+        "start_second": 394,
+        "end_second": 398,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "2",
+        "stt_original": "2,",
+        "start_second": 394,
+        "end_second": 398,
+        "duration": 5
+    },
+    {
+        "ocr_ground_truth": "2",
+        "stt_original": "2,",
+        "start_second": 394,
+        "end_second": 398,
+        "duration": 5
+    }
+]
