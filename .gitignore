@@ -16,3 +16,4 @@ cropvideos/
 # Ignore files inside target
 target/*
 !target/.gitkeep
+part_videos/
