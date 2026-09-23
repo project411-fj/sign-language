@@ -1,9 +1,9 @@
 import cv2
 import mediapipe as mp
 
-input_path = r"part_videos\part_1_1.mp4"
-output_path = r"part_1_1_mediapipe.mp4"
-model_path = r"yolo_pose\hand_landmarker.task"
+input_path = r"yolo_pose_mediapie\output_upper_body.mp4"
+output_path = r"yolo_pose_mediapie\part_1_1_mediapipe.mp4"
+model_path = r"yolo_pose_mediapie\hand_landmarker.task"
 
 BaseOptions = mp.tasks.BaseOptions
 HandLandmarker = mp.tasks.vision.HandLandmarker
