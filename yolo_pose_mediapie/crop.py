@@ -1,9 +1,11 @@
 import cv2
 import numpy as np
+import os
+import glob
 from ultralytics import YOLO
 
-INPUT_VIDEO = r"part_videos\part_1_1.mp4"
-OUTPUT_VIDEO = r"yolo_pose_mediapie\output_upper_body.mp4"
+INPUT_DIR = r"part_videos"
+OUTPUT_DIR = r"yolo_pose_mediapie/cropped_videos"
 
 PERSON_MODEL = "person.pt"
 POSE_MODEL = "yolo26n-pose.pt"
@@ -70,195 +72,251 @@ def resize_with_padding(image, target_size=640):
     return canvas
 
 
-cap = cv2.VideoCapture(INPUT_VIDEO)
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-fps = cap.get(cv2.CAP_PROP_FPS)
-frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+video_files = glob.glob(os.path.join(INPUT_DIR, "*.mp4"))
 
-print("FPS:", fps)
-print("原始尺寸:", frame_width, "x", frame_height)
-print("總 Frame:", total_frames)
+print("找到影片數量:", len(video_files))
 
-fourcc = cv2.VideoWriter_fourcc(*"mp4v")
 
-writer = cv2.VideoWriter(OUTPUT_VIDEO,fourcc,fps,(OUTPUT_SIZE, OUTPUT_SIZE))
+for video_index, INPUT_VIDEO in enumerate(video_files, start=1):
 
-previous_person_box = None
+    file_name = os.path.basename(INPUT_VIDEO)
+    file_stem = os.path.splitext(file_name)[0]
 
-previous_left_hip_y = None
-previous_right_hip_y = None
+    OUTPUT_VIDEO = os.path.join(
+        OUTPUT_DIR,
+        f"{file_stem}_upper_body.mp4"
+    )
 
-previous_roi = None
+    print(f"\n[{video_index}/{len(video_files)}] 處理影片: {INPUT_VIDEO}")
 
-frame_id = 0
-written_frames = 0
+    cap = cv2.VideoCapture(INPUT_VIDEO)
 
+    fps = cap.get(cv2.CAP_PROP_FPS)
+    frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+    frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+    total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 
-while True:
+    print("FPS:", fps)
+    print("原始尺寸:", frame_width, "x", frame_height)
+    print("總 Frame:", total_frames)
 
-    ret, frame = cap.read()
+    fourcc = cv2.VideoWriter_fourcc(*"mp4v")
 
-    if not ret:
-        break
+    writer = cv2.VideoWriter(
+        OUTPUT_VIDEO,
+        fourcc,
+        fps,
+        (OUTPUT_SIZE, OUTPUT_SIZE)
+    )
 
-    frame_id += 1
+    previous_person_box = None
 
-    print(f"\rProcessing: {frame_id}/{total_frames}", end="")
+    previous_left_hip_y = None
+    previous_right_hip_y = None
 
-    person_results = person_model(frame,conf=PERSON_CONF,verbose=False)
+    previous_roi = None
 
-    current_person_box = None
-    largest_area = 0
+    frame_id = 0
+    written_frames = 0
 
-    if len(person_results[0].boxes) > 0:
 
-        for box in person_results[0].boxes:
+    while True:
 
-            x1, y1, x2, y2 = box.xyxy[0].cpu().numpy()
+        ret, frame = cap.read()
 
-            area = (x2 - x1) * (y2 - y1)
+        if not ret:
+            break
 
-            if area > largest_area:
-                largest_area = area
+        frame_id += 1
 
-                current_person_box = (float(x1),float(y1),float(x2),float(y2))
+        print(f"\rProcessing: {frame_id}/{total_frames}", end="")
 
-    if current_person_box is not None:
-        previous_person_box = smooth_box(previous_person_box,current_person_box,BOX_ALPHA)
+        person_results = person_model(frame,conf=PERSON_CONF,verbose=False)
 
-    if previous_person_box is None:
+        current_person_box = None
+        largest_area = 0
 
-        output = resize_with_padding(frame, OUTPUT_SIZE)
+        if len(person_results[0].boxes) > 0:
 
-        writer.write(output)
-        written_frames += 1
+            for box in person_results[0].boxes:
 
-        continue
+                x1, y1, x2, y2 = box.xyxy[0].cpu().numpy()
 
-    x1, y1, x2, y2 = previous_person_box
+                area = (x2 - x1) * (y2 - y1)
 
-    x1 = int(max(0, x1))
-    y1 = int(max(0, y1))
+                if area > largest_area:
+                    largest_area = area
 
-    x2 = int(min(frame_width, x2))
-    y2 = int(min(frame_height, y2))
+                    current_person_box = (
+                        float(x1),
+                        float(y1),
+                        float(x2),
+                        float(y2)
+                    )
 
-    if x2 <= x1 or y2 <= y1:
+        if current_person_box is not None:
+            previous_person_box = smooth_box(
+                previous_person_box,
+                current_person_box,
+                BOX_ALPHA
+            )
 
-        output = resize_with_padding(frame, OUTPUT_SIZE)
+        if previous_person_box is None:
 
-        writer.write(output)
-        written_frames += 1
+            output = resize_with_padding(frame, OUTPUT_SIZE)
 
-        continue
+            writer.write(output)
+            written_frames += 1
 
-    person_crop = frame[y1:y2, x1:x2]
+            continue
 
-    if person_crop.size == 0:
+        x1, y1, x2, y2 = previous_person_box
 
-        output = resize_with_padding(frame, OUTPUT_SIZE)
+        x1 = int(max(0, x1))
+        y1 = int(max(0, y1))
 
-        writer.write(output)
-        written_frames += 1
+        x2 = int(min(frame_width, x2))
+        y2 = int(min(frame_height, y2))
 
-        continue
+        if x2 <= x1 or y2 <= y1:
 
-    person_h, person_w = person_crop.shape[:2]
+            output = resize_with_padding(frame, OUTPUT_SIZE)
 
-    pose_results = pose_model(person_crop,conf=POSE_CONF,verbose=False)
+            writer.write(output)
+            written_frames += 1
 
-    pose_success = False
+            continue
 
-    if (
-        pose_results[0].keypoints is not None
-        and len(pose_results[0].keypoints.data) > 0
-    ):
+        person_crop = frame[y1:y2, x1:x2]
 
-        keypoints = pose_results[0].keypoints.data[0].cpu().numpy()
+        if person_crop.size == 0:
 
-        left_hip = keypoints[11]
-        right_hip = keypoints[12]
+            output = resize_with_padding(frame, OUTPUT_SIZE)
 
-        left_hip_y = float(left_hip[1])
-        right_hip_y = float(right_hip[1])
+            writer.write(output)
+            written_frames += 1
 
-        left_conf = float(left_hip[2])
-        right_conf = float(right_hip[2])
+            continue
 
-        if left_conf >= KEYPOINT_CONF and right_conf >= KEYPOINT_CONF:
+        person_h, person_w = person_crop.shape[:2]
 
-            previous_left_hip_y = ema(previous_left_hip_y,left_hip_y,KEYPOINT_ALPHA)
+        pose_results = pose_model(
+            person_crop,
+            conf=POSE_CONF,
+            verbose=False
+        )
 
-            previous_right_hip_y = ema(previous_right_hip_y,right_hip_y,KEYPOINT_ALPHA)
+        pose_success = False
 
-            pose_success = True
+        if (
+            pose_results[0].keypoints is not None
+            and len(pose_results[0].keypoints.data) > 0
+        ):
 
-    if (
-        pose_success
-        and previous_left_hip_y is not None
-        and previous_right_hip_y is not None
-    ):
+            keypoints = pose_results[0].keypoints.data[0].cpu().numpy()
 
-        hip_y = max(previous_left_hip_y, previous_right_hip_y)
+            left_hip = keypoints[11]
+            right_hip = keypoints[12]
 
-        bottom_padding = person_h * BOTTOM_PADDING_RATIO
+            left_hip_y = float(left_hip[1])
+            right_hip_y = float(right_hip[1])
 
-        crop_bottom = hip_y + bottom_padding
-        crop_bottom = min(crop_bottom, person_h)
+            left_conf = float(left_hip[2])
+            right_conf = float(right_hip[2])
 
-        side_padding = person_w * SIDE_PADDING_RATIO
+            if left_conf >= KEYPOINT_CONF and right_conf >= KEYPOINT_CONF:
 
-        roi_x1 = x1 - side_padding
-        roi_x2 = x2 + side_padding
+                previous_left_hip_y = ema(
+                    previous_left_hip_y,
+                    left_hip_y,
+                    KEYPOINT_ALPHA
+                )
 
-        roi_y1 = y1
-        roi_y2 = y1 + crop_bottom
+                previous_right_hip_y = ema(
+                    previous_right_hip_y,
+                    right_hip_y,
+                    KEYPOINT_ALPHA
+                )
 
-        roi_x1 = max(0, roi_x1)
-        roi_y1 = max(0, roi_y1)
+                pose_success = True
 
-        roi_x2 = min(frame_width, roi_x2)
-        roi_y2 = min(frame_height, roi_y2)
+        if (
+            pose_success
+            and previous_left_hip_y is not None
+            and previous_right_hip_y is not None
+        ):
 
-        current_roi = (roi_x1,roi_y1,roi_x2,roi_y2)
+            hip_y = max(
+                previous_left_hip_y,
+                previous_right_hip_y
+            )
 
-        previous_roi = smooth_box(previous_roi,current_roi,ROI_ALPHA)
+            bottom_padding = person_h * BOTTOM_PADDING_RATIO
 
-    if previous_roi is not None:
+            crop_bottom = hip_y + bottom_padding
+            crop_bottom = min(crop_bottom, person_h)
 
-        rx1, ry1, rx2, ry2 = previous_roi
+            side_padding = person_w * SIDE_PADDING_RATIO
 
-        rx1 = int(max(0, rx1))
-        ry1 = int(max(0, ry1))
+            roi_x1 = x1 - side_padding
+            roi_x2 = x2 + side_padding
 
-        rx2 = int(min(frame_width, rx2))
-        ry2 = int(min(frame_height, ry2))
+            roi_y1 = y1
+            roi_y2 = y1 + crop_bottom
 
-        if rx2 > rx1 and ry2 > ry1:
-            upper_body = frame[ry1:ry2, rx1:rx2]
+            roi_x1 = max(0, roi_x1)
+            roi_y1 = max(0, roi_y1)
+
+            roi_x2 = min(frame_width, roi_x2)
+            roi_y2 = min(frame_height, roi_y2)
+
+            current_roi = (
+                roi_x1,
+                roi_y1,
+                roi_x2,
+                roi_y2
+            )
+
+            previous_roi = smooth_box(
+                previous_roi,
+                current_roi,
+                ROI_ALPHA
+            )
+
+        if previous_roi is not None:
+
+            rx1, ry1, rx2, ry2 = previous_roi
+
+            rx1 = int(max(0, rx1))
+            ry1 = int(max(0, ry1))
+
+            rx2 = int(min(frame_width, rx2))
+            ry2 = int(min(frame_height, ry2))
+
+            if rx2 > rx1 and ry2 > ry1:
+                upper_body = frame[ry1:ry2, rx1:rx2]
+            else:
+                upper_body = frame
+
         else:
-            upper_body = frame
+            upper_body = person_crop
 
-    else:
-        upper_body = person_crop
+        output = resize_with_padding(upper_body, OUTPUT_SIZE)
 
-    output = resize_with_padding(upper_body, OUTPUT_SIZE)
-
-    if output is not None:
-        writer.write(output)
-        written_frames += 1
+        if output is not None:
+            writer.write(output)
+            written_frames += 1
 
 
-cap.release()
-writer.release()
+    cap.release()
+    writer.release()
 
-print()
-print("==============================")
-print("處理完成")
-print("==============================")
+    print()
+    print("原始 Frame:", total_frames)
+    print("輸出 Frame:", written_frames)
+    print("輸出影片:", OUTPUT_VIDEO)
 
-print("原始 Frame:", total_frames)
-print("輸出 Frame:", written_frames)
-print("輸出影片:", OUTPUT_VIDEO)
+
+print("\n所有影片處理完成")
