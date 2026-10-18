@@ -22,3 +22,12 @@ target/*
 yolo_pose_mediapipe/
 
 /yolo_pose_mediapie/pose_analysis_v3/*.mp4
+
+/rewrite_Phase2/ocr_text
+/rewrite_Phase2/frame_cropped
+/rewrite_Phase2/temp
+
+# Python 虛擬環境
+.venv/
+.venv-paddleocr/
+venv/

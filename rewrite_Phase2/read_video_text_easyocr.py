@@ -1,14 +1,3 @@
-"""Read text from part_videos/part_1_1.mp4 with EasyOCR.
-
-The program displays the video with OCR bounding boxes and shows each box's
-left, top, right, and bottom coordinates as percentages of the video frame.
-The same information is also printed in the terminal.
-
-Controls:
-    Q or Esc: quit
-    Space: pause/resume
-"""
-
 from __future__ import annotations
 
 import argparse

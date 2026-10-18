@@ -1,13 +1,3 @@
-"""Extract timestamped text intervals from MP4 videos with EasyOCR.
-
-No video window is opened. Repeated OCR results from consecutive samples are
-merged into intervals and written as UTF-8 tab-separated text for use by other
-programs.
-
-Default subtitle box filter:
-    left >= 27.5%, top >= 79%, bottom <= 88%
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -154,6 +144,12 @@ def parse_args() -> argparse.Namespace:
         help="Minimum top coordinate percentage (default: 79.0)",
     )
     parser.add_argument(
+        "--max-right",
+        type=float,
+        default=100.0,
+        help="Maximum right coordinate percentage (default: 100.0)",
+    )
+    parser.add_argument(
         "--max-bottom",
         type=float,
         default=88.0,
@@ -192,10 +188,15 @@ def validate_args(args: argparse.Namespace) -> None:
     for option, value in (
         ("--min-left", args.min_left),
         ("--min-top", args.min_top),
+        ("--max-right", args.max_right),
         ("--max-bottom", args.max_bottom),
     ):
         if not 0.0 <= value <= 100.0:
             raise ValueError(f"{option} must be between 0 and 100")
+    if args.min_left >= args.max_right:
+        raise ValueError("--min-left must be less than --max-right")
+    if args.min_top >= args.max_bottom:
+        raise ValueError("--min-top must be less than --max-bottom")
 
 
 def normalize_text(text: str) -> str:
@@ -210,6 +211,32 @@ def text_similarity(first: str, second: str) -> float:
     return SequenceMatcher(None, first, second).ratio()
 
 
+def crop_ocr_region(
+    frame: np.ndarray,
+    min_left_pct: float,
+    min_top_pct: float,
+    max_right_pct: float,
+    max_bottom_pct: float,
+) -> tuple[np.ndarray, int, int]:
+    """Crop the configured subtitle area before running EasyOCR.
+
+    The returned offsets allow OCR coordinates from the cropped image to be
+    translated back to coordinates in the original video frame.
+    """
+    frame_height, frame_width = frame.shape[:2]
+    left_px = int(np.ceil(frame_width * min_left_pct / 100.0))
+    top_px = int(np.ceil(frame_height * min_top_pct / 100.0))
+    right_px = int(np.floor(frame_width * max_right_pct / 100.0))
+    bottom_px = int(np.floor(frame_height * max_bottom_pct / 100.0))
+
+    left_px = min(max(left_px, 0), frame_width - 1)
+    top_px = min(max(top_px, 0), frame_height - 1)
+    right_px = min(max(right_px, left_px + 1), frame_width)
+    bottom_px = min(max(bottom_px, top_px + 1), frame_height)
+
+    return frame[top_px:bottom_px, left_px:right_px], left_px, top_px
+
+
 def extract_frame_text(
     raw_results: list,
     frame_width: int,
@@ -217,7 +244,10 @@ def extract_frame_text(
     confidence_threshold: float,
     min_left_pct: float,
     min_top_pct: float,
+    max_right_pct: float,
     max_bottom_pct: float,
+    x_offset: int = 0,
+    y_offset: int = 0,
 ) -> FrameText | None:
     accepted: list[tuple[float, float, str, float, float, float, float, float]] = []
 
@@ -227,7 +257,12 @@ def extract_frame_text(
         if not text or confidence < confidence_threshold:
             continue
 
-        points = np.asarray(box, dtype=np.float32)
+        # EasyOCR coordinates are relative to the cropped subtitle image.
+        # Translate them back so saved percentages still describe the full
+        # video frame.
+        points = np.asarray(box, dtype=np.float32).copy()
+        points[:, 0] += x_offset
+        points[:, 1] += y_offset
         x_values = np.clip(points[:, 0], 0, frame_width - 1)
         y_values = np.clip(points[:, 1], 0, frame_height - 1)
 
@@ -239,6 +274,7 @@ def extract_frame_text(
         if not (
             left_pct >= min_left_pct
             and top_pct >= min_top_pct
+            and right_pct <= max_right_pct
             and bottom_pct <= max_bottom_pct
         ):
             continue
@@ -393,7 +429,11 @@ def process_video(
 
     try:
         while True:
-            ok, frame = capture.read()
+            # Advance every frame to keep timestamps accurate, but only
+            # retrieve a full BGR image for frames that will actually be sent
+            # to OCR. This avoids unnecessary image conversion/copying for
+            # skipped frames.
+            ok = capture.grab()
             if not ok:
                 break
             frame_index += 1
@@ -401,9 +441,26 @@ def process_video(
             if frame_index != 1 and (frame_index - 1) % args.ocr_every != 0:
                 continue
 
+            ok, frame = capture.retrieve()
+            if not ok:
+                raise RuntimeError(
+                    f"Cannot decode frame / 無法解碼影格: {frame_index}"
+                )
+
             timestamp_sec = (frame_index - 1) / fps
             height, width = frame.shape[:2]
-            raw_results = reader.readtext(frame, detail=1, paragraph=False)
+            ocr_frame, x_offset, y_offset = crop_ocr_region(
+                frame,
+                args.min_left,
+                args.min_top,
+                args.max_right,
+                args.max_bottom,
+            )
+            raw_results = reader.readtext(
+                ocr_frame,
+                detail=1,
+                paragraph=False,
+            )
             item = extract_frame_text(
                 raw_results,
                 width,
@@ -411,7 +468,10 @@ def process_video(
                 args.confidence,
                 args.min_left,
                 args.min_top,
+                args.max_right,
                 args.max_bottom,
+                x_offset,
+                y_offset,
             )
 
             if item is None:
@@ -490,10 +550,11 @@ def main() -> None:
         "OCR box filter / 文字框篩選: "
         f"L >= {args.min_left:.1f}%, "
         f"T >= {args.min_top:.1f}%, "
+        f"R <= {args.max_right:.1f}%, "
         f"B <= {args.max_bottom:.1f}%"
     )
     print("Loading EasyOCR once / 正在載入 EasyOCR（僅一次）...")
-    reader = easyocr.Reader(args.languages, gpu=True)
+    reader = easyocr.Reader(args.languages, gpu=args.gpu)
 
     successful = 0
     total_intervals = 0
