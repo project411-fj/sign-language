@@ -1,23 +1,8 @@
-"""Merge matching STT/filtered EasyOCR files. Only main() is defined.
-
-Phase2 wins spelling/substitution conflicts. Phase1-only occurrences are kept
-in sequence, even when the same words appeared earlier. Output keeps the
-original Phase1 intervals; these are segment times, not word-level alignment.
-
-Run from the project, or place this script in rewrite_Phase2:
-    python merge_stt_easyocr.py
-    python merge_stt_easyocr.py --file part_1_1 --overwrite
-
-Uses only the Python standard library. Existing outputs are skipped unless
---overwrite is supplied. Neither input directory is modified.
-"""
-
 import argparse
 import re
 import unicodedata
 from difflib import SequenceMatcher
 from pathlib import Path
-
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -47,7 +32,6 @@ def main():
         if output_dir == input_dir or output_dir.is_relative_to(input_dir):
             parser.error("Output must be outside the input directories.")
 
-    # part_1_1.txt <-> part_1_1_frames.txt (also accepts a same-name OCR file).
     ocr_files = {}
     for path in sorted(ocr_dir.glob("*.txt")):
         key = path.stem.removesuffix("_frames")
@@ -93,8 +77,6 @@ def main():
                 raise ValueError("Phase1 is empty")
             ocr_text = " ".join(line.strip() for line in ocr_files[name].read_text(encoding="utf-8-sig").splitlines() if line.strip())
 
-            # Normalize only for matching; retain raw characters and spaces in
-            # output. Keep occurrence positions so repeated words stay distinct.
             sequences = []
             positions = []
             pieces = []
@@ -135,8 +117,6 @@ def main():
                 elif tag == "insert":
                     alignment.extend((None, index) for index in range(b0, b1))
                 else:
-                    # Refine replacement blocks: substitutions use Phase2;
-                    # surplus Phase1 characters remain as extra occurrences.
                     left, right = stt_sequence[a0:a1], ocr_sequence[b0:b1]
                     costs = [[0] * (len(right) + 1) for _ in range(len(left) + 1)]
                     for i in range(len(left), -1, -1):
@@ -148,8 +128,6 @@ def main():
                             else:
                                 costs[i][j] = min(costs[i + 1][j + 1] + (left[i] != right[j]), costs[i + 1][j] + 1, costs[i][j + 1] + 1)
                     i = j = 0
-                    # Resolve ties from left to right: 位臺南市 -> 味 should
-                    # correct 位 and preserve the following 臺南市 occurrence.
                     while i < len(left) or j < len(right):
                         if i < len(left) and j < len(right) and costs[i][j] == costs[i + 1][j + 1] + (left[i] != right[j]):
                             alignment.append((a0 + i, b0 + j))
@@ -183,8 +161,6 @@ def main():
                 start, end, original = segment
                 text = "".join(text_parts).strip() or original
                 lines.append(f"{start} - {end}: {text}")
-            # If Phase2 contains only punctuation, there is no linguistic text
-            # to align. Keep it explicitly rather than silently dropping it.
             if ocr_text and not ocr_sequence:
                 lines.append(f"{segments[-1][0]} - {segments[-1][1]}: {ocr_text}")
             payload = "\n".join(lines) + "\n"
@@ -199,7 +175,6 @@ def main():
     print(f"Merged: {merged}; skipped: {skipped}; failed: {failed}")
     if failed:
         raise SystemExit(1)
-
 
 if __name__ == "__main__":
     main()
