@@ -1,0 +1,1364 @@
+[
+  {
+    "clip_id": "part_1_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_1_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天6月6號的公視手語新聞 首先來關心臺南市永康鬧區 昨晚突然飄出瓦斯異位 臺南市警消貨報到場偵測到可燃性氣體 緊急疏散周邊店家人員 封路不水線防護 瓦斯公司也關閉閥門 尋找洩漏員 由於今天是上班日 要看搶修進度才能確認 是否影響白天上班通勤",
+    "num_frames": 368
+  },
+  {
+    "clip_id": "part_1_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_1_2_upper_body_coordinates.npy",
+    "text": "嘉義地檢署接獲檢舉 東石鄉去年開始動工的漁電共生案場 業者遭恐嚇勒索四百萬元 昨天搜尋並約談對外自稱是嘉義縣議員蔡正怡的助理 張檢男子以及王姓地方人士 檢方訓後認為二人涉嫌恐嚇取材等罪嫌疑重大 向法院申請羈押獲准",
+    "num_frames": 303
+  },
+  {
+    "clip_id": "part_1_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_1_3_upper_body_coordinates.npy",
+    "text": "賭報時間來看到聯合報是美國總統川普和中國國家主席習近平五號通話聚焦貿易議題習近平表示美方應撤銷對中國實施的消極舉措川普則說美方樂見中國經濟保持強勁增長雙方團隊近期將展開第二次會談 習近平表示歡迎川普再次訪問中國 中國時報報道監察院爆發監委濫用公務車後下令取消以個人名義申請公務車 監委田秋瑾卻訴苦現在每天得轉三班捷運走15分鐘到捷運站下雨天上班會遲到引發網路易潤 自由時報提到了 近年有不肖律師淪為詐團幫兇被起訴仍在職業的狀況 為了維護人民對司法制度信賴 行政院會昨天透過律師法部分條文修正草案 擴大經檢察官提起公訴時得命停止執行律師職務之範圍 將喊請立法院審議 看完報紙重點繼續來關心 中共升高臺海情勢緊張 中國官媒央視報導 指出我國的資通電軍 對廣州的科技公司發動網路攻擊 還公開二十名臺灣資通電軍成員的個資對外懸賞 對此我資通電軍駁斥絕非事實反控中共抹黑",
+    "num_frames": 929
+  },
+  {
+    "clip_id": "part_1_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_1_5_upper_body_coordinates.npy",
+    "text": "一名申請入學、爭取多校、醫學系的高中生 在社群平臺公開分享自己的學習歷程檔案 結果被網友質疑 某精英杯辯論賽的最佳辨識榮譽並非如此 原本錄取該生的楊明交大、臺北醫學大學、中山醫學大學 決議取消錄取 引發外界對學黨核實的質疑 還有教團呼籲廢除學黨採集",
+    "num_frames": 360
+  },
+  {
+    "clip_id": "part_1_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_1_7_upper_body_coordinates.npy",
+    "text": "新冠疫情升溫 疾管署預估高峰將落在6月底、7月初 臺灣感染症醫學會表示 臺灣平均每5人就有一人是新冠高風險族群 尤其是洗腎患者感染新冠的死亡率較一般人高10倍 6月11號起 65歲以上等三類新冠高風險族群 第二劑疫苗接種時間間隔縮短為兩個月",
+    "num_frames": 308
+  },
+  {
+    "clip_id": "part_2_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_2_1_upper_body_coordinates.npy",
+    "text": "看新聞開視野 歡迎收看今天7月4號的公事手語新聞 首先來關心臺中市豐園區一家軍用品店老闆 一家五口疑似碰上了投資黃金被詐騙 極淺鉅款而集體輕生 在現場還發現留有遺書以及燒過的木炭 他們曾經向市議員求助 但最後還是來不及 非常令人遺憾",
+    "num_frames": 303
+  },
+  {
+    "clip_id": "part_2_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_2_3_upper_body_coordinates.npy",
+    "text": "讀報時間來看到 中國時報是 臺大醫院追蹤17年 首度證實 大腸癌篩檢的年齡 如果從50歲提早自40到49歲 死亡率可以下降超過四成 如果民眾要自費大腸鏡檢查 建議40歲以上開始做 自由時報報道 兩岸合辦的金夏永渡體育活動 原定要在26日 由廈門出發到金門上岸 因為有統戰疑慮 中央要求金門縣政府來停辦 聯合報學提到了 立法院去年底三讀透過 開放80歲以上的長者 不用82表評估 可以聘用外籍看護 勞動部昨天預告三項法規 日後保證重症家庭 可以優先承接國內的移工 而國外引進看護人員 則是維持兩個月左右的申請時程 預計在本月底上路 看完報紙重點 繼續來關心 美國總統川普推動的大而美法案 3號在眾議院透過 川普預計在7月4號完成法案的簽署 而其中一項稅改是半導體投資抵免 上調到35% 這對於在美國設廠的臺積電 實屬利多訊息",
+    "num_frames": 875
+  },
+  {
+    "clip_id": "part_2_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_2_6_upper_body_coordinates.npy",
+    "text": "臺北地院審理精華成案 昨天提訊前民眾黨主席柯文哲 臺北市議員應小偉等人 不過日前 前北市副市長彭正生太太身亡之後 在網路上出現了恐嚇法官與檢察官的言論 而涉嫌散佈恐嚇圖文的一名代姓嫌犯 昨天下午在新北市的戲劇被逮捕 經過漏頁徵訊 檢方申請羈押",
+    "num_frames": 319
+  },
+  {
+    "clip_id": "part_2_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_2_7_upper_body_coordinates.npy",
+    "text": "高雄永安區鑽石沙灘公園 昨天傍晚發生了一起溺水命案 一名76歲菜姓男子 在海里游泳的時候 疑似遭到流浪狗攻擊 導致他頭部重傷溺水 海巡遊員趕到的時候 發現他已經沒有生命跡象 終於搶救後仍然傷重不治",
+    "num_frames": 226
+  },
+  {
+    "clip_id": "part_2_8_upper_body_coordinates",
+    "npy_path": "processed_features/part_2_8_upper_body_coordinates.npy",
+    "text": "今年漢光41號演習期間 將首度整合城鎮任性演習 7月15號開始在各地陸續進行 這次警政署首度跟全聯賣場合作 到時候民眾在指定賣場門市 聽到防空警報 要依照賣場人員引導避難 而內政部也呼籲民眾 準備緊急避難包 一旦遇到狀況可以立即取用",
+    "num_frames": 325
+  },
+  {
+    "clip_id": "part_2_9_upper_body_coordinates",
+    "npy_path": "processed_features/part_2_9_upper_body_coordinates.npy",
+    "text": "藝人瑞莎在臺灣致力發展韻律體操 辦理的邀請賽今年邁入了第五屆 共來自15國總共228位選手參賽 而瑞莎說 辦比賽當然有壓力 但是希望讓喜歡韻律體操的孩子 有更多比賽的機會",
+    "num_frames": 238
+  },
+  {
+    "clip_id": "part_2_10_upper_body_coordinates",
+    "npy_path": "processed_features/part_2_10_upper_body_coordinates.npy",
+    "text": "這幾天都是高溫炎熱的天氣形態 昨天在桃園盧竹測到了39.2度高溫 另外在新北三峽和金門側站也有超過38度 根據衛福部統計 7月1號、2號這兩天 因為熱傷害就診就超過百人",
+    "num_frames": 157
+  },
+  {
+    "clip_id": "part_3_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_3_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天7月10號的公事手語新聞 小鄉來關心 新北市消防隊員 前天到新店營救溺水的民眾 卻因為船艇在急流中翻覆 五人全部都落水 而其中的吳恩碩不幸殉職 另一位張敬謙 也在昨天下午宣告不治 整起事件 從民眾闖進高風險水域違規玩水 到消防人力以及專業訓練是否足夠 都引發各界的討論",
+    "num_frames": 351
+  },
+  {
+    "clip_id": "part_3_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_3_2_upper_body_coordinates.npy",
+    "text": "去年在0403花蓮大地震 立下了無數功勞的花蓮縣消防局搜救犬Wilson 在上個月訓練的時候 不小心從三樓摔落地面傷重過世 他的零犬員和物件弟兄都非常難過",
+    "num_frames": 197
+  },
+  {
+    "clip_id": "part_3_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_3_4_upper_body_coordinates.npy",
+    "text": "督報時間來看到 聯合報時提到了 高鐵延伸宜蘭案 昨天進行環平專業小組 第二次出省會議 交通部承諾 重新檢核開發涉及的旅行時間 經濟效益等評估 以及強化和沿線居民的溝通作業 最後決議 透過出省相送環平大會審查 自由時報報導 丹納斯颱風以及豪雨 造成全臺農損嚴重 而截至昨天下午五點為止 全臺農損破20億元 其中臺南將近有8億 嘉義則是超過了6億 再來看到中國時報是 中國商務部 昨天宣佈 對漢祥臺船等10家臺灣公司 以及單位 列入出口管制名單 管制軍民兩用的貨物 技術或服務出口 看完報紙重點 繼續來關心 長達10天9夜的漢光41號演習 昨天正式登場 第一天模擬灰色地帶襲擾 航艦殺手 首級的萬江艦 也使出了基隆港待命 國防部是動員了22000名後備軍人 投入演訓 要恢復後備部隊的戰力",
+    "num_frames": 853
+  },
+  {
+    "clip_id": "part_3_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_3_6_upper_body_coordinates.npy",
+    "text": "中南部連日以來下大雨 雲林谷坑、草嶺村發生出現土石崩塌 阻斷溪流,形成豔色湖 恐怕對下游的村落造成危害 而昨天晚間已經有自然溢流的情況 此外,受到西南風和低壓帶的影響 紀項署也啟動了大規模劇烈豪雨作業 尤其南部以及東南部地區 有豪雨等級以上降雨的機率 今天,包括雲林、嘉義、臺南、高雄還有屏東 都有部分地區停班停課",
+    "num_frames": 360
+  },
+  {
+    "clip_id": "part_3_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_3_7_upper_body_coordinates.npy",
+    "text": "丹納斯颱風在臺南吹斷了大量電線杆以及電纜 經過連日的搶修 到今天早上7點為止 仍有4萬4千多戶尚未覆電 養殖餘溫也因為打水機無法啟動 損失相當的慘重 為此國軍以及新北、桃園還有高雄 都派出了機具以及人力支援臺南 協助居民整理家園",
+    "num_frames": 313
+  },
+  {
+    "clip_id": "part_3_8_upper_body_coordinates",
+    "npy_path": "processed_features/part_3_8_upper_body_coordinates.npy",
+    "text": "另外嘉義也還有2萬多戶停電 有民眾因為沒電 沒辦法開啟鐵卷門 困在家裡第四天 易竹鄉的鱸魚養殖區也損失慘重",
+    "num_frames": 152
+  },
+  {
+    "clip_id": "part_4_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_4_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天7月17號的公式手語新聞 首相大關心 又有颱風要生成 菲律賓東方海面的熱帶性低氣壓 預計最快今天就會生成今年的第六號颱風 韋帕 而影響臺灣最明顯的時間將是在週五 週六以及週日這三天 東半部以及南部地區都要嚴防大雨或豪雨 而中南部有些民眾家園還沒有恢復 聽到颱風要來感到相當的擔心 趕緊準備放臺",
+    "num_frames": 703
+  },
+  {
+    "clip_id": "part_4_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_4_2_upper_body_coordinates.npy",
+    "text": "臺師大女足隊受到教練的威脅 抽血換學分事件延燒 教育部昨天下午 針對違反學術倫理的部分 分別裁罰研究主持人陳中慶教授 與女足隊教練周臺英各50萬元罰還 此外也要求臺師大重審並開罰110萬元",
+    "num_frames": 461
+  },
+  {
+    "clip_id": "part_4_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_4_3_upper_body_coordinates.npy",
+    "text": "督報時間來看到 中國時報是 丹納斯颱風造成14萬5千片的光電板毀損 立委認為設在水面的光電免環屏不合理 而環境部則回應 年底會進行通盤檢討 再來看到 聯合報是提到了 農地違規蓋超商現象普遍 中央去年起要求清查 而陸續有出租土地給超商的地主被移送法辦 掀起超商席登朝 自由時報報道 華聯壽豐鄉一間鐵皮屋民宅 昨天凌晨起火 造成四個人死亡 對於消防員一開始跑錯地點 地方人士說 當地的門牌混亂 數十年來都沒有處理 起火戶是和平河村的門牌 實際卻在共和村裡面 而看完了報紙重點 繼續再來關心 臺美關稅談判的進度 行政院經貿談判辦公室指出 要力拼在8月1號前完成談判 至少要爭取到不高於日韓等競爭對手的稅率 而目前這兩個國家的稅率都是25%",
+    "num_frames": 1521
+  },
+  {
+    "clip_id": "part_4_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_4_4_upper_body_coordinates.npy",
+    "text": "7.26罷免投票進入倒數 昨天開始各地陸續進行電視說明會 在花蓮選委會 場外雙方的支持者比聲亮 而場內立委傅坤祺與罷團的領銜人 雙方也各自拿手板首次正面交鋒 而這次唯一面臨立委市長雙罷免的新竹市 罷團領銜人延續政政前高洪安的司法戰 在說明會上雙方正面對決",
+    "num_frames": 650
+  },
+  {
+    "clip_id": "part_4_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_4_7_upper_body_coordinates.npy",
+    "text": "下週六就要進行罷免投票 依照規定 現在已經不能夠釋出或是引述民調 最終將開罰兩百萬元 不過對於像是告急 可能調解席之類的用語 算不算違規 中選會主委李靜永表示 還是要看個案來認定 至於如果投票日 遇到了颱風 則是有延期和改地點 兩種辦法可以解決 請確認是否為空箱",
+    "num_frames": 694
+  },
+  {
+    "clip_id": "part_4_9_upper_body_coordinates",
+    "npy_path": "processed_features/part_4_9_upper_body_coordinates.npy",
+    "text": "現在都沒有提供搶救時序表 救災相關的影像 以及無線電譯文等資料 昨天是來到了市府抗議 現場更一度爆發衝突 消防局回應 由於相關資料涉及個資 無法提供給災調會委員以外的人",
+    "num_frames": 373
+  },
+  {
+    "clip_id": "part_4_10_upper_body_coordinates",
+    "npy_path": "processed_features/part_4_10_upper_body_coordinates.npy",
+    "text": "由市仗者組成的蝦米市仗人生樂團 前往歐洲參加阿卡貝拉大賽 不但是決賽旗幟隊伍裡面 唯一的亞洲團體 更打敗歐洲樂團奪金 創下了臺灣的紀錄 而比賽的時候 他們也特別穿上 與去年國慶大會表演時 相同的服飾燈臺 紅白藍的配色 也象徵臺灣意涵",
+    "num_frames": 593
+  },
+  {
+    "clip_id": "part_4_11_upper_body_coordinates",
+    "npy_path": "processed_features/part_4_11_upper_body_coordinates.npy",
+    "text": "泰國在三年前成為亞洲第一個大麻合法化的國家 吸引了許多外國遊客蜂擁而至 但是這項政策在上個月出現急轉彎 大麻重新被列為毒品 也再度在當地引發爭議 來看公示國際記者楊志強 在泰國曼谷的採訪報道",
+    "num_frames": 474
+  },
+  {
+    "clip_id": "part_4_12_upper_body_coordinates",
+    "npy_path": "processed_features/part_4_12_upper_body_coordinates.npy",
+    "text": "關心天氣,今天環境逐漸由西南風轉為偏東風 上午,中南部有零星的降雨 而到了下午,各地就會有區域性短暫雷陣雨 山區及南部地區有區域性大雨發生的機率 另外,大臺北以及彰化要留意36度以上的高溫 接著就提供您各地的跡象資料",
+    "num_frames": 529
+  },
+  {
+    "clip_id": "part_5_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_5_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天7月24號的公式手語新聞 讀報時間來看到 自由時報報道 希望提升急診品質 健保署提出八大策略 其中將參考國外的經驗 推行假日急診中心 也就是在急診庸塞醫院附近再開據點 分流收治急診輕症病人 最快今年10月始辦 聯合報提到了 籌劃9年 位於臺北機場基地的國家鐵道博物館 即將於7月底進行第一階段開放 預計2027年全區開放 不過2027年之後 交通部是否續租 或無償給文化部來使用 還要討論 再來看到 中國時報是 日本自民黨於參議院改選慘敗之後 首相石破茂面臨要求他辭職的壓力 更有媒體報道 石破茂將於8月下旬請辭 但是他昨天下午出面否認",
+    "num_frames": 715
+  },
+  {
+    "clip_id": "part_5_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_5_2_upper_body_coordinates.npy",
+    "text": "準備進行新一輪的實體磋商 而深圳民進黨主席的總統賴清德 在中常會上強調 我方團隊會在維護國家及產業利益 國民健康及糧食安全等原則上 促進臺美貿易平衡 國民黨主席朱立倫呼籲 對美談判不應該黑箱作業 應該讓國人預先了解臺灣會讓步哪些部分",
+    "num_frames": 248
+  },
+  {
+    "clip_id": "part_5_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_5_3_upper_body_coordinates.npy",
+    "text": "臺師大女足案抽血風波 足球協會昨天下午召開紀律委員會 決定撤銷周臺英教練證 終身禁止參與足球事務 而昨天立法院魏環委員會也召開公聽會 臺師大人體研究倫理審查委員會主委陳學聚 談言計劃與實際的執行有多項不符之處 未來也將會改善增加實地查核的頻率",
+    "num_frames": 328
+  },
+  {
+    "clip_id": "part_5_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_5_4_upper_body_coordinates.npy",
+    "text": "今年第七號颱風範思高 今明兩天最接近臺灣 而呂宋島的西北側 昨晚也有一個颱風逐節草生成 這項專家提醒 近日可能會出現多臺共舞的情形 而中選會表示 如果這個星期六有颱風來襲 地方政府宣佈停止上班上課 那個地區也會停止辦理罷免案投票",
+    "num_frames": 305
+  },
+  {
+    "clip_id": "part_5_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_5_5_upper_body_coordinates.npy",
+    "text": "再來關心一起重大車禍 新北市萬里區 昨天有一輛載滿鋼條的異影車 在下坡轉彎的時候 撞上載滿乘客的果光客運 造成一人死亡 14人輕重傷 死者是坐在車頭第一排的乘客 現年39歲的遊行男子 警方調查 異影車是打滑失控 撞上對面車道的果光客運 中文字幕志願者 楊茜茜",
+    "num_frames": 236
+  },
+  {
+    "clip_id": "part_5_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_5_6_upper_body_coordinates.npy",
+    "text": "臺北市蛋商工會決定本週的蛋價維持不變 但是南部基農指出 颱風導致蛋機與禽社折損 認為蔬菜水果都漲價了 唯獨雞蛋不漲實在不合理 中華民國養雞協會 昨天開會做成決定 要拿回產地價的報價權 宣佈兩週後自己報價",
+    "num_frames": 253
+  },
+  {
+    "clip_id": "part_5_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_5_7_upper_body_coordinates.npy",
+    "text": "在花蓮強震後受創嚴重的太魯閣國家公園 至今只有臺八線、天翔到太魯閣口有限制的開放 為了要振興震後產業以及觀光 花蓮縣政府特別邀請了旅行業者 組成綵線團、實地走訪、考察地震後重建的情況 一起探討未來該如何穩定開放",
+    "num_frames": 271
+  },
+  {
+    "clip_id": "part_6_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_6_1_upper_body_coordinates.npy",
+    "text": "看新聞 開始也 歡迎收看今天7月29號的公式手語新聞 首先來關心受到了低壓帶與西南氣流的影響 南部地區好雨不斷 今天包括了嘉義縣 臺南市 高雄市以及屏東縣都宣佈停班停課 而今天各地天氣都不穩定 中南部地區降雨相當明顯 晚間會稍微趨緩 但是到了明天白天估計又會有一波明顯降雨 提醒相關地區民眾要慎防淹水 土石流等災情",
+    "num_frames": 315
+  },
+  {
+    "clip_id": "part_6_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_6_2_upper_body_coordinates.npy",
+    "text": "昨天,大宇重災區之一的嘉義縣傳出淹水災情 浦子因為大排潰堤,洪水湧入了養豬場內 畜牧場3500頭豬,剩下不到100頭 大量豬隻在洪水中逃散 而另外,還有臺電工程人員搶修停電 工程車和人員都受困 幸好最後通通火灸",
+    "num_frames": 267
+  },
+  {
+    "clip_id": "part_6_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_6_3_upper_body_coordinates.npy",
+    "text": "讀報時間來看到 聯合報提到了 美國總統川普27號宣佈 已經和歐盟達成協議 多數歐盟輸美產品將課徵15%關稅 這是川普之前開出30%稅率的一半 而歐盟方面則是承諾向美國開放市場 購買7500億美元的能源 額外投資6000億美元 以及必須要採購大量美國的武器 自由時報時報導 726罷免失敗 民進黨秘書長林佑昌 昨天已經提出請辭 而這次罷免案失利 普發現今議題被認為是關鍵因素之一 31號星期四 是行政院提出複議的最後期限 據瞭解 考量到8月23日 還有七席國民黨立委罷免案 與重啟核三公投案 行政院長卓仲泰已經決定不提複議 再來看到中國時報是 美國媒體昨天報導 川普政府內部正在爭辯 是否同意賴清德總統 下週出訪中南美時過境美國 因為擔心就會影響到美中的貿易談判 以及籌劃中的川普與習近平峰會 而我總統府表示 考量近日南部的風災災後復原 以及與美國對等關稅等 賴清德總統近期 暫時沒有海外訪問的安排 而想要提出 詳細情形 來看華府國際記者方子齊的報導",
+    "num_frames": 979
+  },
+  {
+    "clip_id": "part_6_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_6_5_upper_body_coordinates.npy",
+    "text": "臺北市衛生局最新抽驗市售的食品 發現有三件黃麴毒素超標 而其中包括新竹熱門伴手禮 福原顆粒花生醬 黃麴毒素是一級的致癌物 如果長期食用 累積在肝臟有肝癌的風險 衛生局已經要求業者下架 並且獻其改善",
+    "num_frames": 285
+  },
+  {
+    "clip_id": "part_6_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_6_6_upper_body_coordinates.npy",
+    "text": "80歲以上免82表可申請外籍看護工薪質 即將在8月上路 有十多個社福團體昨天聯合召開記者會 擔憂薪質上路後恐怕會造成 目前20萬外籍看護工家庭搶工危機 要求優先保障重症家庭的需求 而另外也呼籲 並僱外籍看護應該要廢除82表 全面改採長照失能評估 才能夠照顧到重症弱勢家庭",
+    "num_frames": 364
+  },
+  {
+    "clip_id": "part_6_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_6_7_upper_body_coordinates.npy",
+    "text": "川普斡旋下 雙方昨天下午就派人到馬來西亞 進行停火談判 迅速同意立即無條件停火 而雙方的軍事指揮官 在今天上午7點 也舉行了非正式會議 重新建立聯絡",
+    "num_frames": 154
+  },
+  {
+    "clip_id": "part_7_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_7_1_upper_body_coordinates.npy",
+    "text": "看新聞開視野 歡迎收看今天7月31號的公事手語新聞 首先來關心中南部地區大雨不斷 昨天在高雄的桃園區就有一家無口 疑似因為路面攤方 行車途中不慎滑落邊坡 消防人員漏夜展開搜救 但是到現在還沒有找到人",
+    "num_frames": 460
+  },
+  {
+    "clip_id": "part_7_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_7_2_upper_body_coordinates.npy",
+    "text": "剛看到今天包括了南投 雲林以南到屏東的學校或地區 還有臺東達仁鄉的圖板國小 也宣佈停班停課一天 昨天嘉義縣許多的山區道路發生淹水 還有土石崩落等災情 在阿里山鄉的達邦公路 有泥水像是瀑布一樣 從山壁傾瀉而下 縣長前往山區勘災 還遇到了路基瞬間癱癇 大片路面斷裂的驚險狀況",
+    "num_frames": 608
+  },
+  {
+    "clip_id": "part_7_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_7_4_upper_body_coordinates.npy",
+    "text": "賭報時間來看到 中國時報是 備戰823罷免投票 昨天藍綠兩黨都召開中常會 兼任民進黨主席的賴清德 首度公開向公民團體致歉 宣誓全黨會陪公民團體走完最後一里路 而國民黨主席朱立倫則是喊話 全黨團結 強調823是他交棒前最後一役 自由時報報導 教育部補助設定兩歲專班 自106到113學年度 已經增設達到1160班 總共增加了17000名就讀名額 今年預計再增設100班 提供更多幼兒學習機會 幫忙 減輕家庭負擔 聯合報提到了 美國總統川普宣佈 對印度輸美商品 課徵25%的關稅 同時批評印度從俄羅斯購買能源 以及大量的軍備 將另外對印度加上懲罰性措施 看完報紙重點繼續來關心 昨天俄羅斯遠東外海 規模8.8的強震 已經造成34個人死亡 上百人受傷 環太平洋地區國家 包括了日本 印尼 菲律賓 還有臺灣 都發布了海嘯警報",
+    "num_frames": 1681
+  },
+  {
+    "clip_id": "part_7_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_7_5_upper_body_coordinates.npy",
+    "text": "昨天,氣象署釋出了臺灣史上第三次的海嘯警報,原本預警,沿海波高可能會達到一公尺,不過後續實際測量,最高是在藍宇12公分。 而海嘯是怎麼形成的呢?當海底有地震或是火山爆發發生的時候,海水被劇烈擾動就會形成海嘯。 海嘯有多可怕?只要30公分,不到成人膝蓋的高度,女性和小孩就可能被衝倒或捲走。 而浪高50公分的時候,就會衝倒男性。海嘯浪高來到100公分,就可能會造成百分之百的死亡。 一旦浪高超過10米,就能夠把沿岸的建築物完全的沖毀。 因此,當海嘯發生的時候,記得要帶著緊急避難包往高處逃離。 建議是尋找三層樓以上的建築物來避難。 此外,也要避免使用車輛,以免捲入海嘯時,因為在車中而導致無法脫困。 地震專家提醒,現在全球進入地震活躍期。 預估在千島海溝周邊的日本、美國還有加拿大,不排除還有規模7以上的雨震。",
+    "num_frames": 1577
+  },
+  {
+    "clip_id": "part_7_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_7_6_upper_body_coordinates.npy",
+    "text": "臺北市信義區昨天晚間發生了一起名案 一名27歲的古姓女子 在信義威秀停車場遭到流性前男友砍傷 送醫急救不治 警方展開了追緝 而今天凌晨在宜蘭縣的武傑鄉 將流性男子逮捕到案",
+    "num_frames": 414
+  },
+  {
+    "clip_id": "part_7_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_7_7_upper_body_coordinates.npy",
+    "text": "新竹監獄有受刑人在保外就醫期間脫逃 甚至犯下兩起性侵案件 立委質疑受刑人違法在外將近20天 卻沒有執行拘提釋出通緝 批評監獄與警方消極處理 目前保外就醫的受刑人還有超過500名 有立委就建議要實施科技監控",
+    "num_frames": 499
+  },
+  {
+    "clip_id": "part_7_9_upper_body_coordinates",
+    "npy_path": "processed_features/part_7_9_upper_body_coordinates.npy",
+    "text": "去年底到今年初 流行性豬之下立盛行 造成宰豬生病 育成率下降 而最近各地出現嚴重的缺豬情況 為了調節市場 全國肉品市場昨天是休市一天 傳統豬肉攤商則在今天休市一天",
+    "num_frames": 387
+  },
+  {
+    "clip_id": "part_7_10_upper_body_coordinates",
+    "npy_path": "processed_features/part_7_10_upper_body_coordinates.npy",
+    "text": "未成年照顧者因為要照顧身心狀況不佳的家人 揹負著超齡的身體負荷和心理壓力 家庭照顧者關懷總會和學者建議 全面進行未成年照顧者普查 並呼籲終止校行獎 對照顧者行為的美化與歌頌",
+    "num_frames": 470
+  },
+  {
+    "clip_id": "part_8_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_8_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天8月1號的公式手語新聞 首先來關心 今天西南風在增強 中南部將出現大雨或豪雨 南部山區要嚴防豪雨以上的降雨 而其他各地山區以及大臺北地區 則是午後有區域性的大雨 估計要到下個禮拜二 各地的雨勢才會趨緩 而今天包括了南投 雲林 嘉義 高雄 屏東以及臺東 部分地區還有國中小學都有宣佈停班停課",
+    "num_frames": 656
+  },
+  {
+    "clip_id": "part_8_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_8_2_upper_body_coordinates.npy",
+    "text": "臺二十縣高雄六歸和桃園交界處 前天深夜 一輛載有兩大三小的小客車 疑似因為道路的地基掏空 連人帶車墜落大約150公尺深的深谷 而昨天發現了兩個人的遺體 其他三人失聯 昨天下午山區降雨明顯 搜救任務中斷 另外在六歸區和平路 以及納馬下 也因為降雨宣洩不及 道路跟民宅都出現了滾滾泥水 居民緊急撤離",
+    "num_frames": 690
+  },
+  {
+    "clip_id": "part_8_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_8_3_upper_body_coordinates.npy",
+    "text": "男童凱凱遭虐死的事件震驚全臺 凱凱的流性生母 也因為不滿男友令節心歡 而將這名女子囚禁 淋虐而遭到通緝 逃亡三年多 流性女子昨天晚間在臺中殺戮落網 新北地院裁定擠牙",
+    "num_frames": 480
+  },
+  {
+    "clip_id": "part_8_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_8_4_upper_body_coordinates.npy",
+    "text": "讀報時間來看到 中國時報是 臺北市今年調生重陽禮金髮放金額 85歲到98歲的長者 從1500元提高到3000元 而另外 自9月1號起 提供符合資格的55歲以上原住民 以及65歲以上長者 免費打兩劑帶狀泡診疫苗 自由時報是報導 食藥署今年核准了兩款失智症新藥 不過其中一款因為長期效益不明 藥費昂貴 國際評估大多沒有建議支付使用 因此專家決議不納入健保給付 再來看到聯合報是提到了 行政院 會昨天討論災後復原工作 中央將要編列8億元來清理災後 1.5萬噸的10年廢棄物 但是桃園表示經費太少 清理速度緩慢 呼籲中央要增列預算 而看完了報紙重點 繼續再來關心 美國總統川普對等關稅 8月1號 川普表示跟墨西哥的談判延展90天 維持現行25%的關稅 至於臺灣方面 在稍早宣佈稅率是20%",
+    "num_frames": 1756
+  },
+  {
+    "clip_id": "part_8_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_8_5_upper_body_coordinates.npy",
+    "text": "行政院長卓榮泰昨天表示 將提出丹納斯颱風災後復原特別條例 送交立法院審議 而國民黨團也提出了災後重建條例 要加大農損保險理賠 還有住屋毀損補助",
+    "num_frames": 375
+  },
+  {
+    "clip_id": "part_8_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_8_6_upper_body_coordinates.npy",
+    "text": "新竹市環保局監測,水鎮底泥發現有重金屬拱超標 檢測農作物發現,有三處農地的稻田也都拱超標 農地被汙染,農民憂心忡忡,向市議員澄清 新竹市政府派人銷燬稻作,強調會補償農民 而至於汙染源,還在追查當中",
+    "num_frames": 548
+  },
+  {
+    "clip_id": "part_8_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_8_7_upper_body_coordinates.npy",
+    "text": "一位天然藝術家 加上一位龍人表演者 會碰撞出什麼火花呢 莫比斯圓環創作公社 以實驗開放的態度 進行共融劇場的創作 今年邁入第三年 而演出分為富裕組與熟成組 各有三組表演者 分別以童話邊界、語言邊界為題 要在本週末展現他們探索共創的成果",
+    "num_frames": 561
+  },
+  {
+    "clip_id": "part_9_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_9_1_upper_body_coordinates.npy",
+    "text": "看新聞開視野 歡迎收看今天8月7號的公式手語新聞 首先來關心 之前我們為您報道過 傳出基欠聽打員費用的臺北海洋科技大學 特教中心主任 5月10被家長檢舉 他要求孩子把臺積電提供的公讀費回捐 孩子不配合 就被該名主任霸凌 家長還指控 這些回捐的錢款項用途不明 而校方表示 在5月下旬受理案件之後 就將老師調離了行政職 已經委請三位校外委員來進入調查",
+    "num_frames": 433
+  },
+  {
+    "clip_id": "part_9_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_9_2_upper_body_coordinates.npy",
+    "text": "獨報學間來看到 中國時報是 交通部公佈1到5月交通事故統計 高齡者死亡507人 和去年同期相比增加了25人 如何減少高齡者交通事故 交通部8月底前將提出詳細的規劃 自由時報是報導 國內接連發生家暴命案 屢屢傳出被害人已經申請了保護令 但是難黨加害人的暴力而遇害 衛福部長邱太元表示 職區對加害者納入電子監控 會在一個月內召開跨部門會議 力平半年內提出家暴法的修法草案 再來看到 聯合報是提到了 英國媒體報導 美國宣佈 印度因為進口俄羅斯石油 將對印度輸美商品加徵25%的關稅 來到50% 21天之後生效 而此外 美國對等關稅將在今天上路 臺灣的暫時性關稅是20% 行政院經貿談判 辦公室副總談判代表 顏惠欣表示 今天不會是臺美的談判截止日 原因是資通訊產品還沒有談妥",
+    "num_frames": 830
+  },
+  {
+    "clip_id": "part_9_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_9_5_upper_body_coordinates.npy",
+    "text": "好的,謝謝子琪 接著焦點回到國內 我們來看 桃園市龜山區的龍壽工業區附近 昨天是傳出了一起離奇的命案 有名眾目擊一名男子 懸掛在高度約60公尺的高壓電線上 已經明顯死亡 而初步調查 這名男子疑似是外籍移工 事發經過還要再調查",
+    "num_frames": 261
+  },
+  {
+    "clip_id": "part_9_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_9_6_upper_body_coordinates.npy",
+    "text": "南部豪雨災情嚴重,連收容犬貓的園區也受創 臺灣動物救援小組日前公開了多處南部貓狗園受創的情形 卻被網購飼料平臺涉嫌盜用影像蟲制 放在網路上大量地投放廣告 讓民眾誤以為是公益團體需要購買飼料 而臺灣動物救援小組準備要提告 也質疑對方的行為有詐騙嫌疑",
+    "num_frames": 343
+  },
+  {
+    "clip_id": "part_9_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_9_7_upper_body_coordinates.npy",
+    "text": "政府加強打詐力道 但是目前官方資料忽略了多達145萬的移民工 南洋臺灣姐妹會歷時一年 完成了全臺第一份針對移民與移工詐騙風險的調查 檢視他們最常遇到的是網購詐騙 但是被騙之後報警的比例偏低 原因不是移民工缺乏警覺 而是制度上的不友善",
+    "num_frames": 314
+  },
+  {
+    "clip_id": "part_9_8_upper_body_coordinates",
+    "npy_path": "processed_features/part_9_8_upper_body_coordinates.npy",
+    "text": "美國總統川普5號簽署了一項行政命令 宣佈成立2028年洛杉磯奧運任務小組 由他親自來擔任主席 他同時在把矛頭指向了跨性別選手 強調到時候將會進行嚴格的性別檢測 只有檢測合格的女性運動員 才能夠參加女子組的比賽",
+    "num_frames": 199
+  },
+  {
+    "clip_id": "part_9_9_upper_body_coordinates",
+    "npy_path": "processed_features/part_9_9_upper_body_coordinates.npy",
+    "text": "高溫熱浪襲擊南歐 西班牙一處海濱度假村爆發了野火 居民跟遊客被迫緊急撤離 而法國南部也面臨到今年最大規模的野火 當局估計火勢蔓延的面積超過了首都巴黎",
+    "num_frames": 235
+  },
+  {
+    "clip_id": "part_10_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_10_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天8月8號的公式手語新聞 接著讀報時間來看到 中國時報是 有調查顯示 超過三成40歲以上的民眾 很少或從不運動 而自認為有運動的民眾 只有35% 他們只做散步 爬樓梯等無效的運動 年老之後可能會有積少症的風險 而自由時報是報道 新北一家安置機構 發生兒少連環性侵案 議員指出 有六名受害 以及部分淪為加害人的同學 社會局則表示 6月中接到機構通報 就展開調查與輔導 聯合報提到了 臺北捷運和機場 捷運臺北站 路程約10到15分鐘 輪椅卻無法護戒 造成身障者不便 而在雙方協調之後 昨天宣佈事辦輪椅互助借用機制 看完報紙重點繼續來關心 美國對等關稅20%稅率 從臺灣時間8月7號中午12點生效 整體產業 衝擊以塑膠液 工具機 還有農與業的蘭花 以及鬼頭刀等影響最大 推估約有4.2萬人恐怕面臨減薪 失業的風險 行政院會會後也宣佈 930億元的產業支援方案 即日起開放申請",
+    "num_frames": 1784
+  },
+  {
+    "clip_id": "part_10_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_10_2_upper_body_coordinates.npy",
+    "text": "近年來,非法中資企業 透過了人頭公司或衛裝外資等手法 企圖在臺灣滲透並且挖角高科技人才 還有以兩岸交流為包裝 像是近期登場的福州海青會 對臺灣釋出了兩千多個職缺 但是陸委會質疑 中國青年失業率這麼高 應擠出來的職缺肯定不會長久",
+    "num_frames": 564
+  },
+  {
+    "clip_id": "part_10_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_10_3_upper_body_coordinates.npy",
+    "text": "核三重啟公投,8月23日投票 而中選會在投票前,舉辦了五場電視意見發表會 首場在昨天展開 政方代表、清大教授葉宗光呼籲 臺電讓核三在一年內恢復為停機待命的狀態 而反方代表、臺電董事長曾文生強調 科學完整檢測還沒有出來,就進行公投,程式不合理",
+    "num_frames": 620
+  },
+  {
+    "clip_id": "part_10_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_10_4_upper_body_coordinates.npy",
+    "text": "丹納斯颱風與後續雨勢重創了西南部 為了加速重建修復 行政院已經成立雲加南災後復原前進指揮所 協助地方政府在人類、機具與物資的排程 而昨天更是正式提出 匡列560億元的災後復原重建特別條例草案 協助災民來重建家園並函請立法院審議",
+    "num_frames": 559
+  },
+  {
+    "clip_id": "part_10_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_10_5_upper_body_coordinates.npy",
+    "text": "臺鐵近期暴力事件頻傳 吉隆站站務員自7月底以來 每天都遭到遊民騷擾至少三次 有的還遭毆打尾隨 儘管多次報警 但是似乎不見成效 臺鐵產業工會已經協助集體提出了不法侵害通報 呼籲交通部啟動安全機制",
+    "num_frames": 483
+  },
+  {
+    "clip_id": "part_10_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_10_6_upper_body_coordinates.npy",
+    "text": "避免臺師大女卒抽血 違反研究倫理的案件再度發生 立委指出 目前全臺有13所大學設定IRB研究倫理委員會 教育部每年不定期抽查 但是查核的頻率、內容、深度都需要做調整 針對人體研究計劃 教育部應該設立永久的單一申訴視窗",
+    "num_frames": 543
+  },
+  {
+    "clip_id": "part_10_9_upper_body_coordinates",
+    "npy_path": "processed_features/part_10_9_upper_body_coordinates.npy",
+    "text": "慣性天氣 關島北北東方的海面上 昨天生成了熱帶性低氣壓 今天凌晨兩點已經發展成為 今年第十一號颱風陽柳 氣象署預估下週二 會接近臺灣的東方海面 下週三 週四最接近臺灣 也影響我們最大的時間 如果環境有力發展 強度會增強為中臺 不過目前預估以青臺 靠近的機率比較大 而另外 氣象署對全臺七個縣市 發布高溫資訊 雙北 臺南 屏東是高溫長色燈號 有連續出現三十六度高溫的機率 而另外 彰化 雲林 高雄 是高溫黃色燈號 還要注意中午前後半段 外出一定要做好防曬 多補充水分 接著就提供您各地的氣象資料",
+    "num_frames": 1001
+  },
+  {
+    "clip_id": "part_11_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_11_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天8月14號的公視首語新聞 首先來關心 隨著颱風快速透過臺灣 氣象署在今天清晨5點半 解除了洋流的陸上警報 並且預計在早上8點半解除海警 而今天 高雄 屏東跟臺東 都有部分地區停班停課 金門則是上半天停課 停班 洋流清洗期間 嘉義有一名弔客被海浪給捲走失蹤 另外還有112個人受傷 對危險地區撤離了8000多人 有28萬多戶停電",
+    "num_frames": 424
+  },
+  {
+    "clip_id": "part_11_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_11_4_upper_body_coordinates.npy",
+    "text": "毒報時間來看到 聯合報時提到了 聚業客運司機 去年在臺中車站前 左轉碾死了東海大學的女學生 被以過失致死的罪嫌起訴 昨天開庭 家屬痛斥司機撞人之後 三度來回移動車子 請求法官判處殺人罪 再來看到 自由時報時報導 勞動部公告強化版僱傭安定措施 適用物件擴集了九大產業 自今年八月一日起 如果勞工實施減班休息 也就是五薪假 每人每月可以領取薪資差額的七成 最高一萬兩千一百元的補貼 而中國時報是 每天領助每個人有籌費 823重起核三公投 朝野政黨昨天都下達了動員令 生間民進黨主席的賴清德總統 昨天表態會去投票 喊話一起投下不同意票 而國民黨主席朱立倫 民眾黨主席黃國昌批評 能源政策應該給臺灣人民做主決定 而不是賴清德說了算 而中選會昨天是舉行第四場公投說明會 正方代表是黃國昌 反方代表則是20歲的公民代表吳雅欣 他說 核能風險會深深影響下一代人 包括核廢料如何處理 以及位於斷層帶的問題 這些都是難以解決",
+    "num_frames": 1044
+  },
+  {
+    "clip_id": "part_11_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_11_5_upper_body_coordinates.npy",
+    "text": "貴福部的醫事人員性別事件資訊專區上線 針對醫師、藥師等醫事人員 如果涉及性侵、性騷擾等 經判決確定 民眾就可以查到相關的資料 但是目前只查得到 112年性平三法修正後的資訊 醫改會認為這樣還是不夠",
+    "num_frames": 230
+  },
+  {
+    "clip_id": "part_11_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_11_6_upper_body_coordinates.npy",
+    "text": "臺灣晚婚晚育成為常態 高齡懷孕難度也上升 而且內政部統計 臺灣人口總數已經連續19個月負成長 少子女化已經成為國安危機 國進署強調 正眼裡擴大試管嬰兒補助 減輕不孕症夫妻的經濟壓力",
+    "num_frames": 244
+  },
+  {
+    "clip_id": "part_11_8_upper_body_coordinates",
+    "npy_path": "processed_features/part_11_8_upper_body_coordinates.npy",
+    "text": "接著帶您到巴拿馬 這裡有一種特殊的黃金蛙 是極度冰維物種 全球野生數量不到50只 因此巴拿馬把今天8月14號 定為國定假日黃金蛙日 舉辦了一系列活動 倡導保育觀念",
+    "num_frames": 208
+  },
+  {
+    "clip_id": "part_12_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_12_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天6月12號的公視首語新聞 首先來關心 昨天晚間7點 全臺都收到了國家級警報 花蓮東部海域發生規模6.4的有感地震 而今天凌晨0點01分 臺東近海也發生了規模5的地震 接鄉署提醒 未來三天內 還是要注意規模5到5.5之間的雨震",
+    "num_frames": 288
+  },
+  {
+    "clip_id": "part_12_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_12_2_upper_body_coordinates.npy",
+    "text": "高雄有三名男子相約到屏東三地門山區 溯溪的細水秘境海神宮 卻不慎發生了溺水的意外 警消獲報後趕往救人 而救起時三人都沒有了呼吸心跳 最後仍送醫不治 由於海神宮水位高低落差大 暗藏危險 近五年來共有六個人溺水死亡 而至於為何三人同時溺水 仍待檢警進一步理清",
+    "num_frames": 299
+  },
+  {
+    "clip_id": "part_12_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_12_3_upper_body_coordinates.npy",
+    "text": "臺鐵又傳出了旅客暴力 昨天台北松山站 有一名酒醉男子臥倒在月臺 站務人員前往關切 卻遭到男子出手攻擊 造成眼睛瘀傷送醫 而這名男子也被鐵路警察當場逮捕",
+    "num_frames": 171
+  },
+  {
+    "clip_id": "part_12_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_12_4_upper_body_coordinates.npy",
+    "text": "毒爆時間來幹道 中國時報是 有議員發現 臺北市1.4萬多戶社會住宅當中 只有大龍洞社宅45戶有配設冷氣 讓住戶是抱怨連連 臺北市長蔣萬安承諾 未來新建的社宅會加裝冷氣 再來看到 自由時報時報導 美國洛杉磯爆發了 反川普政府移民政策抗議衝突 洛杉磯市長宣佈 自10日起 部分地區管間實施宵禁 以制止搶劫等破壞的行為 聯合報是提到了 為了要留住住院主治醫師 健保署昨天首度討論 醫師加班費所得睡眠稅措施 以總工時的百分之五十為上限 預計新制於明年報稅時適用 而看完報紙重點繼續來關心 香港國安處公告 由於臺灣開發的手遊 逆統戰因為涉及鼓吹港獨臺獨 予以禁止 不管是分享或下載都可能會觸犯國安法 都可能會觸犯國安法 但是也因此讓這款遊戲登上熱搜",
+    "num_frames": 801
+  },
+  {
+    "clip_id": "part_12_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_12_5_upper_body_coordinates.npy",
+    "text": "臺南知名的周氏蝦卷被民眾檢舉 員工把客人吃剩下的油豆腐倒回了滷鍋 店家是公開道歉 強調會嚴正處理這名員工 而臺南市衛生局也前往稽查 列出了三項缺失 要求業者限期在7月2日前改正 中文字幕志願者 楊茜茜",
+    "num_frames": 225
+  },
+  {
+    "clip_id": "part_12_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_12_6_upper_body_coordinates.npy",
+    "text": "高雄延城區屋林大約40年的七絃大樓 10號晚上發生了火警 有6名住戶送醫 這棟大樓過去累積了36次不合格記錄 但是因為住戶多為長者或是弱勢家庭 大樓籌措整建或裝置更新的經費有困難 而在高雄超過30年以上大樓 遭公共安全列管的共有4棟 市長陳其邁表示 優先提供相關裝置加強安檢頻率",
+    "num_frames": 301
+  },
+  {
+    "clip_id": "part_12_8_upper_body_coordinates",
+    "npy_path": "processed_features/part_12_8_upper_body_coordinates.npy",
+    "text": "衛福部統計 臺灣去年家暴通報人數 高達了十三萬八千多人 平均不到四分鐘 就有一個人受暴 而這當中也包含了 晚輩向長輩施暴的案件 現代婦女基金會舉出 近年來未成年子女 成為加害者的案件 大約佔了百分之三 背後成因複雜難解 MING PAO CANADA // MING PAO TORONTO",
+    "num_frames": 229
+  },
+  {
+    "clip_id": "part_12_9_upper_body_coordinates",
+    "npy_path": "processed_features/part_12_9_upper_body_coordinates.npy",
+    "text": "每年6月的第三個星期五 是國際停職網路霸凌日 董事基金會也公佈了一項 對青少年的調查 有4.9%在一年內曾經被網路霸凌 而17%被網路霸凌的時候 選擇不求助他人 使用網路的時間越多 猶豫的程度就越高",
+    "num_frames": 238
+  },
+  {
+    "clip_id": "part_12_10_upper_body_coordinates",
+    "npy_path": "processed_features/part_12_10_upper_body_coordinates.npy",
+    "text": "立法院未還委員會 昨天討論兒童托育服務法草案 由於是參考2023年的 新版幼兒教育及照顧法等 立委和民間團體質疑 法案實施至今本身就有漏洞 如今兒託法行政運草案 如果再將整套移植 處理過程恐怕會有 無法提供兒童保護 以及家長沒有申訴管道等五大缺失",
+    "num_frames": 311
+  },
+  {
+    "clip_id": "part_13_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_13_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天8月21號的公式手語新聞 首先來關心8.23核三重啟公投 本週六將要登場 昨天 民進黨前臺北市黨部副執行長陳勝文 帶著從藍宇核廢料儲存廠取回來的象徵性瓶裝水 來到國民黨中央黨部踢館 沒想到 卻被國民黨發言人楊志渝一飲而盡 而昨天 朝野立委也到了核三廠考察 藍白立委支援核三重啟 但是外頭則有當地居民舉牌抗議 高喊不同意",
+    "num_frames": 411
+  },
+  {
+    "clip_id": "part_13_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_13_2_upper_body_coordinates.npy",
+    "text": "讀報時間來看到 中國時報是 國家語言發展法 108年上路以來爭議不斷 省紀部點名 文化部推動的國家語言整體發展方案 總經費高達321億元 但是執行成效不彰 包含應該要成立的專責單位 國家語言研究發展中心 還沒有審議透過 多項重點計劃執行 進度嚴重落後 而聯合報是提到了 中醫院於2016年 發起臺灣癌症登月計劃 分析肺腺癌患者飲食 以及生活習慣 證實汽機車的廢棄 PM2.5 和肺炎患者飲食 還有加工食品防腐劑的亞硝胺 為主要致癌關鍵因子 再來看到 自由時報時報導 高鐵旅客越來越多 尖峰時段一味難求 高鐵公司董事長史哲提出新制 明年推指定車次自由座 在尖峰時段 購買自由座要先選好搭哪一班車 其餘車次都不能達成 而另外高鐵延伸宜蘭計劃 昨天在環境部環平大會透過審查 起點是銜接既有的南港地下月臺 最後在宜蘭縣政府東南側設站 全長會有60.6公里",
+    "num_frames": 862
+  },
+  {
+    "clip_id": "part_13_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_13_3_upper_body_coordinates.npy",
+    "text": "美國商務部長盧特尼克認為 美國要在本土製造晶片不能只依賴臺灣 而目前正在和英特爾洽談收購10%的股份 下一步更將討論美國是否能夠透過晶片法補助的資金 要來換取美光、臺積電、三星等公司的股份 認為這樣才真正符合美國利益 MING PAO CANADA // MING PAO TORONTO",
+    "num_frames": 272
+  },
+  {
+    "clip_id": "part_13_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_13_4_upper_body_coordinates.npy",
+    "text": "而面對美方考慮要對晶片法案當中受惠的公司 以補助換取對方股權 並點名了臺積電 訊息一出臺積電股價昨天大跌50元 大盤也重摔了728點 直接灌破月線",
+    "num_frames": 174
+  },
+  {
+    "clip_id": "part_13_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_13_5_upper_body_coordinates.npy",
+    "text": "823第二波罷免投票後 可能內閣改組的傳言不斷 而身兼民進黨主席的總統賴清德 現在黨內中常會宣佈了新人士 由前內政部長徐國勇來接任黨秘書長一職",
+    "num_frames": 205
+  },
+  {
+    "clip_id": "part_13_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_13_7_upper_body_coordinates.npy",
+    "text": "近期颱風接連重創中南部 民眾出門捐血的意願降低 庫存量告急 因此血液基金會 今年罕見地啟動了北血南送 緊急調撥數千袋的血液來救急 同時也呼籲民眾踴躍去捐血",
+    "num_frames": 209
+  },
+  {
+    "clip_id": "part_13_8_upper_body_coordinates",
+    "npy_path": "processed_features/part_13_8_upper_body_coordinates.npy",
+    "text": "臺中海洋館今天將要開始試營運 市府希望這項耗時14年的建設 可以成為海線觀光亮點 不過有民眾認為票價過高 而且和其他類似的展館 應該要做出更明顯的區別",
+    "num_frames": 180
+  },
+  {
+    "clip_id": "part_13_10_upper_body_coordinates",
+    "npy_path": "processed_features/part_13_10_upper_body_coordinates.npy",
+    "text": "受到臺灣上空冷心低壓的影響 南投還有臺中跟嘉義山區 昨天午後都出現了劇烈的降雨 和歡山還降下了冰雹 而今天各山區午後 仍然要留意區域性大雨",
+    "num_frames": 201
+  },
+  {
+    "clip_id": "part_16_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_16_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天8月22號的公視手語新聞 首先來關心行政院透過明年度的中央政府總預算案 由於新財化法上路 明年中央分給地方的統籌分配稅款 將大幅增加4165億元 中央財政會出現極大的缺口 將舉債4千億 此外 總預算也沒有納入明年軍公教條新3%",
+    "num_frames": 329
+  },
+  {
+    "clip_id": "part_16_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_16_2_upper_body_coordinates.npy",
+    "text": "明年度中央政府總預算當中 國防預算的金額創了史上新高 總計達到9495億元 預計佔GDP的3.32% 行政院長朱鎔泰強調 是因為這次參考了北約標準 也是向國際展現維護國家安全的決心 中文字幕志願者 楊茜茜",
+    "num_frames": 234
+  },
+  {
+    "clip_id": "part_16_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_16_3_upper_body_coordinates.npy",
+    "text": "讀報時間來看到 聯合報提到了 清華大學整病私立中華大學案 獲得教育部核定 中華大學確定明年2月起停止招生 而中國時報是 立法院財政委員會昨天達成朝野共識 汽機車貨物稅減徵 延長到2030年底 汽車太舊換新 也從5萬元提高到了10萬元 就算只買新車 也可以減徵5萬元 機車太舊換新 則從4000元提高到了6000元 如果順利三讀透過 最快9月中上路 自由時報報導 史信空軍退役少校飛官 退伍之後到中國發展 被中國情治人員收買 甚至還吸收現役的學弟 將我國雄風三型飛彈 戰場運用等機密資料 洩露給中國 法院昨天判處他 兩年兩個月的徒刑定言 而看完了報紙重點 繼續來關心 中國為了紀念二戰結束之後 國際軍事協議 將在9月3號舉行大閱兵 而官方宣稱 將展示各式新型裝備秀肌肉 其中有部分武器 是首次對外亮相",
+    "num_frames": 846
+  },
+  {
+    "clip_id": "part_16_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_16_4_upper_body_coordinates.npy",
+    "text": "核三重啟公投明天登場 而美國總統川普 20號在社群發文 批評風力和太陽能發電 是世紀最大騙局 將不再批准太陽能電廠建設案",
+    "num_frames": 165
+  },
+  {
+    "clip_id": "part_16_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_16_5_upper_body_coordinates.npy",
+    "text": "藍白分別提案,修訂刑法與刑事訴訟法 而其中,國民黨立委提出無期徒刑分級制 一共分成三級,最終終身監禁不得假釋 法務部支援無期徒刑分級化 提出草案分成兩級,送行政院來審查 而另外,民眾黨立委黃國昌等人 則是提出刪除現行積壓事由的勾串共犯或證人 對此,法務部強烈反對 優先形同縱容犯罪者,肅忌但勾串共證",
+    "num_frames": 348
+  },
+  {
+    "clip_id": "part_16_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_16_6_upper_body_coordinates.npy",
+    "text": "政府推出減稅政策 明年開始 租屋青年年所得在62.6萬以下 四口家庭年所得在164.1萬以下 還有三代同堂 年所得在212.4萬以下 都不用繳綜合所得稅 而另外 每個人的基本生活費 會調高三千元 而長照特別扣除額 在修法完成之後 也會從12萬調高到18萬 期盼能夠增加民眾家庭可支配所得",
+    "num_frames": 379
+  },
+  {
+    "clip_id": "part_16_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_16_7_upper_body_coordinates.npy",
+    "text": "搭乘高鐵的人越來越多 而今年運量渴望突破8000萬人次 董事長使者丟擲 超尖峰時刻指定車次自由做措施 最快明年開始 而此外為了要維護車廂的寧靜 也將要實施寧靜車廂措施 乘客接聽電話要到列車玄關 如果圈道不聽最終可以拒載 本期影片就分享到這裡",
+    "num_frames": 254
+  },
+  {
+    "clip_id": "part_16_8_upper_body_coordinates",
+    "npy_path": "processed_features/part_16_8_upper_body_coordinates.npy",
+    "text": "在南投的山上,有一片由聽障青年陳於安經營的農場 雖然大學唸的是特教系,和農業完全不相關 但喜愛大自然的他,一直夢想著可以擁有自己的農場 畢業後一邊工作一邊找地 終於在2021年租下了農地,從零開始逐夢 雖然辛苦,看到大家享用著自己的農產品 他就感到滿滿的成就感",
+    "num_frames": 300
+  },
+  {
+    "clip_id": "part_16_9_upper_body_coordinates",
+    "npy_path": "processed_features/part_16_9_upper_body_coordinates.npy",
+    "text": "受到太平洋高壓的影響 今天各地高溫炎熱 線上署釋出高溫資訊 臺北市可能連續出現38度高溫 而新北也可能來到36度以上 昨天最高溫是出現在臺北信義側站 下午一點半測得了38.8度 醫師就警告 在高溫的環境中 民眾如果水分攝取不足 很可能會導致熱傷害 尤其是熱中暑 可能造成器官衰竭甚至死亡",
+    "num_frames": 340
+  },
+  {
+    "clip_id": "part_17_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_17_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天8月28號的公式手語新聞 首先來關心 昨天晚間9點11分 北部民眾可以感受到明顯的搖晃 宜蘭近海發生瑞士規模6.0地震 最大震度在宜蘭東山和臺北信義 達到了4級 而未來三天內 不排除會有規模5以上的餘震",
+    "num_frames": 273
+  },
+  {
+    "clip_id": "part_17_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_17_2_upper_body_coordinates.npy",
+    "text": "罷免案落幕後,賴政府隨即啟動舉證團隊調整 行政院昨天公佈內閣改組方案,共有16位的閣員異動 衛福部長將由現任健保署長石從良接任 國發會主委將由前中金院院長葉俊顯出任 奧運羽球雙打兩面金牌得主李揚 則是接任了首任運動部長 而李揚也在臉書上面發文表示 會延續運動員勇於挑戰的精神 用運動讓臺灣更好",
+    "num_frames": 355
+  },
+  {
+    "clip_id": "part_17_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_17_3_upper_body_coordinates.npy",
+    "text": "讀報時間來看到 中國時報是 因應中國日益擴張的軍事規模 傳出美國國防部打算要派聯絡員駐臺 以加速無人機領域的合作 而自由時報是報道 臺北市政府昨天宣佈 公管圓環拆除 公車地下專用道填平工程 9月13號凌晨啟動工 要將七叉路口改成正交路口 預計10月下11月的下旬完工 聯合報提到了 高檢署偵辦臺積電 兩奈米核心關鍵技術竊密案 查出臺積電前工程師 跳槽到日商公司之後 透過臺積電的兩雲工程師 來竊取引數配方 昨天三人依違反國安法 營業秘密等罪起訴求處重刑 而看完報紙重點 繼續來關心",
+    "num_frames": 586
+  },
+  {
+    "clip_id": "part_17_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_17_5_upper_body_coordinates.npy",
+    "text": "在任內向臺電來施壓 而昨天清晨被羈押進建 權案也捎向前經濟部長郭志輝 被影射牽扯權案 他則是發宣告提出博趣",
+    "num_frames": 144
+  },
+  {
+    "clip_id": "part_17_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_17_6_upper_body_coordinates.npy",
+    "text": "臺北監獄爆出命案 一名越南籍受刑人 把馬來西亞籍獄友毆打致死 這名越南籍受刑人 有多次暴力記錄 也讓獄方的設防安排 與相關管理被控有疏失 事後的處理方式 更被質疑隱匿包庇 但北京回應 兩人互不認識沒有嫌隙 而且都會中文 安排同設防 沒有違反規定 矯正署調查後 也初判斷獄方沒有疏失",
+    "num_frames": 289
+  },
+  {
+    "clip_id": "part_17_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_17_7_upper_body_coordinates.npy",
+    "text": "搭高鐵買對號座旅客 如果提前到站 可以直接拿原本的票 搭乘其他班次的自由座 不過這樣原班次的座位就浪費了 沒有辦法賣給有需要的旅客 也影響自由座的搭乘品質 因此高鐵公佈了新規定 從11月10號起 如果有需要提前搭乘的對號座旅客 必須依照規定 先完成換票再搭乘 MING PAO CANADA MING PAO TORONTO",
+    "num_frames": 231
+  },
+  {
+    "clip_id": "part_17_8_upper_body_coordinates",
+    "npy_path": "processed_features/part_17_8_upper_body_coordinates.npy",
+    "text": "今年1月,由山友攀登南投縣馬海浦富士山的時候 意外發現紅塊神木被山老鼠盜伐 隨即通報了林業署 而警方跟監蒐證之後 一舉破獲23人的盜伐集團 其中有5名是越南籍非法移工 全案移送南投地檢署偵辦 本月提起公訴 集團全員將面臨最重10年半的有期徒刑 併科最高2000萬元以下罰金",
+    "num_frames": 303
+  },
+  {
+    "clip_id": "part_17_9_upper_body_coordinates",
+    "npy_path": "processed_features/part_17_9_upper_body_coordinates.npy",
+    "text": "0403大地震對華聯港造成重大災情 多處碼頭地面下陷 影響商船停泊卸貨 為了趕緊修復 港公司花費將近5億元來進行修繕 並且對水下作業做調查 結果竟然發現有許多的珊瑚跟魚類 要如何修復港區 又能夠避免干擾生態成為重要的議題 MING PAO CANADA MING PAO TORONTO",
+    "num_frames": 246
+  },
+  {
+    "clip_id": "part_17_10_upper_body_coordinates",
+    "npy_path": "processed_features/part_17_10_upper_body_coordinates.npy",
+    "text": "美國總統川普對於各大藥廠 在美國的售價遠高於其他工業化國家感到不滿 他在星期一要求藥廠將美國的藥價下調1400%到1500% 也就是要調降到15分之一 否則將會逐步調高關稅最高上看250%",
+    "num_frames": 221
+  },
+  {
+    "clip_id": "part_17_11_upper_body_coordinates",
+    "npy_path": "processed_features/part_17_11_upper_body_coordinates.npy",
+    "text": "來關心天氣,氣象組對全臺11個縣市釋出了高溫資訊 新北、桃園區域性地區有機會出現38度極端高溫 各地高溫普遍是32到35度 外出請做好防曬並多補充水分 接著提供您各地的氣象資料",
+    "num_frames": 198
+  },
+  {
+    "clip_id": "part_19_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_19_1_upper_body_coordinates.npy",
+    "text": "看新聞開始也 歡迎收看今天9月2號的公事手語新聞 首先來關心臺積電洩密案 三名涉案工程師被依違反國安法等罪嫌起訴 昨天已審制裁商業法院 最後何怡婷裁定羈押禁建三個月 檢方也分案偵辦 繼續調查有沒有其他可能涉犯的法人或自然人",
+    "num_frames": 260
+  },
+  {
+    "clip_id": "part_19_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_19_2_upper_body_coordinates.npy",
+    "text": "讀報時間來看到,中國時報是,教育部原定本學期9月起,針對高中以下學校實施學生帶手機進校園管理措施,不過教育部昨天表示,目前還在蒐集整理各方意見,在新方案公告前,各校可依現行規定辦理。 自由時報報道,有關勞工退休後分紅的新制勞退基金,今年前6個月仍處虧損狀態,但是7月大賺943.8億元,前7月賬面收益已經轉正為287.8億元,平均每位勞工賬面分紅2228元。 聯合報提出, 勞動部昨天公佈最新無薪假統計,受到美國關稅政策影響的有118家,3055人,重災區為機械裝置業,學者示警可能會導致內需消費緊縮,造成惡性迴圈。 看完報紙重點,繼續來關心。 長照3.0第一階段新制上路,重點包括放寬聘僱外籍看護家庭,也能夠適用社群照顧模式等等。 另外,家庭照顧者關懷總會,首創帶長輩上班的計劃,希望照顧者得到專業的訓練,到日照中心工作,也能夠按照照顧的訓練。 關心照顧家人。 關心照顧家人。",
+    "num_frames": 897
+  },
+  {
+    "clip_id": "part_19_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_19_3_upper_body_coordinates.npy",
+    "text": "日本福島五線食品進口管制再放寬 衛福部食藥署預告草案 將全面取消日本福島食品限制 取消雙證管理以及豬皮檢驗 改為一般邊境管理 新制最快年底上路 不過消極會批評 合格率不代表零檢出 還是有輻射風險存在 反對貿然開放",
+    "num_frames": 253
+  },
+  {
+    "clip_id": "part_19_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_19_5_upper_body_coordinates.npy",
+    "text": "雲林一所國中的菜姓羽球教練涉及體罰羽球隊員 校方去年底調查後將教練解聘並且撤銷教練資格 不過今年5月有家長髮現 這名菜姓教練疑似向另一所國小租用場地 開設私人羽球課程 但是校方解釋租場地的另有其人 菜姓教練只是義務陪練",
+    "num_frames": 255
+  },
+  {
+    "clip_id": "part_19_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_19_6_upper_body_coordinates.npy",
+    "text": "日前高雄碼頭山山區 一隻梅花鹿遭遊蕩犬攻擊 幾天後 梅花鹿傷重死亡 地方民眾指出 當地有人餵養遊蕩犬成群 也會追逐人車 農業局接獲反映 已經設定誘犬籠 不過 棄養和餵養的問題不根據 遊蕩犬問題只會一再發生",
+    "num_frames": 302
+  },
+  {
+    "clip_id": "part_19_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_19_7_upper_body_coordinates.npy",
+    "text": "臺鐵宣佈張牧機物車輛維修檢察員、技術員起薪四萬兩千多元 助理工程師最高薪資上看五萬九千元 臺鐵表示提高檢察員職級拉高薪資,希望吸引更多人才投入 臺鐵產業工會表示檢察員工作內容多元 責任大,但相對薪資並不高,也導致目前流動率相當高",
+    "num_frames": 263
+  },
+  {
+    "clip_id": "part_19_9_upper_body_coordinates",
+    "npy_path": "processed_features/part_19_9_upper_body_coordinates.npy",
+    "text": "上海合作組織高峰會在中國天津登場 來自超過20個國家與地區的領導人齊聚一堂 中國國家主席習近平與本次峰會 與俄羅斯總統胡廷和印度總理莫迪同臺 象徵中俄印三大國加強合作 被外界視為對美國影響力的挑戰 北韓領導人金正恩也出發赴會引發矚目",
+    "num_frames": 268
+  },
+  {
+    "clip_id": "part_20_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_20_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天9月9號的公事手語新聞 首先來關心前臺北市長柯文哲 因為京華城案被羈押一年 昨天點頭交保 他在離開法院的時候 接受媒體訪問 再度強調自己的案件是冤獄 痛批賴清德總統 讓國家陷入了四分五裂 而他在交保之後 是趕到了新竹老家和母親團聚 由於他被法院裁定 佩戴電子監控裝置 以及不得接觸證人 也被限制住居 在晚上八點到十點前 必須回到臺北住家 用手機上傳",
+    "num_frames": 412
+  },
+  {
+    "clip_id": "part_20_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_20_2_upper_body_coordinates.npy",
+    "text": "柯文哲昨天晚上7點左右 離開了新竹老家 返回臺北住處 面對媒體詢問 如何看待北檢要提抗告 柯文哲是不發一語 沒有回應",
+    "num_frames": 128
+  },
+  {
+    "clip_id": "part_20_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_20_3_upper_body_coordinates.npy",
+    "text": "讀報時間來看到 中國時報是 教育部昨天宣佈 國教署管轄高中以下公私立學校的老師 教師節每人發放一千元的禮券 但是教育團體認為不應該有差別待遇 呼籲不分中央地方管轄統一發放教師禮券 自由時報報導 動漫漫畫遊戲收藏家離世 親友往往不知道要如何處理他們的收藏品 而動漫活動主持人曾慶平就創辦了遺品整理師 協助處理被遺留或遺棄的收藏品 幫忙出售或免費提供索取 幫忙找到下一個主人 聯合報時提到了 今天9月9號是國民體育日 新成立的運動部 今天掛牌 有兩屆奧運金牌得主李揚擔任首任的部長 看完報紙重點繼續來關心 國際半導體展明天登場 集結全球一千兩百家半導體與科技業者 預計吸引超過十萬人觀展 而受到了半導體題材發酵的影響 臺股昨天開高震盪 中場是收在兩萬四千五百四十七點 創收盤歷史新高",
+    "num_frames": 784
+  },
+  {
+    "clip_id": "part_20_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_20_4_upper_body_coordinates.npy",
+    "text": "行情恩上路之後 吸引不少年輕族群進場買房 資料顯示 今年上半年 不到40歲的年輕族群 佔全臺身貸總建數超過了五成 創近十年同期新高 央行也宣佈 考量換屋自住者的需求 調整換屋出售舊屋的期限 從一年延長到了18個月 20號開始實施",
+    "num_frames": 274
+  },
+  {
+    "clip_id": "part_20_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_20_5_upper_body_coordinates.npy",
+    "text": "勞保的錢藏負債增加 主席總處統計 截至今年6月底 勞保錢藏負債 也就是未來要給付的部分 超過了13.5兆元 比去年增加了1.7兆 專家分析 與人口結構高齡化、少子化最有關 勞動部回應 會爭取編列預算撥補 確保勞工保險給付的權益",
+    "num_frames": 282
+  },
+  {
+    "clip_id": "part_20_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_20_6_upper_body_coordinates.npy",
+    "text": "幾乎是翻倍 專家提醒 青少年因為3C普及影響睡眠 可能會陷入藥物依賴 但是在成長階段使用 成癮的風險不容小覷 呼籲需要更完善的醫療資源 來降低濫用風險",
+    "num_frames": 196
+  },
+  {
+    "clip_id": "part_20_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_20_7_upper_body_coordinates.npy",
+    "text": "南部知名連鎖速食店丹丹漢堡宣佈 12號起調漲部分產品的售價2元到5元左右 而臺北喜來登飯店的吃到飽餐廳 也要調漲100元到200元 根據主計總處公佈 8月消費者物價指數CPI 其中食物類的價格漲幅較大",
+    "num_frames": 210
+  },
+  {
+    "clip_id": "part_20_8_upper_body_coordinates",
+    "npy_path": "processed_features/part_20_8_upper_body_coordinates.npy",
+    "text": "U18青棒錦標賽 我代表隊迎戰澳洲隊 揹負著非營不可的壓力 最後10比2贏球 以三勝一敗的戰績 晉級下一輪的超級迴圈賽",
+    "num_frames": 170
+  },
+  {
+    "clip_id": "part_20_9_upper_body_coordinates",
+    "npy_path": "processed_features/part_20_9_upper_body_coordinates.npy",
+    "text": "以色列耶路撒冷8號爆發槍擊事件 兩名巴勒斯坦槍手朝公車站 以及一輛近戰的公車開槍 造成6死12傷 兩名槍手當場遭到擊斃 另外還有一名相關嫌犯已經被逮捕 警方定調為恐怖攻擊",
+    "num_frames": 194
+  },
+  {
+    "clip_id": "part_20_10_upper_body_coordinates",
+    "npy_path": "processed_features/part_20_10_upper_body_coordinates.npy",
+    "text": "梵蒂岡羅馬天主教教宗梁十四世 正式冊封一名15歲就過世的天才少年阿庫提斯 成為第一位遷徙世代聖人 而這名少年生前運用科技 在網路上傳播天主教的信仰 被稱為上帝的網紅",
+    "num_frames": 208
+  },
+  {
+    "clip_id": "part_21_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_21_1_upper_body_coordinates.npy",
+    "text": "看新聞開視野 歡迎收看今天9月10號的公示手語新聞 首先來關心高雄興達電廠 昨天晚間傳出火警 所幸火勢在半個小時左右撲滅 沒有傳出傷亡 臺電指出起火的是新建機組 目前正處於測試階段 火災沒有影響既有的機組運轉 也不會影響今年的整體供電狀況 不過這起事故也讓附近民眾嚇壞了 地方里長要求臺電全面停工 釐清責任 臺電董事長曾文生說明 這場意外應該是天然氣洩漏造成 上午9點會先由施工處 以及興達電廠廠長來向里長說明",
+    "num_frames": 435
+  },
+  {
+    "clip_id": "part_21_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_21_2_upper_body_coordinates.npy",
+    "text": "獨報時間來看到 自由時報報道 尼泊爾政府封鎖了社群媒體 還有貪腐文化都引發年輕人不滿 上街抗議 警方射殺至少19名的抗議者後 首都加德滿都陷入混亂 總理奧利昨天宣佈辭職 但是未平息民怨 抗議運動持續升級 中國時報是 南韓現代汽車在美國喬治亞州的電池工廠 遭到美國移民單位大動作查器 逮捕了300多名涉嫌在美國非法打工的韓國人 而此舉震驚國際 目前多家韓國企業 已經暫停了22項在美國的建廠計劃 聯合報提到了 中央統籌分配稅款與補助款爭議延燒 臺中市長盧秀燕 召集藍白與無黨籍執政共15縣市首長 今天將要在臺北市開記者會 呼籲中央公平公開分配 而看完了報紙的重點之後 繼續再來關心 臺股昨天開會 臺股市場中的紅盤 盤中跟收盤都創歷史新高 中場收在24855點 總市值一口氣突破了80兆元 幾近全球股市規模第十大",
+    "num_frames": 824
+  },
+  {
+    "clip_id": "part_21_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_21_3_upper_body_coordinates.npy",
+    "text": "民眾黨前主席柯文哲週一才剛以七千萬元交保 但是臺北地檢署不服 認為京華城岸還有重要證人尚未調查完畢 而且柯文哲在交保之後跟證人有所接觸 因此仍然有積壓的必要 所以在昨天傍晚已經提起抗告",
+    "num_frames": 229
+  },
+  {
+    "clip_id": "part_21_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_21_5_upper_body_coordinates.npy",
+    "text": "過去不時發生,民政為了博愛座爆發衝突的狀況。 在申權法修正將博愛座證明為優先席之後, 交通部昨天公佈了統一圖示, 各運具必須要在今年底前全面更換, 否則最高會開罰五萬元。",
+    "num_frames": 235
+  },
+  {
+    "clip_id": "part_21_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_21_6_upper_body_coordinates.npy",
+    "text": "今年秋冬公費流感疫苗將從10月1號起開打 疾管署將依照世界衛生組織的建議 全面改用三架疫苗 而另外國內百日科上週是新增了三例 是北部一起家庭群聚 還要提醒您 南韓政府日前宣佈 將立百病毒列為第一級的傳染病 這是一種人畜共通的傳染病 目前還沒有疫苗跟特效藥 致死率最高達到75% 目前國內風險相對較低 疾管署將會持續觀察",
+    "num_frames": 436
+  },
+  {
+    "clip_id": "part_21_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_21_7_upper_body_coordinates.npy",
+    "text": "提醒家長要注意孩子玩的玩具 宜蘭縣有一名七歲的孩童 不小心把一個奧特曼模型吊墜吞到了肚子裡 到醫院照X光 發現吊墜已經進入腸道 醫生說先觀察讓它隨著糞便排出 同時也提醒民眾 如果吞入物較大 表面尖銳或有磁力 就需要馬上就醫 開刀取除",
+    "num_frames": 260
+  },
+  {
+    "clip_id": "part_21_9_upper_body_coordinates",
+    "npy_path": "processed_features/part_21_9_upper_body_coordinates.npy",
+    "text": "全球各地這個夏天都超級熱 越熱越想喝飲料 同時也攝取了過多的糖分 一項最新研究發現 當氣溫從12度升到30度 美國人對糖分的額外攝取量 也從2公克飆升到15公克 而且低射精地位的族群 因為沒有冷氣和良好的水質 更容易喝高糖飲料來解渴 成為健康飲油",
+    "num_frames": 277
+  },
+  {
+    "clip_id": "part_22_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_22_2_upper_body_coordinates.npy",
+    "text": "毒報時間來看到聯合報市U18世界盃棒球賽六強迴圈賽昨天開打 中華隊首戰以1比8輸給南韓隊 想要拼盡冠軍賽難度很高 再來看中國時報報道 新北市淡江大橋經過30年催生 斥資230億元打造全臺最難蓋的橋樑 預計9月16日合龍 明年5月12日開放通車 未來淡水來往巴黎可以節省25分鐘車程 自由時報提到了 行政院任性特別預算 其中教育部強化高教人才培育特別預算 共200億元 教育部表示有65億元將會用於支援大學經營 114到116學年不需要調漲學雜費 每年可以照顧91萬名學生 看完報紙重點繼續來關心 統籌款爭議延燒 再也 15縣市首長呼籲中央要放下屠刀 昨天總統賴清德出席活動時則回應 屠刀從來都不在民進黨手上 希望中央和地方可以理性討論 行政院長卓榮泰規劃 在星期六會分上午和下午兩個天 第一次邀請全臺22縣市首長到行政院討論解方",
+    "num_frames": 908
+  },
+  {
+    "clip_id": "part_22_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_22_4_upper_body_coordinates.npy",
+    "text": "各界都很關心政府何時要普發現金1萬元 昨天行政院透過任性特別預算案 編列了2360億元作為發放經費 等到立法院審議透過後 最快在10月下旬就能領到 可以領取的資格包含了現有戶籍國民 取得居留許可的無戶籍國民等五大族群 並且是比照上回會有五種管道 方便民眾領取",
+    "num_frames": 323
+  },
+  {
+    "clip_id": "part_23_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_23_1_upper_body_coordinates.npy",
+    "text": "看新聞 開始也 歡迎收看今天9月16號的公示手語新聞 首先來關心 民眾黨前主席柯文哲和臺北市議員應曉維的交保裁定 遭到高原撤銷 臺北地院昨天上午重開積壓庭 簡便在庭上激烈辯論 何一庭歷經了6個多小時的評議 晚間6點半裁定 維持柯文哲以7000萬交保 應曉維3000萬交保",
+    "num_frames": 647
+  },
+  {
+    "clip_id": "part_23_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_23_2_upper_body_coordinates.npy",
+    "text": "臺巖綠能光電弊案 涉案的前董事長陳啟玉等五人 已經被起訴 但是同案又爆出 臺南市調查處一名調查官 在調查期間 將關係人的個資、財務等資料 用隨身碟洩密給臺巖綠能的 總經理秘書等人 昨天檢方再起訴 包含調查官等四人 MING PAO CANADA MING PAO TORONTO",
+    "num_frames": 481
+  },
+  {
+    "clip_id": "part_23_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_23_3_upper_body_coordinates.npy",
+    "text": "獨報時間來看到 中國時報是 花蓮縣吉安鄉光華村 垃圾掩埋場11號發生大火 造成臭氣四處飄散 雖然火勢已經撲滅 但是村民不滿 至今無人道歉負責 近百人昨天高舉擺佈條 到縣議會抗議 而議會今天將會安排會刊 並請縣府提出檢討改善計劃 自由時報時報導 二次大戰中戰80週年 中國以開羅宣言等檔案 指出日本已經將臺灣主權 歸還中國 而美國在臺協會AIT 上週批評 中國是不實的法律論述 美國國務院也表示 中國刻意扭曲二戰時期檔案 美國將持續支援臺灣 聯合報提到了 美國總統川普昨天表示 美國和中國在馬德里的貿易會談 進展非常順利 他將在本週五 和中國國家主席習近平通話 美國財政部長 貝森特說 美中這次會談 已經就TikTok問題 達成框架協議 將轉由美國控制所有權 來看我們的報導",
+    "num_frames": 1558
+  },
+  {
+    "clip_id": "part_23_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_23_4_upper_body_coordinates.npy",
+    "text": "昨天各地的氣溫高溫炎熱 帶動用電量提升 不過臺電自從上週 發生高雄興達電廠火警事故之後 臺電的燃煤發電機組 臨口二號機 昨天上午九點多 也出現異常故障 外界擔心恐怕會對供電造成壓力 臺電表示 將排程緊急備用的新達三四號機組 加上水力發電等措施 力保夜間備轉容量率維持6%",
+    "num_frames": 643
+  },
+  {
+    "clip_id": "part_23_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_23_5_upper_body_coordinates.npy",
+    "text": "中共擾臺動作頻頻 昨天又有四艘中國海警船 關閉自動識別系統 航入金門水域 最後在巡防艇的並行監控下 轉向離開 不過前一天14號",
+    "num_frames": 316
+  },
+  {
+    "clip_id": "part_23_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_23_6_upper_body_coordinates.npy",
+    "text": "宜蘭縣一所高職傳出校園暴力事件 一名就讀二年級的男學生 昨天上午在教室持尖刀攻擊班上另一名男同學 被害同學的背部被刺兩刀 索性送醫後沒有生命危險 而動手的男學生 法官在昨天晚間8點50分裁定收容 處不瞭解 疑似兩人在社群平臺有爭執 引發行為人不滿 分而在課堂行兇",
+    "num_frames": 491
+  },
+  {
+    "clip_id": "part_23_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_23_7_upper_body_coordinates.npy",
+    "text": "截至今年7月,臺北市65歲以上的長者已經達到了58萬人 而臺北市政府2017年和文化大學合作 在陽明老人公寓推動輕盈共居政策 每學期招收最多8名的學生,每個月租金只要3000元 但至今處於事半的狀態 而且目前只有3名學生居住當中 被質疑輕盈共居的政策形同停擺",
+    "num_frames": 616
+  },
+  {
+    "clip_id": "part_23_8_upper_body_coordinates",
+    "npy_path": "processed_features/part_23_8_upper_body_coordinates.npy",
+    "text": "新建中連線巴黎與淡水的淡江大橋 預計今天進行合攏儀式 邁向工程最後一里路 這座大橋是國內首度以國際淨土的方式 辦理的橋樑設計工程 完工後將成為世界上最長的 單塔不對稱跨距斜張橋 渴望在明年五月通車",
+    "num_frames": 452
+  },
+  {
+    "clip_id": "part_23_9_upper_body_coordinates",
+    "npy_path": "processed_features/part_23_9_upper_body_coordinates.npy",
+    "text": "第六十屆金鐘獎入圍名單在昨天揭曉 英集《影后》以及《畫外之一》入圍了15項 並列戲劇節目最多 而公視關心身心障礙者平權的紀錄片節目 《極樂世界》也有入圍人文紀實節目 公視總共入圍了95項 入圍比例高達90%",
+    "num_frames": 545
+  },
+  {
+    "clip_id": "part_23_10_upper_body_coordinates",
+    "npy_path": "processed_features/part_23_10_upper_body_coordinates.npy",
+    "text": "美國艾美獎昨天頒獎 現場最受矚目的焦點之一 就是Netflix在全球引發話題的迷你影集 《混沌少年時》 以一鏡到底的拍攝手法 透過一個13歲少年殺害女同學的案件 探討時下的網路現象 包括校園霸凌和豔女等等 一播出就大獲好評 一舉抱走最佳迷你影集等六項大獎 而主人翁歐文庫博第一次演戲就得獎 15歲的他也寫下艾美獎最年輕的獲獎記錄",
+    "num_frames": 740
+  },
+  {
+    "clip_id": "part_24_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_24_1_upper_body_coordinates.npy",
+    "text": "看新聞開視野 歡迎收看今天9月17號的公示手語新聞 首先來關心去年5月 新北三重發生一名24歲的張姓男子 先後殺害岳母妻子和妻子之後 逃到臺中被捕 新北地方法院國民法官法庭審理後 依殺人等罪判處死刑 而這是首起由國民法官判決死刑的案件 全案仍可以上訴",
+    "num_frames": 294
+  },
+  {
+    "clip_id": "part_24_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_24_2_upper_body_coordinates.npy",
+    "text": "讀報時間來看到 中國時報是 流感季節9月今年提早報道了 濟官署表示 國內類流感就診人次已經超過10萬人 本週正式進入流行期 10月1號起公費流感疫苗開打 呼籲民眾儘速接種 自由時報是報道 教育部昨天舉辦 卓越特殊教育人員頒獎典禮 共有57人獲獎 而其中 新北市景興國小廳長特教老師楊伯儒 用自己的生命故事來指引學生獲得殊榮 聯合報是提到了 無照駕駛致死的人數高於9駕致死 交通部昨天 公佈修法細節 無照駕駛累犯罰款將沒有上限 最終可以罰吊銷駕照不得再考 而同時車主也要連帶守法 看完報紙重點之後 繼續要再來關心的是 勞動部昨天公佈 國內最新減班休息資料 共有333家 影響人數突破7000人 而其中242家業者表示 是受到美國關稅的影響 其中又以金屬積電工業衝擊最大 而相對於傳統產業的低迷 科技業是一枝獨秀 昨天帶領檯北股市上漲272點 再創新高",
+    "num_frames": 930
+  },
+  {
+    "clip_id": "part_24_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_24_3_upper_body_coordinates.npy",
+    "text": "立法院日前透過全民普發1萬元特別預算案 預計最快10月下旬開始發放 不過法師市召會認為 這項政策是舉債大撒幣 號召拒領 並且要求行政院增設國家續命專款的選項 讓錢可以轉入 不過行政院僅回應尊重會審慎言議 有不少民進黨立委表示支援 但國民黨立委林思明則認為 普發是民意 要發起人市召會少碰政治",
+    "num_frames": 345
+  },
+  {
+    "clip_id": "part_24_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_24_4_upper_body_coordinates.npy",
+    "text": "國防部推出新版的全民國防手冊 與舊版最大的不同 包括強調任何有關國家戰敗 政府宣佈投降都是假訊息 還有要民眾在戰時遠離軍隊活動 另外政府已經規劃了 5668個配售站 供應米、食用油、鹽、瓦斯和嬰兒奶粉 未來也考慮將超商和賣場也一起納入",
+    "num_frames": 318
+  },
+  {
+    "clip_id": "part_24_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_24_5_upper_body_coordinates.npy",
+    "text": "的補助經費 降低臺續大一年管理費比率2% 約900萬元 而陳中慶與周臺英 分別停權5年及4年 不得申請及執行各項補助案",
+    "num_frames": 156
+  },
+  {
+    "clip_id": "part_24_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_24_6_upper_body_coordinates.npy",
+    "text": "一名旅居韓國的臺灣YouTuber 日前自曝在首爾 因為拒絕陌生男子的搭訕 與對方發生了肢體衝突 造成全身有多處的淤青 而我外交部表示 駐韓代表處已經與當地的警方聯絡 將當面與承辦警員瞭解案情",
+    "num_frames": 243
+  },
+  {
+    "clip_id": "part_24_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_24_7_upper_body_coordinates.npy",
+    "text": "新北市的五穀昨天中午熱到了39.2度 是全臺灣最高溫 今天大臺北地區以及桃園 還是會有區域性地區來到37度 不過在呂宋島東南方海面 有熱帶性低氣壓形成 不排除會增強為颱風 今天台東以及屏東 會有區域性較大雨勢發生 週四週五 東半部跟南部降雨會變得更明顯",
+    "num_frames": 304
+  },
+  {
+    "clip_id": "part_24_8_upper_body_coordinates",
+    "npy_path": "processed_features/part_24_8_upper_body_coordinates.npy",
+    "text": "美國傳奇影星勞博瑞福十六號辭世,享受八十九歲 他生前不僅以俊俏的外形和精湛的演技享譽影壇 還曾經獲得奧斯卡最佳導演以及終身成就獎 並且創辦以扶植年輕導演獨立電影的日舞影展 被認為是此生在電影產業中所做出的最大貢獻",
+    "num_frames": 270
+  },
+  {
+    "clip_id": "part_25_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_25_1_upper_body_coordinates.npy",
+    "text": "看新聞開視野 歡迎收看今天6月13號的公示手語新聞 首先來關心熱帶性低壓 昨晚9點從臺東長濱登陸 為花東地區帶來了劇烈降雨 而今天降雨熱區將會轉移到南部 臺南、高雄、屏東這三個縣市 要嚴防致災性降雨 來看看",
+    "num_frames": 233
+  },
+  {
+    "clip_id": "part_25_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_25_2_upper_body_coordinates.npy",
+    "text": "獨報時間來看到 中國時報是 美國通膨降溫引發降息預期 新臺幣昨天狂飆了2.6角 收在29.66元 是近三年的新高價位 而新臺幣今年的升幅已經超過了10% 成為最強亞幣 再來看到 自由時報時報導 今年2月 中國全伊倫 鴻泰58號貨船 涉嫌破壞中華定性 臺澎第三海嵐線 臺南地院昨天是判處了中國籍船長 王玉亮三年徒刑 而聯合報是提到了 賴清德總統 在520 就職週年談話的時候 只是國安團隊規劃 向在野黨主席 進行重要國安情緒簡報 而府方昨天正式聯絡 國民黨跟民眾黨 預定本月18號會面 而看完了報紙的重點 繼續再來關心 2019年6月12日 為了反對逃犯條例修訂草案 許多港人走上街頭抗議 卻爆發了激烈的警民衝突 引發反送中事件 而港版國安法的實施 逼得許多當時參加活動的人 只能流亡 如今六年過去 他們無奈地表示 家已經不是原來的樣子 他們無奈地表示 家已經不是原來的樣子 只有不斷在外地聲援",
+    "num_frames": 975
+  },
+  {
+    "clip_id": "part_25_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_25_3_upper_body_coordinates.npy",
+    "text": "臺南市永康一處賣場 昨天晚間傳出了槍響 一名無姓男子疑似喝酒醉 手持武士刀 在一間二手賣場內四處亂揮 而警方獲報之後趕抵現場 在壓制過程中 疑似槍支走火 擊中男子頸部 一度失去呼吸心跳 送醫搶救後恢復了生命跡象",
+    "num_frames": 252
+  },
+  {
+    "clip_id": "part_25_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_25_5_upper_body_coordinates.npy",
+    "text": "網路詐騙多 根據書發部統計 最常被仿冒的公眾人物 是金融投資產業領域 企業界跟財經界公眾人物都有 為了強化詛詐 書發部去年9月 建制網路詐騙通報查詢網 至今已經確認 也有12萬則詐騙訊息 通報Meta、LINE等平臺業者下架",
+    "num_frames": 275
+  },
+  {
+    "clip_id": "part_25_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_25_7_upper_body_coordinates.npy",
+    "text": "有旅客自備伸縮椅 搭乘臺北捷運 尖峰時就坐在車廂中間 而北捷表示 自備椅子可能影響他人和進出的動線 違反大眾捷運法 勸導不聽 最高可以罰七千五百元 並且可以拒絕運送 前期",
+    "num_frames": 198
+  },
+  {
+    "clip_id": "part_25_8_upper_body_coordinates",
+    "npy_path": "processed_features/part_25_8_upper_body_coordinates.npy",
+    "text": "全國設有三萬五千個身障專用車位 不過這些車位常常一味難求 高達八九成車位都被領有識別證的家屬佔用 而他們是否有再送事實往往很難查證 身障家屬人質疑 現在的身障停車證制度失控 交通平權大倒退",
+    "num_frames": 232
+  },
+  {
+    "clip_id": "part_25_10_upper_body_coordinates",
+    "npy_path": "processed_features/part_25_10_upper_body_coordinates.npy",
+    "text": "印度有一架波音787夢幻客機 昨天下午起飛30秒 突然墜毀在機場附近 有一人起機生還 機上其他241個人全部罹難 而因為飛機墜毀在住宅區 地面也有人與命 當局出判已經有超過290個人死亡 是近年來全球最嚴重的恐難",
+    "num_frames": 224
+  },
+  {
+    "clip_id": "part_26_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_26_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天9月23號的公示手語新聞 首先來關心颱風動態 牆臺劃加沙移動速度很快 氣象署預估最快8點30分會解除陸上警報 而海警則是最快要到晚上才會解除 接著來看氣象署稍早的說明 氣象署稍早的說明",
+    "num_frames": 242
+  },
+  {
+    "clip_id": "part_26_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_26_2_upper_body_coordinates.npy",
+    "text": "牆臺花家沙,昨天已經在花東地區帶來了風雨 臺東部分道路一度積淹水 而綠島外海還出現了水龍捲 花蓮則是因為馬太安溪豔色湖有溢流的風險 縣府強制撤離了下游7000位的居民",
+    "num_frames": 252
+  },
+  {
+    "clip_id": "part_26_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_26_3_upper_body_coordinates.npy",
+    "text": "讀報時間來看到 自由時報報導 臺灣戲曲學院 16年前爆發老師對未成年學生性侵 性騷擾、體罰等重大事件 但是因為學校主管常年包庇 使加害的情形長達15年 而原本校評會打算輕縱 教育部扣除學校3.1億元的補助款 讓校評會重審決議 將當時的校長等四名主管全部解評 再來看到聯合報時提到了 主級總處昨天釋出了 8月的失業率是3.45% 連續三個月上升 主級總處官員表示 對等關稅的影響 已經慢慢浮現 中國時報是 日本自民黨總裁選舉 昨天正式公告有5個人參選 10月4號投票選出石破茂首相的繼任者 而呼聲最高的是 農林水產大臣小泉晉次郎 以及前經濟安保大臣高士早苗 看完了報紙重點之後 繼續再來關心 美國保守派名嘴柯克 上個星期遭到暗殺 昨天在鳳凰城的一場大型追思會 有將近10萬人參加 而川普總統也親自到場 柯克的遺孀含淚表示 願意原諒兇手",
+    "num_frames": 955
+  },
+  {
+    "clip_id": "part_26_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_26_4_upper_body_coordinates.npy",
+    "text": "接著焦點回到國內 財化法修正之後 發生鼓勵營養午餐使用國產食材的經費 中央和地方都沒有編列明年度的預算 團善業者等團體擔心面臨斷吹 而對此 主計總處表示 財化法後 中央將大筆預算撥給地方 先前就邀集了地方政府開會 明確說明應該由地方辦理編列預算 明年度經費迴歸由地方政府負擔",
+    "num_frames": 337
+  },
+  {
+    "clip_id": "part_26_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_26_5_upper_body_coordinates.npy",
+    "text": "臺北上海雙城論壇 原本規劃9月25、26日於上海舉行 不過臺北市政府昨天宣佈要延期 並且強調辦得早不如辦得好 陸委會則說 移民署本來昨天要發證給全團 對於市府決定延期 感到意外和遺憾 雲",
+    "num_frames": 244
+  },
+  {
+    "clip_id": "part_26_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_26_6_upper_body_coordinates.npy",
+    "text": "臺中成功領昨天驚傳打靶意外 一名18歲的新兵 昨天下午使用步槍打靶 疑似發生膛炸意外 導致左臉重創 緊急送醫 目前還沒有脫離險境 軍方強調 崛起意外到底是槍械彈藥 還是人為因素 目前無法判定 後續會進行調查理清原因 хот請不吝點贊 訂閱 轉發 打賞支援明鏡與點點欄目",
+    "num_frames": 240
+  },
+  {
+    "clip_id": "part_26_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_26_7_upper_body_coordinates.npy",
+    "text": "iPhone 17剛上市,已經出現了詐騙 日前,一名吳小姐在社群平臺看到有人發文 表示有了新手機,要以4500元便宜脫手九成星的iPhone 16 隨訊溝通卻是掉入陷阱 詐騙集團提供假的超商交貨變系統交易 要求印證賬戶 吳小姐因此損失了10萬元",
+    "num_frames": 268
+  },
+  {
+    "clip_id": "part_26_8_upper_body_coordinates",
+    "npy_path": "processed_features/part_26_8_upper_body_coordinates.npy",
+    "text": "國寶魚櫻花勾吻龜 棲息在武陵農場的七家灣溪 而其實 同樣屬於大甲溪上游的合歡溪 也有龜魚棲息 2018年放流之後數量回升 中研院的研究團隊發現 合歡溪的龜魚基因起溢度最高 加上海拔高 水溫低 水質清澈 是目前最好的棲地 學者建議 未來的寶玉行動 能夠重視合歡溪的環境維護",
+    "num_frames": 373
+  },
+  {
+    "clip_id": "part_27_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_27_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天9月24號的公視手語新聞 首先來關心 隨著強臺華家沙離開 海上颱風警報已經在昨晚8點半解除 不過這次颱風已經造成14個人死亡 還有18個人受傷 災情最嚴重的是在花蓮 馬太安溪的艷澀湖溢流 洪水夾雜著沙石衝向下遊 大橋瞬間被沖毀 下午更是直接淹進了光復市區 當地成了汪洋一片 許多人緊急逃到二三樓避難",
+    "num_frames": 802
+  },
+  {
+    "clip_id": "part_27_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_27_2_upper_body_coordinates.npy",
+    "text": "花蓮的艷色湖溢流非常嚴重 幾乎把整個市區給淹沒 而現在光復市區的水已經退了 前進指揮中心正漏液的清淤 不少縣市也都派出救災人員 以及救生艇等器材前往支援",
+    "num_frames": 382
+  },
+  {
+    "clip_id": "part_27_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_27_3_upper_body_coordinates.npy",
+    "text": "牆臺畫家沙已經遠離 不過現在又有一個颱風 勃羅伊生成 氣象署預測朝著海南島的方向前進 對臺灣沒有直接的影響 而氣象署提醒 今天花蓮臺東的民眾 還是要嚴防超大豪雨",
+    "num_frames": 399
+  },
+  {
+    "clip_id": "part_27_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_27_4_upper_body_coordinates.npy",
+    "text": "讀報時間來看到 中國時報是 再來看到自由時報報導 醫學中心急診用色的問題嚴重 衛福部提出假日急診中心解方 在大型醫院附近 羞脂發燒、外傷縫合等 輕度症狀的患者分流病患 衛福部昨天表示 最快十一月上路 其中臺北市跟桃園市 已經選定據點 聯合報提到了 晶片 面具頭揮達前天宣佈 將要投資人工智慧大廠 OpenAI高達一千億美元 約臺幣三兆元 打造下一代AI資料中心 而看完報紙的重點 繼續再來關心 普發現金一萬元 最快預計十月發放 要不要有不領取的選項 現在的疫情下 行政院昨天表示 考量到令件系統 將會延宕發放的時程 因此決議不增設不領取的選項 不過民眾要特別留意 現在錢還沒發放 已經有詐騙集團 用普發現金的名義 假冒政府機關 又騙民眾點選釣魚網址 有人就被倒刷了五萬多元",
+    "num_frames": 1891
+  },
+  {
+    "clip_id": "part_27_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_27_5_upper_body_coordinates.npy",
+    "text": "臺中成功嶺前天發生打靶的意外 18歲士兵左臉受傷嚴重 醫院表示還有多塊金屬碎片卡在腦部 目前無法取出 而至於事發的原因 軍方初步排除機械彈藥因素 而由於這款步槍只能右側射擊 士兵左臉受傷有不少的疑點 現場錄影畫面已經交給臺中檢方 釐清事故原因",
+    "num_frames": 570
+  },
+  {
+    "clip_id": "part_27_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_27_6_upper_body_coordinates.npy",
+    "text": "疾管署統計,最近一個星期以來, 累流感就醫超過了11.5萬人次, 比前一週上升了13.1%, 顯示流感進入流行期。 而榆林縣的國中、小學還有幼兒園, 開學後出現了多起校園群聚。 22號甚至傳出, 有一名未接種流感疫苗的幼兒園大班幼童, 因為流感重症不治死亡。",
+    "num_frames": 525
+  },
+  {
+    "clip_id": "part_27_8_upper_body_coordinates",
+    "npy_path": "processed_features/part_27_8_upper_body_coordinates.npy",
+    "text": "有名眾在臺北市信義區地下停車場直播的時候 發現有動物 沒想到竟然是山羌 趕緊通報動保處 派人來捕捉 再到山區野放",
+    "num_frames": 354
+  },
+  {
+    "clip_id": "part_27_9_upper_body_coordinates",
+    "npy_path": "processed_features/part_27_9_upper_body_coordinates.npy",
+    "text": "臺灣高鐵向日本採購了12組最新款的列車 最快在2027年就可以投入營運 而新列車從外觀到內裝都有不同以往的設計 現在就跟著公示國際記者的鏡頭 到這樣列車基地來搶先知己",
+    "num_frames": 412
+  },
+  {
+    "clip_id": "part_28_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_28_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天9月29號的公事手語新聞 首先來關心 花蓮光復鄉受到洪災 滾滾泥水淹入了道路還有房屋 至今仍有7人失聯 特搜隊現在針對重點區域 包括了佛祖街和下游處持續開挖 不過昨天中午 當地一度謠傳 豔色湖再度溢流 讓現場一片混亂 行政院也趕緊公佈撤離警報 是短鳴5秒 停5秒 重複9次 避免民眾再度恐慌",
+    "num_frames": 401
+  },
+  {
+    "clip_id": "part_28_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_28_2_upper_body_coordinates.npy",
+    "text": "趁著教師節廉價 許多熱心的產自超人前進華聯光復 協助災後復原 而中央也設了排程戰 不過人力以及資源分配都是一大挑戰 廉價只剩下今天 面對志工陸續離開 總統萊清德下令增派國軍 力拼中秋假期前能夠完成情譽",
+    "num_frames": 277
+  },
+  {
+    "clip_id": "part_28_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_28_3_upper_body_coordinates.npy",
+    "text": "花蓮光復救災行動持續 現場也開設了多個臨時醫療站 有災民腿上出現嚴重傷口潰爛 醫療團隊直接在現場進行了輕創手術 而由於災區現況充滿積水以及淤泥 疾管署也提醒志工還有救災人員 類BG等疾病的傳播風險可能增加 務必要做好防護",
+    "num_frames": 231
+  },
+  {
+    "clip_id": "part_28_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_28_4_upper_body_coordinates.npy",
+    "text": "督報時間來看到 中國時報是 國造潛艦海昆號 仍在測試階段 而主要的推手黃樹光 昨天以家庭因素為由 請辭國安會諮詢委員 來經得總統為了無效 請辭獲准 再來看到 自由時報時報導 主紀總處調查 去年大學教育程度 可支配所得 平均數是68.35萬元 反超專科的66.36萬元 但是中位數 大學56.27萬 仍然低於專科的56.86萬元 已經連續 15年低於專科 聯合報提到了 健保統計 去年給付藥費2536億元 佔健保總額將近三成 平均每個人的健保藥費 是10584元 當中止痛藥蟬聯使用人數 最多藥品之冠 共919萬元 比前年多出了20萬人 看完報紙重點 繼續來關心 外交部長林佳龍 受邀前往波蘭 參加第12屆華沙安全論壇 並且將會發表演說 不過對於明年度 外交部預算 編列增加 但是邦交國數量下滑 聲援臺灣的國家數 也沒有顯示出 不足增長 立法院預算中心認為 應該要周延考量預算",
+    "num_frames": 950
+  },
+  {
+    "clip_id": "part_28_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_28_5_upper_body_coordinates.npy",
+    "text": "臺電通宵發電廠近年來陸續進行機組汰換 前天晚間就將已經廚藝第四號機組的大煙囪 進行放導作業 瞬間發出了巨大聲響 也震撼當地居民 這座曾經被視為苗栗通宵海岸最醒目的地標 甚至還被當作偷渡客舉飲的大煙囪 也成為歷史",
+    "num_frames": 281
+  },
+  {
+    "clip_id": "part_28_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_28_6_upper_body_coordinates.npy",
+    "text": "健身品牌全真瑜伽健身 近期宣佈全臺六個分店暫停營業 引發大批會員不滿 提出申訴 業者強調目前尚未進入破產或清算 正在積極爭取資金挹注 而對此臺北市法務局則要求業者 9月底之前要提出營運計劃與退費方案",
+    "num_frames": 229
+  },
+  {
+    "clip_id": "part_28_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_28_7_upper_body_coordinates.npy",
+    "text": "新聞集錦來看到,內政部為了要打造合理公平的住宅市場,推動需品改革, 渴望讓公社比下降5%,最快明年1月上路,還有最低工資連續10年調漲, 明年起,月薪調高到29,500元,時薪則調高到196元。 另外,昨天教師節,有一群老師集結在教育部前抗議,點名校士制度三大亂象,要求廢除。 來看我們的整理報道。",
+    "num_frames": 346
+  },
+  {
+    "clip_id": "part_28_9_upper_body_coordinates",
+    "npy_path": "processed_features/part_28_9_upper_body_coordinates.npy",
+    "text": "第31屆亞洲棒球錦標賽冠軍戰 臺灣昨天晚間再度與日本交手 結果日本攻勢猛烈 全場狂敲了15支的安打 中場臺灣就以0比11落敗取局亞軍 還寫下冠軍戰比數最大分叉記錄",
+    "num_frames": 168
+  },
+  {
+    "clip_id": "part_28_10_upper_body_coordinates",
+    "npy_path": "processed_features/part_28_10_upper_body_coordinates.npy",
+    "text": "印度再度發生死亡踩踏事件 去年,轉戰政壇的印度知名演員維傑 27號在印度南部為明年初的選舉來進行造勢 吸引5萬人左右到場 但是卻不幸爆發了踩踏意外 造成包括婦女還有兒童在內 至少有39個人死亡 還有50多人重傷 政府下令展開調查",
+    "num_frames": 271
+  },
+  {
+    "clip_id": "part_29_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_29_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天6月19號的公視首語新聞 首先來關心 從中國到印尼 接連出現了自然災害 印尼的勒沃託比火山 週二下午開始噴發 連帶的讓往返巴釐島的航班也都取消 而中國廣東 颱風過境之後連日暴雨 洪水成災 村莊泡水 有超過6.8萬的居民疏散撤離 而隨著雨勢趨緩 現在民眾和商家則是忙著清理善後",
+    "num_frames": 371
+  },
+  {
+    "clip_id": "part_29_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_29_2_upper_body_coordinates.npy",
+    "text": "讀報時間來看到,中國時報是,有超過350萬人使用的社群平臺, 已經開放了廣告功能,卻沒有列入納管的名單。 有立委質疑,可能會成為詐騙溫床。 述發部回應,會考慮納入管理。 再來看到,自由時報時報道,臺中擁有5億房地產的賴姓高中生, 2023年與下姓男子辦理同性婚姻,一小時後墜樓死亡。 而昨天,臺中地院宣判婚姻無效,下姓男子沒有繼承遺產權。 而未來主要的遺產, 可能由賴姓高中生, 的兄弟姊妹來繼承。 聯合報提到了,立法院去年底修法,開放80歲以上的長者, 免80項表評估,即可申請外籍看護。 勞動部表示,預計7月底上路,預估, 輕症的申請者將會增加10萬人。 而看完了報紙的重點,繼續再來關心。 美國太平洋空軍, 近期在阿拉斯加舉行了聯合軍演, 邀請多個太平洋盟邦參演。 而官方釋出的照片當中,首度揭露臺灣以觀察員的身份參與。 學者表示, 這凸顯出臺美軍事交流更為緊密。",
+    "num_frames": 887
+  },
+  {
+    "clip_id": "part_29_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_29_3_upper_body_coordinates.npy",
+    "text": "金夏海域常年存在違法科棚 而過去金門縣政府只核准了4公頃養殖區 多年下來,業者違法擴大養殖的範圍 已經超過了72公頃 而且還僱用中國的漁船越界協助捕科 形成國安漏洞 海巡積極查獲中國越界漁船 而金門縣政府表示 持續與中國協調拆除作業",
+    "num_frames": 327
+  },
+  {
+    "clip_id": "part_29_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_29_4_upper_body_coordinates.npy",
+    "text": "警政署提高獎金 鼓勵民眾檢舉車手 但是計劃才上路一個多月 就已經把獎金給發完了 另外有許多的詐騙案件 都是靠被害人約出車手面交才查獲 但是這類的警民合作 以雙北為例 不會發放民眾獎金",
+    "num_frames": 182
+  },
+  {
+    "clip_id": "part_29_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_29_5_upper_body_coordinates.npy",
+    "text": "臺中市有31名原警涉嫌將違規停車進行舉發的白單 開立紅單時改成罰還較低或消單 遭到檢方起訴 為了杜絕人為篡改或刪除 6月開始全面改為電子化 提升執法效率 也可以避免外界管說",
+    "num_frames": 209
+  },
+  {
+    "clip_id": "part_29_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_29_7_upper_body_coordinates.npy",
+    "text": "肥胖、代謝症候群以及心血管疾病的上升趨勢明顯 立委提案修法 讓無糖飲料免貨物稅 昨天初審透過 立委希望 無糖飲料少了15%的貨物稅之後 應該要回饋到消費者的身上",
+    "num_frames": 206
+  },
+  {
+    "clip_id": "part_29_8_upper_body_coordinates",
+    "npy_path": "processed_features/part_29_8_upper_body_coordinates.npy",
+    "text": "為了要讓育嬰架更彈性好用,勞動部推動彈性育嬰流停。 不過立委質疑,推動沒有具體化,進展牛步。 對於至少得請一個月的彈性育嬰流停,是否放寬到以日為單位? 勞動部長洪生漢表示,正與行政院爭取配套資源, 希望最快這個夏天能夠公佈。",
+    "num_frames": 260
+  },
+  {
+    "clip_id": "part_30_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_30_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天6月20號的公視手語新聞 首先來關心 以色列和伊朗 7天以來輪番發動空襲 以色列襲擊了伊朗的核設施 而伊朗還以顏色 發射飛彈擊中了以色列的醫院 美國已經向中東地區集結兵力 是否會直接介入攻擊伊朗 兩周內將會決定",
+    "num_frames": 499
+  },
+  {
+    "clip_id": "part_30_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_30_2_upper_body_coordinates.npy",
+    "text": "以色列與伊朗情勢緊張 總統府召開國安高層會議 賴總統指示 國安以及行政部門加強戒備 外交部長林佳龍證實 我駐以色列代表處 以及代表官邸 已受到了戰火波及 但是受損輕微 目前沒有撤僑的計劃 不過已經陸續協助 有需要的臺灣人 離開以色列跟伊朗",
+    "num_frames": 545
+  },
+  {
+    "clip_id": "part_30_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_30_3_upper_body_coordinates.npy",
+    "text": "讀報時間來看到 中國時報是 零卡食品和飲料盛行 而其中代糖之一的蔗糖素 北藝大最新研究發現 如果食用過多 可能會導致精子的數量大減 損害男性生育率 而自由時報是報導 交通部昨天宣佈 提高車輛不理讓行人的罰還金額 致人輕傷提高到一萬八千元 致人重傷或死亡 一律以最高額度罰還三萬六千元 將會從六月三十號開始實施 聯合報提到了 行政院會昨天透過長照三點零計劃 預計明年上路 將擴大服務物件 擴大服務物件 擴充長照服務內容 以及匯入智慧輔具等 看完報紙重點 繼續來關心 環境部一百零九年間 因為認為財處違法 所以撤銷了臺中市環保局 對臺中火力發電廠 做出的一千八百萬元財罰 臺中環保局不服提行政訴訟 而臺北高等行政法院昨天試判 為環保局勝訴 全案還可以上訴",
+    "num_frames": 1559
+  },
+  {
+    "clip_id": "part_30_8_upper_body_coordinates",
+    "npy_path": "processed_features/part_30_8_upper_body_coordinates.npy",
+    "text": "澎湖青梅海域的外來種 極冠海星 近期被發現數量異常變多 由於極冠海星是以珊瑚為食 而且食量相當驚人 恐怕會影響到當地的珊瑚生態 海保署與當地潛水業者合作 開始進行人工移除",
+    "num_frames": 398
+  },
+  {
+    "clip_id": "part_30_9_upper_body_coordinates",
+    "npy_path": "processed_features/part_30_9_upper_body_coordinates.npy",
+    "text": "菲律賓駐臺代表處昨天公告 自7月1日起 持臺灣護照 以觀光目的入境菲律賓 可以免簽證停留14天 外交部長林佳龍 也在臉書分享這個好訊息 說這是臺非情義的重要突破 與里程碑 而接著鏡頭再轉到美國 最高法院18號表決 支援田納西州 禁止未成年跨性別者 接受性別肯定醫療的法律 被視為跨性別權益的一大倒退 引發全國關注",
+    "num_frames": 745
+  },
+  {
+    "clip_id": "part_31_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_31_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天6月26號的公視首語新聞 首先來關心 又傳出了溺水意外 地點是在臺南南化的秘境 千層巖瀑布 昨天下午一點多 一名成功大學學生溺水 送醫急救仍然不幸喪命 而同一天 則是有一名男子 獨自走屏東 關刀縱走 缺水加上餓了兩天 向外求援 所幸救難人員順利地找到人 將他吊掛上直升機送醫",
+    "num_frames": 383
+  },
+  {
+    "clip_id": "part_31_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_31_2_upper_body_coordinates.npy",
+    "text": "獨報時間來看到,自由時報報道,美國總統川普昨天出席在荷蘭舉行的北約高峰會,北約成員國承諾2035年之前要將國防支出提升到GDP的5%,而這也是對川普要求的回應。 再來看到,聯合報是提到了,臺幣對美元匯率昨天升值了1.45角,來到29.391元,創下三年新高,和去年底相比,臺幣已經升值了3.39元。 中國時報是,總統府今天將召開全社會防衛任性第四次委員會議。 宣佈今年漢光演習首度結合城鎮任性演習,並且把7月定謀為國家團結月,由於是逢在大罷免的前夕,在野陣營質疑動機不單純。 而看完報紙重點,繼續來關心,24案國民黨立委,以及被停職的新竹市長高洪安罷免案。 將在7月26日投票,中選會公佈有效票和無效票的樣態,並且提醒民眾,投票的時候一定要使用選委會準備的全選工具,不可以改私章或者是按壓指引。",
+    "num_frames": 885
+  },
+  {
+    "clip_id": "part_31_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_31_5_upper_body_coordinates.npy",
+    "text": "不少民眾到國外旅遊,喜歡到藥妝店來掃貨。 食藥署提醒,食品、藥品或是衣材、化妝品,包括口罩,都有數量的限制, 而且只限個人自用,不得販售。 如果未經輸入查驗就轉售食品,最高可以罰300萬元。 而違法販售國外藥品,最終可以處200萬元。",
+    "num_frames": 287
+  },
+  {
+    "clip_id": "part_31_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_31_6_upper_body_coordinates.npy",
+    "text": "改善校園前交通安全 高雄市參考日本 將要試辦橫斷旗的做法 就是針對沒有設定號制的路口 行人在穿越馬路的時候 揮舞鮮豔的旗幟 提醒駕駛停車 暑假過後 將在鳳山區的大東國小 及中山國小來試辦",
+    "num_frames": 250
+  },
+  {
+    "clip_id": "part_31_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_31_7_upper_body_coordinates.npy",
+    "text": "為了要提高癌症篩檢異常民眾進一步到醫院診斷 雲林縣政府今年就編列了200萬交通費補助 只要是涉及在雲林縣符合條件的民眾 到12月底前都可以申請 最高每個人可補助1000元",
+    "num_frames": 193
+  },
+  {
+    "clip_id": "part_31_8_upper_body_coordinates",
+    "npy_path": "processed_features/part_31_8_upper_body_coordinates.npy",
+    "text": "2015年6月27號 新北市八仙樂園爆發城堡事件 有將近500人受傷 而當時擔任工程師的黃伯偉 燒傷命機達到了9成 存活率只有5% 不過他求生意志很強 選擇截肢保命 出院後也積極的復健 現在已經可以獨立生活 他把心路歷程寫成了書 昨天到醫院 除了感謝當年救治他的醫護人員 也希望他的生命故事 可以激勵更多的人",
+    "num_frames": 401
+  },
+  {
+    "clip_id": "part_31_9_upper_body_coordinates",
+    "npy_path": "processed_features/part_31_9_upper_body_coordinates.npy",
+    "text": "超細懸浮微粒PM0.1 系道可以穿透肺泡進入血液 進而影響心肺健康 環境部已經把PM0.1的相關議題 列入未來十年空瓶政策重點 而明年起將在臺中市和高雄市 進行試驗性監測",
+    "num_frames": 246
+  },
+  {
+    "clip_id": "part_31_10_upper_body_coordinates",
+    "npy_path": "processed_features/part_31_10_upper_body_coordinates.npy",
+    "text": "討論如何實現停火與真正和平 以及制裁俄國等問題 而川普在會後記者會上透露 考慮提供烏克蘭更多愛國者防空飛彈 並且強調 俄國總統普京必須要結束這場戰爭",
+    "num_frames": 193
+  },
+  {
+    "clip_id": "part_31_11_upper_body_coordinates",
+    "npy_path": "processed_features/part_31_11_upper_body_coordinates.npy",
+    "text": "天氣訊息要來關心 又有熱帶性低氣壓生成 不過根據氣象署的預測 對臺灣影響機率不大 而值得注意的是 週末過後 菲律賓東方海面的低氣壓 不排除會變成熱帶性低氣壓 或是颱風 要請民眾隨時注意最新的氣象預報 那預估是在週末之後 菲律賓東方海面上 可能會有較明",
+    "num_frames": 316
+  },
+  {
+    "clip_id": "part_32_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_32_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天6月27號的公視手語新聞 首先來關心 為了打造沒有歧視的職場環境 勞動部推行的身心障礙者職場合理調整行政指導 將在7月生效 各地方政府將要建置諮詢輔導視窗 幫助勞僱雙方知道可以怎麼做 政府有什麼資源可以協助 共同打造友善的工作環境",
+    "num_frames": 273
+  },
+  {
+    "clip_id": "part_32_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_32_2_upper_body_coordinates.npy",
+    "text": "副總統蕭美琴去年3月出訪捷克的時候 車隊被中國外交人員跟車 差點釀成車禍 而捷克媒體最新報道 中方不只是監視蕭美琴訪問行程 還規劃衝撞計劃 輔方表達強烈譴責",
+    "num_frames": 208
+  },
+  {
+    "clip_id": "part_32_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_32_3_upper_body_coordinates.npy",
+    "text": "賭報時間來看到 中國時報是 環境部24號公告 基隆市協和電廠更新改進計劃 環評透過 並且韓文同意臺電動工 引發環保團體強烈的不滿 準備要提出溯源進行救濟 聯合報是提到了 美元指數重變 亞洲主要貨幣昨天全面走升 臺幣昨天收在29.165 漲幅2.26角 是半個多月來的單日最大升幅 自由時報報導 臺北市一名高中生 自學破解優有卡晶片的技術 利用安全漏洞來進行補本除值 再拿著卡片去刷退現金 半年多來榨取60多萬元 全案已經含送地檢署偵辦 看完報紙重點繼續來關心 總統府全社會防衛任性委員會 定謀7月為國家團結月 聚焦漢光與城鎮防空演習 而另外也釋出了新版的防空避難指引 重點放在 空襲警報響起時 民眾該如何就地自保",
+    "num_frames": 785
+  },
+  {
+    "clip_id": "part_32_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_32_4_upper_body_coordinates.npy",
+    "text": "臺北設計獎是設計界的年度盛事 不過近期有民眾收到了 簡體中文版本的文宣引發討論 臺北市產發局表示 這是執行廠商的重大疏失 已經要求重新寄送正確的文宣 以及道歉信函 後續會依照合約來進行懲處 中文字幕志願者 楊茜茜",
+    "num_frames": 240
+  },
+  {
+    "clip_id": "part_32_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_32_5_upper_body_coordinates.npy",
+    "text": "而昨天新北地方法院議審宣判 國民法官判處黃國維18年6個月的重刑 全案還可以上訴 而對於被告在法庭上毫無回憶 家屬是感到相當痛心",
+    "num_frames": 157
+  },
+  {
+    "clip_id": "part_33_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_33_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天7月25號的公視首語新聞 首先來關心 現在臺灣附近的海面上 一共有三個颱風 以在臺灣東方的泛絲高 對臺灣影響較大 這項專家判斷 颱風帶來的雨大於風 從今天 今天是從北到南會有明顯的雨勢",
+    "num_frames": 451
+  },
+  {
+    "clip_id": "part_33_2_upper_body_coordinates",
+    "npy_path": "processed_features/part_33_2_upper_body_coordinates.npy",
+    "text": "賭報時間來看到 中國時報是 臺南市公務局一名男員工 利用勘栽時間 駕駛公務車偷溜班 到某國小區游泳 還猥褻了兩名男學童 遭到警方帶回撥查 法院裁準羈押 而公務局依法給予停職 再來看到 自由時報時報導 經濟部推出冷氣 冰箱太舊換新 每臺可以補助三千元 但是預算遭到煽動 上個月解凍之後 今年可以太換的臺數 約兩百零七萬臺 申請結局日 可能延長到明年一月中 加上減增貨物稅等 每臺可以享五千元的補助 聯合報提供 提到了 漫畫博覽會 昨天於世貿藝館登場 今年首度結合電競 以及玩具大展 現場有超過一千兩百個攤位 主辦單位估計 五天參觀人潮 約六十五萬人 上看三億賞極 而看完了報紙的重點 繼續再來關心 726大罷免倒數一天 昨晚公民團體在凱道 舉辦影像成功晚會 進行最後的罷免造勢 而另一方面 國民黨也全力掃街 要催出不同議票",
+    "num_frames": 1689
+  },
+  {
+    "clip_id": "part_33_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_33_3_upper_body_coordinates.npy",
+    "text": "明天就要進行罷免投票 公司也將於下午的5點到8點製作特別節目 並且全程有手語翻譯 歡迎您的收看 而投票的結果 中選會將在8月1號公告 如果罷免透過就當天解局 不能行使立委職權",
+    "num_frames": 372
+  },
+  {
+    "clip_id": "part_33_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_33_5_upper_body_coordinates.npy",
+    "text": "今年初全臺急診擁塞 為了要解決困境 健保署提出假日急診中心的構想 計劃在急診擁塞的醫院附近 利用診所或是小型醫院人員值班 專門來收治輕症的患者 部分負擔的費用也相對便宜 而試辦計劃預計10月上路",
+    "num_frames": 465
+  },
+  {
+    "clip_id": "part_33_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_33_7_upper_body_coordinates.npy",
+    "text": "國際訊息來關心 泰國和柬埔寨邊境 昨天是再度發生了軍事衝突 柬埔寨出動火箭炮 擊中泰國一處加油站 而泰國也不甘示弱 派出了戰鬥機反擊 目前雙方已經關閉邊境 並且互相召回大使 而衝突仍在持續升溫",
+    "num_frames": 458
+  },
+  {
+    "clip_id": "part_33_8_upper_body_coordinates",
+    "npy_path": "processed_features/part_33_8_upper_body_coordinates.npy",
+    "text": "關心天氣,受到第七號颱風泛絲高外圍雲系的影響 氣象署對九個縣市釋出了大雨特報 臺中以北以及宜蘭地區有區域性大雨發生的機率 中南部以及澎湖、金門跟馬祖 雨勢在下半天之後將會逐漸的明顯 華東地區午後也會有區域性短暫雷陣雨 接著提供您各地的氣象資料",
+    "num_frames": 615
+  },
+  {
+    "clip_id": "part_34_1_upper_body_coordinates",
+    "npy_path": "processed_features/part_34_1_upper_body_coordinates.npy",
+    "text": "看新聞 開視野 歡迎收看今天7月3號的公示手語新聞 首先來關心 日本洛爾島外海的兔嘎拉群島 過去兩個禮拜已經發生超過900起地震 昨天下午也出現多次規模5以上的地震 這也使得民眾聯想到7月5號將有大海嘯的預言 對此感到相當不安 學者認為 雖然依照目前的科學能力 不能預測地震的時間和強度 但也剛好提醒民眾 防災意識不能鬆懈",
+    "num_frames": 323
+  },
+  {
+    "clip_id": "part_34_3_upper_body_coordinates",
+    "npy_path": "processed_features/part_34_3_upper_body_coordinates.npy",
+    "text": "7月1日下午發生在臺北市民生社群的死亡車禍 是一輛民間救護車 紅燈行駛路口撞上機車 其事宣告不至 而警方調查這一名救護車駕駛竟然沒有駕照 而他還是掛名公司的負責人 他便稱當時接獲病患情況緊急 公司沒人有空才會無照賞路",
+    "num_frames": 221
+  },
+  {
+    "clip_id": "part_34_4_upper_body_coordinates",
+    "npy_path": "processed_features/part_34_4_upper_body_coordinates.npy",
+    "text": "賭報時間來看到 中國時報是 原先在LiPay錢包裡的iPay Money 一卡通電子支付 擁有超過700萬使用者 昨天宣佈 明年起將與LiPay結束合作關係 所有功能都將移到自行開發的APP 自由時報報導 衛福部昨天宣佈 原本只補助去年4月到12月的國民年金 再多送一個月 擴大到去年3月到12月 民眾只要在今年10月31日前繳薪 就能享有保費5成補助 預估約有276萬人受惠 聯合報提到了 各大腳踏車道 或是景點附近的拼裝電動車 事故頻傳 但是業者沒有相關保險 民眾求償無門 車輛也沒有法規可管 立委就要求交通部研議 定定統一指引 看完報紙重點 繼續來關心 屏東地檢署偵辦 民進黨立委武力華罷免案 涉及不實聯署 展開了一段時間 開了大動作的搜尋 發現實名黨工涉及未造文書等罪 訊後黨中央組發會副主委黃碧雲 生涯盡見獲准 國民黨中央認為 這是典型的半藍不半綠 是雙重標準",
+    "num_frames": 897
+  },
+  {
+    "clip_id": "part_34_5_upper_body_coordinates",
+    "npy_path": "processed_features/part_34_5_upper_body_coordinates.npy",
+    "text": "最近教師資格考試 身障特教組 有一道題引發爭議 題目是 一名手語跟口語並用的小二聽障生小方 手語比口語好 在定定個別化教育計劃的時候 應該要優先規劃哪一項 正確答案是 加強口語表達能力 出題委員的解釋是 手語翻譯員的服務 主要提供給完全以手語溝通為主的聽障學生 小方會口語不符合標準 對此專家呼籲 要重視聽障學生 原本的語言優勢與實際的需求",
+    "num_frames": 412
+  },
+  {
+    "clip_id": "part_34_6_upper_body_coordinates",
+    "npy_path": "processed_features/part_34_6_upper_body_coordinates.npy",
+    "text": "國人捐血的標準新修正 食藥署公佈 捐血年齡從最小17歲下修到16歲 超過70歲的民眾 只要兩年內有捐血記錄 而且取得醫師同意 也可以捐血 同時新增 有到牙科洗牙、拔牙、根管治療 還有植牙 7天內暫停捐血 謝謝",
+    "num_frames": 239
+  },
+  {
+    "clip_id": "part_34_7_upper_body_coordinates",
+    "npy_path": "processed_features/part_34_7_upper_body_coordinates.npy",
+    "text": "臺灣智慧醫療有重大突破 臺北榮總昨天發表 全球首創研發的智慧腦影像平臺 利用最尖端的醫療AI人工智慧技術 突破傳統臨床觀察的限制 提供客觀的生物學指標 輔助醫師診斷評估思覺失調症 準確率超過九成 未來將要開設智慧腦影像特別門診",
+    "num_frames": 268
+  },
+  {
+    "clip_id": "part_34_8_upper_body_coordinates",
+    "npy_path": "processed_features/part_34_8_upper_body_coordinates.npy",
+    "text": "英國有民間團體 培訓街友成為導覽員 臺北市的萬華也有街友 帶人們探訪城市裡不一樣的風景 接著就帶您一起去看看",
+    "num_frames": 162
+  },
+  {
+    "clip_id": "part_34_10_upper_body_coordinates",
+    "npy_path": "processed_features/part_34_10_upper_body_coordinates.npy",
+    "text": "美國總統川普前往佛州新建的鱷魚惡魔島移民居留中心來視察 這裡就位在沼澤地中央,被蟒蛇還有鱷魚給環繞 川普表示,唯一離開的辦法只有驅逐出境 而由於這個地點同時還屬於國家公園保護區與印第安原住民文化保留地 已經有兩個環保團體對於聯邦與州政府提起訴訟",
+    "num_frames": 304
+  },
+  {
+    "clip_id": "part_34_11_upper_body_coordinates",
+    "npy_path": "processed_features/part_34_11_upper_body_coordinates.npy",
+    "text": "關心天氣,氣象署今天仍然對於12個縣市釋出高溫資訊 其中,新竹縣有機會出現38度極端高溫 至於在降雨方面,東半部地區、恆春半島以及基隆北海岸 不定時有零星短暫陣雨 午後,嘉義以南地區還有山區有區域性短暫雷陣雨 提醒您,外出要記得帶把傘備用 接著就提供您各地的氣象資料",
+    "num_frames": 328
+  }
+]

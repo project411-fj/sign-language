@@ -4,7 +4,7 @@ __pycache__/
 *.pyo
 *.pt
 *.mp4
-*.json
+
 
 # VS Code
 .vscode/
@@ -22,6 +22,7 @@ target/*
 yolo_pose_mediapipe/
 
 /yolo_pose_mediapie/pose_analysis_v3/*.mp4
+/yolo_pose_mediapie/pose_analysis_v3/*.json
 
 /rewrite_Phase2/ocr_text
 /rewrite_Phase2/frame_cropped
