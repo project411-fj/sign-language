@@ -2,9 +2,6 @@
 __pycache__/
 *.pyc
 *.pyo
-*.pt
-*.mp4
-
 
 # VS Code
 .vscode/
@@ -18,11 +15,6 @@ cropvideos/
 # Ignore files inside target
 target/*
 !target/.gitkeep
-
-yolo_pose_mediapipe/
-
-/yolo_pose_mediapie/pose_analysis_v3/*.mp4
-/yolo_pose_mediapie/pose_analysis_v3/*.json
 
 /rewrite_Phase2/ocr_text
 /rewrite_Phase2/frame_cropped
