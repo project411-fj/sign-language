@@ -1,0 +1,6 @@
+import numpy as np
+
+data = np.load(r"yolo_pose_mediapie/hand_keypoints/part_1_1.npy")
+
+print(data.shape)
+print(data[4])

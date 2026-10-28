@@ -2,6 +2,12 @@
 __pycache__/
 *.pyc
 *.pyo
+*.json
+*.mp4
+*.txt
+*.jpg
+*.npz
+*.npy
 
 # VS Code
 .vscode/
