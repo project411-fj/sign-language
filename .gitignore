@@ -6,8 +6,8 @@ __pycache__/
 *.mp4
 *.txt
 *.jpg
-*.npz
-*.npy
+
+
 
 # VS Code
 .vscode/
