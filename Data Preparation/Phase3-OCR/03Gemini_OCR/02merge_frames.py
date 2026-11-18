@@ -1,12 +1,3 @@
-"""把 04GeminiOCR_context 裡「相鄰且文字相同」的區間合併成一個，輸出到 05GeminiOCR_merged。
-
-輸入：04GeminiOCR_context/<num>/<n>/<name>_frames.txt
-輸出：05GeminiOCR_merged/<num>/<n>/<name>_frames.txt
-
-不直接覆蓋 04：01gemini_ocr_batch.py 重跑時會比對 02 和 04 的區間數，
-04 若被合併，區間數對不上，整個檔案會被重設成 NONE 重新送 Gemini。
-"""
-
 import re
 from pathlib import Path
 

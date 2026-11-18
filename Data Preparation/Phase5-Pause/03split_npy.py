@@ -1,17 +1,3 @@
-"""
-split_segments.py
-依 find_sign_pauses.py 輸出的 .txt 區間，把完整的 .npy 切成一句一段。
-
-輸入 (<part> 執行時輸入，<子資料夾> 為 1、2、3…)：
-    .npy : 02combined/<part>/<子資料夾>/000600_001507.npy
-    .txt : 02pause/<part>/<子資料夾>/000600_001507_frames.txt   每行「34-204: 字幕文字」
-輸出：
-    分段 : 03segments/<part>/<子資料夾>/000600_001507_s00.npy、_s01.npy …
-    標籤 : 04labels/<part>/<子資料夾>/000600_001507.txt        每行「000600_001507_s00: 字幕文字」
-
-執行時只顯示進度條；出錯的檔案記錄在 failed_segments_part_<part>.txt，
-下次執行同一個 part 時只重跑紀錄裡的檔案，全部成功後紀錄檔會刪除。
-"""
 import re
 from pathlib import Path
 

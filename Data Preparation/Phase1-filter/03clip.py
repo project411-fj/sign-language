@@ -1,7 +1,3 @@
-"""讀取 02intervals/<part>/<n>_frames.txt，
-從 source_videos/<part>/<n>.mp4 依照幀區間剪出片段，存到 part_videos/<part>/<n>/。
-（MoviePy 版：多支影片平行處理 + 較快的編碼設定 + 雙進度條）"""
-
 from concurrent.futures import ProcessPoolExecutor, wait
 from multiprocessing import Manager
 from pathlib import Path

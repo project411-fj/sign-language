@@ -1,8 +1,3 @@
-"""讀取 01frames_crop/<part>/<n>/<start>_<end>_frames/*.jpg，用 EasyOCR 辨識字幕。
-先每 STEP 幀取樣 OCR 一次；前後兩個取樣點文字不同時，把中間每一幀都 OCR，找出真實邊界；
-文字完全相同的區段不再 OCR，輸出時直接沿用左邊取樣點的結果。
-輸出 01EasOCR_text/<part>/<n>/<start>_<end>_frames.txt，每行「幀號: 文字」。"""
-
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 

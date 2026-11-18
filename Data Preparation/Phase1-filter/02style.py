@@ -1,7 +1,3 @@
-"""讀取 frames_crop/<part>/ 底下每個 *_frames 資料夾裡已裁好的字幕圖片，
-先每 0.5 秒取樣一幀分類，只在前後取樣結果不同的區段逐幀補測找出真實邊界，
-把 target 機率 >= TARGET_THRESHOLD 的連續幀合併成區間，每個資料夾存成一個 .txt。"""
-
 import os
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path

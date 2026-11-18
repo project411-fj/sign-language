@@ -1,20 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-get_video_fps.py
-讀取 videos/keypoint_videos/<part>/<子資料夾>/*_upper_body.mp4 的 fps，寫成 .csv (filename,fps)。
-
-用法
-----
-1. 修改下面「路徑設定」區。
-2. python get_video_fps.py
-
-輸出範例 (filename 是相對於該 part 的路徑)
---------
-filename,fps
-1/000600_001507_upper_body.mp4,30.0
-1/004045_004735_upper_body.mp4,30.0
-"""
 from __future__ import annotations
 
 import csv

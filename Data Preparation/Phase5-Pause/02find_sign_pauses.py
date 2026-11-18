@@ -1,17 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-find_sign_pauses.py
-把 OCR 字幕的起訖 frame 對齊到「手語」真正的停頓點。
-
-1. 從 .npy (T, 156) 算每個 frame 的動作能量 (手腕 / 手肘速度 + 手形變化)，能量低 = 停頓。
-2. 每個字幕邊界在 [邊界 - SEARCH_BEFORE, 邊界 + SEARCH_AFTER] 內找能量局部最低點當候選。
-3. 用動態規劃一次決定所有邊界 (保證遞增、每句不短於 MIN_LEN)。
-4. 用相同格式 (start-end: 文字) 輸出。
-
-執行時輸入 part；出錯的檔案記錄在 failed_pause_part_<part>.txt，
-下次執行同一個 part 時只重跑紀錄裡的檔案，全部成功後紀錄檔會刪除。
-"""
 import csv
 import re
 import warnings

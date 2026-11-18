@@ -1,6 +1,3 @@
-"""用 ffmpeg 把 source_videos/<part>/ 底下每支影片逐幀裁出字幕區、放大 2 倍，
-存成 01frames_crop/<part>/<影片名>_frames/frame_000001.jpg ..."""
-
 import subprocess
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
