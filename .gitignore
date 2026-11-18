@@ -2,11 +2,17 @@
 __pycache__/
 *.pyc
 *.pyo
-*.json
+
 *.mp4
 
 *.jpg
 
+*.txt
+*.npy
+*.pt
+*.csv
+*.png
+*.task
 
 
 # VS Code
@@ -21,10 +27,6 @@ cropvideos/
 # Ignore files inside target
 target/*
 !target/.gitkeep
-
-/rewrite_Phase2/ocr_text
-/rewrite_Phase2/frame_cropped
-/rewrite_Phase2/temp
 
 # Python 虛擬環境
 .venv/
