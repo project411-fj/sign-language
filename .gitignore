@@ -10,10 +10,9 @@ __pycache__/
 *.txt
 *.npy
 *.pt
-*.csv
+
 *.png
 *.task
-
 
 # VS Code
 .vscode/
