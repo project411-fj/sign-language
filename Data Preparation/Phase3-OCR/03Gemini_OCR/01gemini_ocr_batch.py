@@ -1,13 +1,3 @@
-"""用 Gemini 重新辨識 03EasOCR_frame 的字幕圖片，取代 02EasOCR_merged 每個區間的文字，輸出到 04GeminiOCR_context。
-
-輸入圖片：03EasOCR_frame/<num>/<n>/<name>_sXX.jpg   （XX = 02EasOCR_merged 檔案內第幾個區間，從 00 開始）
-對應字幕：02EasOCR_merged/<num>/<n>/<name>_frames.txt 的第 XX 行
-輸出字幕：04GeminiOCR_context/<num>/<n>/<name>_frames.txt（frame 區間不變，只換文字）
-
-文字標記：NONE = 還沒有 Gemini 結果（失敗或尚未處理）、NOWORD = Gemini 判斷沒有字、UNFOUND = 03 找不到對應圖片。
-再次執行同一個 part 時，只會把 04GeminiOCR_context 裡顯示為 NONE 的區間所對應的圖片送給 Gemini。
-"""
-
 import json
 import re
 import time
