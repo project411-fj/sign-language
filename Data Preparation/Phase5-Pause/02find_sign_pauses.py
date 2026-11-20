@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore")   # 執行時只顯示進度條
 
 # ================================================================ 路徑設定 (後面會再接 /<part>)
 NPY_DIR = r"Data Preparation\Phase4-Keypoint\Keypoint_output\02combined"
-TXT_DIR = r"Data Preparation\Phase3-OCR\OCR_output\05GeminiOCR_merged"
+TXT_DIR = r"Data Preparation\Phase3-OCR\OCR_output\06GeminiOCR_merged"
 OUT_DIR = r"Data Preparation\Phase5-Pause\output\02pause"
 FPS_CSV = r"Data Preparation\Phase5-Pause\output\01fps"          # 裡面是 fps_<part>.csv
 PLOT_DIR = r"Data Preparation\Phase5-Pause\output\02check_plots"  # 不想畫圖就改成 None

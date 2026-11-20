@@ -1,6 +1,8 @@
+import subprocess
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
-from threading import Lock
+from queue import Queue
+from threading import Lock, Thread
 
 import cv2
 import numpy as np
@@ -8,7 +10,7 @@ from tqdm import tqdm
 from ultralytics import YOLO
 
 
-PART = "2"  # 要處理的 part：videos/part_videos/<PART>/
+PART = "3"  # 要處理的 part：videos/part_videos/<PART>/
 
 INPUT_DIR = Path("Data Preparation/videos/part_videos") / PART
 OUTPUT_DIR = Path("Data Preparation/videos/keypoint_videos") / PART
@@ -22,7 +24,22 @@ POSE_CONF = 0.5
 KEYPOINT_CONF = 0.5
 
 BATCH_SIZE = 32
-MAX_WORKERS = 2
+FRAME_STRIDE = 3     # 分析時每 N 幀取 1 幀（ROI 是統計值，不需要逐幀）
+QUANTIZE = 16        # GPU 上用 FP16 推論（32 = FP32）
+PREFETCH = 2         # 預讀幾批幀，讓解碼和 GPU 推論同時進行
+POSE_MAX_SIDE = 640  # 暫存給 pose 的裁切圖最長邊（pose 輸入本來就是 640，縮小可省記憶體）
+
+# 裁切輸出改用 ffmpeg（需在 PATH 中）
+MAX_WORKERS = 2      # ffmpeg 本身就是多執行緒，同時跑 2 支通常足夠
+FFMPEG = "ffmpeg"
+# GPU：解碼、編碼用 NVIDIA 顯卡（裁切、縮放在 CPU）
+VIDEO_CODEC = "h264_nvenc"
+VIDEO_CODEC_ARGS = ["-preset", "p4", "-cq", "19"]
+HWACCEL = ["-hwaccel", "cuda"]
+# 改回 CPU：
+# VIDEO_CODEC = "libx264"
+# VIDEO_CODEC_ARGS = ["-preset", "veryfast", "-crf", "18"]
+# HWACCEL = []
 
 OUTPUT_SIZE = 640
 SIDE_PADDING_RATIO = 0.10
@@ -52,8 +69,8 @@ def box_area(box):
     return (box[2] - box[0]) * (box[3] - box[1])
 
 
-def hip_roi(box, pose_result):
-    """以 hip 11、12 算出原圖上的上半身 ROI。"""
+def hip_roi(box, scale, pose_result):
+    """以 hip 11、12 算出原圖上的上半身 ROI（scale 為裁切圖的縮放比例）。"""
     keypoints = pose_result.keypoints.data
     if len(keypoints) == 0:
         return None
@@ -63,7 +80,7 @@ def hip_roi(box, pose_result):
 
     x1, y1, x2, y2 = box
     width, height = x2 - x1, y2 - y1
-    bottom = y1 + max(left_hip[1], right_hip[1]) + height * BOTTOM_PADDING_RATIO
+    bottom = y1 + max(left_hip[1], right_hip[1]) / scale + height * BOTTOM_PADDING_RATIO
     side = width * SIDE_PADDING_RATIO
     return x1 - side, y1, x2 + side, bottom
 
@@ -80,73 +97,102 @@ def square_roi(samples, width, height):
     return x1, y1, size
 
 
-def analyze_video(video, person_model, pose_model, bar):
-    cap = cv2.VideoCapture(str(video))
-    frame_count = 0
-    counts = {name: 0 for name in REGIONS}
-    samples = {name: [] for name in REGIONS}
-
-    while True:
-        frames = []
-        for _ in range(BATCH_SIZE):
-            ok, frame = cap.read()
-            if not ok:
+def read_batch(cap):
+    """每 FRAME_STRIDE 幀取 1 幀，跳過的幀只 grab 不轉色彩。回傳 (取樣幀, 實際讀過的幀數)。"""
+    frames, read = [], 0
+    while len(frames) < BATCH_SIZE and cap.grab():
+        frames.append(cap.retrieve()[1])
+        read += 1
+        for _ in range(FRAME_STRIDE - 1):
+            if not cap.grab():
                 break
-            frames.append(frame)
+            read += 1
+    return frames, read
+
+
+def prefetch_batches(cap):
+    """背景執行緒先解碼下一批，主執行緒同時做推論。"""
+    queue = Queue(maxsize=PREFETCH)
+
+    def reader():
+        while True:
+            batch = read_batch(cap)
+            queue.put(batch)
+            if not batch[0]:
+                break
+
+    Thread(target=reader, daemon=True).start()
+    while True:
+        frames, read = queue.get()
         if not frames:
             break
-        height, width = frames[0].shape[:2]
+        yield frames, read
 
-        # 每個區域挑面積最大的人
-        crops, metas = [], []
-        for frame, result in zip(frames, person_model(frames, conf=PERSON_CONF, verbose=False)):
+
+def analyze_video(video, person_model, pose_model, bar):
+    cap = cv2.VideoCapture(str(video))
+    bar.reset(total=int(cap.get(cv2.CAP_PROP_FRAME_COUNT)))
+    frame_count, sampled = 0, 0
+    crops = {name: [] for name in REGIONS}  # 每區域：(裁切圖, 原圖框, 縮放比例)
+
+    # 第一步：person 偵測，每個區域挑面積最大的人，先把裁切圖存起來
+    for frames, read in prefetch_batches(cap):
+        height, width = frames[0].shape[:2]
+        results = person_model(frames, conf=PERSON_CONF, quantize=QUANTIZE, verbose=False)
+        for frame, result in zip(frames, results):
             best = {}
             for box in result.boxes.xyxy.tolist():
                 region = region_of(box, width)
                 if region and (region not in best or box_area(box) > box_area(best[region])):
                     best[region] = box
             for region, box in best.items():
-                counts[region] += 1
                 x1, y1, x2, y2 = map(int, box)
-                crops.append(frame[y1:y2, x1:x2])
-                metas.append((region, (x1, y1, x2, y2)))
+                crop = frame[y1:y2, x1:x2]
+                scale = min(1.0, POSE_MAX_SIDE / max(crop.shape[:2]))
+                if scale < 1:
+                    crop = cv2.resize(crop, None, fx=scale, fy=scale, interpolation=cv2.INTER_AREA)
+                else:
+                    crop = crop.copy()  # 不 copy 的話 view 會讓整張原圖留在記憶體
+                crops[region].append((crop, (x1, y1, x2, y2), scale))
 
-        for i in range(0, len(crops), BATCH_SIZE):
-            results = pose_model(crops[i:i + BATCH_SIZE], conf=POSE_CONF, verbose=False)
-            for (region, box), result in zip(metas[i:i + BATCH_SIZE], results):
-                roi = hip_roi(box, result)
-                if roi:
-                    samples[region].append(roi)
-
-        frame_count += len(frames)
-        update_progress(bar, len(frames))
+        sampled += len(frames)
+        frame_count += read
+        update_progress(bar, read)
     cap.release()
 
-    ratios = {name: counts[name] / frame_count for name in REGIONS}
+    ratios = {name: len(crops[name]) / sampled for name in REGIONS}
     region = max(ratios, key=ratios.get)
-    if ratios[region] < PRESENCE_THRESHOLD or not samples[region]:
+    if ratios[region] < PRESENCE_THRESHOLD:
         return frame_count, ratios, None
-    return frame_count, ratios, square_roi(samples[region], width, height)
+
+    # 第二步：只對勝出的區域跑 pose
+    items = crops[region]
+    samples = []
+    for i in range(0, len(items), BATCH_SIZE):
+        chunk = items[i:i + BATCH_SIZE]
+        results = pose_model([crop for crop, _, _ in chunk], conf=POSE_CONF, quantize=QUANTIZE, verbose=False)
+        for (_, box, scale), result in zip(chunk, results):
+            roi = hip_roi(box, scale, result)
+            if roi:
+                samples.append(roi)
+
+    if not samples:
+        return frame_count, ratios, None
+    return frame_count, ratios, square_roi(samples, width, height)
 
 
-def crop_video(video, output, roi, bar):
+def crop_video(video, output, roi):
     x1, y1, size = roi
-    cap = cv2.VideoCapture(str(video))
-    writer = cv2.VideoWriter(
+    cmd = [
+        FFMPEG, "-y", "-loglevel", "error", *HWACCEL,
+        "-i", str(video),
+        "-vf", f"crop={size}:{size}:{x1}:{y1},scale={OUTPUT_SIZE}:{OUTPUT_SIZE}:flags=area",
+        "-an", "-c:v", VIDEO_CODEC, *VIDEO_CODEC_ARGS, "-pix_fmt", "yuv420p",
         str(output),
-        cv2.VideoWriter_fourcc(*"mp4v"),
-        cap.get(cv2.CAP_PROP_FPS),
-        (OUTPUT_SIZE, OUTPUT_SIZE),
-    )
-    while True:
-        ok, frame = cap.read()
-        if not ok:
-            break
-        crop = frame[y1:y1 + size, x1:x1 + size]
-        writer.write(cv2.resize(crop, (OUTPUT_SIZE, OUTPUT_SIZE), interpolation=cv2.INTER_AREA))
-        update_progress(bar, 1)
-    cap.release()
-    writer.release()
+    ]
+    result = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace")
+    if result.returncode != 0:
+        raise RuntimeError(result.stderr.strip())
 
 
 def main():
@@ -160,19 +206,23 @@ def main():
     else:
         videos = sorted(INPUT_DIR.glob("*/*.mp4"))
         tqdm.write(f"處理 part {PART}，共 {len(videos)} 支影片")
-    total = sum(2 * int(cv2.VideoCapture(str(v)).get(cv2.CAP_PROP_FRAME_COUNT)) for v in videos)
-
     failed = []   # (影片, 錯誤訊息)
     futures = []  # (影片, 裁切 future)
 
-    with tqdm(total=total, unit="step") as bar, ThreadPoolExecutor(MAX_WORKERS) as pool:
+    # 主進度條：完成的影片數（分析失敗、略過、裁切完成都算完成）
+    # 副進度條：目前分析中影片的幀數
+    with tqdm(total=len(videos), desc="全部影片", unit="video", position=0) as main_bar, \
+            tqdm(unit="frame", position=1, leave=False) as sub_bar, \
+            ThreadPoolExecutor(MAX_WORKERS) as pool:
         for video in videos:
             relative = video.relative_to(INPUT_DIR)
+            sub_bar.set_description_str(relative.as_posix())
             try:
-                frame_count, ratios, roi = analyze_video(video, person_model, pose_model, bar)
+                frame_count, ratios, roi = analyze_video(video, person_model, pose_model, sub_bar)
             except Exception as exc:
                 failed.append((relative, f"分析失敗：{exc}"))
                 tqdm.write(f"{relative.as_posix()}：分析失敗，跳過")
+                update_progress(main_bar, 1)
                 continue
             tqdm.write(
                 f"{relative.as_posix()}：{frame_count} frames，"
@@ -180,13 +230,16 @@ def main():
             )
 
             if roi is None:
-                update_progress(bar, frame_count)  # 補上不需裁切的步數
                 tqdm.write("  略過：存在率不足或無有效 hip ROI")
+                update_progress(main_bar, 1)
                 continue
 
             output = OUTPUT_DIR / relative.parent / f"{video.stem}_upper_body.mp4"
             output.parent.mkdir(parents=True, exist_ok=True)
-            futures.append((relative, pool.submit(crop_video, video, output, roi, bar)))
+            future = pool.submit(crop_video, video, output, roi)
+            future.add_done_callback(lambda _: update_progress(main_bar, 1))  # 裁切完成才算這支影片完成
+            futures.append((relative, future))
+        sub_bar.set_description_str("等待裁切完成")
 
     # 離開 with 時已等所有裁切完成，這裡收集裁切錯誤
     for relative, future in futures:
