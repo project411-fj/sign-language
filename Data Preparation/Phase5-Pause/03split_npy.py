@@ -25,7 +25,7 @@ MARGIN = 0.0               # 寬鬆切法的實驗已經做完 (跟原本沒有�
 #          "_face" = 加上臉部的 292 維 (02combined_face，由 Phase4 的 03keypoint_combine_face.py 產生)
 #   會從 NPY_DIR + FEATURE_TAG 讀取，輸出到 03segments<FEATURE_TAG>、03labels<FEATURE_TAG>，不會覆蓋原本的結果
 #   切點一樣用 02pause 的結果，所以句子跟原本一一對應
-FEATURE_TAG = ""
+FEATURE_TAG = "_face"
 
 # .txt 每行：「34-204: 字幕文字」
 LINE_RE = re.compile(r"^\s*(\d+)\s*[~～\-–—]\s*(\d+)\s*[:：]?\s*(.*?)\s*$")

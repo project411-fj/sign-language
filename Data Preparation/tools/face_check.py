@@ -1,4 +1,5 @@
-"""檢查 02keypoint_face.py 的輸出：臉偵測率、嘴巴有沒有在動。
+"""
+檢查 02keypoint_face.py 的輸出：臉偵測率、嘴巴有沒有在動。
 
 用法：先用 02keypoint_face.py 跑完一個 part，把下面的 PART 改成同一個，再執行這支。
 """
