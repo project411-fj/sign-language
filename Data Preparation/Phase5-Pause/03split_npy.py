@@ -19,14 +19,21 @@ FRAME_OFFSET = 0           # .txt 的 frame 編號 + FRAME_OFFSET = .npy 的列�
 # 實驗 3：每句前後各多切幾秒 (寬鬆切法)，0 = 照原本的切點切
 #   MARGIN > 0 時會輸出到 03segments_m<MARGIN>、03labels_m<MARGIN>，不會覆蓋原本的結果
 #   相鄰句子會互相重疊，這是刻意的：目的是確保每句的手語一定完整包含在片段裡
-MARGIN = 0.5
+MARGIN = 0.0               # 寬鬆切法的實驗已經做完 (跟原本沒有差異)，改回 0
+
+# 特徵版本：""  = 原本的 156 維 (02combined)
+#          "_face" = 加上臉部的 292 維 (02combined_face，由 Phase4 的 03keypoint_combine_face.py 產生)
+#   會從 NPY_DIR + FEATURE_TAG 讀取，輸出到 03segments<FEATURE_TAG>、03labels<FEATURE_TAG>，不會覆蓋原本的結果
+#   切點一樣用 02pause 的結果，所以句子跟原本一一對應
+FEATURE_TAG = ""
 
 # .txt 每行：「34-204: 字幕文字」
 LINE_RE = re.compile(r"^\s*(\d+)\s*[~～\-–—]\s*(\d+)\s*[:：]?\s*(.*?)\s*$")
 
 
-def margin_tag():
-    return f"_m{MARGIN:g}" if MARGIN > 0 else ""
+def output_tag():
+    """輸出資料夾的後綴，例如 ""、"_face"、"_m0.5"、"_face_m0.5"。"""
+    return FEATURE_TAG + (f"_m{MARGIN:g}" if MARGIN > 0 else "")
 
 
 def read_ranges(path):
@@ -83,8 +90,8 @@ def parse_parts(answer, npy_root):
 
 
 def run_part(part):
-    tag = margin_tag()
-    npy_dir, txt_dir = Path(NPY_DIR) / part, Path(TXT_DIR) / part
+    tag = output_tag()
+    npy_dir, txt_dir = Path(NPY_DIR + FEATURE_TAG) / part, Path(TXT_DIR) / part
     seg_dir, label_dir = Path(SEG_DIR + tag) / part, Path(LABEL_DIR + tag) / part
     failed_log = Path(__file__).parent / f"failed_segments{tag}_part_{part}.txt"
     fps_table = load_fps_table(Path(FPS_CSV) / f"fps_{part}.csv") if MARGIN > 0 else {}
@@ -128,8 +135,9 @@ def run_part(part):
 
 def main():
     if MARGIN > 0:
-        print(f"寬鬆切法：每句前後各多切 {MARGIN:g} 秒，輸出到 {Path(SEG_DIR + margin_tag()).name}")
-    for part in parse_parts(input("part (例如 3、1,2,5 或 all): "), Path(NPY_DIR)):
+        print(f"寬鬆切法：每句前後各多切 {MARGIN:g} 秒")
+    print(f"讀取 {Path(NPY_DIR + FEATURE_TAG).name}，輸出到 {Path(SEG_DIR + output_tag()).name}、{Path(LABEL_DIR + output_tag()).name}")
+    for part in parse_parts(input("part (例如 3、1,2,5 或 all): "), Path(NPY_DIR + FEATURE_TAG)):
         run_part(part)
 
 
