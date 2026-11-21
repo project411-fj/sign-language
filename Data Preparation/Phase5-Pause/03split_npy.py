@@ -19,7 +19,7 @@ FRAME_OFFSET = 0           # .txt 的 frame 編號 + FRAME_OFFSET = .npy 的列�
 # 實驗 3：每句前後各多切幾秒 (寬鬆切法)，0 = 照原本的切點切
 #   MARGIN > 0 時會輸出到 03segments_m<MARGIN>、03labels_m<MARGIN>，不會覆蓋原本的結果
 #   相鄰句子會互相重疊，這是刻意的：目的是確保每句的手語一定完整包含在片段裡
-MARGIN = 0.0
+MARGIN = 0.5
 
 # .txt 每行：「34-204: 字幕文字」
 LINE_RE = re.compile(r"^\s*(\d+)\s*[~～\-–—]\s*(\d+)\s*[:：]?\s*(.*?)\s*$")
