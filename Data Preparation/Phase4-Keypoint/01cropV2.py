@@ -10,7 +10,7 @@ from tqdm import tqdm
 from ultralytics import YOLO
 
 
-PART = "8"  # 要處理的 part：videos/part_videos/<PART>/
+PART = "9"  # 要處理的 part：videos/part_videos/<PART>/
 
 INPUT_DIR = Path("Data Preparation/videos/part_videos") / PART
 OUTPUT_DIR = Path("Data Preparation/videos/keypoint_videos") / PART

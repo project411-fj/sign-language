@@ -13,7 +13,7 @@ from pathlib import Path
 import numpy as np
 from tqdm import tqdm
 
-PART = "8"  # 要合併的 part
+PART = "9"  # 要合併的 part
 
 ROOT = Path("Data Preparation/Phase4-Keypoint/Keypoint_output")
 BASE_DIR = ROOT / "02combined" / PART
