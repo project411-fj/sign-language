@@ -1,6 +1,6 @@
 """關鍵詞辨識推論：輸入一句手語的 .npy，輸出模型有把握的關鍵詞。
 
-先執行 sign_keyword_demo.ipynb 產生 keyword_ctc/demo_config.json (門檻、詞彙、模型設定)，之後：
+先執行 data_train.ipynb 產生 keyword_model/demo_config.json (門檻、詞彙、模型設定)，之後：
 
 命令列 (在 Data Training 資料夾執行)：
     python keyword_predict.py 某句.npy [另一句.npy ...]
@@ -22,7 +22,11 @@ import numpy as np
 import torch
 from torch import nn
 
-DEFAULT_CONFIG = Path(__file__).resolve().parent / "keyword_ctc" / "demo_config.json"
+HERE = Path(__file__).resolve().parent
+# data_train.ipynb 的輸出優先；沒有的話用舊的 sign_keyword_demo.ipynb 輸出
+DEFAULT_CONFIG = next((p for p in (HERE / "keyword_model" / "demo_config.json",
+                                   HERE / "keyword_ctc" / "demo_config.json") if p.exists()),
+                      HERE / "keyword_model" / "demo_config.json")
 
 # 特徵位置 (跟訓練用的 notebook 相同)
 LEFT, RIGHT, POSE = slice(0, 63), slice(63, 126), slice(128, 155)
@@ -74,7 +78,7 @@ class KeywordPredictor:
     def __init__(self, config_path=DEFAULT_CONFIG, device=None):
         config_path = Path(config_path)
         if not config_path.exists():
-            raise FileNotFoundError(f"找不到 {config_path}：請先執行 sign_keyword_demo.ipynb 產生設定檔")
+            raise FileNotFoundError(f"找不到 {config_path}：請先執行 data_train.ipynb 產生設定檔")
         cfg = json.loads(config_path.read_text(encoding="utf-8"))
         base = config_path.parent
         self.cfg = cfg
