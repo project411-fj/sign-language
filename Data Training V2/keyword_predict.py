@@ -9,6 +9,8 @@ notebook / 其他程式：
     from keyword_predict import KeywordPredictor
     predictor = KeywordPredictor()
     predictor.predict("某句.npy")        # → [("天氣", 0.83), ("陣雨", 0.71)]，沒把握就是 []
+    predictor.predict_with_candidates("某句.npy")
+        # → 有把握的詞 [("天氣", 0.83)]，其他可能 [("氣象", 0.32), ("北部", 0.28), ...]，兩者合計最多 SHOW_WORDS 個
 
 輸入可以是 Phase5 切出來的 156 維 (03segments) 或 292 維 (03segments_face) .npy；
 模型只用手和 pose (臉部特徵在訓練時就遮掉了)，所以兩種都可以。
@@ -82,6 +84,7 @@ class KeywordPredictor:
         self.keywords = cfg["keywords"]
         self.threshold = cfg["threshold"]
         self.max_words = cfg["max_words"]
+        self.show_words = cfg.get("show_words", 5)
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
 
         norm = np.load(base / cfg["norm_file"])
@@ -137,17 +140,32 @@ class KeywordPredictor:
         order = [j for j in np.argsort(-s) if s[j] >= threshold][:max_words]
         return [(self.keywords[j], float(s[j])) for j in order]
 
+    def predict_with_candidates(self, npy, threshold=None, show_words=None):
+        """兩層輸出：(有把握的詞, 其他可能的詞)。
+        有把握 = 分數 >= 門檻 (準確率約為 data_train.ipynb 第 5 步報告的「有把握」精確率)；
+        其他可能 = 沒超過門檻、但分數最高的幾個詞，補到合計 show_words 個 (準確率低很多，只當參考)。"""
+        threshold = self.threshold if threshold is None else threshold
+        show_words = self.show_words if show_words is None else show_words
+        s = self.scores(npy)
+        order = list(np.argsort(-s))
+        confident = [j for j in order if s[j] >= threshold][:min(self.max_words, show_words)]
+        others = [j for j in order if j not in confident][:max(0, show_words - len(confident))]
+        return ([(self.keywords[j], float(s[j])) for j in confident],
+                [(self.keywords[j], float(s[j])) for j in others])
+
 
 def main(paths):
     if not paths:
         print(__doc__)
         return
     predictor = KeywordPredictor()
-    print(f"門檻 {predictor.threshold:.2f}，每句最多 {predictor.max_words} 個詞")
+    print(f"門檻 {predictor.threshold:.2f}，每句顯示 {predictor.show_words} 個詞")
     for path in paths:
-        words = predictor.predict(path)
-        found = "、".join(f"{w} ({p:.2f})" for w, p in words) if words else "無法判斷"
-        print(f"{path}\n  → {found}")
+        confident, others = predictor.predict_with_candidates(path)
+        fmt = lambda words: "、".join(f"{w} ({p:.2f})" for w, p in words)
+        print(f"{path}")
+        print(f"  有把握：{fmt(confident) if confident else '無'}")
+        print(f"  其他可能：{fmt(others) if others else '無'}")
 
 
 if __name__ == "__main__":
