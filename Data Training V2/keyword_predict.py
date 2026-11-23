@@ -90,10 +90,18 @@ class KeywordPredictor:
         norm = np.load(base / cfg["norm_file"])
         self.mean, self.std = norm["mean"], norm["std"]
         m = cfg["model"]
-        self.model = SignKeywordCTC(len(self.keywords), cfg["feat_dim"], m["d_model"], m["n_heads"],
-                                    m["enc_layers"], m["ff_dim"], m["dropout"]).to(self.device)
-        self.model.load_state_dict(torch.load(base / cfg["checkpoint"], map_location=self.device))
-        self.model.eval()
+
+        def load(n_outputs, checkpoint):
+            model = SignKeywordCTC(n_outputs, cfg["feat_dim"], m["d_model"], m["n_heads"],
+                                   m["enc_layers"], m["ff_dim"], m["dropout"]).to(self.device)
+            model.load_state_dict(torch.load(base / checkpoint, map_location=self.device))
+            return model.eval()
+
+        self.model = load(len(self.keywords), cfg["checkpoint"])
+        # 集成：第一階段模型 (候選詞較多) 的分類層分數，取出最終詞彙對應的欄位，跟第二階段平均
+        ens = cfg.get("ensemble")
+        self.stage1 = load(ens["n_keywords"], ens["checkpoint"]) if ens else None
+        self.stage1_columns = torch.tensor(ens["columns"], device=self.device) if ens else None
 
     # ------------------------------------------------------------ 前處理 (跟訓練時的驗證 / 測試相同，不做資料增強)
     def valid_mask(self, arr):
@@ -123,14 +131,19 @@ class KeywordPredictor:
     # ------------------------------------------------------------ 推論
     @torch.no_grad()
     def scores(self, npy):
-        """每個關鍵詞的分數 (分類層機率與 CTC 偵測分數的平均)。npy 可以是路徑或陣列。"""
+        """每個關鍵詞的分數。npy 可以是路徑或陣列。
+        第二階段 = 分類層機率與 CTC 偵測分數的平均；有集成設定時，再跟第一階段的分類層機率平均。"""
         arr = np.load(npy) if isinstance(npy, (str, Path)) else npy
         x = torch.from_numpy(self.preprocess(arr)).unsqueeze(0).to(self.device)
         mask = torch.zeros(1, x.size(1), dtype=torch.bool, device=self.device)
         logits, ctc_logits = self.model(x, mask)
         cls = torch.sigmoid(logits.float())[0]
         det = ctc_logits.softmax(-1)[0, :, 1:].amax(0)
-        return ((cls + det) / 2).cpu().numpy()
+        score = (cls + det) / 2
+        if self.stage1 is not None:
+            stage1_logits, _ = self.stage1(x, mask)
+            score = (score + torch.sigmoid(stage1_logits.float())[0, self.stage1_columns]) / 2
+        return score.cpu().numpy()
 
     def predict(self, npy, threshold=None, max_words=None):
         """回傳 [(詞, 分數), ...]，依分數由高到低；沒有任何詞超過門檻就回傳 []。"""
