@@ -13,7 +13,7 @@ from tqdm import tqdm
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from multiprocessing import freeze_support
 
-PART = "10"  # 要處理的 part：videos/keypoint_videos/<PART>/
+PART = "12"  # 要處理的 part：videos/keypoint_videos/<PART>/
 
 INPUT_PATH = Path("Data Preparation") / ("videos") / "keypoint_videos" / PART
 OUTPUT_PATH = Path("Data Preparation") / ("Phase4-Keypoint") / ("Keypoint_output") / "01hand" / PART
