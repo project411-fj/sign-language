@@ -10,7 +10,9 @@ from tqdm import tqdm
 #   輸出到 OUTPUT_ROOT/<影片所在資料夾名稱>/<檔名>_frames/，例如 source_videos/13/1.mp4 → 01frames_crop/13/1_frames/
 #   (02style.py 依這個結構找對應的影片，所以影片請放在 source_videos/<part>/ 底下)
 VIDEOS = {
-    r"Data Preparation\videos\source_videos\14\3.mp4": (0.20, 0.73, 0.10, 0.33),   # 高 20%~73%、寬 10%~33%
+    r"Data Preparation\videos\source_videos\13\3.mp4": (0.10, 0.33, 0.20, 0.73),
+    r"Data Preparation\videos\source_videos\13\6.mp4": (0.77, 0.100, 0.65, 0.100),
+    r"Data Preparation\videos\source_videos\13\4.mp4": (0.63, 0.100, 0.20, 0.75)
 }
 OUTPUT_ROOT = Path("Data Preparation") / "Phase1-filter" / "01frames_crop"
 
