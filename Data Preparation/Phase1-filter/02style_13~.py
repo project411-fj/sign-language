@@ -1,13 +1,12 @@
-"""02style.py 的指定目錄版：處理 VIDEO_DIR 裡所有的 .mp4，不用輸入 part。
+"""02style.py 的指定影片版：只處理 VIDEOS 列出的 .mp4，不用輸入 part。
 
-對每一支 <VIDEO_DIR>/<n>.mp4：
-    讀 01frames_crop/<目錄名稱>/<n>_frames/ 的字幕條畫面 (01crop_text_13~.py 的輸出)
+對每一支 source_videos/<part>/<n>.mp4：
+    讀 01frames_crop/<part>/<n>_frames/ 的字幕條畫面 (01crop_text_13~.py 的輸出)
     → 判斷每一格是不是目標節目的樣式 → 把連續的目標畫面合併成區間
-    → 寫到 02intervals/<目錄名稱>/<n>_frames.txt (每行「起始格 結束格」，03clipV2.py 會讀這個)
+    → 寫到 02intervals/<part>/<n>_frames.txt (每行「起始格 結束格」，03clipV2.py 會讀這個)
 判斷方式 (粗掃 + 細掃) 跟 02style.py 完全相同。
 """
 import os
-import re
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -16,8 +15,13 @@ from PIL import Image
 from ultralytics import YOLO
 
 # ========== 設定 ==========
-# 要處理的影片目錄 (底下的每一支 .mp4 都會處理)；相對路徑從專案根目錄 (sign-language/) 算起，也可以寫完整路徑
-VIDEO_DIR = r"Data Preparation\videos\source_videos\13"
+# 要處理的影片：直接列出 .mp4 的路徑 (通常跟 01crop_text_13~.py 的 VIDEOS 相同)
+#   相對路徑從專案根目錄 (sign-language/) 算起，也可以寫完整路徑
+VIDEOS = [
+    r"Data Preparation\videos\source_videos\13\3.mp4",
+    r"Data Preparation\videos\source_videos\13\6.mp4",
+    r"Data Preparation\videos\source_videos\13\4.mp4",
+]
 
 BASE = Path(__file__).resolve().parent          # Data Preparation/Phase1-filter/
 PROJECT = BASE.parents[1]                       # sign-language/
@@ -62,31 +66,26 @@ def classify(paths, phase):
     return out
 
 
-def natural_key(path):
-    """1.mp4、2.mp4、…、10.mp4 依數字排序 (不是 1、10、2)。"""
-    return [int(t) if t.isdigit() else t for t in re.split(r"(\d+)", path.stem)]
+def resolve(p):
+    p = Path(p)
+    return p if p.is_absolute() else PROJECT / p
 
 
-video_dir = Path(VIDEO_DIR)
-if not video_dir.is_absolute():
-    video_dir = PROJECT / video_dir
-if not video_dir.is_dir():
-    raise SystemExit(f"找不到影片目錄：{video_dir}")
-
-videos = sorted(video_dir.glob("*.mp4"), key=natural_key)
-if not videos:
-    raise SystemExit(f"{video_dir} 裡沒有 .mp4")
+videos = [resolve(p) for p in VIDEOS]
+not_found = [v for v in videos if not v.is_file()]
+if not_found:
+    raise SystemExit("找不到這些影片：\n" + "\n".join(f"  {v}" for v in not_found))
 
 # 每支影片對應的畫面資料夾：source_videos/13/3.mp4 → 01frames_crop/13/3_frames
 jobs, missing = [], []
 for v in videos:
-    frames = FRAMES_DIR / video_dir.name / f"{v.stem}_frames"
+    frames = FRAMES_DIR / v.parent.name / f"{v.stem}_frames"
     if frames.is_dir() and any(frames.glob("*.jpg")):
         jobs.append((v, frames))
     else:
         missing.append((v, frames))
 
-print(f"影片目錄：{video_dir}，共 {len(videos)} 支 .mp4，其中 {len(jobs)} 支有裁好的畫面")
+print(f"共 {len(videos)} 支影片，其中 {len(jobs)} 支有裁好的畫面")
 for v, frames in missing:
     print(f"  [略過] {v.name}：找不到 {frames} (請先用 01crop_text_13~.py 裁切)")
 if not jobs:
@@ -94,14 +93,14 @@ if not jobs:
 
 os.system("")  # 讓 Windows 終端機吃 ANSI 游標控制碼
 
+results = []
 pool = ThreadPoolExecutor(WORKERS)
 model = YOLO(str(WEIGHTS))
 target_idx = [k for k, v in model.names.items() if v == "target"][0]
 
-out_dir = OUTPUT / video_dir.name
-out_dir.mkdir(parents=True, exist_ok=True)
-
 for n, (video, d) in enumerate(jobs, 1):
+    out_dir = OUTPUT / video.parent.name              # source_videos/13/3.mp4 → 02intervals/13/
+    out_dir.mkdir(parents=True, exist_ok=True)
     paths = sorted(d.glob("*.jpg"))
     labels = [None] * len(paths)
 
@@ -149,5 +148,8 @@ for n, (video, d) in enumerate(jobs, 1):
             f.write(f"{s} {e}\n")
 
     show(f"完成 測了 {len(samples) + len(gaps)}/{len(paths)} 幀，{len(intervals)} 個區間")
+    results.append(out_dir / f"{d.name}.txt")
 
-print(f"\033[2K總進度 {bar(len(jobs), len(jobs))} ({len(jobs)}/{len(jobs)})\n\033[2K  全部完成，結果在 {out_dir}")
+print(f"\033[2K總進度 {bar(len(jobs), len(jobs))} ({len(jobs)}/{len(jobs)})\n\033[2K  全部完成，結果：")
+for r in results:
+    print(f"  {r}")
