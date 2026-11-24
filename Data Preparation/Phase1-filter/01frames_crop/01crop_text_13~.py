@@ -13,9 +13,20 @@ WORKERS = 1       # 同時處理幾支影片（ffmpeg 本身也是多執行緒�
 JPEG_Q = 10       # ffmpeg JPEG 品質，2 最好、31 最差
 GPU = True        # True：解碼、裁切、放大都在 NVIDIA 顯卡上；False：全部用 CPU
 
-# 和原本 OpenCV 版相同的裁切範圍：高 80.5%~88%、寬 27%~100%，再放大 2 倍
-TOP, BOTTOM, LEFT = 0.805, 0.88, 0.27
-SCALE = 2
+# 裁切範圍：四個邊各自設定，都是佔畫面寬 / 高的比例 (0 = 最上 / 最左，1 = 最下 / 最右)
+#   TOP ~ BOTTOM：保留的高度範圍；LEFT ~ RIGHT：保留的寬度範圍
+#   例：TOP, BOTTOM, LEFT, RIGHT = 0.805, 0.88, 0.27, 1.0 → 高 80.5%~88%、寬 27%~100% (跟 01crop_text.py 相同)
+TOP, BOTTOM, LEFT, RIGHT = 0.805, 0.88, 0.27, 1.0
+SCALE = 2         # 裁切後放大幾倍
+
+# 個別影片用不同的範圍 (檔名不含 .mp4 → (TOP, BOTTOM, LEFT, RIGHT))；沒列出的影片用上面的預設值
+#   例 (note.md 記錄的 part 13，寬 10%~33%、高 20%~73% → (0.20, 0.73, 0.10, 0.33))：
+#   CROP_BY_VIDEO = {
+#       "1": (0.20, 0.73, 0.10, 0.33),
+#       "2": (0.65, 1.00, 0.77, 1.00),
+#       "3": (0.20, 0.75, 0.63, 1.00),
+#   }
+CROP_BY_VIDEO = {}
 
 # 每個 worker 佔一行子進度條（第 0 行留給主進度條）
 slots = queue.Queue()
@@ -43,6 +54,15 @@ def count_frames(path):
     return int(out.strip())
 
 
+def crop_box(stem):
+    """這支影片要用的 (TOP, BOTTOM, LEFT, RIGHT)，並檢查範圍是否合理。"""
+    top, bottom, left, right = CROP_BY_VIDEO.get(stem, (TOP, BOTTOM, LEFT, RIGHT))
+    if not (0 <= top < bottom <= 1 and 0 <= left < right <= 1):
+        raise ValueError(f"{stem}.mp4 的裁切範圍不合理：上 {top}、下 {bottom}、左 {left}、右 {right} "
+                         "(需要 0 <= 上 < 下 <= 1、0 <= 左 < 右 <= 1)")
+    return top, bottom, left, right
+
+
 def crop(input_path, output_root):
     pos = slots.get()
     try:
@@ -51,22 +71,24 @@ def crop(input_path, output_root):
         total = count_frames(input_path)
 
         codec, w, h = video_info(input_path)
-        y1, y2, x1 = int(h * TOP), int(h * BOTTOM), int(w * LEFT)
+        top, bottom, left, right = crop_box(input_path.stem)
+        y1, y2 = int(h * top), int(h * bottom)
+        x1, x2 = int(w * left), int(w * right)
 
         if GPU:
             # cuvid 解碼器在 GPU 上直接裁出字幕區，只有這一小條搬回 CPU
             # GPU 的 NV12 格式要求偶數座標，所以邊界往外擴到偶數（可能比 CPU 版多 1 pixel）
             y1, x1 = y1 // 2 * 2, x1 // 2 * 2
-            y2 = (y2 + 1) // 2 * 2
+            y2, x2 = min(h, (y2 + 1) // 2 * 2), min(w, (x2 + 1) // 2 * 2)
             decode = [
                 "-hwaccel", "cuda", "-hwaccel_output_format", "cuda",
                 "-c:v", f"{codec}_cuvid",                 # 依影片格式選解碼器：h264_cuvid、hevc_cuvid…
-                "-crop", f"{y1}x{h - y2}x{x1}x0",         # 上x下x左x右 要裁掉的像素
+                "-crop", f"{y1}x{h - y2}x{x1}x{w - x2}",  # 上x下x左x右 要裁掉的像素
             ]
             vf = f"scale_cuda=w=iw*{SCALE}:h=ih*{SCALE}:interp_algo=bicubic,hwdownload,format=nv12"
         else:
             decode = []
-            vf = f"crop={w - x1}:{y2 - y1}:{x1}:{y1}:exact=1,scale=iw*{SCALE}:ih*{SCALE}:flags=bicubic"
+            vf = f"crop={x2 - x1}:{y2 - y1}:{x1}:{y1}:exact=1,scale=iw*{SCALE}:ih*{SCALE}:flags=bicubic"
 
         cmd = [
             "ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-nostats", "-progress", "pipe:1",
