@@ -71,6 +71,8 @@ def crop(input_path, box):
     try:
         output_dir = output_dir_of(input_path)
         output_dir.mkdir(parents=True, exist_ok=True)
+        for old in output_dir.glob("frame_*.jpg"):     # 先清掉上次的輸出，避免殘留的舊圖片混在一起
+            old.unlink()
         total = count_frames(input_path)
 
         codec, w, h = video_info(input_path)
@@ -97,12 +99,18 @@ def crop(input_path, box):
             decode = []
             vf = f"crop={x2 - x1}:{y2 - y1}:{x1}:{y1}:exact=1,scale=iw*{SCALE}:ih*{SCALE}:flags=bicubic"
 
+        # 有些影片 (例如 VP9) 有時間戳記重複的畫面，輸出圖片時會出現
+        # "non monotonically increasing dts" 並可能丟格，造成後面的圖片編號跟影片時間對不上。
+        # 最後用 setpts=N 依畫面順序重新編時間戳記 (0, 1, 2…)，並沿用原影片的時間單位，確保每一格都依序輸出
+        vf += ",setpts=N"
+
         cmd = [
             "ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-nostats", "-progress", "pipe:1",
             *decode,
             "-i", str(input_path), "-an",
             "-vf", vf,
             "-fps_mode", "passthrough",  # 每個解碼出來的幀都輸出一張，不補幀也不丟幀
+            "-enc_time_base", "demux",
             "-q:v", str(JPEG_Q),
             str(output_dir / "frame_%06d.jpg"),
         ]
@@ -117,6 +125,13 @@ def crop(input_path, box):
                     done = n
             if proc.wait() != 0:
                 raise subprocess.CalledProcessError(proc.returncode, cmd)
+
+        # 確認每一格都有輸出：張數不對的話，圖片編號會跟影片時間錯位
+        written = sum(1 for _ in output_dir.glob("frame_*.jpg"))
+        if written != total:
+            raise RuntimeError(f"{input_path}：影片有 {total} 格，卻輸出了 {written} 張圖片 "
+                               f"(差 {total - written} 張)，圖片編號會跟影片時間對不上")
+        tqdm.write(f"{input_path}：完成，{written} 張 = 影片總格數")
     finally:
         slots.put(pos)
 
