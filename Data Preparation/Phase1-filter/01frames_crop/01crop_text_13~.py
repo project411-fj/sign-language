@@ -88,7 +88,11 @@ def crop(input_path, box):
                 "-c:v", f"{codec}_cuvid",                 # 依影片格式選解碼器：h264_cuvid、hevc_cuvid…
                 "-crop", f"{y1}x{h - y2}x{x1}x{w - x2}",  # 上x下x左x右 要裁掉的像素
             ]
-            vf = f"scale_cuda=w=iw*{SCALE}:h=ih*{SCALE}:interp_algo=bicubic,hwdownload,format=nv12"
+            # 有些影片 (例如 VP9) 的色彩資訊標錯 (YUV 畫面卻標成 RGB 的 gbr、其他欄位是 reserved)，
+            # 新版 ffmpeg 轉成 JPEG 時會報 "Unsupported input" (-129)。下載回 CPU 後把標記改成一般影片的 BT.709，
+            # 只改標記、不改畫面內容；本來就標對的影片不受影響
+            vf = (f"scale_cuda=w=iw*{SCALE}:h=ih*{SCALE}:interp_algo=bicubic,hwdownload,format=nv12,"
+                  "setparams=range=tv:color_primaries=bt709:color_trc=bt709:colorspace=bt709")
         else:
             decode = []
             vf = f"crop={x2 - x1}:{y2 - y1}:{x1}:{y1}:exact=1,scale=iw*{SCALE}:ih*{SCALE}:flags=bicubic"
