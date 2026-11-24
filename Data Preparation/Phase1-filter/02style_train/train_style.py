@@ -34,7 +34,10 @@ VAL_RATIO = 0.2                 # 拿多少比例當驗證集
 SEED = 42
 TARGET_THRESHOLD = 0.9          # 跟 02style.py 相同：target 機率 >= 這個值才算 target (只用在最後的評估)
 IMAGE_EXT = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
-WORKERS = 8                     # 前處理圖片的執行緒數
+WORKERS = 8                     # 前處理圖片的執行緒數 (執行緒，不會額外佔用大量記憶體)
+DATALOADER_WORKERS = 0          # 訓練時讀圖片的背景程序數。Windows 上每個程序都會重新載入 PyTorch / CUDA，
+                                # 佔用好幾 GB 虛擬記憶體；開太多會出現 WinError 1455「分頁檔太小」。
+                                # 0 = 在主程序讀圖 (最省記憶體)；記憶體充足時可以改成 2~4 加快訓練
 
 
 def crop_subtitle(img):
@@ -136,6 +139,7 @@ def main():
     model.train(
         data=str(DATASET), imgsz=CROP_SIZE, epochs=EPOCHS, patience=PATIENCE, batch=BATCH,
         device=device, seed=SEED, project=str(RUNS), name="train", exist_ok=True,
+        workers=DATALOADER_WORKERS,
         fliplr=0.0,              # 字幕條有固定的左右版面，不做左右翻轉
         plots=True,
     )
