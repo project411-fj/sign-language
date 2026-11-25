@@ -19,6 +19,7 @@ from ultralytics import YOLO
 # 要處理的影片：直接列出 .mp4 的路徑 (通常跟 01crop_text_13~.py 的 VIDEOS 相同)
 #   相對路徑從專案根目錄 (sign-language/) 算起，也可以寫完整路徑
 VIDEOS = [
+    r"Data Preparation\videos\source_videos\13\1.mp4",
     r"Data Preparation\videos\source_videos\13\3.mp4"
     ]
 
