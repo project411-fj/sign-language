@@ -13,10 +13,9 @@ from ultralytics import YOLO
 from tqdm import tqdm
 
 
-PART = "12"  # 要處理的 part：videos/keypoint_videos/<PART>/
-
-INPUT_PATH = Path("Data Preparation") / ("videos") / "keypoint_videos" / PART
-OUTPUT_PATH = Path("Data Preparation") / ("Phase4-Keypoint") / ("Keypoint_output") / "01pose" / PART
+# 要處理的 part 在執行時輸入：「3」、「1,2,5」或「all」(keypoint_videos 底下所有 part)
+INPUT_ROOT = Path("Data Preparation") / ("videos") / "keypoint_videos"
+OUTPUT_ROOT = Path("Data Preparation") / ("Phase4-Keypoint") / ("Keypoint_output") / "01pose"
 
 MODEL_PATH = "yolo26n-pose.pt"
 YOLO_DEVICE = "0"         
@@ -198,20 +197,20 @@ def video_sort_key(path):
     return int(path.parent.name), int(parts[0]), int(parts[1])
 
 
-def main():
-    OUTPUT_PATH.mkdir(parents=True, exist_ok=True)
-
-    video_paths = sorted(INPUT_PATH.glob("*/*_upper_body.mp4"), key=video_sort_key)
+def run_part(part):
+    input_path, output_root = INPUT_ROOT / part, OUTPUT_ROOT / part
+    print(f"\n===== part {part}")
+    video_paths = sorted(input_path.glob("*/*_upper_body.mp4"), key=video_sort_key)
 
     if not video_paths:
-        print(f"找不到 MP4 影片：{INPUT_PATH}")
+        print(f"找不到 MP4 影片：{input_path}")
         return
 
     tasks = []
     for video_path in video_paths:
         # 1/000600_001507_upper_body.mp4 → 1/000600_001507.npy
         output_name = video_path.stem.removesuffix("_upper_body") + ".npy"
-        output_path = OUTPUT_PATH / video_path.parent.name / output_name
+        output_path = output_root / video_path.parent.name / output_name
         # 已處理過的跳過，方便中斷後續跑
         if output_path.exists():
             continue
@@ -234,7 +233,7 @@ def main():
     start_time = time.perf_counter()
     failures = 0
 
-    progress = tqdm(total=len(tasks), desc="pose", unit="video")
+    progress = tqdm(total=len(tasks), desc=f"pose part {part}", unit="video")
     log = tqdm.write
 
     with ProcessPoolExecutor(max_workers=workers, initializer=init_worker) as executor:
@@ -264,6 +263,24 @@ def main():
     total_time = time.perf_counter() - start_time
     print(f"\n全部處理結束，總耗時: {total_time:.2f} 秒")
     print(f"成功: {len(tasks) - failures}，失敗: {failures}")
+
+
+def parse_parts(answer, root):
+    """「3」→ ["3"]；「1,2,5」→ ["1", "2", "5"]；「all」→ root 底下所有 part (依數字排序)。"""
+    answer = answer.strip()
+    if answer.lower() == "all":
+        return sorted((p.name for p in root.iterdir() if p.is_dir()), key=lambda x: (len(x), x))
+    return [p.strip() for p in answer.split(",") if p.strip()]
+
+
+def main():
+    parts = parse_parts(input("part (例如 3、1,2,5 或 all): "), INPUT_ROOT)
+    if not parts:
+        print("沒有輸入 part")
+        return
+    print(f"要處理的 part：{'、'.join(parts)}")
+    for part in parts:
+        run_part(part)
 
 
 if __name__ == "__main__":

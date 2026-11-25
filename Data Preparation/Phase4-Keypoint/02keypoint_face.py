@@ -13,12 +13,10 @@ from tqdm import tqdm
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from multiprocessing import freeze_support
 
-PART = "12"  # 要處理的 part：videos/keypoint_videos/<PART>/  (建議先跑 part 1 試試看)
-
-INPUT_PATH = Path("Data Preparation") / ("videos") / "keypoint_videos" / PART
-OUTPUT_PATH = Path("Data Preparation") / ("Phase4-Keypoint") / ("Keypoint_output") / "01face" / PART
+# 要處理的 part 在執行時輸入：「3」、「1,2,5」或「all」(keypoint_videos 底下所有 part)
+INPUT_ROOT = Path("Data Preparation") / ("videos") / "keypoint_videos"
+OUTPUT_ROOT = Path("Data Preparation") / ("Phase4-Keypoint") / ("Keypoint_output") / "01face"
 MODEL_PATH = Path("Data Preparation") / ("models") / ("mediapipe_models") / "face_landmarker.task"
-FAILED_LOG = Path(__file__).parent / f"failed_face_part_{PART}.txt"
 
 MAX_WORKERS = 8
 SKIP_EXISTING = True   # 已經有輸出的影片就跳過 (中斷後可以接著跑)
@@ -124,31 +122,29 @@ def video_sort_key(path):
     return int(path.parent.name), int(parts[0]), int(parts[1])
 
 
-def main():
-    if not MODEL_PATH.exists():
-        raise SystemExit(f"找不到模型：{MODEL_PATH}\n請先下載 face_landmarker.task 放到這個位置")
-    OUTPUT_PATH.mkdir(parents=True, exist_ok=True)
-
-    video_paths = sorted(INPUT_PATH.glob("*/*_upper_body.mp4"), key=video_sort_key)
+def run_part(part):
+    input_path, output_root = INPUT_ROOT / part, OUTPUT_ROOT / part
+    failed_log = Path(__file__).parent / f"failed_face_part_{part}.txt"
+    video_paths = sorted(input_path.glob("*/*_upper_body.mp4"), key=video_sort_key)
     tasks = []
     for video_path in video_paths:
         # 1/000600_001507_upper_body.mp4 → 1/000600_001507.npy
         output_name = video_path.stem.removesuffix("_upper_body") + ".npy"
-        output_path = OUTPUT_PATH / video_path.parent.name / output_name
+        output_path = output_root / video_path.parent.name / output_name
         if SKIP_EXISTING and output_path.exists():
             continue
         tasks.append((video_path, output_path))
 
-    print(f"part {PART}：共 {len(video_paths)} 支影片，這次要處理 {len(tasks)} 支")
+    print(f"part {part}：共 {len(video_paths)} 支影片，這次要處理 {len(tasks)} 支")
     if not tasks:
-        FAILED_LOG.unlink(missing_ok=True)
+        failed_log.unlink(missing_ok=True)
         return
 
     workers = min(MAX_WORKERS, os.cpu_count() or 1, len(tasks))
     failed = []
     with ProcessPoolExecutor(max_workers=workers, initializer=init_worker) as executor:
         futures = {executor.submit(process_video, video, output): video for video, output in tasks}
-        for future in tqdm(as_completed(futures), total=len(futures), desc="face", unit="video"):
+        for future in tqdm(as_completed(futures), total=len(futures), desc=f"face part {part}", unit="video"):
             try:
                 future.result()
             except Exception as exc:
@@ -156,12 +152,32 @@ def main():
 
     # 有失敗就寫紀錄，全部成功就刪除紀錄
     if failed:
-        FAILED_LOG.write_text("".join(f"{video.as_posix()}\n" for video, _ in failed), encoding="utf-8")
-        tqdm.write(f"\n失敗 {len(failed)} 個，已記錄到 {FAILED_LOG.name}：")
+        failed_log.write_text("".join(f"{video.as_posix()}\n" for video, _ in failed), encoding="utf-8")
+        tqdm.write(f"\npart {part} 失敗 {len(failed)} 個，已記錄到 {failed_log.name}：")
         for video, exc in failed:
             tqdm.write(f"  {video.as_posix()}：{exc}")
     else:
-        FAILED_LOG.unlink(missing_ok=True)
+        failed_log.unlink(missing_ok=True)
+
+
+def parse_parts(answer, root):
+    """「3」→ ["3"]；「1,2,5」→ ["1", "2", "5"]；「all」→ root 底下所有 part (依數字排序)。"""
+    answer = answer.strip()
+    if answer.lower() == "all":
+        return sorted((p.name for p in root.iterdir() if p.is_dir()), key=lambda x: (len(x), x))
+    return [p.strip() for p in answer.split(",") if p.strip()]
+
+
+def main():
+    if not MODEL_PATH.exists():
+        raise SystemExit(f"找不到模型：{MODEL_PATH}\n請先下載 face_landmarker.task 放到這個位置")
+    parts = parse_parts(input("part (例如 3、1,2,5 或 all): "), INPUT_ROOT)
+    if not parts:
+        print("沒有輸入 part")
+        return
+    print(f"要處理的 part：{'、'.join(parts)}")
+    for part in parts:
+        run_part(part)
 
 
 if __name__ == "__main__":

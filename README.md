@@ -51,7 +51,7 @@ GitHub 上的工作分支是 **`main`**。
 | `Data Preparation/models/mediapipe_models/face_landmarker.task` | 臉部關鍵點 ([下載](https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/latest/face_landmarker.task)) |
 
 **所有程式都在專案根目錄 (`sign-language/`) 執行**。影片以 part 為單位處理：
-大部分程式執行後會詢問 `part:`；`03split_npy.py`、`01cropV2.py` 可以輸入 `3`、`1,2,5` 或 `all`。Phase4 的其他程式則是改檔案開頭的 `PART = "..."`。
+大部分程式執行後會詢問 `part:`；Phase4 全部的程式與 `03split_npy.py` 可以輸入 `3`、`1,2,5` 或 `all` (已經處理過的影片會跳過)。`Phase2-STT/voice.py` 則是改檔案開頭的 `PART = "..."`。
 檔名有 `_13~` 的程式 (part 13 之後使用) 則是在檔案開頭直接列出要處理的影片。
 
 ---
