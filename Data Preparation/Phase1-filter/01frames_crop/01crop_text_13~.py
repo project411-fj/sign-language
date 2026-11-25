@@ -1,4 +1,5 @@
 import queue
+import re
 import subprocess
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
@@ -13,6 +14,9 @@ VIDEOS = {
     r"Data Preparation\videos\source_videos\13\1.mp4": (0.20, 0.73,0.10, 0.33)
 }
 OUTPUT_ROOT = Path("Data Preparation") / "Phase1-filter" / "01frames_crop"
+# STT 路徑：同時建好 part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/ (例如 13/1/0.20_0.73_0.10_0.33/)，
+# 03clipV2_13~.py 會把片段剪到這個資料夾，Phase4 STT/01cropV2.py 再依資料夾名稱的範圍裁出手語員
+PART_VIDEOS_ROOT = Path("Data Preparation") / "videos" / "part_videos"
 
 WORKERS = 1       # 同時處理幾支影片（ffmpeg 本身也是多執行緒）
 JPEG_Q = 10       # ffmpeg JPEG 品質，2 最好、31 最差
@@ -57,6 +61,34 @@ def crop_box(path, box):
         raise ValueError(f"{path} 的裁切範圍不合理：上 {top}、下 {bottom}、左 {left}、右 {right} "
                          "(需要 0 <= 上 < 下 <= 1、0 <= 左 < 右 <= 1)")
     return top, bottom, left, right
+
+
+def box_name(box):
+    """(0.2, 0.73, 0.1, 0.33) → "0.20_0.73_0.10_0.33" (至少兩位小數，0.805 這種會保留三位)。"""
+    def fmt(v):
+        s = f"{v:.4f}".rstrip("0")
+        return s if len(s.split(".")[1]) >= 2 else f"{v:.2f}"
+    return "_".join(fmt(v) for v in box)
+
+
+def is_box_name(name):
+    return re.fullmatch(r"\d+(\.\d+)?(_\d+(\.\d+)?){3}", name) is not None
+
+
+def make_clip_dir(input_path, box):
+    """建立 part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/；範圍改過時，舊的空資料夾會刪掉，有片段的會提醒。"""
+    parent = PART_VIDEOS_ROOT / input_path.parent.name / input_path.stem
+    clip_dir = parent / box_name(box)
+    if parent.is_dir():
+        for old in parent.iterdir():
+            if old.is_dir() and is_box_name(old.name) and old != clip_dir:
+                if any(old.iterdir()):
+                    print(f"  注意：{old} 是舊的裁切範圍而且裡面有檔案，請確認後手動刪除 "
+                          "(同一支影片有兩個範圍資料夾時，03clipV2_13~.py 不知道要用哪一個)")
+                else:
+                    old.rmdir()
+    clip_dir.mkdir(parents=True, exist_ok=True)
+    return clip_dir
 
 
 def output_dir_of(input_path):
@@ -141,7 +173,9 @@ if __name__ == "__main__":
         raise FileNotFoundError("找不到這些影片：\n" + "\n".join(f"  {p}" for p in missing))
     for p, box in videos.items():          # 先檢查全部的範圍，避免跑到一半才發現設定錯誤
         crop_box(p, box)
-        print(f"{p} → {output_dir_of(p)}")
+    for p, box in videos.items():
+        clip_dir = make_clip_dir(p, crop_box(p, box))
+        print(f"{p} → {output_dir_of(p)}，片段資料夾 {clip_dir}")
 
     with ThreadPoolExecutor(WORKERS) as executor:
         futures = [executor.submit(crop, p, box) for p, box in videos.items()]

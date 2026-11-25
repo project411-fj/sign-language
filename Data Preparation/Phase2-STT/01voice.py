@@ -1,6 +1,7 @@
 """語音轉文字：用 Breeze-ASR-25 (聯發科創新基地，針對台灣華語與中英夾雜微調的 Whisper) 轉出 part_videos 每個片段的主播語音。
 
 執行後輸入 part：「3」、「1,2,5」或「all」(part_videos 底下所有 part)
+輸入可以是 part_videos/<part>/<n>/<start>_<end>.mp4，或 STT 路徑的 part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/<start>_<end>.mp4。
 輸出 context_breeze/<part>/<n>/<start>_<end>.csv (欄位 start, end, text)；已經轉過的片段會跳過。
 輸入與輸出格式和 voice.py (faster-whisper large-v3) 相同，只是輸出到另一個資料夾，方便兩者比較。
 
@@ -15,6 +16,7 @@ from collections import deque
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 import csv
+import re
 import threading
 
 import av
@@ -38,6 +40,24 @@ VAD_REFINE = True          # False：直接輸出模型給的時間 (句子會�
 VAD_MIN_SILENCE_MS = 150   # 至少停頓這麼久才算句子間的空白 (太小會把字和字之間的空隙也當成停頓)
 VAD_SPEECH_PAD_MS = 30     # 人聲區間前後各多留一點，避免切到字頭字尾
 SNAP_TOLERANCE = 0.6       # 句子邊界離停頓多近 (秒) 才對齊過去；模型的時間通常誤差在半秒內
+
+
+BOX_RE = re.compile(r"\d+(\.\d+)?(_\d+(\.\d+)?){3}")   # STT 路徑的範圍資料夾，例如 0.20_0.73_0.10_0.33
+
+
+def clip_number(video_file):
+    """片段屬於哪支影片 (<n>)：part_videos/<part>/<n>/<start>_<end>.mp4，
+    或 STT 路徑的 part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/<start>_<end>.mp4。"""
+    parent = video_file.parent
+    return parent.parent.name if BOX_RE.fullmatch(parent.name) else parent.name
+
+
+def list_clips(input_directory):
+    """兩種結構的片段都找出來 (略過暫存檔)，依 <n>、檔名排序。"""
+    clips = [p for p in input_directory.glob("*/*.mp4")] + \
+            [p for p in input_directory.glob("*/*/*.mp4") if BOX_RE.fullmatch(p.parent.name)]
+    clips = [p for p in clips if re.fullmatch(r"\d+_\d+", p.stem)]
+    return sorted(clips, key=lambda p: (int(clip_number(p)), p.stem))
 
 
 def parse_parts(answer, root):
@@ -147,9 +167,9 @@ def run_part(part, asr, cc, executor):
 
     def output_of(video_file):
         # 保留子目錄（1, 2, 3…），避免不同影片的片段檔名互相覆蓋
-        return output_directory / video_file.parent.name / f"{video_file.stem}.csv"
+        return output_directory / clip_number(video_file) / f"{video_file.stem}.csv"
 
-    all_videos = sorted(input_directory.glob("*/*.mp4"), key=lambda p: (int(p.parent.name), p.stem))
+    all_videos = list_clips(input_directory)
     videos, skipped, no_audio, failed = [], 0, 0, []
     for video_file in all_videos:
         if SKIP_EXISTING and output_of(video_file).exists():

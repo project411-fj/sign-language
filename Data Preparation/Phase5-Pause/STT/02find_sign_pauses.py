@@ -18,7 +18,7 @@ from tqdm import tqdm
 warnings.filterwarnings("ignore")   # 執行時只顯示進度條
 
 # ================================================================ 路徑設定 (後面會再接 /<part>)
-NPY_DIR = "Data Preparation/Phase4-Keypoint/Keypoint_output_STT/02combined"   # Phase4 STT/03keypoint_combine.py 的輸出
+NPY_DIR = "Data Preparation/Phase4-Keypoint/Keypoint_output/02combined"
 TXT_DIR = "Data Preparation/Phase5-Pause/output_STT/01frames"       # 01stt_frames.py 的輸出
 OUT_DIR = "Data Preparation/Phase5-Pause/output_STT/02pause"
 FPS_CSV = "Data Preparation/Phase5-Pause/output_STT/01fps"          # 裡面是 fps_<part>.csv (01stt_frames.py 寫的)
@@ -88,7 +88,7 @@ def write_segments(path, segs):
 
 
 def load_fps_table(csv_path):
-    """{子資料夾/檔名: fps}，1/000600_001507.mp4 -> 1/000600_001507"""
+    """{子資料夾/檔名: fps}，1/000600_001507_upper_body.mp4 -> 1/000600_001507"""
     with csv_path.open(encoding="utf-8-sig") as f:
         return {
             Path(row["filename"]).with_suffix("").as_posix().removesuffix("_upper_body"): float(row["fps"])

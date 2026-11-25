@@ -1,4 +1,4 @@
-"""列出每個 part 在關鍵點與切句流程各步驟的狀態，找出哪一步還沒跑完 (OCR 路徑：Keypoint_output/、Phase5 output/)。
+"""列出每個 part 在關鍵點與切句流程各步驟的狀態，找出哪一步還沒跑完。
 
     01hand           02keypoint_hand.py 的輸出
     01face           02keypoint_face.py 的輸出
@@ -38,9 +38,9 @@ for part in parts:
     combined_dim = first_dim(KEY / "02combined" / part)
     seg_dim = first_dim(OUT / "03segments" / part)
     if face < hand:
-        todo = f"OCR/02keypoint_face.py (part 輸入 {part})"
+        todo = f"02keypoint_face.py (PART = \"{part}\")"
     elif combined < hand or combined_dim != FEAT_DIM:
-        todo = f"OCR/03keypoint_combine.py (part 輸入 {part})" + ("：目前是舊的 156 維" if combined_dim == 156 else "")
+        todo = f"03keypoint_combine.py (PART = \"{part}\")" + ("：目前是舊的 156 維" if combined_dim == 156 else "")
     elif seg == 0 or seg_dim != FEAT_DIM:
         todo = "OCR/03split_npy.py (part 輸入 all)" + ("：目前是舊的 156 維" if seg_dim == 156 else "")
     else:
@@ -48,10 +48,10 @@ for part in parts:
     dims = "".join(f"{'-' if d is None else d:>12}" for d in (combined_dim, seg_dim))
     print(f"{part:<6}" + "".join(f"{n:>12}" for n in counts) + f"{dims}   {todo}")
 
-# Phase4、Phase5 的程式都分成 OCR/、STT/ 兩版，失敗紀錄會寫在各自的資料夾裡 (上一層的是搬移前留下的舊紀錄)
+# Phase5 的程式分成 OCR/、STT/ 兩版，失敗紀錄會寫在各自的資料夾裡 (Phase5-Pause/ 底下的是搬移前留下的舊紀錄)
 logs = sorted(p.relative_to(ROOT).as_posix()
-              for phase in ("Phase4-Keypoint", "Phase5-Pause")
-              for folder in (ROOT / phase, ROOT / phase / "OCR", ROOT / phase / "STT")
+              for folder in (ROOT / "Phase4-Keypoint", ROOT / "Phase5-Pause",
+                             ROOT / "Phase5-Pause" / "OCR", ROOT / "Phase5-Pause" / "STT")
               for pattern in ("failed_*face*.txt", "failed_combine_part_*.txt", "failed_segments_part_*.txt")
               for p in folder.glob(pattern))
 if logs:

@@ -51,7 +51,7 @@ GitHub 上的工作分支是 **`main`**。
 | `Data Preparation/models/mediapipe_models/face_landmarker.task` | 臉部關鍵點 ([下載](https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/latest/face_landmarker.task)) |
 
 **所有程式都在專案根目錄 (`sign-language/`) 執行**。影片以 part 為單位處理：
-大部分程式執行後會詢問 `part:`；`Phase2-STT/` 的程式、Phase4 全部的程式 (`OCR/`、`STT/`)、`Phase5-Pause/OCR/03split_npy.py` 與 `Phase5-Pause/STT/` 全部的程式可以輸入 `3`、`1,2,5` 或 `all` (已經處理過的影片會跳過)。
+大部分程式執行後會詢問 `part:`；`Phase2-STT/` 的程式、Phase4 全部的程式 (含 `OCR/`、`STT/01cropV2.py`)、`Phase5-Pause/OCR/03split_npy.py` 與 `Phase5-Pause/STT/` 全部的程式可以輸入 `3`、`1,2,5` 或 `all` (已經處理過的影片會跳過)。
 檔名有 `_13~` 的程式 (part 13 之後使用) 則是在檔案開頭直接列出要處理的影片。
 
 ---
@@ -63,16 +63,11 @@ GitHub 上的工作分支是 **`main`**。
 ```text
 Data Preparation/videos/
 ├─ source_videos/<part>/<n>.mp4                          原始新聞影片
-├─ part_videos/<part>/<n>/<start>_<end>.mp4              Phase1 切出的節目片段
-└─ keypoint_videos/<part>/<n>/<start>_<end>_upper_body.mp4  Phase4 OCR 版裁出的手語員上半身 (640×640)
+├─ part_videos/<part>/<n>/<start>_<end>.mp4              Phase1 切出的節目片段 (OCR 路徑，part 1~12)
+├─ part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/<start>_<end>.mp4
+│                                                        Phase1 切出的節目片段 (STT 路徑，part 13 之後；資料夾名稱是手語員的範圍)
+└─ keypoint_videos/<part>/<n>/<start>_<end>_upper_body.mp4  Phase4 裁出的手語員上半身 (640×640，兩條路徑共用)
 ```
-
-處理流程分成兩條路徑，Phase4、Phase5 各有 `OCR/`、`STT/` 兩版程式，輸出分開放：
-
-| 路徑 | 影片 | 句子的時間與文字 | Phase4 | Phase5 |
-|---|---|---|---|---|
-| OCR | 新聞畫面，要先裁出手語員 (`keypoint_videos`) | Phase3 的字幕 | `OCR/` → `Keypoint_output/` | `OCR/` → `output/` |
-| STT | `part_videos` 本身就只有手語員，不用裁切 | Phase2 的語音轉文字 (`context_breeze`) | `STT/` → `Keypoint_output_STT/` | `STT/` → `output_STT/` |
 
 ### Phase1：篩選節目片段 (`Phase1-filter/`)
 
@@ -82,12 +77,14 @@ Data Preparation/videos/
 | 2 | `02style.py` | 用分類模型判斷每一格字幕條是不是目標節目的樣式，把連續的目標畫面合併成區間 | `02intervals/<part>/<n>_frames.txt` |
 | 3 | `03clipV2.py` (或 `03clip.py`) | 依區間把原始影片切成片段 | `videos/part_videos/<part>/` |
 
-**part 13 之後的影片** (字幕條位置不固定) 改用 `_13~` 版本，輸出位置與格式跟上面相同：
+**part 13 之後的影片** (STT 路徑，字幕條位置不固定) 改用 `_13~` 版本：
 
 | 程式 | 跟原版的差別 |
 |---|---|
 | `01frames_crop/01crop_text_13~.py` | 在 `VIDEOS` 直接列出影片，每支各自設定裁切範圍 `(上, 下, 左, 右)` (佔畫面的比例，`None` = 預設範圍)。會清掉舊圖片，並檢查輸出張數 = 影片總格數 |
+| `01frames_crop/01crop_text_13~.py` (續) | 同時建立 `part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/` (例如 `13/1/0.20_0.73_0.10_0.33/`)。範圍改過時，舊的空資料夾會刪掉；舊資料夾裡有片段的話只會提醒，請自己確認後刪除 |
 | `02style_13~.py` | 在 `VIDEOS` 直接列出影片 (通常跟上面相同)；還沒裁切的影片會列出並略過 |
+| `03clipV2_13~.py` | 依 `02intervals` 剪片段，輸出到上面建好的 `part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/`。開始前會先檢查每支影片都有唯一的範圍資料夾 |
 
 `VIDEOS` 的範圍是**先高再寬**，例如寬 10%~33%、高 20%~73% 寫成 `(0.20, 0.73, 0.10, 0.33)`；100% 要寫 `1.00` (不是 `0.100`)。
 各影片的範圍記錄在根目錄的 `note.md`。
@@ -108,7 +105,8 @@ Data Preparation/videos/
 | `voice.py` | Whisper large-v3 (faster-whisper，轉成繁體) | `context/<part>/<n>/<start>_<end>.csv` |
 | `01voice.py` | [Breeze-ASR-25](https://huggingface.co/MediaTek-Research/Breeze-ASR-25) (針對台灣華語、中英夾雜微調；transformers) | `context_breeze/<part>/<n>/<start>_<end>.csv` |
 
-兩支程式的 part 都可輸入 `all`，已經轉過的片段會跳過；輸出欄位都是 `start, end, text`。目前只作為參考，後面的步驟用的是 Phase3 的字幕。
+兩支程式的 part 都可輸入 `all`，已經轉過的片段會跳過；輸出欄位都是 `start, end, text`。
+兩種 `part_videos` 結構都讀得到 (STT 路徑多一層範圍資料夾)，輸出都是 `<part>/<n>/<start>_<end>.csv`。目前只作為參考，後面的步驟用的是 Phase3 的字幕。
 
 Whisper 系列模型給的句子時間是首尾相接的 (上一句的 end = 下一句的 start，停頓被算進句子裡)。`01voice.py` 另外用
 [Silero VAD](https://github.com/snakers4/silero-vad) (`pip install silero-vad`) 找出實際有人聲的區間，把每句的 start / end
@@ -131,23 +129,16 @@ Whisper 系列模型給的句子時間是首尾相接的 (上一句的 end = 下
 
 ### Phase4：手語員關鍵點 (`Phase4-Keypoint/`)
 
-OCR 版 (`OCR/`)：
-
 | 順序 | 程式 | 做什麼 | 輸出 (`Keypoint_output/`) |
 |---|---|---|---|
-| 1 | `OCR/01cropV2.py` | 找出手語員，裁出上半身並縮成 640×640 (frame 數不變)；已裁切過的影片會跳過 | `videos/keypoint_videos/` |
-| 2 | `OCR/02keypoint_hand.py` | MediaPipe 雙手 21 點 (以手腕為原點、依手掌大小縮放) | `01hand/` |
-| 2 | `OCR/02keypoint_pose.py` | YOLO 身體 9 點：鼻、肩、肘、腕、髖 | `01pose/` |
-| 2 | `OCR/02keypoint_face.py` | MediaPipe 臉部：52 個表情分數、嘴唇 40 點、頭部轉向 | `01face/` |
-| 3 | `OCR/03keypoint_combine.py` | 合併手 + 身體 + 臉 → **292 維** | `02combined/` |
+| 1 | `OCR/01cropV2.py` | OCR 路徑：用 YOLO 找出手語員，裁出上半身並縮成 640×640 (frame 數不變)；已裁切過的影片會跳過 | `videos/keypoint_videos/` |
+| 1 | `STT/01cropV2.py` | STT 路徑：讀 `part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/`，照資料夾名稱的範圍裁切 (不用模型)，等比例縮放後補黑邊成 640×640 (frame 數不變) | `videos/keypoint_videos/` |
+| 2 | `02keypoint_hand.py` | MediaPipe 雙手 21 點 (以手腕為原點、依手掌大小縮放) | `01hand/` |
+| 2 | `02keypoint_pose.py` | YOLO 身體 9 點：鼻、肩、肘、腕、髖 | `01pose/` |
+| 2 | `02keypoint_face.py` | MediaPipe 臉部：52 個表情分數、嘴唇 40 點、頭部轉向 | `01face/` |
+| 3 | `03keypoint_combine.py` | 合併手 + 身體 + 臉 → **292 維** | `02combined/` |
 
-STT 版 (`STT/`)：`part_videos` 本身就只有手語員，所以**沒有裁切這一步**，直接從 `part_videos/<part>/<n>/<start>_<end>.mp4` 取關鍵點。
-取法和 OCR 版完全一樣，輸出到 `Keypoint_output_STT/` (`01hand/`、`01pose/`、`01face/`、`02combined/`)：
-
-| 順序 | 程式 |
-|---|---|
-| 1 | `STT/02keypoint_hand.py`、`STT/02keypoint_pose.py`、`STT/02keypoint_face.py` |
-| 2 | `STT/03keypoint_combine.py` |
+只有第 1 步依路徑分成 `OCR/`、`STT/` 兩版；兩版都輸出到同一個 `keypoint_videos`，第 2、3 步兩條路徑共用。
 
 每一格的特徵：
 
@@ -184,12 +175,12 @@ STT 版 (三支都可輸入 `3`、`1,2,5` 或 `all`)：
 
 | 順序 | 程式 | 做什麼 | 輸出 (`output_STT/`) |
 |---|---|---|---|
-| 1 | `STT/01stt_frames.py` | 讀 `part_videos` 的 fps，把語音句子的秒數換成格數 (格式和 OCR 字幕一樣：`起始格-結束格: 文字`) | `01fps/`、`01frames/<part>/` |
+| 1 | `STT/01stt_frames.py` | 讀 fps，把語音句子的秒數換成格數 (格式和 OCR 字幕一樣：`起始格-結束格: 文字`) | `01fps/`、`01frames/<part>/` |
 | 2 | `STT/02find_sign_pauses.py` | 同 OCR 版，錨點改用語音句子的時間；沒有語音句子的片段會跳過 | `02pause/<part>/`、`02check_plots/` |
 | 3 | `STT/03split_npy.py` | 同 OCR 版，標籤是語音轉出來的文字 | `03segments/`、`03labels/` |
 
 `03segments/` 裡每個 `.npy` 都是 292 維；`03labels/` 是對應的文字 (`分段檔名: 文字`)。
-OCR 版讀 Phase4 `OCR/03keypoint_combine.py` 產生的 `Keypoint_output/02combined`；STT 版讀 Phase4 `STT/03keypoint_combine.py` 產生的 `Keypoint_output_STT/02combined`，另外需要 Phase2 的 `01voice.py`。
+兩版都需要先用 Phase4 的 `03keypoint_combine.py` 產生 292 維的 `02combined`；STT 版另外需要 Phase2 的 `01voice.py`。
 STT 版沿用 OCR 版的停頓搜尋參數 (`SEARCH_BEFORE`、`SEARCH_AFTER`、`EXPECTED_LAG`)，可以看 `02check_plots` 再調整。
 
 ### 小工具 (`tools/`)

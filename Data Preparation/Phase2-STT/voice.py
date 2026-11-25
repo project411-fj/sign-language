@@ -1,12 +1,14 @@
 """語音轉文字：用 Whisper large-v3 轉出 part_videos 每個片段的主播語音 (轉成繁體)。
 
 執行後輸入 part：「3」、「1,2,5」或「all」(part_videos 底下所有 part)
+輸入可以是 part_videos/<part>/<n>/<start>_<end>.mp4，或 STT 路徑的 part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/<start>_<end>.mp4。
 輸出 context/<part>/<n>/<start>_<end>.csv (欄位 start, end, text)；已經轉過的片段會跳過。
 """
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from queue import Queue
 import csv
+import re
 
 import av
 from faster_whisper import WhisperModel
@@ -17,6 +19,24 @@ INPUT_ROOT = Path("Data Preparation/videos/part_videos")     # part_videos/<part
 OUTPUT_ROOT = Path("Data Preparation/Phase2-STT/context")    # context/<part>/<n>/<start>_<end>.csv
 WORKERS = 8
 SKIP_EXISTING = True   # 已經有 .csv 的片段就跳過 (輸入 all 時不會把舊的 part 重做一次)；要重做就改成 False
+
+
+BOX_RE = re.compile(r"\d+(\.\d+)?(_\d+(\.\d+)?){3}")   # STT 路徑的範圍資料夾，例如 0.20_0.73_0.10_0.33
+
+
+def clip_number(video_file):
+    """片段屬於哪支影片 (<n>)：part_videos/<part>/<n>/<start>_<end>.mp4，
+    或 STT 路徑的 part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/<start>_<end>.mp4。"""
+    parent = video_file.parent
+    return parent.parent.name if BOX_RE.fullmatch(parent.name) else parent.name
+
+
+def list_clips(input_directory):
+    """兩種結構的片段都找出來 (略過暫存檔)，依 <n>、檔名排序。"""
+    clips = [p for p in input_directory.glob("*/*.mp4")] + \
+            [p for p in input_directory.glob("*/*/*.mp4") if BOX_RE.fullmatch(p.parent.name)]
+    clips = [p for p in clips if re.fullmatch(r"\d+_\d+", p.stem)]
+    return sorted(clips, key=lambda p: (int(clip_number(p)), p.stem))
 
 
 def parse_parts(answer, root):
@@ -35,9 +55,9 @@ def run_part(part, model, cc):
 
     def output_of(video_file):
         # 保留子目錄（1, 2, 3…），避免不同影片的片段檔名互相覆蓋
-        return output_directory / video_file.parent.name / f"{video_file.stem}.csv"
+        return output_directory / clip_number(video_file) / f"{video_file.stem}.csv"
 
-    all_videos = sorted(input_directory.glob("*/*.mp4"), key=lambda p: (int(p.parent.name), p.stem))
+    all_videos = list_clips(input_directory)
     videos, skipped, no_audio = {}, 0, 0
     for video_file in all_videos:
         if SKIP_EXISTING and output_of(video_file).exists():
@@ -70,7 +90,7 @@ def run_part(part, model, cc):
             output.parent.mkdir(parents=True, exist_ok=True)
             segments, _ = model.transcribe(str(video_file), language="zh", beam_size=5, vad_filter=True)
             done = 0
-            with tqdm(total=round(duration, 1), desc=f"{video_file.parent.name}/{video_file.stem}", unit="s",
+            with tqdm(total=round(duration, 1), desc=f"{clip_number(video_file)}/{video_file.stem}", unit="s",
                       position=slot, leave=False) as bar, \
                     open(temp, "w", encoding="utf-8-sig", newline="") as file:
                 writer = csv.writer(file)
