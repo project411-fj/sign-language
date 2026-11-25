@@ -25,7 +25,10 @@
 |---|---|
 | `Data Preparation/` | 資料前處理 Phase1～5 與小工具 |
 | `Data Training V2/` | **目前使用的訓練與推論**：`data_train.ipynb`、`keyword_predict.py` |
+| `Data Training V1/` | 整句翻譯模型 (`sign_transformer_fixed.ipynb`)，有自己的資料切分與預測結果 |
 | `Data Training/` | 之前的實驗 notebook (翻譯模型、各種比較實驗)，保留作為紀錄 |
+
+GitHub 上的工作分支是 **`main`**。
 
 影片 (`*.mp4`)、關鍵點 (`*.npy`)、模型權重 (`*.pt`、`*.task`)、字幕文字 (`*.txt`) 都被 `.gitignore` 排除，只存在本機。
 
@@ -42,13 +45,14 @@
 
 | 檔案 | 用途 |
 |---|---|
-| `Data Preparation/Phase1-filter/best.pt` | 辨識目標新聞節目的字幕條樣式 |
+| `Data Preparation/Phase1-filter/best~12.pt` | 辨識目標新聞節目的字幕條樣式 (`02style.py`、`02style_13~.py` 讀這個檔名；可以用 `02style_train/` 重新訓練) |
 | `Data Preparation/models/Yolo_models/person.pt`、`yolo26n-pose.pt` | 找出手語員並裁切上半身、身體關鍵點 |
 | `Data Preparation/models/mediapipe_models/hand_landmarker.task` | 手部關鍵點 |
 | `Data Preparation/models/mediapipe_models/face_landmarker.task` | 臉部關鍵點 ([下載](https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/latest/face_landmarker.task)) |
 
 **所有程式都在專案根目錄 (`sign-language/`) 執行**。影片以 part 為單位處理：
 大部分程式執行後會詢問 `part:`，Phase4 的程式則是改檔案開頭的 `PART = "..."`。
+檔名有 `_13~` 的程式 (part 13 之後使用) 則是在檔案開頭直接列出要處理的影片。
 
 ---
 
@@ -67,9 +71,28 @@ Data Preparation/videos/
 
 | 順序 | 程式 | 做什麼 | 輸出 |
 |---|---|---|---|
-| 1 | `01frames_crop/01crop_text.py` | 裁出畫面下方的字幕條 | `01frames_crop/<part>/` |
-| 2 | `02style.py` | 用 `best.pt` 判斷字幕條是不是目標節目的樣式，找出節目區間 | `02intervals/<part>/` |
+| 1 | `01frames_crop/01crop_text.py` | 逐格裁出畫面下方的字幕條 (固定範圍：高 80.5%~88%、寬 27%~100%) | `01frames_crop/<part>/<n>_frames/` |
+| 2 | `02style.py` | 用分類模型判斷每一格字幕條是不是目標節目的樣式，把連續的目標畫面合併成區間 | `02intervals/<part>/<n>_frames.txt` |
 | 3 | `03clipV2.py` (或 `03clip.py`) | 依區間把原始影片切成片段 | `videos/part_videos/<part>/` |
+
+**part 13 之後的影片** (字幕條位置不固定) 改用 `_13~` 版本，輸出位置與格式跟上面相同：
+
+| 程式 | 跟原版的差別 |
+|---|---|
+| `01frames_crop/01crop_text_13~.py` | 在 `VIDEOS` 直接列出影片，每支各自設定裁切範圍 `(上, 下, 左, 右)` (佔畫面的比例，`None` = 預設範圍)。會清掉舊圖片，並檢查輸出張數 = 影片總格數 |
+| `02style_13~.py` | 在 `VIDEOS` 直接列出影片 (通常跟上面相同)；還沒裁切的影片會列出並略過 |
+
+`VIDEOS` 的範圍是**先高再寬**，例如寬 10%~33%、高 20%~73% 寫成 `(0.20, 0.73, 0.10, 0.33)`；100% 要寫 `1.00` (不是 `0.100`)。
+各影片的範圍記錄在根目錄的 `note.md`。
+
+**訓練字幕條樣式模型** (`02style_train/`，`02-1style_train/` 是同樣的另一份，可以訓練另一個版本)：
+
+1. 目標節目的字幕條圖片放進 `target/`，其他圖片放進 `other/` (可以直接放 `01frames_crop` 的圖片，建議依影片分子資料夾)
+2. 執行 `python "Data Preparation/Phase1-filter/02style_train/train_style.py"`
+3. 模型存成 `02style_train/best.pt`；要讓 `02style.py` 使用，把它複製到 `Phase1-filter/` 並修改 `WEIGHTS`
+
+`train_style.py` 的前處理跟 `02style.py` 相同 (取字幕條左邊 3 倍高度的寬度，縮成 320×320)，只使用自己所在的資料夾，
+整個資料夾複製到其他地方也能執行。
 
 ### Phase2：語音轉文字 (`Phase2-STT/voice.py`)
 
@@ -243,3 +266,4 @@ predictor.predict_with_candidates("某句.npy")    # (有把握的詞, 其他可
 | `sign_transformer_learning_curve.ipynb` | 用 25% / 50% / 75% / 100% 的資料訓練 | 資料越多越好，曲線還沒變平 |
 | `sign_transformer_face.ipynb` | 加入臉部特徵 (表情、嘴型) | 翻譯與關鍵詞辨識都沒有明顯幫助 |
 | `sign_keyword*.ipynb` | 改成關鍵詞辨識 | 第一次明確學到句子層級的內容，之後整合成 `Data Training V2/data_train.ipynb` |
+| `Data Training V1/sign_transformer_fixed.ipynb` | 整句翻譯模型的修正版 | 測試集 CER 1.251，仍無法做逐字翻譯 |
