@@ -51,7 +51,7 @@ GitHub 上的工作分支是 **`main`**。
 | `Data Preparation/models/mediapipe_models/face_landmarker.task` | 臉部關鍵點 ([下載](https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/latest/face_landmarker.task)) |
 
 **所有程式都在專案根目錄 (`sign-language/`) 執行**。影片以 part 為單位處理：
-大部分程式執行後會詢問 `part:`，Phase4 的程式則是改檔案開頭的 `PART = "..."`。
+大部分程式執行後會詢問 `part:`；`03split_npy.py`、`01cropV2.py` 可以輸入 `3`、`1,2,5` 或 `all`。Phase4 的其他程式則是改檔案開頭的 `PART = "..."`。
 檔名有 `_13~` 的程式 (part 13 之後使用) 則是在檔案開頭直接列出要處理的影片。
 
 ---
@@ -118,7 +118,7 @@ Data Preparation/videos/
 
 | 順序 | 程式 | 做什麼 | 輸出 (`Keypoint_output/`) |
 |---|---|---|---|
-| 1 | `01cropV2.py` | 找出手語員，裁出上半身並縮成 640×640 (frame 數不變) | `videos/keypoint_videos/` |
+| 1 | `01cropV2.py` | 找出手語員，裁出上半身並縮成 640×640 (frame 數不變)；part 可輸入 `all`，已裁切過的影片會跳過 | `videos/keypoint_videos/` |
 | 2 | `02keypoint_hand.py` | MediaPipe 雙手 21 點 (以手腕為原點、依手掌大小縮放) | `01hand/` |
 | 2 | `02keypoint_pose.py` | YOLO 身體 9 點：鼻、肩、肘、腕、髖 | `01pose/` |
 | 2 | `02keypoint_face.py` | MediaPipe 臉部：52 個表情分數、嘴唇 40 點、頭部轉向 | `01face/` |
