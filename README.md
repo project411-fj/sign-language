@@ -1,537 +1,246 @@
-# Video Subtitle Processing Pipeline
+# 手語新聞關鍵詞辨識
 
-This project processes every MP4 video in the `target` directory through three sequential phases:
+從台灣手語新聞影片中，擷取手語翻譯員的關鍵點 (手、身體、臉)，對齊新聞字幕，訓練一個模型：
+**輸入一句手語的關鍵點序列 (`.npy`)，輸出這句話裡出現的關鍵詞**，例如
+
+```
+字幕：看完報紙重點 繼續來關心
+有把握  ：報紙 (1.00)、繼續 (0.99)、關心 (0.99)、重點 (0.92)
+其他可能：立委 (0.14)
+```
 
 ```text
-Source MP4
-    |
-    v
-Phase 1: Frame filtering
-    |
-    v
-Phase 2: OCR and speech-to-text
-    |
-    v
-Phase 3: JSON conversion and OCR/STT matching
-    |
-    v
-Final subtitle JSON
+新聞影片 ─▶ Phase1 篩選節目片段 ─▶ Phase2 語音轉文字 (參考用)
+                                ─▶ Phase3 字幕 OCR ───────────────┐
+                                ─▶ Phase4 手語員關鍵點 (手/身體/臉) ┤
+                                                                  ▼
+                                            Phase5 依手語停頓切成一句一句的 .npy
+                                                                  ▼
+                                   Data Training V2：訓練關鍵詞模型 → keyword_predict.py
 ```
 
-## Project structure
-
-```text
-/
-|-- main.py
-|-- target/                       # Source MP4 files
-|-- cropvideos/                   # Phase 1 video output
-|-- results/                      # Phase 2 and Phase 3 output
-|-- Phase_1/
-|   |-- cropping.py
-|   |-- person.pt
-|   `-- ties.pt
-|-- Phase_2/
-|   |-- OCR_full.py
-|   `-- voice.py
-`-- Phase_3/
-    |-- ocr_txt_to_json.py
-    |-- tts_txt_to_json.py
-    `-- ocr_compare_stt.py
-```
-
-## Phase 1: Video-frame filtering
-
-Program: `Phase_1/cropping.py`
-
-Phase 1 reads the source MP4 frame by frame and applies two YOLO models:
-
-- `person.pt` detects the required person class.
-- `ties.pt` detects ties.
-- A frame is written only when both detections are present.
-
-Although the function is named `crop`, it filters complete frames; it does not crop a rectangular area from a frame.
-
-### Input
-
-```text
-target/<video-name>.mp4
-```
-
-### Output
-
-```text
-cropvideos/<video-name>_output.avi
-```
-
-The AVI contains the selected video frames but does not contain the original audio track. For that reason, the Phase 1 result passed to Phase 2 contains both paths:
-
-```python
-{
-    "source_video": Path("target/example.mp4"),
-    "filtered_video": Path("cropvideos/example_output.avi")
-}
-```
-
-## Phase 2: OCR and speech recognition
-
-Programs:
-
-- `Phase_2/OCR_full.py`
-- `Phase_2/voice.py`
-
-Phase 2 consumes the result returned by Phase 1 and performs two operations.
-
-### OCR
-
-OCR uses the filtered AVI from Phase 1. EasyOCR recognizes Traditional Chinese text from sampled frames and groups similar consecutive text into time ranges.
-
-OCR text output:
-
-```text
-results/<video-name>/<video-name>_ocr.txt
-```
-
-OCR line format:
-
-```text
-<start>s --- <end>s ---文字: ['text 1', 'text 2']
-```
-
-Example:
-
-```text
-2.00s --- 5.20s ---文字: ['今日新聞', '即時報導']
-```
-
-### Speech-to-text
-
-Speech recognition uses Faster Whisper. Because the filtered AVI has no audio, STT uses the original source MP4 reference carried in the Phase 1 result.
-
-STT text output:
-
-```text
-results/<video-name>/<video-name>_stt.txt
-```
-
-STT line format:
-
-```text
-[<start>s -> <end>s] recognized text
-```
-
-Example:
-
-```text
-[2.10s -> 5.00s] 今日為您帶來最新新聞
-```
-
-### Phase 2 result passed to Phase 3
-
-```python
-{
-    "source_video": Path(...),
-    "filtered_video": Path(...),
-    "ocr_text": Path("..._ocr.txt"),
-    "stt_text": Path("..._stt.txt")
-}
-```
-
-## Phase 3: Conversion and subtitle matching
-
-Programs:
-
-- `Phase_3/ocr_txt_to_json.py`
-- `Phase_3/tts_txt_to_json.py`
-- `Phase_3/ocr_compare_stt.py`
-
-Phase 3 consumes the OCR and STT files returned by Phase 2.
-
-### OCR JSON conversion
-
-`ocr_txt_to_json.py` expands each OCR time range into one record per covered second.
-
-Output:
-
-```text
-results/<video-name>/<video-name>_ocr.json
-```
-
-Format:
-
-```json
-[
-    {
-        "second": 2,
-        "texts": ["今日新聞", "即時報導"]
-    },
-    {
-        "second": 3,
-        "texts": ["今日新聞", "即時報導"]
-    }
-]
-```
-
-### STT JSON conversion
-
-`tts_txt_to_json.py` extracts the text from each Whisper timestamp line. Despite its filename, this program processes STT rather than text-to-speech.
-
-Output:
-
-```text
-results/<video-name>/<video-name>_stt.json
-```
-
-Format:
-
-```json
-[
-    "今日為您帶來最新新聞",
-    "接下來是氣象消息"
-]
-```
-
-### OCR/STT matching
-
-`ocr_compare_stt.py` performs the final comparison:
-
-1. Removes punctuation and whitespace.
-2. Converts OCR and STT text to Pinyin.
-3. Calculates their similarity with RapidFuzz.
-4. Accepts matches whose score reaches the configured threshold.
-5. Records the first and last matching seconds.
-
-Final output:
-
-```text
-results/<video-name>/<video-name>_final_subtitles.json
-```
-
-Format:
-
-```json
-[
-    {
-        "ocr_ground_truth": "今日新聞",
-        "stt_original": "今日為您帶來最新新聞",
-        "start_second": 2,
-        "end_second": 5,
-        "duration": 4
-    }
-]
-```
-
-## How `main.py` connects the phases
-
-For each source video, `main.py` uses this explicit data flow:
-
-```python
-phase_1_result = run_phase_1(source_video)
-phase_2_result = run_phase_2(phase_1_result, output_dir, progress)
-final_json = run_phase_3(phase_2_result, output_dir, threshold, progress)
-```
-
-The controller functions have these responsibilities:
-
-- `find_videos()` finds and naturally sorts the MP4 files in `target`.
-- `run_phase_1()` packages the original and filtered video paths.
-- `run_phase_2()` receives the Phase 1 package and adds OCR/STT outputs.
-- `run_phase_3()` receives the Phase 2 package and creates the JSON files.
-- `run_pipeline()` runs all three phases for one video and displays phase progress.
-- `run_all()` processes every video sequentially and displays overall progress.
-- `main()` reads command-line options and prints each final JSON path.
-
-Each video receives an independent result directory, so files from different videos do not overwrite one another.
-
-## Running the pipeline
-
-Place MP4 files in:
-
-```text
-\target
-```
-
-Open a terminal and run:
-
-```powershell
-python main.py
-```
-
-Optional arguments:
-
-```powershell
-python main.py --target-dir target --output-dir results --threshold 80
-```
-
-- `--target-dir`: source-video directory; default is `target`.
-- `--output-dir`: result directory; default is `results`.
-- `--threshold`: minimum OCR/STT similarity; default is `80`.
+## 目錄
+
+| 位置 | 內容 |
+|---|---|
+| `Data Preparation/` | 資料前處理 Phase1～5 與小工具 |
+| `Data Training V2/` | **目前使用的訓練與推論**：`data_train.ipynb`、`keyword_predict.py` |
+| `Data Training/` | 之前的實驗 notebook (翻譯模型、各種比較實驗)，保留作為紀錄 |
+
+影片 (`*.mp4`)、關鍵點 (`*.npy`)、模型權重 (`*.pt`、`*.task`)、字幕文字 (`*.txt`) 都被 `.gitignore` 排除，只存在本機。
 
 ---
 
-# 影片字幕處理流程
+## 環境
 
-本專案會將 `target` 目錄中的每一支 MP4 影片依序送入三個 Phase：
+- Python 3.11、NVIDIA GPU (YOLO、Whisper、模型訓練)
+- `ffmpeg` 需要在 PATH 中 (Phase1、Phase4 裁切影片)
+- 主要套件：`torch`、`ultralytics`、`mediapipe`、`opencv-python`、`faster-whisper`、`opencc`、`av`、`easyocr`、`google-genai`、`numpy`、`scipy`、`tqdm`、`jieba`、`matplotlib`
+- Phase3 的 Gemini OCR 需要環境變數 `GEMINI_API_KEY`
 
-```text
-來源 MP4
-    |
-    v
-Phase 1：影片影格篩選
-    |
-    v
-Phase 2：OCR 與語音辨識
-    |
-    v
-Phase 3：JSON 轉換與 OCR/STT 比對
-    |
-    v
-最終字幕 JSON
-```
+需要的模型檔 (放在本機，不在 repo 中)：
 
-## 專案結構
+| 檔案 | 用途 |
+|---|---|
+| `Data Preparation/Phase1-filter/best.pt` | 辨識目標新聞節目的字幕條樣式 |
+| `Data Preparation/models/Yolo_models/person.pt`、`yolo26n-pose.pt` | 找出手語員並裁切上半身、身體關鍵點 |
+| `Data Preparation/models/mediapipe_models/hand_landmarker.task` | 手部關鍵點 |
+| `Data Preparation/models/mediapipe_models/face_landmarker.task` | 臉部關鍵點 ([下載](https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/latest/face_landmarker.task)) |
 
-```text
-/
-|-- main.py
-|-- target/                       # 來源 MP4
-|-- cropvideos/                   # Phase 1 影片輸出
-|-- results/                      # Phase 2、3 輸出
-|-- Phase_1/
-|   |-- cropping.py
-|   |-- person.pt
-|   `-- ties.pt
-|-- Phase_2/
-|   |-- OCR_full.py
-|   `-- voice.py
-`-- Phase_3/
-    |-- ocr_txt_to_json.py
-    |-- tts_txt_to_json.py
-    `-- ocr_compare_stt.py
-```
+**所有程式都在專案根目錄 (`sign-language/`) 執行**。影片以 part 為單位處理：
+大部分程式執行後會詢問 `part:`，Phase4 的程式則是改檔案開頭的 `PART = "..."`。
 
-## Phase 1：影片影格篩選
+---
 
-程式：`Phase_1/cropping.py`
+## 資料前處理 (`Data Preparation/`)
 
-Phase 1 逐格讀取來源 MP4，並套用兩個 YOLO 模型：
-
-- `person.pt` 偵測指定人物類別。
-- `ties.pt` 偵測領帶。
-- 只有兩種偵測結果同時存在時，才會寫入該影格。
-
-雖然函式名稱是 `crop`，目前的行為是篩選完整影格，不是裁切畫面中的矩形區域。
-
-### 輸入
+影片資料夾：
 
 ```text
-target/<影片名稱>.mp4
+Data Preparation/videos/
+├─ source_videos/<part>/<n>.mp4                          原始新聞影片
+├─ part_videos/<part>/<n>/<start>_<end>.mp4              Phase1 切出的節目片段
+└─ keypoint_videos/<part>/<n>/<start>_<end>_upper_body.mp4  Phase4 裁出的手語員上半身 (640×640)
 ```
 
-### 輸出
+### Phase1：篩選節目片段 (`Phase1-filter/`)
+
+| 順序 | 程式 | 做什麼 | 輸出 |
+|---|---|---|---|
+| 1 | `01frames_crop/01crop_text.py` | 裁出畫面下方的字幕條 | `01frames_crop/<part>/` |
+| 2 | `02style.py` | 用 `best.pt` 判斷字幕條是不是目標節目的樣式，找出節目區間 | `02intervals/<part>/` |
+| 3 | `03clipV2.py` (或 `03clip.py`) | 依區間把原始影片切成片段 | `videos/part_videos/<part>/` |
+
+### Phase2：語音轉文字 (`Phase2-STT/voice.py`)
+
+用 Whisper large-v3 轉出主播語音的文字 (轉成繁體)，輸出 `context/<part>/<n>/<start>_<end>.csv`
+(欄位 `start, end, text`)。目前只作為參考，後面的步驟用的是 Phase3 的字幕。
+
+### Phase3：字幕 OCR (`Phase3-OCR/`)
+
+| 順序 | 程式 | 做什麼 | 輸出 (`OCR_output/`) |
+|---|---|---|---|
+| 1 | `01frames_crop/crop_text.py` | 逐格裁出字幕區域 | `01frames_crop/<part>/` |
+| 2 | `02EasOCR/01EasOCR.py` | EasyOCR 辨識每一格 | `01EasOCR_text/` |
+| 3 | `02EasOCR/02merge_frames.py` | 相似的連續格合併成一句 | `02EasOCR_merged/` |
+| 4 | `02EasOCR/03smooth_merged.py` | 去掉太短的雜訊區間 | (覆蓋 `02EasOCR_merged/`) |
+| 5 | `02EasOCR/04pick_frames.py` | 每句挑代表性的畫面 | `03EasOCR_frame/` |
+| 6 | `03Gemini_OCR/01gemini_ocr_batch.py` | 用 Gemini 重新辨識，修正 EasyOCR 的錯字 | `04GeminiOCR_context/` |
+| 7 | `03Gemini_OCR/02merge_frames.py` | 合併 | `05GeminiOCR_merged/` |
+| 8 | `03Gemini_OCR/03merge_frames.py` | 再合併相似的句子 | `06GeminiOCR_merged/` |
+
+最終字幕格式 (`06GeminiOCR_merged/<part>/<n>/<start>_<end>_frames.txt`)：每行 `起始格-結束格: 字幕`。
+
+### Phase4：手語員關鍵點 (`Phase4-Keypoint/`)
+
+| 順序 | 程式 | 做什麼 | 輸出 (`Keypoint_output/`) |
+|---|---|---|---|
+| 1 | `01cropV2.py` | 找出手語員，裁出上半身並縮成 640×640 (frame 數不變) | `videos/keypoint_videos/` |
+| 2 | `02keypoint_hand.py` | MediaPipe 雙手 21 點 (以手腕為原點、依手掌大小縮放) | `01hand/` |
+| 2 | `02keypoint_pose.py` | YOLO 身體 9 點：鼻、肩、肘、腕、髖 | `01pose/` |
+| 2 | `02keypoint_face.py` | MediaPipe 臉部：52 個表情分數、嘴唇 40 點、頭部轉向 | `01face/` |
+| 3 | `03keypoint_combine.py` | 合併手 + 身體 → **156 維** | `02combined/` |
+| 4 | `03keypoint_combine_face.py` | 再接上臉部 → **292 維** | `02combined_face/` |
+
+每一格的特徵：
+
+| 維度 | 內容 |
+|---|---|
+| 0:63 / 63:126 | 左手 / 右手 21 點 (x, y, z) |
+| 126 / 127 | 左手 / 右手是否偵測到 |
+| 128:155 | 身體 9 點 (x, y, 信心值) |
+| 155 | 身體是否偵測到 |
+| 156:208 | 52 個表情分數 (眉毛、眼睛、臉頰、下巴、嘴巴) |
+| 208:288 | 嘴唇 40 點 (x, y) |
+| 288:291 | 頭部轉向 (點頭、轉頭、歪頭) |
+| 291 | 臉是否偵測到 |
+
+### Phase5：依手語停頓切句 (`Phase5-Pause/`)
+
+字幕出現的時間通常比手語早一點，所以不直接用字幕的時間切，而是在字幕邊界附近找手語員動作停下來的地方。
+
+| 順序 | 程式 | 做什麼 | 輸出 (`output/`) |
+|---|---|---|---|
+| 1 | `01get_fps.py` | 讀每個片段的 fps | `01fps/fps_<part>.csv` |
+| 2 | `02find_sign_pauses.py` | 依動作能量找停頓點，調整每句的起訖格 | `02pause/<part>/`、`02check_plots/` |
+| 3 | `03split_npy.py` | 依切點把關鍵點切成一句一個 `.npy` | `03segments<TAG>/`、`03labels<TAG>/` |
+
+`03split_npy.py` 的設定：`FEATURE_TAG = "_face"` 讀 `02combined_face` (292 維)，輸出到 `03segments_face/`；
+`""` 則是 156 維的 `03segments/`。**目前的訓練使用 `03segments_face`**。
+
+### 小工具 (`tools/`)
+
+| 程式 | 用途 |
+|---|---|
+| `face_pipeline_check.py` | 列出每個 part 在臉部流程各步驟的檔案數，告訴你下一步要跑什麼 |
+| `face_check.py` | 檢查臉偵測率、嘴巴與各部位的動作量 |
+| `npy_check.py` | 檢查手、身體的缺漏比例 |
+| `calculation.py`、`frame_count.py`、`video_sort.py` | 影片總長度、OCR 行數統計、影片重新命名 |
+
+---
+
+## 訓練與推論 (`Data Training V2/`)
+
+### `data_train.ipynb`：從資料切分到展示設定，一次完成
+
+從上到下執行一次即可 (約 60～80 分鐘)，所有輸出放在 `keyword_model/`：
+
+| 步驟 | 做什麼 |
+|---|---|
+| 0. 準備資料 | 以影片為單位切成訓練 / 驗證 / 測試 (8:1:1)；檢查有沒有還沒用到的新影片 |
+| 1. 選詞 | 用 jieba (繁體詞典 `dict.txt.big`，自動下載) 斷詞，訓練集出現 ≥ `MIN_WORD_COUNT` 次的詞都列為候選 |
+| 2. 第一階段訓練 | 用所有候選詞訓練一次，判斷哪些詞學得起來 |
+| 3. 篩選詞彙 | 保留**驗證集** AP ≥ `SELECT_MIN_VAL_AP` 的詞 |
+| 4. 第二階段訓練 | 用篩選後的詞 + CTC 輔助損失訓練最終模型；最終分數 = 兩個階段模型的平均 |
+| 5. 評估與挑門檻 | 在驗證集挑門檻，讓「有把握」的詞有 `TARGET_PRECISION` 是對的；報告測試集效果，存成 `demo_config.json` |
+| 6. 示範 | 確認 `keyword_predict.py` 跟訓練時一致，並實際示範 |
+
+模型：Transformer encoder (4 層) 讀整句的關鍵點序列，對每個關鍵詞輸出「有出現」的機率。
+缺漏的手、身體點會被遮罩成 0，訓練時有旋轉、縮放、平移、變速、時間遮罩等資料增強。
+臉部特徵 (`USE_FACE`) 在實驗中沒有幫助，預設不使用。
+
+中途中斷的話重新執行即可，已完成的階段會自動略過。
+
+### 常用設定 (notebook 最上面)
+
+| 設定 | 預設 | 說明 |
+|---|---|---|
+| `REBUILD` | `False` | **加入新影片時才改成 `True`**，見下一節 |
+| `MIN_WORD_COUNT` | 30 | 候選詞的最少出現次數；資料越多，候選詞自動越多 |
+| `SELECT_MIN_VAL_AP` | 0.1 | 驗證集 AP 低於這個值的詞不保留 |
+| `TARGET_PRECISION` | 0.7 | 「有把握」的詞在驗證集要達到的準確率 (測試集通常低幾個百分點) |
+| `SHOW_WORDS` | 5 | 每句顯示幾個詞 (有把握的不夠時，用「其他可能」補滿) |
+| `ENSEMBLE_STAGE1` | `True` | 最終分數是否平均兩個階段的模型 |
+
+只改 `TARGET_PRECISION`、`MAX_WORDS`、`SHOW_WORDS` 的話，從第 5 步重新執行即可，不用重新訓練。
+
+### 加入新影片
+
+1. 新影片跑完 Phase1～5 與臉部流程，執行 `python "Data Preparation/tools/face_pipeline_check.py"`，確認每個 part 都顯示「完成」
+2. `data_train.ipynb` 設 `REBUILD = True`，從頭執行：舊的資料切分與模型會搬到 `backup_<時間>/`，再用全部影片重新切分、訓練
+3. **跑完改回 `REBUILD = False`**，否則每次執行都會重新訓練
+
+不確定有沒有新影片時，用 `False` 執行即可，第 0 步會提醒有幾支影片還沒被用到。
+
+### `keyword_predict.py`：對任何一句 `.npy` 做預測
+
+需要 `data_train.ipynb` 產生的 `keyword_model/demo_config.json`、`keyword_model/stage1/best.pt`、`keyword_model/stage2/best.pt`
+與 `data/norm_masked_face.npz` (模型權重不在 repo 中，要在訓練的電腦上使用)。
+
+命令列 (在 `Data Training V2/` 執行)：
+
+```bash
+python keyword_predict.py "..\Data Preparation\Phase5-Pause\output\03segments_face\2\10\000641_001738_s00.npy"
+```
 
 ```text
-cropvideos/<影片名稱>_output.avi
+門檻 0.69，每句顯示 5 個詞
+...\000641_001738_s00.npy
+  有把握：天氣 (0.83)、陣雨 (0.71)
+  其他可能：氣象 (0.32)、北部 (0.28)、局部 (0.21)
 ```
 
-AVI 只包含篩選後的影片影格，不包含原始音軌。因此，傳給 Phase 2 的 Phase 1 結果會同時包含兩個路徑：
+程式中：
 
 ```python
-{
-    "source_video": Path("target/example.mp4"),
-    "filtered_video": Path("cropvideos/example_output.avi")
-}
+from keyword_predict import KeywordPredictor
+
+predictor = KeywordPredictor()
+predictor.predict("某句.npy")                    # 只回傳有把握的詞：[("天氣", 0.83), ("陣雨", 0.71)]
+predictor.predict_with_candidates("某句.npy")    # (有把握的詞, 其他可能的詞)
 ```
 
-## Phase 2：OCR 與語音辨識
+輸入可以是 292 維 (`03segments_face`) 或 156 維 (`03segments`) 的 `.npy`。
 
-程式：
+---
 
-- `Phase_2/OCR_full.py`
-- `Phase_2/voice.py`
+## 目前效果
 
-Phase 2 接收 Phase 1 回傳的結果，並執行兩項工作。
+最近一次訓練 (訓練集 25,276 句、驗證集 3,036 句、測試集 2,775 句；保留 285 個詞)，測試集：
 
-### OCR
+| 指標 | 數值 |
+|---|---|
+| 「有把握」的詞的準確率 | **67.4%** |
+| 有輸出「有把握」詞的句子 | 24.0% (其他句子回答「無法判斷」) |
+| 有回答的句子中，至少答對 1 個詞 | 65.6% |
+| 訓練時沒出現過的句子，「有把握」的準確率 | 43.2% |
+| 「其他可能」的準確率 | 5.7% (只當參考) |
 
-OCR 使用 Phase 1 篩選後的 AVI。EasyOCR 會從取樣影格辨識繁體中文，並將連續且相似的文字整理成時間範圍。
+使用上要知道的限制：
 
-OCR 輸出：
+- **模型只能說出詞彙清單裡的詞**。字幕平均每句 4.7 個詞，其中在清單裡的平均只有 1.1 個，這是每句能答對的上限
+- 模型最可靠的是**固定說法**：天氣預報 (陣雨、短暫、局部…)、讀報單元 (報紙、聯合報…)、節目轉場 (接著、繼續、關心…)；全新內容的句子準確率明顯較低
+- **增加資料是最有效的改善方式**：資料從 20,191 句增加到 25,276 句時，詞彙從 256 個增加到 285 個，準確率與能回答的句子比例都同時提升
 
-```text
-results/<影片名稱>/<影片名稱>_ocr.txt
-```
+## 實驗紀錄 (`Data Training/`)
 
-每行格式：
+在改成關鍵詞辨識之前做過的實驗，結論如下：
 
-```text
-<開始時間>s --- <結束時間>s ---文字: ['文字 1', '文字 2']
-```
-
-範例：
-
-```text
-2.00s --- 5.20s ---文字: ['今日新聞', '即時報導']
-```
-
-### 語音轉文字
-
-語音辨識使用 Faster Whisper。由於篩選後的 AVI 沒有音軌，因此 STT 會使用 Phase 1 結果中一併傳遞的原始 MP4。
-
-STT 輸出：
-
-```text
-results/<影片名稱>/<影片名稱>_stt.txt
-```
-
-每行格式：
-
-```text
-[<開始時間>s -> <結束時間>s] 辨識文字
-```
-
-範例：
-
-```text
-[2.10s -> 5.00s] 今日為您帶來最新新聞
-```
-
-### 傳給 Phase 3 的 Phase 2 結果
-
-```python
-{
-    "source_video": Path(...),
-    "filtered_video": Path(...),
-    "ocr_text": Path("..._ocr.txt"),
-    "stt_text": Path("..._stt.txt")
-}
-```
-
-## Phase 3：資料轉換與字幕比對
-
-程式：
-
-- `Phase_3/ocr_txt_to_json.py`
-- `Phase_3/tts_txt_to_json.py`
-- `Phase_3/ocr_compare_stt.py`
-
-Phase 3 接收 Phase 2 回傳的 OCR 和 STT 檔案。
-
-### OCR JSON 轉換
-
-`ocr_txt_to_json.py` 會將每個 OCR 時間範圍展開成涵蓋期間內每秒一筆的資料。
-
-輸出：
-
-```text
-results/<影片名稱>/<影片名稱>_ocr.json
-```
-
-格式：
-
-```json
-[
-    {
-        "second": 2,
-        "texts": ["今日新聞", "即時報導"]
-    },
-    {
-        "second": 3,
-        "texts": ["今日新聞", "即時報導"]
-    }
-]
-```
-
-### STT JSON 轉換
-
-`tts_txt_to_json.py` 會擷取每個 Whisper 時間戳後面的文字。雖然檔名寫成 `tts`，但這支程式實際處理的是 STT，而不是文字轉語音。
-
-輸出：
-
-```text
-results/<影片名稱>/<影片名稱>_stt.json
-```
-
-格式：
-
-```json
-[
-    "今日為您帶來最新新聞",
-    "接下來是氣象消息"
-]
-```
-
-### OCR/STT 比對
-
-`ocr_compare_stt.py` 負責最終比對：
-
-1. 移除標點與空白。
-2. 將 OCR 和 STT 文字轉成拼音。
-3. 使用 RapidFuzz 計算相似度。
-4. 接受分數達到設定門檻的結果。
-5. 記錄第一次及最後一次匹配的秒數。
-
-最終輸出：
-
-```text
-results/<影片名稱>/<影片名稱>_final_subtitles.json
-```
-
-格式：
-
-```json
-[
-    {
-        "ocr_ground_truth": "今日新聞",
-        "stt_original": "今日為您帶來最新新聞",
-        "start_second": 2,
-        "end_second": 5,
-        "duration": 4
-    }
-]
-```
-
-## `main.py` 如何串接三個 Phase
-
-對每一支來源影片，`main.py` 使用以下明確資料流：
-
-```python
-phase_1_result = run_phase_1(source_video)
-phase_2_result = run_phase_2(phase_1_result, output_dir, progress)
-final_json = run_phase_3(phase_2_result, output_dir, threshold, progress)
-```
-
-各控制函式的責任：
-
-- `find_videos()`：尋找 `target` 內的 MP4，並以自然檔名排序。
-- `run_phase_1()`：包裝原始影片和篩選後影片路徑。
-- `run_phase_2()`：接收 Phase 1 結果，並加入 OCR/STT 輸出。
-- `run_phase_3()`：接收 Phase 2 結果，並產生所有 JSON。
-- `run_pipeline()`：替單一影片執行三個 Phase，並顯示各 Phase 進度。
-- `run_all()`：依序處理所有影片，並顯示影片總進度。
-- `main()`：讀取命令列參數，並印出每支影片的最終 JSON 路徑。
-
-每支影片都有獨立的結果目錄，因此不同影片的輸出不會互相覆蓋。
-
-## 執行方式
-
-將 MP4 放入：
-
-```text
-\target
-```
-
-開啟終端並執行：
-
-```powershell
-python main.py
-```
-
-可選參數：
-
-```powershell
-python main.py --target-dir target --output-dir results --threshold 80
-```
-
-- `--target-dir`：來源影片目錄，預設為 `target`。
-- `--output-dir`：結果目錄，預設為 `results`。
-- `--threshold`：OCR/STT 最低相似度，預設為 `80`。
+| notebook | 實驗 | 結論 |
+|---|---|---|
+| `sign_transformer*.ipynb` | 直接把手語翻譯成整句中文 | 新句的字元錯誤率一直在 0.99～1.03，資料量不足以做逐字翻譯 |
+| `sign_transformer_copy.ipynb` (寬鬆切法) | 每句前後多切 0.5 秒 | 跟原本沒有差異，切點不是瓶頸 |
+| `sign_transformer_ctc*.ipynb` | CTC 輔助損失、缺漏遮罩、資料增強 | CTC 有小幅幫助，其他沒有明顯差異 |
+| `sign_transformer_learning_curve.ipynb` | 用 25% / 50% / 75% / 100% 的資料訓練 | 資料越多越好，曲線還沒變平 |
+| `sign_transformer_face.ipynb` | 加入臉部特徵 (表情、嘴型) | 翻譯與關鍵詞辨識都沒有明顯幫助 |
+| `sign_keyword*.ipynb` | 改成關鍵詞辨識 | 第一次明確學到句子層級的內容，之後整合成 `Data Training V2/data_train.ipynb` |

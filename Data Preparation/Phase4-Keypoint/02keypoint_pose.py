@@ -13,7 +13,7 @@ from ultralytics import YOLO
 from tqdm import tqdm
 
 
-PART = "7"  # 要處理的 part：videos/keypoint_videos/<PART>/
+PART = "12"  # 要處理的 part：videos/keypoint_videos/<PART>/
 
 INPUT_PATH = Path("Data Preparation") / ("videos") / "keypoint_videos" / PART
 OUTPUT_PATH = Path("Data Preparation") / ("Phase4-Keypoint") / ("Keypoint_output") / "01pose" / PART

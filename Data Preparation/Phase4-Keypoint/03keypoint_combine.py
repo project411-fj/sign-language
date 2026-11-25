@@ -3,7 +3,7 @@ from pathlib import Path
 import numpy as np
 from tqdm import tqdm
 
-PART = "7"  # 要合併的 part
+PART = "12"  # 要合併的 part
 
 ROOT = Path("Data Preparation/Phase4-Keypoint/Keypoint_output")
 HAND_DIR = ROOT / "01hand" / PART

@@ -7,8 +7,8 @@ from faster_whisper import WhisperModel
 from opencc import OpenCC
 from tqdm import tqdm
 
-PART = "1"
-WORKERS = 4
+PART = "13"
+WORKERS = 8
 input_directory = Path("Data Preparation/videos/part_videos") / PART      # part_videos/<PART>/<n>/<start>_<end>.mp4
 output_directory = Path("Data Preparation/Phase2-STT/context") / PART     # context/<PART>/<n>/<start>_<end>.csv
 
