@@ -1,24 +1,25 @@
 """STT 版第 1 步：讀每個片段的 fps，把 Phase2 語音轉文字的秒數換成格數。
 
 輸入：
-    videos/keypoint_videos/<part>/<n>/<start>_<end>_upper_body.mp4    (Phase4 01cropV2.py 的輸出，用來讀 fps)
+    videos/part_videos/<part>/<n>/<start>_<end>.mp4                   (Phase1 的片段，用來讀 fps；STT 路徑的影片本身就只有手語員，不用裁切)
     Phase2-STT/context_breeze/<part>/<n>/<start>_<end>.csv            (Phase2 01voice.py 的輸出：start, end, text，單位是秒)
 輸出 (output_STT/)：
     01fps/fps_<part>.csv                                          (欄位 filename, fps；格式和 OCR 版的 01get_fps.py 一樣)
     01frames/<part>/<n>/<start>_<end>_frames.txt                  (每行「起始格-結束格: 文字」，格式和 OCR 的字幕一樣)
 
-裁切後的影片 frame 數、fps 都和原本的片段一樣，所以秒數 × fps 就是 .npy 的列索引。
-執行後輸入 part：「3」、「1,2,5」或「all」(keypoint_videos 底下所有 part)。
+Phase4 STT 版直接從 part_videos 取關鍵點，所以秒數 × fps 就是 .npy 的列索引。
+執行後輸入 part：「3」、「1,2,5」或「all」(part_videos 底下所有 part)。
 """
 import csv
 import math
+import re
 from pathlib import Path
 
 import cv2
 from tqdm import tqdm
 
 # ================================================================ 路徑設定 (後面會再接 /<part>)
-VIDEO_DIR = Path("Data Preparation/videos/keypoint_videos")
+VIDEO_DIR = Path("Data Preparation/videos/part_videos")
 STT_DIR = Path("Data Preparation/Phase2-STT/context_breeze")          # 改成 context 就是讀 voice.py (Whisper large-v3) 的輸出
 FPS_DIR = Path("Data Preparation/Phase5-Pause/output_STT/01fps")      # 裡面是 fps_<part>.csv
 FRAMES_DIR = Path("Data Preparation/Phase5-Pause/output_STT/01frames")
@@ -40,7 +41,7 @@ def get_fps(path):
 
 
 def video_sort_key(path):
-    # <子資料夾>/<start>_<end>_upper_body.mp4
+    # <子資料夾>/<start>_<end>.mp4
     parts = path.stem.split("_")
     return int(path.parent.name), int(parts[0]), int(parts[1])
 
@@ -71,23 +72,23 @@ def convert(csv_path, txt_path, fps):
 def run_part(part):
     video_dir, stt_dir, frames_dir = VIDEO_DIR / part, STT_DIR / part, FRAMES_DIR / part
     if not video_dir.is_dir():
-        print(f"part {part}：找不到 {video_dir}，請先跑 Phase4 的 01cropV2.py，跳過")
+        print(f"part {part}：找不到 {video_dir}，跳過")
         return
     if not stt_dir.is_dir():
         print(f"part {part}：找不到 {stt_dir}，請先跑 Phase2 的 01voice.py，跳過")
         return
 
-    videos = sorted(video_dir.glob("*/*_upper_body.mp4"), key=video_sort_key)
+    videos = sorted((p for p in video_dir.glob("*/*.mp4") if re.fullmatch(r"\d+_\d+", p.stem)), key=video_sort_key)
     rows, no_fps, no_stt, empty = [], [], [], []
     for video in tqdm(videos, desc=f"part {part}", unit="video"):
-        name = video.relative_to(video_dir).as_posix()            # 例如 1/000600_001507_upper_body.mp4
+        name = video.relative_to(video_dir).as_posix()            # 例如 1/000600_001507.mp4
         fps = get_fps(video)
         if fps is None:
             no_fps.append(name)
             continue
         rows.append((name, fps))
 
-        clip = video.stem.removesuffix("_upper_body")             # 000600_001507
+        clip = video.stem                                         # 000600_001507
         csv_path = stt_dir / video.parent.name / f"{clip}.csv"
         if not csv_path.exists():
             no_stt.append(name)
