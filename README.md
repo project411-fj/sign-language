@@ -45,7 +45,8 @@ GitHub 上的工作分支是 **`main`**。
 
 | 檔案 | 用途 |
 |---|---|
-| `Data Preparation/Phase1-filter/best~12.pt` | 辨識目標新聞節目的字幕條樣式 (`02style.py`、`02style_13~.py` 讀這個檔名；可以用 `02style_train/` 重新訓練) |
+| `Data Preparation/Phase1-filter/best~12.pt` | 辨識目標新聞節目的字幕條樣式 (`02style.py` 讀這個檔名；可以用 `02style_train/` 重新訓練) |
+| `Data Preparation/Phase1-filter/best<part>-<n>.pt` | `02style_13~.py` 每支影片各自的字幕條樣式模型，例如 `source_videos/13/3.mp4` 用 `best13-3.pt` |
 | `Data Preparation/models/Yolo_models/person.pt`、`yolo26n-pose.pt` | 找出手語員並裁切上半身、身體關鍵點 |
 | `Data Preparation/models/mediapipe_models/hand_landmarker.task` | 手部關鍵點 |
 | `Data Preparation/models/mediapipe_models/face_landmarker.task` | 臉部關鍵點 ([下載](https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/latest/face_landmarker.task)) |
@@ -83,7 +84,7 @@ Data Preparation/videos/
 |---|---|
 | `01frames_crop/01crop_text_13~.py` | 在 `VIDEOS` 直接列出影片，每支各自設定裁切範圍 `(上, 下, 左, 右)` (佔畫面的比例，`None` = 預設範圍)。會清掉舊圖片，並檢查輸出張數 = 影片總格數 |
 | `01frames_crop/01crop_text_13~.py` (續) | 同時建立 `part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/` (例如 `13/1/0.20_0.73_0.10_0.33/`)。範圍改過時，舊的空資料夾會刪掉；舊資料夾裡有片段的話只會提醒，請自己確認後刪除 |
-| `02style_13~.py` | 在 `VIDEOS` 直接列出影片 (通常跟上面相同)；還沒裁切的影片會列出並略過 |
+| `02style_13~.py` | 在 `VIDEOS` 直接列出影片 (通常跟上面相同)；每支影片用自己的模型 `best<part>-<n>.pt` (例如 `14/5.mp4` → `best14-5.pt`)。還沒裁切或找不到模型的影片會列出並略過 |
 | `03clipV2_13~.py` | 依 `02intervals` 剪片段，輸出到上面建好的 `part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/`。開始前會先檢查每支影片都有唯一的範圍資料夾 |
 
 `VIDEOS` 的範圍是**先高再寬**，例如寬 10%~33%、高 20%~73% 寫成 `(0.20, 0.73, 0.10, 0.33)`；100% 要寫 `1.00` (不是 `0.100`)。

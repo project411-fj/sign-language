@@ -5,6 +5,7 @@
     → 判斷每一格是不是目標節目的樣式 → 把連續的目標畫面合併成區間
     → 寫到 02intervals/<part>/<n>_frames.txt (每行「起始格 結束格」，03clipV2.py 會讀這個)
 判斷方式 (粗掃 + 細掃) 跟 02style.py 完全相同。
+每支影片用自己的模型：source_videos/<part>/<n>.mp4 → Phase1-filter/best<part>-<n>.pt (例如 13/3.mp4 → best13-3.pt)。
 """
 import os
 from concurrent.futures import ThreadPoolExecutor
@@ -24,7 +25,6 @@ VIDEOS = [
 BASE = Path(__file__).resolve().parent          # Data Preparation/Phase1-filter/
 PROJECT = BASE.parents[1]                       # sign-language/
 FRAMES_DIR = BASE / "01frames_crop"             # 01crop_text_13~.py 的輸出
-WEIGHTS = BASE / "best13-3.pt"                   # 用 02style_train 訓練的新模型：BASE / "02style_train" / "best.pt"
 OUTPUT = BASE / "02intervals"
 
 CROP_SIZE = 320
@@ -64,6 +64,11 @@ def classify(paths, phase):
     return out
 
 
+def weights_of(video):
+    """source_videos/13/3.mp4 → BASE / "best13-3.pt" (每支影片各自的字幕條樣式模型)。"""
+    return BASE / f"best{video.parent.name}-{video.stem}.pt"
+
+
 def resolve(p):
     p = Path(p)
     return p if p.is_absolute() else PROJECT / p
@@ -75,17 +80,23 @@ if not_found:
     raise SystemExit("找不到這些影片：\n" + "\n".join(f"  {v}" for v in not_found))
 
 # 每支影片對應的畫面資料夾：source_videos/13/3.mp4 → 01frames_crop/13/3_frames
-jobs, missing = [], []
+jobs, missing, no_weights = [], [], []
 for v in videos:
     frames = FRAMES_DIR / v.parent.name / f"{v.stem}_frames"
-    if frames.is_dir() and any(frames.glob("*.jpg")):
-        jobs.append((v, frames))
-    else:
+    if not (frames.is_dir() and any(frames.glob("*.jpg"))):
         missing.append((v, frames))
+    elif not weights_of(v).is_file():
+        no_weights.append(v)
+    else:
+        jobs.append((v, frames))
 
-print(f"共 {len(videos)} 支影片，其中 {len(jobs)} 支有裁好的畫面")
+print(f"共 {len(videos)} 支影片，其中 {len(jobs)} 支可以處理")
 for v, frames in missing:
-    print(f"  [略過] {v.name}：找不到 {frames} (請先用 01crop_text_13~.py 裁切)")
+    print(f"  [略過] {v.parent.name}/{v.name}：找不到 {frames} (請先用 01crop_text_13~.py 裁切)")
+for v in no_weights:
+    print(f"  [略過] {v.parent.name}/{v.name}：找不到模型 {weights_of(v)}")
+for v, _ in jobs:
+    print(f"  {v.parent.name}/{v.name} → 模型 {weights_of(v).name}")
 if not jobs:
     raise SystemExit("沒有可以處理的影片")
 
@@ -93,10 +104,14 @@ os.system("")  # 讓 Windows 終端機吃 ANSI 游標控制碼
 
 results = []
 pool = ThreadPoolExecutor(WORKERS)
-model = YOLO(str(WEIGHTS))
-target_idx = [k for k, v in model.names.items() if v == "target"][0]
+models = {}   # 同一個模型檔只載入一次
 
 for n, (video, d) in enumerate(jobs, 1):
+    weights = weights_of(video)
+    if weights not in models:
+        loaded = YOLO(str(weights))
+        models[weights] = (loaded, [k for k, v in loaded.names.items() if v == "target"][0])
+    model, target_idx = models[weights]   # classify() 用的是這兩個全域變數
     out_dir = OUTPUT / video.parent.name              # source_videos/13/3.mp4 → 02intervals/13/
     out_dir.mkdir(parents=True, exist_ok=True)
     paths = sorted(d.glob("*.jpg"))
