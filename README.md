@@ -51,7 +51,7 @@ GitHub 上的工作分支是 **`main`**。
 | `Data Preparation/models/mediapipe_models/face_landmarker.task` | 臉部關鍵點 ([下載](https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/latest/face_landmarker.task)) |
 
 **所有程式都在專案根目錄 (`sign-language/`) 執行**。影片以 part 為單位處理：
-大部分程式執行後會詢問 `part:`；Phase4 全部的程式與 `03split_npy.py` 可以輸入 `3`、`1,2,5` 或 `all` (已經處理過的影片會跳過)。`Phase2-STT/voice.py` 則是改檔案開頭的 `PART = "..."`。
+大部分程式執行後會詢問 `part:`；`Phase2-STT/voice.py`、Phase4 全部的程式與 `03split_npy.py` 可以輸入 `3`、`1,2,5` 或 `all` (已經處理過的影片會跳過)。
 檔名有 `_13~` 的程式 (part 13 之後使用) 則是在檔案開頭直接列出要處理的影片。
 
 ---
@@ -96,7 +96,7 @@ Data Preparation/videos/
 
 ### Phase2：語音轉文字 (`Phase2-STT/voice.py`)
 
-用 Whisper large-v3 轉出主播語音的文字 (轉成繁體)，輸出 `context/<part>/<n>/<start>_<end>.csv`
+用 Whisper large-v3 轉出主播語音的文字 (轉成繁體)，part 可輸入 `all`，已經轉過的片段會跳過。輸出 `context/<part>/<n>/<start>_<end>.csv`
 (欄位 `start, end, text`)。目前只作為參考，後面的步驟用的是 Phase3 的字幕。
 
 ### Phase3：字幕 OCR (`Phase3-OCR/`)
