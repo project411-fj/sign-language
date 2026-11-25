@@ -51,7 +51,7 @@ GitHub 上的工作分支是 **`main`**。
 | `Data Preparation/models/mediapipe_models/face_landmarker.task` | 臉部關鍵點 ([下載](https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/latest/face_landmarker.task)) |
 
 **所有程式都在專案根目錄 (`sign-language/`) 執行**。影片以 part 為單位處理：
-大部分程式執行後會詢問 `part:`；`Phase2-STT/voice.py`、Phase4 全部的程式與 `03split_npy.py` 可以輸入 `3`、`1,2,5` 或 `all` (已經處理過的影片會跳過)。
+大部分程式執行後會詢問 `part:`；`Phase2-STT/` 的程式、Phase4 全部的程式、`Phase5-Pause/OCR/03split_npy.py` 與 `Phase5-Pause/STT/` 全部的程式可以輸入 `3`、`1,2,5` 或 `all` (已經處理過的影片會跳過)。
 檔名有 `_13~` 的程式 (part 13 之後使用) 則是在檔案開頭直接列出要處理的影片。
 
 ---
@@ -147,16 +147,33 @@ Whisper 系列模型給的句子時間是首尾相接的 (上一句的 end = 下
 
 ### Phase5：依手語停頓切句 (`Phase5-Pause/`)
 
-字幕出現的時間通常比手語早一點，所以不直接用字幕的時間切，而是在字幕邊界附近找手語員動作停下來的地方。
+字幕、語音出現的時間通常比手語早一點，所以不直接用它們的時間切，而是在句子邊界附近找手語員動作停下來的地方。
+依切句錨點的來源分成兩版，演算法相同，輸出分開放：
+
+| 版本 | 錨點與標籤來源 | 程式 | 輸出 |
+|---|---|---|---|
+| `OCR/` | Phase3 的字幕 (`06GeminiOCR_merged`) | `01get_fps.py` → `02find_sign_pauses.py` → `03split_npy.py` | `output/` |
+| `STT/` | Phase2 的語音轉文字 (`context_breeze`，`01voice.py` 的輸出) | `01stt_frames.py` → `02find_sign_pauses.py` → `03split_npy.py` | `output_STT/` |
+
+OCR 版：
 
 | 順序 | 程式 | 做什麼 | 輸出 (`output/`) |
 |---|---|---|---|
-| 1 | `01get_fps.py` | 讀每個片段的 fps | `01fps/fps_<part>.csv` |
-| 2 | `02find_sign_pauses.py` | 依動作能量找停頓點，調整每句的起訖格 | `02pause/<part>/`、`02check_plots/` |
-| 3 | `03split_npy.py` | 依切點把關鍵點 (`02combined`，292 維) 切成一句一個 `.npy` | `03segments/`、`03labels/` |
+| 1 | `OCR/01get_fps.py` | 讀每個片段的 fps | `01fps/fps_<part>.csv` |
+| 2 | `OCR/02find_sign_pauses.py` | 依動作能量找停頓點，調整每句的起訖格 | `02pause/<part>/`、`02check_plots/` |
+| 3 | `OCR/03split_npy.py` | 依切點把關鍵點 (`02combined`，292 維) 切成一句一個 `.npy` | `03segments/`、`03labels/` |
 
-`03segments/` 裡每個 `.npy` 都是 292 維；`03labels/` 是對應的字幕 (`分段檔名: 文字`)。
-需要先用 Phase4 的 `03keypoint_combine.py` 產生 292 維的 `02combined`。
+STT 版 (三支都可輸入 `3`、`1,2,5` 或 `all`)：
+
+| 順序 | 程式 | 做什麼 | 輸出 (`output_STT/`) |
+|---|---|---|---|
+| 1 | `STT/01stt_frames.py` | 讀 fps，把語音句子的秒數換成格數 (格式和 OCR 字幕一樣：`起始格-結束格: 文字`) | `01fps/`、`01frames/<part>/` |
+| 2 | `STT/02find_sign_pauses.py` | 同 OCR 版，錨點改用語音句子的時間；沒有語音句子的片段會跳過 | `02pause/<part>/`、`02check_plots/` |
+| 3 | `STT/03split_npy.py` | 同 OCR 版，標籤是語音轉出來的文字 | `03segments/`、`03labels/` |
+
+`03segments/` 裡每個 `.npy` 都是 292 維；`03labels/` 是對應的文字 (`分段檔名: 文字`)。
+兩版都需要先用 Phase4 的 `03keypoint_combine.py` 產生 292 維的 `02combined`；STT 版另外需要 Phase2 的 `01voice.py`。
+STT 版沿用 OCR 版的停頓搜尋參數 (`SEARCH_BEFORE`、`SEARCH_AFTER`、`EXPECTED_LAG`)，可以看 `02check_plots` 再調整。
 
 ### 小工具 (`tools/`)
 

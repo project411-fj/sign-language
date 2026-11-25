@@ -42,13 +42,16 @@ for part in parts:
     elif combined < hand or combined_dim != FEAT_DIM:
         todo = f"03keypoint_combine.py (PART = \"{part}\")" + ("：目前是舊的 156 維" if combined_dim == 156 else "")
     elif seg == 0 or seg_dim != FEAT_DIM:
-        todo = "03split_npy.py (part 輸入 all)" + ("：目前是舊的 156 維" if seg_dim == 156 else "")
+        todo = "OCR/03split_npy.py (part 輸入 all)" + ("：目前是舊的 156 維" if seg_dim == 156 else "")
     else:
         todo = "完成"
     dims = "".join(f"{'-' if d is None else d:>12}" for d in (combined_dim, seg_dim))
     print(f"{part:<6}" + "".join(f"{n:>12}" for n in counts) + f"{dims}   {todo}")
 
-logs = sorted(p.name for folder in (ROOT / "Phase4-Keypoint", ROOT / "Phase5-Pause")
+# Phase5 的程式分成 OCR/、STT/ 兩版，失敗紀錄會寫在各自的資料夾裡 (Phase5-Pause/ 底下的是搬移前留下的舊紀錄)
+logs = sorted(p.relative_to(ROOT).as_posix()
+              for folder in (ROOT / "Phase4-Keypoint", ROOT / "Phase5-Pause",
+                             ROOT / "Phase5-Pause" / "OCR", ROOT / "Phase5-Pause" / "STT")
               for pattern in ("failed_*face*.txt", "failed_combine_part_*.txt", "failed_segments_part_*.txt")
               for p in folder.glob(pattern))
 if logs:
