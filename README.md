@@ -94,10 +94,14 @@ Data Preparation/videos/
 `train_style.py` 的前處理跟 `02style.py` 相同 (取字幕條左邊 3 倍高度的寬度，縮成 320×320)，只使用自己所在的資料夾，
 整個資料夾複製到其他地方也能執行。
 
-### Phase2：語音轉文字 (`Phase2-STT/voice.py`)
+### Phase2：語音轉文字 (`Phase2-STT/`)
 
-用 Whisper large-v3 轉出主播語音的文字 (轉成繁體)，part 可輸入 `all`，已經轉過的片段會跳過。輸出 `context/<part>/<n>/<start>_<end>.csv`
-(欄位 `start, end, text`)。目前只作為參考，後面的步驟用的是 Phase3 的字幕。
+| 程式 | 模型 | 輸出 |
+|---|---|---|
+| `voice.py` | Whisper large-v3 (faster-whisper，轉成繁體) | `context/<part>/<n>/<start>_<end>.csv` |
+| `01voice.py` | [Breeze-ASR-25](https://huggingface.co/MediaTek-Research/Breeze-ASR-25) (針對台灣華語、中英夾雜微調；transformers) | `context_breeze/<part>/<n>/<start>_<end>.csv` |
+
+兩支程式的 part 都可輸入 `all`，已經轉過的片段會跳過；輸出欄位都是 `start, end, text`。目前只作為參考，後面的步驟用的是 Phase3 的字幕。
 
 ### Phase3：字幕 OCR (`Phase3-OCR/`)
 
