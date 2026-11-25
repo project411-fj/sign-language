@@ -4,17 +4,24 @@
 輸出 context_breeze/<part>/<n>/<start>_<end>.csv (欄位 start, end, text)；已經轉過的片段會跳過。
 輸入與輸出格式和 voice.py (faster-whisper large-v3) 相同，只是輸出到另一個資料夾，方便兩者比較。
 
-需要的套件：torch、transformers、av、opencc、tqdm、numpy (第一次執行會從 Hugging Face 下載模型，約 3 GB)
+時間戳記：Whisper 系列模型的句子時間是一句接一句排下去的 (上一句的 end = 下一句的 start)，
+句子之間的停頓會被算進前後句裡。所以這裡另外用 Silero VAD 找出「實際有人聲」的區間，
+把每一句的 start / end 對齊到最近的停頓邊緣 (詳見 refine_timestamps)，句子之間就會留下真正的停頓。
+
+需要的套件：torch、transformers、av、opencc、tqdm、numpy、silero-vad
+(第一次執行會從 Hugging Face 下載 Breeze 模型，約 3 GB；Silero VAD 的模型包含在 pip 套件裡)
 """
 from collections import deque
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 import csv
+import threading
 
 import av
 import numpy as np
 import torch
 from opencc import OpenCC
+from silero_vad import get_speech_timestamps, load_silero_vad
 from tqdm import tqdm
 from transformers import pipeline
 
@@ -25,6 +32,12 @@ SAMPLE_RATE = 16_000   # Whisper 系列模型固定吃 16 kHz 單聲道
 DECODE_WORKERS = 4     # 在背景解碼音訊的執行緒數；GPU 一次只轉一支，解碼和轉錄同時進行
 PREFETCH = 8           # 最多先解碼好幾支等著轉 (避免整個 part 的音訊同時放在記憶體裡)
 SKIP_EXISTING = True   # 已經有 .csv 的片段就跳過 (輸入 all 時不會把舊的 part 重做一次)；要重做就改成 False
+
+# ---- 用 VAD 修正時間戳記 ----
+VAD_REFINE = True          # False：直接輸出模型給的時間 (句子會首尾相接)
+VAD_MIN_SILENCE_MS = 150   # 至少停頓這麼久才算句子間的空白 (太小會把字和字之間的空隙也當成停頓)
+VAD_SPEECH_PAD_MS = 30     # 人聲區間前後各多留一點，避免切到字頭字尾
+SNAP_TOLERANCE = 0.6       # 句子邊界離停頓多近 (秒) 才對齊過去；模型的時間通常誤差在半秒內
 
 
 def parse_parts(answer, root):
@@ -46,6 +59,66 @@ def load_audio(video_file):
         for out in resampler.resample(None):               # 把 resampler 裡剩下的樣本也取出來
             chunks.append(out.to_ndarray().reshape(-1))
     return np.concatenate(chunks).astype(np.float32) if chunks else np.zeros(0, dtype=np.float32)
+
+
+_vad = threading.local()   # Silero VAD 有內部狀態，每個解碼執行緒各用一個
+
+
+def detect_speech(audio):
+    """用 Silero VAD 找出有人聲的區間，回傳 [(start 秒, end 秒), ...]。"""
+    if not hasattr(_vad, "model"):
+        _vad.model = load_silero_vad()
+    stamps = get_speech_timestamps(torch.from_numpy(audio), _vad.model, sampling_rate=SAMPLE_RATE,
+                                   min_silence_duration_ms=VAD_MIN_SILENCE_MS,
+                                   speech_pad_ms=VAD_SPEECH_PAD_MS)   # 回傳樣本數，比 return_seconds 精準
+    return [(t["start"] / SAMPLE_RATE, t["end"] / SAMPLE_RATE) for t in stamps]
+
+
+def load_audio_and_speech(video_file):
+    """背景執行緒：解碼音訊並做 VAD (都在 CPU 上，和 GPU 轉錄同時進行)。"""
+    audio = load_audio(video_file)
+    speech = detect_speech(audio) if VAD_REFINE and len(audio) else []
+    return audio, speech
+
+
+def refine_timestamps(rows, speech, duration):
+    """把模型給的句子時間對齊到 VAD 找到的停頓邊緣。
+
+    rows：[(start, end, text), ...]，speech：有人聲的區間。
+    停頓 (gap) = 沒有人聲的區間，包含開頭和結尾的靜音。
+    - start 落在停頓裡，或離某段停頓不到 SNAP_TOLERANCE 秒 → 改成那段停頓的結束 (人聲開始)
+    - end   落在停頓裡，或離某段停頓不到 SNAP_TOLERANCE 秒 → 改成那段停頓的開始 (人聲結束)
+    上一句的 end 和下一句的 start 原本是同一個點，會找到同一段停頓，於是被拆成停頓的兩端。
+    兩句之間沒有停頓 (連著講) 就維持原本的邊界。
+    整句都落在沒有人聲的地方 (可能是模型幻覺，或 VAD 沒偵測到) 就保留原本的時間。
+    """
+    if not speech:
+        return rows
+    gaps, previous = [], 0.0
+    for a, b in speech:
+        if a > previous:
+            gaps.append((previous, a))
+        previous = max(previous, b)
+    if duration > previous:
+        gaps.append((previous, duration))
+    if not gaps:
+        return rows
+
+    def nearest_gap(t):
+        distance, gap = min(((0.0 if a <= t <= b else min(abs(t - a), abs(t - b))), (a, b)) for a, b in gaps)
+        return gap if distance <= SNAP_TOLERANCE else None
+
+    refined, previous_end = [], 0.0
+    for start, end, text in rows:
+        gap = nearest_gap(start)
+        new_start = max(gap[1] if gap else start, previous_end)
+        gap = nearest_gap(end)
+        new_end = gap[0] if gap else end
+        if new_end - new_start < 0.05:                      # 對齊後沒剩下人聲：保留原本的時間
+            new_start, new_end = max(start, previous_end), max(end, previous_end)
+        refined.append((new_start, new_end, text))
+        previous_end = new_end
+    return refined
 
 
 def prefetched(executor, items, func, size):
@@ -96,13 +169,14 @@ def run_part(part, asr, cc, executor):
           + (f"{len(failed)} 支打不開，" if failed else "")
           + f"這次處理 {len(videos)} 支")
 
-    for video_file, audio, exc in tqdm(prefetched(executor, videos, load_audio, PREFETCH),
+    for video_file, loaded, exc in tqdm(prefetched(executor, videos, load_audio_and_speech, PREFETCH),
                                        total=len(videos), desc=f"part {part}", unit="支", disable=not videos):
         output = output_of(video_file)
         temp = output.with_name(output.stem + ".tmp.csv")   # 寫完才改名，中斷不會留下只轉一半的 .csv
         try:
             if exc is not None:
                 raise exc
+            audio, speech = loaded
             output.parent.mkdir(parents=True, exist_ok=True)
             duration = len(audio) / SAMPLE_RATE
             rows = []
@@ -117,11 +191,13 @@ def run_part(part, asr, cc, executor):
                     start, end = chunk["timestamp"]
                     start = start or 0.0
                     end = duration if end is None else end    # 最後一句有時沒有結束時間
-                    rows.append([f"{start:.3f}", f"{end:.3f}", text])
+                    rows.append((start, end, text))
+                if VAD_REFINE:
+                    rows = refine_timestamps(rows, speech, duration)
             with open(temp, "w", encoding="utf-8-sig", newline="") as file:
                 writer = csv.writer(file)
                 writer.writerow(["start", "end", "text"])
-                writer.writerows(rows)
+                writer.writerows([f"{start:.3f}", f"{end:.3f}", text] for start, end, text in rows)
             temp.replace(output)
         except Exception as exc:                            # 一支失敗不影響其他片段
             temp.unlink(missing_ok=True)

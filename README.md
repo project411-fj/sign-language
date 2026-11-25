@@ -103,6 +103,10 @@ Data Preparation/videos/
 
 兩支程式的 part 都可輸入 `all`，已經轉過的片段會跳過；輸出欄位都是 `start, end, text`。目前只作為參考，後面的步驟用的是 Phase3 的字幕。
 
+Whisper 系列模型給的句子時間是首尾相接的 (上一句的 end = 下一句的 start，停頓被算進句子裡)。`01voice.py` 另外用
+[Silero VAD](https://github.com/snakers4/silero-vad) (`pip install silero-vad`) 找出實際有人聲的區間，把每句的 start / end
+對齊到最近的停頓邊緣，句子之間就會留下真正的停頓；兩句連著講、中間沒有停頓時維持相接。設定在檔案開頭的 `VAD_*`、`SNAP_TOLERANCE`。
+
 ### Phase3：字幕 OCR (`Phase3-OCR/`)
 
 | 順序 | 程式 | 做什麼 | 輸出 (`OCR_output/`) |
