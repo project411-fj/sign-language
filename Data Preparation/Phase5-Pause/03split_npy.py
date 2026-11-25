@@ -22,7 +22,7 @@ FRAME_OFFSET = 0           # .txt 的 frame 編號 + FRAME_OFFSET = .npy 的列�
 MARGIN = 0.0               # 寬鬆切法的實驗已經做完 (跟原本沒有差異)，改回 0
 
 # 特徵版本：""  = 原本的 156 維 (02combined)
-#          "_face" = 加上臉部的 292 維 (02combined_face，由 Phase4 的 03keypoint_combine_face.py 產生)
+#          "_face" = 加上臉部的 292 維 (02combined_face，由 Phase4 的 03keypoint_combine.py 產生)
 #   會從 NPY_DIR + FEATURE_TAG 讀取，輸出到 03segments<FEATURE_TAG>、03labels<FEATURE_TAG>，不會覆蓋原本的結果
 #   切點一樣用 02pause 的結果，所以句子跟原本一一對應
 FEATURE_TAG = "_face"

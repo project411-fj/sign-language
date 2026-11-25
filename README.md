@@ -99,8 +99,7 @@ Data Preparation/videos/
 | 2 | `02keypoint_hand.py` | MediaPipe 雙手 21 點 (以手腕為原點、依手掌大小縮放) | `01hand/` |
 | 2 | `02keypoint_pose.py` | YOLO 身體 9 點：鼻、肩、肘、腕、髖 | `01pose/` |
 | 2 | `02keypoint_face.py` | MediaPipe 臉部：52 個表情分數、嘴唇 40 點、頭部轉向 | `01face/` |
-| 3 | `03keypoint_combine.py` | 合併手 + 身體 → **156 維** | `02combined/` |
-| 4 | `03keypoint_combine_face.py` | 再接上臉部 → **292 維** | `02combined_face/` |
+| 3 | `03keypoint_combine.py` | 合併手 + 身體 → **156 維**，再接上臉部 → **292 維** (`WITH_FACE = False` 時只輸出 156 維) | `02combined/`、`02combined_face/` |
 
 每一格的特徵：
 

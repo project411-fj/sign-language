@@ -2,7 +2,7 @@
 
     02combined       原本的 156 維 (手 + pose)，臉部流程的起點
     01face           02keypoint_face.py 的輸出
-    02combined_face  03keypoint_combine_face.py 的輸出
+    02combined_face  03keypoint_combine.py 的輸出 (WITH_FACE = True)
     03segments_face  03split_npy.py (FEATURE_TAG = "_face") 切出來的分段
     03segments       原本的分段，用來對照 03segments_face 應該要有幾個
 """
@@ -30,7 +30,7 @@ for part in parts:
     if face < base:
         todo = f"02keypoint_face.py (PART = \"{part}\")"
     elif combined < base:
-        todo = f"03keypoint_combine_face.py (PART = \"{part}\")"
+        todo = f"03keypoint_combine.py (PART = \"{part}\"，WITH_FACE = True)"
     elif seg_face < seg:
         todo = "03split_npy.py (FEATURE_TAG = \"_face\"，part 輸入 all)"
     else:
@@ -38,7 +38,7 @@ for part in parts:
     print(f"{part:<6}" + "".join(f"{n:>17}" for n in counts) + f"   {todo}")
 
 logs = sorted(p.name for folder in (ROOT / "Phase4-Keypoint", ROOT / "Phase5-Pause")
-              for p in folder.glob("failed_*face*.txt"))
+              for pattern in ("failed_*face*.txt", "failed_combine_part_*.txt") for p in folder.glob(pattern))
 if logs:
     print("\n有失敗紀錄 (裡面列的檔案沒有處理成功)：")
     for name in logs:
