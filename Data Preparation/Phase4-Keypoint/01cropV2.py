@@ -10,11 +10,10 @@ from tqdm import tqdm
 from ultralytics import YOLO
 
 
-PART = "12"  # 要處理的 part：videos/part_videos/<PART>/
-
-INPUT_DIR = Path("Data Preparation/videos/part_videos") / PART
-OUTPUT_DIR = Path("Data Preparation/videos/keypoint_videos") / PART
-FAILED_LOG = Path(__file__).parent / f"failed_part_{PART}.txt"
+# 要處理的 part 在執行時輸入：「3」、「1,2,5」或「all」(part_videos 底下所有 part)
+INPUT_ROOT = Path("Data Preparation/videos/part_videos")       # part_videos/<part>/<n>/<start>_<end>.mp4
+OUTPUT_ROOT = Path("Data Preparation/videos/keypoint_videos")  # keypoint_videos/<part>/<n>/<start>_<end>_upper_body.mp4
+SKIP_EXISTING = True   # 已經裁切過的影片就跳過 (輸入 all 時不會把舊的 part 全部重做一次)；要重做就改成 False
 
 PERSON_MODEL = r"Data Preparation\models\Yolo_models\person.pt"
 POSE_MODEL = r"Data Preparation\models\Yolo_models\yolo26n-pose.pt"
@@ -179,40 +178,66 @@ def analyze_video(video, person_model, pose_model, bar):
 
 
 def crop_video(video, output, roi):
+    # 先寫到暫存檔，成功後才改成正式檔名：中途中斷不會留下只寫一半的影片，
+    # 下次執行 (SKIP_EXISTING) 也不會把它誤認成已經裁切完成
     x1, y1, size = roi
+    temp = output.with_name(output.stem + ".tmp.mp4")
     cmd = [
         FFMPEG, "-y", "-loglevel", "error",
         "-i", str(video),
         "-vf", f"crop={size}:{size}:{x1}:{y1},scale={OUTPUT_SIZE}:{OUTPUT_SIZE}:flags=area",
         "-an", "-c:v", VIDEO_CODEC, *VIDEO_CODEC_ARGS, "-pix_fmt", "yuv420p",
-        str(output),
+        str(temp),
     ]
     result = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace")
     if result.returncode != 0:
+        temp.unlink(missing_ok=True)
         raise RuntimeError(result.stderr.strip())
+    temp.replace(output)
 
 
-def main():
-    person_model = YOLO(PERSON_MODEL)
-    pose_model = YOLO(POSE_MODEL)
+def parse_parts(answer):
+    """「3」→ ["3"]；「1,2,5」→ ["1", "2", "5"]；「all」→ part_videos 底下所有 part (依數字排序)。"""
+    answer = answer.strip()
+    if answer.lower() == "all":
+        return sorted((p.name for p in INPUT_ROOT.iterdir() if p.is_dir()), key=lambda x: (len(x), x))
+    return [p.strip() for p in answer.split(",") if p.strip()]
+
+
+def run_part(part, person_model, pose_model):
+    input_dir = INPUT_ROOT / part
+    output_dir = OUTPUT_ROOT / part
+    failed_log = Path(__file__).parent / f"failed_part_{part}.txt"
+    if not input_dir.is_dir():
+        tqdm.write(f"part {part}：找不到 {input_dir}，跳過")
+        return
+
+    def output_of(video):
+        return output_dir / video.relative_to(input_dir).parent / f"{video.stem}_upper_body.mp4"
 
     # 有失敗紀錄就只重跑紀錄裡的影片，否則跑整個 part
-    if FAILED_LOG.exists():
-        videos = [INPUT_DIR / line for line in FAILED_LOG.read_text(encoding="utf-8").splitlines() if line]
-        tqdm.write(f"讀取失敗紀錄 {FAILED_LOG.name}，重跑 {len(videos)} 支影片")
+    if failed_log.exists():
+        videos = [input_dir / line for line in failed_log.read_text(encoding="utf-8").splitlines() if line]
+        tqdm.write(f"part {part}：讀取失敗紀錄 {failed_log.name}，重跑 {len(videos)} 支影片")
     else:
-        videos = sorted(INPUT_DIR.glob("*/*.mp4"))
-        tqdm.write(f"處理 part {PART}，共 {len(videos)} 支影片")
+        videos = sorted(input_dir.glob("*/*.mp4"))
+        done = [v for v in videos if SKIP_EXISTING and output_of(v).exists()]
+        videos = [v for v in videos if v not in done]
+        tqdm.write(f"part {part}：共 {len(videos) + len(done)} 支影片，"
+                   + (f"{len(done)} 支已經裁切過 (跳過)，" if done else "") + f"這次處理 {len(videos)} 支")
+    if not videos:
+        failed_log.unlink(missing_ok=True)
+        return
     failed = []   # (影片, 錯誤訊息)
     futures = []  # (影片, 裁切 future)
 
     # 主進度條：完成的影片數（分析失敗、略過、裁切完成都算完成）
     # 副進度條：目前分析中影片的幀數
-    with tqdm(total=len(videos), desc="全部影片", unit="video", position=0) as main_bar, \
+    with tqdm(total=len(videos), desc=f"part {part}", unit="video", position=0) as main_bar, \
             tqdm(unit="frame", position=1, leave=False) as sub_bar, \
             ThreadPoolExecutor(MAX_WORKERS) as pool:
         for video in videos:
-            relative = video.relative_to(INPUT_DIR)
+            relative = video.relative_to(input_dir)
             sub_bar.set_description_str(relative.as_posix())
             try:
                 frame_count, ratios, roi = analyze_video(video, person_model, pose_model, sub_bar)
@@ -231,7 +256,7 @@ def main():
                 update_progress(main_bar, 1)
                 continue
 
-            output = OUTPUT_DIR / relative.parent / f"{video.stem}_upper_body.mp4"
+            output = output_of(video)
             output.parent.mkdir(parents=True, exist_ok=True)
             future = pool.submit(crop_video, video, output, roi)
             future.add_done_callback(lambda _: update_progress(main_bar, 1))  # 裁切完成才算這支影片完成
@@ -243,20 +268,30 @@ def main():
         if future.exception():
             failed.append((relative, f"裁切失敗：{future.exception()}"))
 
-    tqdm.write("所有影片處理完成")
+    tqdm.write(f"part {part}：處理完成")
 
     # 更新失敗紀錄：有失敗就覆寫，全部成功就刪除
     if failed:
-        FAILED_LOG.write_text(
+        failed_log.write_text(
             "".join(f"{relative.as_posix()}\n" for relative, _ in failed), encoding="utf-8"
         )
-    else:
-        FAILED_LOG.unlink(missing_ok=True)
-
-    if failed:
-        tqdm.write(f"\n發生錯誤的影片（{len(failed)} 支）：")
+        tqdm.write(f"\npart {part} 發生錯誤的影片（{len(failed)} 支），已記錄到 {failed_log.name}：")
         for relative, error in failed:
             tqdm.write(f"  {relative.as_posix()}：{error}")
+    else:
+        failed_log.unlink(missing_ok=True)
+
+
+def main():
+    parts = parse_parts(input("part (例如 3、1,2,5 或 all): "))
+    if not parts:
+        print("沒有輸入 part")
+        return
+    print(f"要處理的 part：{'、'.join(parts)}")
+    person_model = YOLO(PERSON_MODEL)      # 模型只載入一次，所有 part 共用
+    pose_model = YOLO(POSE_MODEL)
+    for part in parts:
+        run_part(part, person_model, pose_model)
 
 
 if __name__ == "__main__":
