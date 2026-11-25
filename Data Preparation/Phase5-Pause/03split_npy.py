@@ -1,4 +1,3 @@
-import csv
 import re
 from pathlib import Path
 
@@ -6,34 +5,19 @@ import numpy as np
 from tqdm import tqdm
 
 # ================================================================ 路徑設定 (後面會再接 /<part>)
-NPY_DIR = r"Data Preparation\Phase4-Keypoint\Keypoint_output\02combined"   # 完整的 .npy
+# 讀含臉部的 292 維 (Phase4 的 03keypoint_combine.py 在 WITH_FACE = True 時產生)
+NPY_DIR = r"Data Preparation\Phase4-Keypoint\Keypoint_output\02combined_face"  # 完整的 .npy
 TXT_DIR = r"Data Preparation\Phase5-Pause\output\02pause"                  # find_sign_pauses.py 的 OUT_DIR
-SEG_DIR = r"Data Preparation\Phase5-Pause\output\03segments"               # 輸出分段 .npy
+SEG_DIR = r"Data Preparation\Phase5-Pause\output\03segments"               # 輸出分段 .npy (292 維)
 LABEL_DIR = r"Data Preparation\Phase5-Pause\output\03labels"               # 輸出「分段檔名: 文字」的 .txt
-FPS_CSV = r"Data Preparation\Phase5-Pause\output\01fps"                    # 裡面是 fps_<part>.csv (MARGIN > 0 才會用到)
+FEAT_DIM = 292                 # 手 128 + 身體 28 + 臉 136
 
 # ================================================================ 參數設定
 TXT_SUFFIX = "_frames"     # 000600_001507.npy -> 000600_001507_frames.txt
 FRAME_OFFSET = 0           # .txt 的 frame 編號 + FRAME_OFFSET = .npy 的列索引 (跟 find_sign_pauses.py 一樣)
 
-# 實驗 3：每句前後各多切幾秒 (寬鬆切法)，0 = 照原本的切點切
-#   MARGIN > 0 時會輸出到 03segments_m<MARGIN>、03labels_m<MARGIN>，不會覆蓋原本的結果
-#   相鄰句子會互相重疊，這是刻意的：目的是確保每句的手語一定完整包含在片段裡
-MARGIN = 0.0               # 寬鬆切法的實驗已經做完 (跟原本沒有差異)，改回 0
-
-# 特徵版本：""  = 原本的 156 維 (02combined)
-#          "_face" = 加上臉部的 292 維 (02combined_face，由 Phase4 的 03keypoint_combine.py 產生)
-#   會從 NPY_DIR + FEATURE_TAG 讀取，輸出到 03segments<FEATURE_TAG>、03labels<FEATURE_TAG>，不會覆蓋原本的結果
-#   切點一樣用 02pause 的結果，所以句子跟原本一一對應
-FEATURE_TAG = "_face"
-
 # .txt 每行：「34-204: 字幕文字」
 LINE_RE = re.compile(r"^\s*(\d+)\s*[~～\-–—]\s*(\d+)\s*[:：]?\s*(.*?)\s*$")
-
-
-def output_tag():
-    """輸出資料夾的後綴，例如 ""、"_face"、"_m0.5"、"_face_m0.5"。"""
-    return FEATURE_TAG + (f"_m{MARGIN:g}" if MARGIN > 0 else "")
 
 
 def read_ranges(path):
@@ -47,18 +31,11 @@ def read_ranges(path):
     return ranges
 
 
-def load_fps_table(csv_path):
-    """{子資料夾/檔名: fps}，1/000600_001507_upper_body.mp4 -> 1/000600_001507"""
-    with csv_path.open(encoding="utf-8-sig") as f:
-        return {
-            Path(row["filename"]).with_suffix("").as_posix().removesuffix("_upper_body"): float(row["fps"])
-            for row in csv.DictReader(f)
-        }
-
-
-def split_file(npy_path, txt_path, seg_dir, label_path, pad=0):
-    """切一個 .npy，回傳切出的段數。pad = 每句前後多切幾個 frame。"""
+def split_file(npy_path, txt_path, seg_dir, label_path):
+    """切一個 .npy，回傳切出的段數。"""
     arr = np.load(npy_path)
+    if arr.ndim != 2 or arr.shape[1] != FEAT_DIM:
+        raise ValueError(f"應該是 {FEAT_DIM} 維 (含臉部)，收到 {arr.shape}；請用 03keypoint_combine.py (WITH_FACE = True) 重新產生")
     T = len(arr)
     ranges = read_ranges(txt_path)
     digits = max(2, len(str(len(ranges) - 1)))      # 超過 100 句時自動變成 3 位數
@@ -73,7 +50,7 @@ def split_file(npy_path, txt_path, seg_dir, label_path, pad=0):
         if s > T - 1:                               # 整句都在 .npy 之外
             continue
         name = f"{npy_path.stem}_s{i:0{digits}d}"
-        np.save(seg_dir / f"{name}.npy", arr[max(s - pad, 0): min(e + pad, T - 1) + 1])
+        np.save(seg_dir / f"{name}.npy", arr[max(s, 0): min(e, T - 1) + 1])
         lines.append(f"{name}: {text}\n")
 
     label_path.parent.mkdir(parents=True, exist_ok=True)
@@ -90,11 +67,9 @@ def parse_parts(answer, npy_root):
 
 
 def run_part(part):
-    tag = output_tag()
-    npy_dir, txt_dir = Path(NPY_DIR + FEATURE_TAG) / part, Path(TXT_DIR) / part
-    seg_dir, label_dir = Path(SEG_DIR + tag) / part, Path(LABEL_DIR + tag) / part
-    failed_log = Path(__file__).parent / f"failed_segments{tag}_part_{part}.txt"
-    fps_table = load_fps_table(Path(FPS_CSV) / f"fps_{part}.csv") if MARGIN > 0 else {}
+    npy_dir, txt_dir = Path(NPY_DIR) / part, Path(TXT_DIR) / part
+    seg_dir, label_dir = Path(SEG_DIR) / part, Path(LABEL_DIR) / part
+    failed_log = Path(__file__).parent / f"failed_segments_part_{part}.txt"
 
     # 有失敗紀錄就只跑紀錄裡的檔案，否則跑整個 part (名稱如 1/000600_001507)
     if failed_log.exists():
@@ -107,19 +82,15 @@ def run_part(part):
         names = [p.relative_to(npy_dir).with_suffix("").as_posix() for p in files]
 
     failed = []
-    for name in tqdm(names, desc=f"segments part {part}{tag}", unit="file"):
+    for name in tqdm(names, desc=f"segments part {part}", unit="file"):
         rel = Path(name)
         try:
-            pad = round(MARGIN * fps_table[name]) if MARGIN > 0 else 0
             split_file(
                 npy_dir / f"{name}.npy",
                 txt_dir / rel.parent / f"{rel.name}{TXT_SUFFIX}.txt",
                 seg_dir / rel.parent,
                 label_dir / f"{name}.txt",
-                pad,
             )
-        except KeyError:
-            failed.append((name, f"fps_{part}.csv 裡找不到這支影片的 fps"))
         except Exception as exc:
             failed.append((name, f"{type(exc).__name__}: {exc}"))
 
@@ -134,10 +105,8 @@ def run_part(part):
 
 
 def main():
-    if MARGIN > 0:
-        print(f"寬鬆切法：每句前後各多切 {MARGIN:g} 秒")
-    print(f"讀取 {Path(NPY_DIR + FEATURE_TAG).name}，輸出到 {Path(SEG_DIR + output_tag()).name}、{Path(LABEL_DIR + output_tag()).name}")
-    for part in parse_parts(input("part (例如 3、1,2,5 或 all): "), Path(NPY_DIR + FEATURE_TAG)):
+    print(f"讀取 {Path(NPY_DIR).name} ({FEAT_DIM} 維)，輸出到 {Path(SEG_DIR).name}、{Path(LABEL_DIR).name}")
+    for part in parse_parts(input("part (例如 3、1,2,5 或 all): "), Path(NPY_DIR)):
         run_part(part)
 
 

@@ -145,16 +145,16 @@ Data Preparation/videos/
 |---|---|---|---|
 | 1 | `01get_fps.py` | 讀每個片段的 fps | `01fps/fps_<part>.csv` |
 | 2 | `02find_sign_pauses.py` | 依動作能量找停頓點，調整每句的起訖格 | `02pause/<part>/`、`02check_plots/` |
-| 3 | `03split_npy.py` | 依切點把關鍵點切成一句一個 `.npy` | `03segments<TAG>/`、`03labels<TAG>/` |
+| 3 | `03split_npy.py` | 依切點把含臉部的關鍵點 (`02combined_face`，292 維) 切成一句一個 `.npy` | `03segments/`、`03labels/` |
 
-`03split_npy.py` 的設定：`FEATURE_TAG = "_face"` 讀 `02combined_face` (292 維)，輸出到 `03segments_face/`；
-`""` 則是 156 維的 `03segments/`。**目前的訓練使用 `03segments_face`**。
+`03segments/` 裡每個 `.npy` 都是 292 維；`03labels/` 是對應的字幕 (`分段檔名: 文字`)。
+需要先用 Phase4 的 `03keypoint_combine.py` (`WITH_FACE = True`) 產生 `02combined_face`。
 
 ### 小工具 (`tools/`)
 
 | 程式 | 用途 |
 |---|---|
-| `face_pipeline_check.py` | 列出每個 part 在臉部流程各步驟的檔案數，告訴你下一步要跑什麼 |
+| `face_pipeline_check.py` | 列出每個 part 在關鍵點與切句各步驟的檔案數、`03segments` 的維度，告訴你下一步要跑什麼 |
 | `face_check.py` | 檢查臉偵測率、嘴巴與各部位的動作量 |
 | `npy_check.py` | 檢查手、身體的缺漏比例 |
 | `calculation.py`、`frame_count.py`、`video_sort.py` | 影片總長度、OCR 行數統計、影片重新命名 |
@@ -212,7 +212,7 @@ Data Preparation/videos/
 命令列 (在 `Data Training V2/` 執行)：
 
 ```bash
-python keyword_predict.py "..\Data Preparation\Phase5-Pause\output\03segments_face\2\10\000641_001738_s00.npy"
+python keyword_predict.py "..\Data Preparation\Phase5-Pause\output\03segments\2\10\000641_001738_s00.npy"
 ```
 
 ```text
@@ -232,7 +232,7 @@ predictor.predict("某句.npy")                    # 只回傳有把握的詞：
 predictor.predict_with_candidates("某句.npy")    # (有把握的詞, 其他可能的詞)
 ```
 
-輸入可以是 292 維 (`03segments_face`) 或 156 維 (`03segments`) 的 `.npy`。
+輸入是 `03segments` 裡的 `.npy` (292 維)；只有手與身體的 156 維 `.npy` 也可以。
 
 ---
 

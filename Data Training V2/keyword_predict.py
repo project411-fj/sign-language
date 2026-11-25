@@ -12,7 +12,7 @@ notebook / 其他程式：
     predictor.predict_with_candidates("某句.npy")
         # → 有把握的詞 [("天氣", 0.83)]，其他可能 [("氣象", 0.32), ("北部", 0.28), ...]，兩者合計最多 SHOW_WORDS 個
 
-輸入可以是 Phase5 切出來的 156 維 (03segments) 或 292 維 (03segments_face) .npy；
+輸入是 Phase5 切出來的 03segments/ 裡的 .npy (292 維，含臉部)；只有手與身體的 156 維 .npy 也可以；
 模型只用手和 pose (臉部特徵在訓練時就遮掉了)，所以兩種都可以。
 """
 import json
@@ -122,7 +122,7 @@ class KeywordPredictor:
             raise ValueError(f"輸入應該是 (格數, 156) 或 (格數, {self.cfg['feat_dim']})，收到 {arr.shape}")
         if arr.shape[1] == 156:                          # 沒有臉部特徵 → 補 0 (等於「沒偵測到臉」)
             if self.cfg["use_face"]:
-                raise ValueError("這個模型有用臉部特徵，輸入需要 292 維 (03segments_face)")
+                raise ValueError("這個模型有用臉部特徵，輸入需要 292 維 (03segments)")
             arr = np.concatenate([arr, np.zeros((len(arr), self.cfg["feat_dim"] - 156), np.float32)], axis=1)
         raw = arr[::self.cfg["frame_stride"]]
         x = np.where(self.valid_mask(raw), (raw - self.mean) / self.std, 0.0).astype(np.float32)
