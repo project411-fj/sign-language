@@ -18,15 +18,13 @@ from ultralytics import YOLO
 # 要處理的影片：直接列出 .mp4 的路徑 (通常跟 01crop_text_13~.py 的 VIDEOS 相同)
 #   相對路徑從專案根目錄 (sign-language/) 算起，也可以寫完整路徑
 VIDEOS = [
-    r"Data Preparation\videos\source_videos\13\3.mp4",
-    r"Data Preparation\videos\source_videos\13\6.mp4",
-    r"Data Preparation\videos\source_videos\13\4.mp4",
-]
+    r"Data Preparation\videos\source_videos\13\3.mp4"
+    ]
 
 BASE = Path(__file__).resolve().parent          # Data Preparation/Phase1-filter/
 PROJECT = BASE.parents[1]                       # sign-language/
 FRAMES_DIR = BASE / "01frames_crop"             # 01crop_text_13~.py 的輸出
-WEIGHTS = BASE / "best~12.pt"                   # 用 02style_train 訓練的新模型：BASE / "02style_train" / "best.pt"
+WEIGHTS = BASE / "best13-3.pt"                   # 用 02style_train 訓練的新模型：BASE / "02style_train" / "best.pt"
 OUTPUT = BASE / "02intervals"
 
 CROP_SIZE = 320
