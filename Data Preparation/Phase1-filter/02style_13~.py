@@ -5,7 +5,7 @@
     → 判斷每一格是不是目標節目的樣式 → 把連續的目標畫面合併成區間
     → 寫到 02intervals/<part>/<n>_frames.txt (每行「起始格 結束格」，03clipV2.py 會讀這個)
 判斷方式 (粗掃 + 細掃) 跟 02style.py 完全相同。
-每支影片用自己的模型：source_videos/<part>/<n>.mp4 → Phase1-filter/best<part>-<n>.pt (例如 13/3.mp4 → best13-3.pt)。
+每支影片用自己的模型：source_videos/<part>/<n>.mp4 → Phase1-filter/style_model/best<part>-<n>.pt (例如 13/3.mp4 → style_model/best13-3.pt)。
 """
 import os
 from concurrent.futures import ThreadPoolExecutor
@@ -26,6 +26,7 @@ VIDEOS = [
 BASE = Path(__file__).resolve().parent          # Data Preparation/Phase1-filter/
 PROJECT = BASE.parents[1]                       # sign-language/
 FRAMES_DIR = BASE / "01frames_crop"             # 01crop_text_13~.py 的輸出
+MODEL_DIR = BASE / "style_model"                # 每支影片的字幕條樣式模型 best<part>-<n>.pt
 OUTPUT = BASE / "02intervals"
 
 CROP_SIZE = 320
@@ -66,8 +67,8 @@ def classify(paths, phase):
 
 
 def weights_of(video):
-    """source_videos/13/3.mp4 → BASE / "best13-3.pt" (每支影片各自的字幕條樣式模型)。"""
-    return BASE / f"best{video.parent.name}-{video.stem}.pt"
+    """source_videos/13/3.mp4 → style_model/best13-3.pt (每支影片各自的字幕條樣式模型)。"""
+    return MODEL_DIR / f"best{video.parent.name}-{video.stem}.pt"
 
 
 def resolve(p):
