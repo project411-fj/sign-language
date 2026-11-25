@@ -122,7 +122,7 @@ Data Preparation/videos/
 | 2 | `02keypoint_hand.py` | MediaPipe 雙手 21 點 (以手腕為原點、依手掌大小縮放) | `01hand/` |
 | 2 | `02keypoint_pose.py` | YOLO 身體 9 點：鼻、肩、肘、腕、髖 | `01pose/` |
 | 2 | `02keypoint_face.py` | MediaPipe 臉部：52 個表情分數、嘴唇 40 點、頭部轉向 | `01face/` |
-| 3 | `03keypoint_combine.py` | 合併手 + 身體 → **156 維**，再接上臉部 → **292 維** (`WITH_FACE = False` 時只輸出 156 維) | `02combined/`、`02combined_face/` |
+| 3 | `03keypoint_combine.py` | 合併手 + 身體 + 臉 → **292 維** | `02combined/` |
 
 每一格的特徵：
 
@@ -145,16 +145,16 @@ Data Preparation/videos/
 |---|---|---|---|
 | 1 | `01get_fps.py` | 讀每個片段的 fps | `01fps/fps_<part>.csv` |
 | 2 | `02find_sign_pauses.py` | 依動作能量找停頓點，調整每句的起訖格 | `02pause/<part>/`、`02check_plots/` |
-| 3 | `03split_npy.py` | 依切點把含臉部的關鍵點 (`02combined_face`，292 維) 切成一句一個 `.npy` | `03segments/`、`03labels/` |
+| 3 | `03split_npy.py` | 依切點把關鍵點 (`02combined`，292 維) 切成一句一個 `.npy` | `03segments/`、`03labels/` |
 
 `03segments/` 裡每個 `.npy` 都是 292 維；`03labels/` 是對應的字幕 (`分段檔名: 文字`)。
-需要先用 Phase4 的 `03keypoint_combine.py` (`WITH_FACE = True`) 產生 `02combined_face`。
+需要先用 Phase4 的 `03keypoint_combine.py` 產生 292 維的 `02combined`。
 
 ### 小工具 (`tools/`)
 
 | 程式 | 用途 |
 |---|---|
-| `face_pipeline_check.py` | 列出每個 part 在關鍵點與切句各步驟的檔案數、`03segments` 的維度，告訴你下一步要跑什麼 |
+| `face_pipeline_check.py` | 列出每個 part 在關鍵點與切句各步驟的檔案數、`02combined` 與 `03segments` 的維度，告訴你下一步要跑什麼 |
 | `face_check.py` | 檢查臉偵測率、嘴巴與各部位的動作量 |
 | `npy_check.py` | 檢查手、身體的缺漏比例 |
 | `calculation.py`、`frame_count.py`、`video_sort.py` | 影片總長度、OCR 行數統計、影片重新命名 |

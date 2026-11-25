@@ -5,8 +5,8 @@ import numpy as np
 from tqdm import tqdm
 
 # ================================================================ 路徑設定 (後面會再接 /<part>)
-# 讀含臉部的 292 維 (Phase4 的 03keypoint_combine.py 在 WITH_FACE = True 時產生)
-NPY_DIR = r"Data Preparation\Phase4-Keypoint\Keypoint_output\02combined_face"  # 完整的 .npy
+# 讀含臉部的 292 維 (Phase4 的 03keypoint_combine.py 的輸出)
+NPY_DIR = r"Data Preparation\Phase4-Keypoint\Keypoint_output\02combined"   # 完整的 .npy
 TXT_DIR = r"Data Preparation\Phase5-Pause\output\02pause"                  # find_sign_pauses.py 的 OUT_DIR
 SEG_DIR = r"Data Preparation\Phase5-Pause\output\03segments"               # 輸出分段 .npy (292 維)
 LABEL_DIR = r"Data Preparation\Phase5-Pause\output\03labels"               # 輸出「分段檔名: 文字」的 .txt
@@ -35,7 +35,7 @@ def split_file(npy_path, txt_path, seg_dir, label_path):
     """切一個 .npy，回傳切出的段數。"""
     arr = np.load(npy_path)
     if arr.ndim != 2 or arr.shape[1] != FEAT_DIM:
-        raise ValueError(f"應該是 {FEAT_DIM} 維 (含臉部)，收到 {arr.shape}；請用 03keypoint_combine.py (WITH_FACE = True) 重新產生")
+        raise ValueError(f"應該是 {FEAT_DIM} 維 (含臉部)，收到 {arr.shape}；請用 Phase4 的 03keypoint_combine.py 重新產生")
     T = len(arr)
     ranges = read_ranges(txt_path)
     digits = max(2, len(str(len(ranges) - 1)))      # 超過 100 句時自動變成 3 位數
