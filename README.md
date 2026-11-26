@@ -157,12 +157,12 @@ Whisper 系列模型給的句子時間是首尾相接的 (上一句的 end = 下
 ### Phase5：依手語停頓切句 (`Phase5-Pause/`)
 
 字幕、語音出現的時間通常比手語早一點，所以不直接用它們的時間切，而是在句子邊界附近找手語員動作停下來的地方。
-依切句錨點的來源分成兩版，演算法相同，輸出分開放：
+依切句錨點的來源分成兩版，演算法相同。兩版都輸出到同一個 `output/` (`Data Training V2` 只讀 `output/03labels`、`output/03segments`)；一個 part 只會走 OCR 或 STT 其中一條，所以不會互相蓋掉。STT 版只處理 STT 路徑的 part (`part_videos` 裡有範圍資料夾的 part)，輸入 `all` 也不會動到 OCR 的 part：
 
 | 版本 | 錨點與標籤來源 | 程式 | 輸出 |
 |---|---|---|---|
 | `OCR/` | Phase3 的字幕 (`06GeminiOCR_merged`) | `01get_fps.py` → `02find_sign_pauses.py` → `03split_npy.py` | `output/` |
-| `STT/` | Phase2 的語音轉文字 (`context_breeze`，`01voice.py` 的輸出) | `01stt_frames.py` → `02find_sign_pauses.py` → `03split_npy.py` | `output_STT/` |
+| `STT/` | Phase2 的語音轉文字 (`context_breeze`，`01voice.py` 的輸出) | `01stt_frames.py` → `02find_sign_pauses.py` → `03split_npy.py` | `output/` |
 
 OCR 版：
 
@@ -174,7 +174,7 @@ OCR 版：
 
 STT 版 (三支都可輸入 `3`、`1,2,5` 或 `all`)：
 
-| 順序 | 程式 | 做什麼 | 輸出 (`output_STT/`) |
+| 順序 | 程式 | 做什麼 | 輸出 (`output/`) |
 |---|---|---|---|
 | 1 | `STT/01stt_frames.py` | 讀 fps，把語音句子的秒數換成格數 (格式和 OCR 字幕一樣：`起始格-結束格: 文字`) | `01fps/`、`01frames/<part>/` |
 | 2 | `STT/02find_sign_pauses.py` | 同 OCR 版，錨點改用語音句子的時間；沒有語音句子的片段會跳過 | `02pause/<part>/`、`02check_plots/` |

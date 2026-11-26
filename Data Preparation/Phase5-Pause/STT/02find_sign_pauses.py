@@ -1,8 +1,8 @@
 """STT 版第 2 步：在語音句子的邊界附近找手語員動作停下來的地方，調整每句的起訖格。
 
 和 OCR/02find_sign_pauses.py 的演算法完全一樣，只是錨點改用 01stt_frames.py 轉出來的語音句子時間，
-輸入、輸出都在 output_STT/ 底下，不會蓋掉 OCR 版的結果。
-執行後輸入 part：「3」、「1,2,5」或「all」(output_STT/01frames 底下所有 part)。
+輸出和 OCR 版放在同一個 output/ (Data Training V2 只讀 output/)；一個 part 只會走 OCR 或 STT 其中一條，不會互相蓋掉。
+執行後輸入 part：「3」、「1,2,5」或「all」(output/01frames 底下所有 part，也就是跑過 01stt_frames.py 的 part)。
 """
 import csv
 import re
@@ -19,10 +19,10 @@ warnings.filterwarnings("ignore")   # 執行時只顯示進度條
 
 # ================================================================ 路徑設定 (後面會再接 /<part>)
 NPY_DIR = "Data Preparation/Phase4-Keypoint/Keypoint_output/02combined"
-TXT_DIR = "Data Preparation/Phase5-Pause/output_STT/01frames"       # 01stt_frames.py 的輸出
-OUT_DIR = "Data Preparation/Phase5-Pause/output_STT/02pause"
-FPS_CSV = "Data Preparation/Phase5-Pause/output_STT/01fps"          # 裡面是 fps_<part>.csv (01stt_frames.py 寫的)
-PLOT_DIR = "Data Preparation/Phase5-Pause/output_STT/02check_plots"  # 不想畫圖就改成 None
+TXT_DIR = "Data Preparation/Phase5-Pause/output/01frames"           # 01stt_frames.py 的輸出
+OUT_DIR = "Data Preparation/Phase5-Pause/output/02pause"
+FPS_CSV = "Data Preparation/Phase5-Pause/output/01fps"              # 裡面是 fps_<part>.csv (01stt_frames.py 寫的)
+PLOT_DIR = "Data Preparation/Phase5-Pause/output/02check_plots"  # 不想畫圖就改成 None
 
 # ================================================================ 參數設定
 TXT_SUFFIX = "_frames"     # 000600_001507.npy -> 000600_001507_frames.txt

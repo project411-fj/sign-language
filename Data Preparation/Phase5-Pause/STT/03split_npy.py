@@ -1,7 +1,7 @@
 """STT 版第 3 步：依 02find_sign_pauses.py 找到的切點，把關鍵點 (02combined，292 維) 切成一句一個 .npy。
 
-和 OCR/03split_npy.py 一樣，只是輸入、輸出都在 output_STT/ 底下，標籤是語音轉出來的文字。
-執行後輸入 part：「3」、「1,2,5」或「all」(02combined 底下所有 part)。
+和 OCR/03split_npy.py 一樣，輸出也在 output/ (Data Training V2 只讀 output/)，標籤是語音轉出來的文字。
+執行後輸入 part：「3」、「1,2,5」或「all」(output/01frames 底下的 part，也就是 STT 路徑的 part；OCR 的 part 請用 OCR/03split_npy.py)。
 """
 import re
 from pathlib import Path
@@ -12,9 +12,10 @@ from tqdm import tqdm
 # ================================================================ 路徑設定 (後面會再接 /<part>)
 # 讀含臉部的 292 維 (Phase4 的 03keypoint_combine.py 的輸出)
 NPY_DIR = "Data Preparation/Phase4-Keypoint/Keypoint_output/02combined"   # 完整的 .npy
-TXT_DIR = "Data Preparation/Phase5-Pause/output_STT/02pause"              # STT/02find_sign_pauses.py 的 OUT_DIR
-SEG_DIR = "Data Preparation/Phase5-Pause/output_STT/03segments"           # 輸出分段 .npy (292 維)
-LABEL_DIR = "Data Preparation/Phase5-Pause/output_STT/03labels"           # 輸出「分段檔名: 語音文字」的 .txt
+TXT_DIR = "Data Preparation/Phase5-Pause/output/02pause"                  # STT/02find_sign_pauses.py 的 OUT_DIR
+SEG_DIR = "Data Preparation/Phase5-Pause/output/03segments"               # 輸出分段 .npy (292 維)
+LABEL_DIR = "Data Preparation/Phase5-Pause/output/03labels"               # 輸出「分段檔名: 語音文字」的 .txt
+STT_FRAMES_DIR = "Data Preparation/Phase5-Pause/output/01frames"          # 01stt_frames.py 的輸出：all 只處理這裡有的 part
 FEAT_DIM = 292                 # 手 128 + 身體 28 + 臉 136
 
 # ================================================================ 參數設定
@@ -118,7 +119,7 @@ def run_part(part):
 
 def main():
     print(f"讀取 {Path(NPY_DIR).name} ({FEAT_DIM} 維)，輸出到 {Path(SEG_DIR).name}、{Path(LABEL_DIR).name}")
-    for part in parse_parts(input("part (例如 3、1,2,5 或 all): "), Path(NPY_DIR)):
+    for part in parse_parts(input("part (例如 3、1,2,5 或 all): "), Path(STT_FRAMES_DIR)):
         run_part(part)
 
 

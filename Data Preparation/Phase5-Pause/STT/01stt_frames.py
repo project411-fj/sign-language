@@ -3,7 +3,7 @@
 輸入：
     videos/keypoint_videos/<part>/<n>/<start>_<end>_upper_body.mp4    (Phase4 01cropV2.py 的輸出，用來讀 fps)
     Phase2-STT/context_breeze/<part>/<n>/<start>_<end>.csv            (Phase2 01voice.py 的輸出：start, end, text，單位是秒)
-輸出 (output_STT/)：
+輸出 (output/，和 OCR 版同一個資料夾；一個 part 只會走 OCR 或 STT 其中一條，不會互相蓋掉)：
     01fps/fps_<part>.csv                                          (欄位 filename, fps；格式和 OCR 版的 01get_fps.py 一樣)
     01frames/<part>/<n>/<start>_<end>_frames.txt                  (每行「起始格-結束格: 文字」，格式和 OCR 的字幕一樣)
 
@@ -12,6 +12,7 @@
 """
 import csv
 import math
+import re
 from pathlib import Path
 
 import cv2
@@ -20,9 +21,11 @@ from tqdm import tqdm
 # ================================================================ 路徑設定 (後面會再接 /<part>)
 VIDEO_DIR = Path("Data Preparation/videos/keypoint_videos")
 STT_DIR = Path("Data Preparation/Phase2-STT/context_breeze")          # 改成 context 就是讀 voice.py (Whisper large-v3) 的輸出
-FPS_DIR = Path("Data Preparation/Phase5-Pause/output_STT/01fps")      # 裡面是 fps_<part>.csv
-FRAMES_DIR = Path("Data Preparation/Phase5-Pause/output_STT/01frames")
+FPS_DIR = Path("Data Preparation/Phase5-Pause/output/01fps")          # 裡面是 fps_<part>.csv
+FRAMES_DIR = Path("Data Preparation/Phase5-Pause/output/01frames")   # 只有 STT 版有這一步
+PART_VIDEOS_DIR = Path("Data Preparation/videos/part_videos")     # 用來判斷是不是 STT 路徑的 part
 TXT_SUFFIX = "_frames"     # 000600_001507.csv -> 000600_001507_frames.txt
+BOX_RE = re.compile(r"\d+(\.\d+)?(_\d+(\.\d+)?){3}")   # STT 路徑的範圍資料夾，例如 0.20_0.73_0.10_0.33
 
 
 def get_fps(path):
@@ -68,7 +71,16 @@ def convert(csv_path, txt_path, fps):
     return len(lines)
 
 
+def is_stt_part(part):
+    """STT 路徑的 part：part_videos/<part>/<n>/ 底下有 <TOP>_<BOTTOM>_<LEFT>_<RIGHT>/ 範圍資料夾。
+    OCR 和 STT 的結果都放在 output/，所以 OCR 的 part 不能跑這支，否則 02 會用語音的時間蓋掉 OCR 的切點。"""
+    return any(d.is_dir() and BOX_RE.fullmatch(d.name) for d in (PART_VIDEOS_DIR / part).glob("*/*"))
+
+
 def run_part(part):
+    if not is_stt_part(part):
+        print(f"part {part}：part_videos 裡沒有範圍資料夾，不是 STT 路徑的 part (OCR 的 part 請用 OCR/ 的程式)，跳過")
+        return
     video_dir, stt_dir, frames_dir = VIDEO_DIR / part, STT_DIR / part, FRAMES_DIR / part
     if not video_dir.is_dir():
         print(f"part {part}：找不到 {video_dir}，請先跑 Phase4 的 01cropV2.py，跳過")
@@ -121,9 +133,12 @@ def parse_parts(answer, root):
 
 
 def main():
-    parts = parse_parts(input("part (例如 3、1,2,5 或 all): "), VIDEO_DIR)
+    answer = input("part (例如 13、13,14 或 all): ")
+    parts = parse_parts(answer, VIDEO_DIR)
+    if answer.strip().lower() == "all":
+        parts = [part for part in parts if is_stt_part(part)]   # all 只取 STT 路徑的 part
     if not parts:
-        print("沒有輸入 part")
+        print("沒有輸入 part" if answer.strip().lower() != "all" else "沒有 STT 路徑的 part")
         return
     print(f"要處理的 part：{'、'.join(parts)}")
     for part in parts:
