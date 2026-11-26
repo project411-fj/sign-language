@@ -1,7 +1,8 @@
 """STT 版第 3 步：依 02find_sign_pauses.py 找到的切點，把關鍵點 (02combined，292 維) 切成一句一個 .npy。
 
 和 OCR/03split_npy.py 一樣，輸出也在 output/ (Data Training V2 只讀 output/)，標籤是語音轉出來的文字。
-執行後輸入 part：「3」、「1,2,5」或「all」(output/01frames 底下的 part，也就是 STT 路徑的 part；OCR 的 part 請用 OCR/03split_npy.py)。
+只處理 STT 路徑的 part (part_videos 裡有範圍資料夾的 part)；OCR 的 part 請用 OCR/03split_npy.py。
+執行後輸入 part：「13」、「13,14」或「all」(context_breeze 底下 STT 路徑的 part)。
 """
 import re
 from pathlib import Path
@@ -15,7 +16,9 @@ NPY_DIR = "Data Preparation/Phase4-Keypoint/Keypoint_output/02combined"   # 完�
 TXT_DIR = "Data Preparation/Phase5-Pause/output/02pause"                  # STT/02find_sign_pauses.py 的 OUT_DIR
 SEG_DIR = "Data Preparation/Phase5-Pause/output/03segments"               # 輸出分段 .npy (292 維)
 LABEL_DIR = "Data Preparation/Phase5-Pause/output/03labels"               # 輸出「分段檔名: 語音文字」的 .txt
-STT_FRAMES_DIR = "Data Preparation/Phase5-Pause/output/01frames"          # 01stt_frames.py 的輸出：all 只處理這裡有的 part
+STT_DIR = "Data Preparation/Phase2-STT/context_breeze"                   # all：這裡有的 part 才處理
+PART_VIDEOS_DIR = "Data Preparation/videos/part_videos"                  # 用來判斷是不是 STT 路徑的 part
+BOX_RE = re.compile(r"\d+(\.\d+)?(_\d+(\.\d+)?){3}")                  # STT 路徑的範圍資料夾，例如 0.20_0.73_0.10_0.33
 FEAT_DIM = 292                 # 手 128 + 身體 28 + 臉 136
 
 # ================================================================ 參數設定
@@ -72,7 +75,15 @@ def parse_parts(answer, npy_root):
     return [p.strip() for p in answer.split(",") if p.strip()]
 
 
+def is_stt_part(part):
+    """STT 路徑的 part：part_videos/<part>/<n>/ 底下有 <TOP>_<BOTTOM>_<LEFT>_<RIGHT>/ 範圍資料夾。"""
+    return any(d.is_dir() and BOX_RE.fullmatch(d.name) for d in (Path(PART_VIDEOS_DIR) / part).glob("*/*"))
+
+
 def run_part(part):
+    if not is_stt_part(part):
+        print(f"part {part}：part_videos 裡沒有範圍資料夾，不是 STT 路徑的 part (OCR 的 part 請用 OCR/03split_npy.py)，跳過")
+        return
     npy_dir, txt_dir = Path(NPY_DIR) / part, Path(TXT_DIR) / part
     seg_dir, label_dir = Path(SEG_DIR) / part, Path(LABEL_DIR) / part
     failed_log = Path(__file__).parent / f"failed_segments_part_{part}.txt"
@@ -119,7 +130,11 @@ def run_part(part):
 
 def main():
     print(f"讀取 {Path(NPY_DIR).name} ({FEAT_DIM} 維)，輸出到 {Path(SEG_DIR).name}、{Path(LABEL_DIR).name}")
-    for part in parse_parts(input("part (例如 3、1,2,5 或 all): "), Path(STT_FRAMES_DIR)):
+    answer = input("part (例如 13、13,14 或 all): ")
+    parts = parse_parts(answer, Path(STT_DIR))
+    if answer.strip().lower() == "all":
+        parts = [part for part in parts if is_stt_part(part)]   # all 只取 STT 路徑的 part
+    for part in parts:
         run_part(part)
 
 

@@ -162,7 +162,7 @@ Whisper 系列模型給的句子時間是首尾相接的 (上一句的 end = 下
 | 版本 | 錨點與標籤來源 | 程式 | 輸出 |
 |---|---|---|---|
 | `OCR/` | Phase3 的字幕 (`06GeminiOCR_merged`) | `01get_fps.py` → `02find_sign_pauses.py` → `03split_npy.py` | `output/` |
-| `STT/` | Phase2 的語音轉文字 (`context_breeze`，`01voice.py` 的輸出) | `01stt_frames.py` → `02find_sign_pauses.py` → `03split_npy.py` | `output/` |
+| `STT/` | Phase2 的語音轉文字 (`context_breeze`，`01voice.py` 的輸出) | `01get_fps.py` → `02find_sign_pauses.py` → `03split_npy.py` | `output/` |
 
 OCR 版：
 
@@ -176,8 +176,8 @@ STT 版 (三支都可輸入 `3`、`1,2,5` 或 `all`)：
 
 | 順序 | 程式 | 做什麼 | 輸出 (`output/`) |
 |---|---|---|---|
-| 1 | `STT/01stt_frames.py` | 讀 fps，把語音句子的秒數換成格數 (格式和 OCR 字幕一樣：`起始格-結束格: 文字`) | `01fps/`、`01frames/<part>/` |
-| 2 | `STT/02find_sign_pauses.py` | 同 OCR 版，錨點改用語音句子的時間；沒有語音句子的片段會跳過 | `02pause/<part>/`、`02check_plots/` |
+| 1 | `STT/01get_fps.py` | 讀每個片段的 fps (和 OCR 版的輸出一樣) | `01fps/fps_<part>.csv` |
+| 2 | `STT/02find_sign_pauses.py` | 同 OCR 版，錨點改用語音句子的時間：直接讀 `context_breeze` 的 `.csv` (秒)，用 `01fps` 換成格數；沒有語音句子的片段會跳過 | `02pause/<part>/`、`02check_plots/` |
 | 3 | `STT/03split_npy.py` | 同 OCR 版，標籤是語音轉出來的文字 | `03segments/`、`03labels/` |
 
 `03segments/` 裡每個 `.npy` 都是 292 維；`03labels/` 是對應的文字 (`分段檔名: 文字`)。

@@ -1,10 +1,13 @@
 """STT 版第 2 步：在語音句子的邊界附近找手語員動作停下來的地方，調整每句的起訖格。
 
-和 OCR/02find_sign_pauses.py 的演算法完全一樣，只是錨點改用 01stt_frames.py 轉出來的語音句子時間，
-輸出和 OCR 版放在同一個 output/ (Data Training V2 只讀 output/)；一個 part 只會走 OCR 或 STT 其中一條，不會互相蓋掉。
-執行後輸入 part：「3」、「1,2,5」或「all」(output/01frames 底下所有 part，也就是跑過 01stt_frames.py 的 part)。
+和 OCR/02find_sign_pauses.py 的演算法完全一樣，只是錨點改用語音句子的時間：
+直接讀 Phase2 01voice.py 的 context_breeze/<part>/<n>/<start>_<end>.csv (秒)，用 01get_fps.py 的 fps 換成格數。
+輸出和 OCR 版放在同一個 output/02pause/ (格式也一樣：「起始格-結束格: 文字」)；一個 part 只會走 OCR 或 STT 其中一條。
+只處理 STT 路徑的 part (part_videos 裡有範圍資料夾的 part)。
+執行後輸入 part：「13」、「13,14」或「all」(context_breeze 底下 STT 路徑的 part)。
 """
 import csv
+import math
 import re
 import warnings
 from dataclasses import dataclass
@@ -19,20 +22,21 @@ warnings.filterwarnings("ignore")   # 執行時只顯示進度條
 
 # ================================================================ 路徑設定 (後面會再接 /<part>)
 NPY_DIR = "Data Preparation/Phase4-Keypoint/Keypoint_output/02combined"
-TXT_DIR = "Data Preparation/Phase5-Pause/output/01frames"           # 01stt_frames.py 的輸出
+STT_DIR = "Data Preparation/Phase2-STT/context_breeze"              # Phase2 01voice.py 的輸出 (改成 context 就是讀 voice.py 的)
+PART_VIDEOS_DIR = "Data Preparation/videos/part_videos"             # 用來判斷是不是 STT 路徑的 part
 OUT_DIR = "Data Preparation/Phase5-Pause/output/02pause"
-FPS_CSV = "Data Preparation/Phase5-Pause/output/01fps"              # 裡面是 fps_<part>.csv (01stt_frames.py 寫的)
+FPS_CSV = "Data Preparation/Phase5-Pause/output/01fps"              # 裡面是 fps_<part>.csv (STT/01get_fps.py 寫的)
 PLOT_DIR = "Data Preparation/Phase5-Pause/output/02check_plots"  # 不想畫圖就改成 None
 
 # ================================================================ 參數設定
-TXT_SUFFIX = "_frames"     # 000600_001507.npy -> 000600_001507_frames.txt
+TXT_SUFFIX = "_frames"     # 輸出檔名：000600_001507.npy -> 000600_001507_frames.txt (和 OCR 版一樣)
 # 參數沿用 OCR 版；手語比語音慢多少和比字幕慢多少不一定一樣，可以看 02check_plots 再調整
 SEARCH_BEFORE = 0.5        # 往語音句子邊界之前找幾秒
 SEARCH_AFTER = 2.0         # 往語音句子邊界之後找幾秒
 EXPECTED_LAG = 0.5         # 預期手語比語音慢幾秒
 MIN_LEN = 0.3              # 每句至少幾秒
 MERGE_GAP = 0.5            # 兩句間隔小於幾秒就共用一個切點
-FRAME_OFFSET = 0           # .txt 的 frame 編號 + FRAME_OFFSET = .npy 的列索引
+FRAME_OFFSET = 0           # 秒數換出來的格 + FRAME_OFFSET = .npy 的列索引
 
 # ---------------------------------------------------------------- 特徵位置
 HANDS = slice(0, 126)          # 左手 0:63、右手 63:126，各 21 點 (x, y, z)
@@ -50,33 +54,15 @@ SHAPE_WEIGHT = 0.5      # 手形變化相對於手臂移動的權重
 LAG_WEIGHT = 0.5        # 「離預期延遲多遠」在分數裡的權重
 ORDER_PENALTY = 1e3     # 違反順序 / 最短長度的懲罰
 
-# .txt 每行：「1-194: 字幕文字」
-LINE_RE = re.compile(r"^\s*(\d+)\s*[~～\-–—]\s*(\d+)\s*[:：]?\s*(.*?)\s*$")
+BOX_RE = re.compile(r"\d+(\.\d+)?(_\d+(\.\d+)?){3}")   # STT 路徑的範圍資料夾，例如 0.20_0.73_0.10_0.33
 
 
-# ---------------------------------------------------------------- 讀寫 txt
+# ---------------------------------------------------------------- 寫 txt
 @dataclass
 class Segment:
     start: int
     end: int
     text: str
-
-
-def read_segments(path):
-    raw = path.read_bytes()
-    for enc in ("utf-8-sig", "cp950"):
-        try:
-            text = raw.decode(enc)
-            break
-        except UnicodeDecodeError:
-            continue
-    segs = []
-    for line in text.splitlines():
-        m = LINE_RE.match(line)
-        if m:
-            s, e = sorted((int(m[1]) + FRAME_OFFSET, int(m[2]) + FRAME_OFFSET))
-            segs.append(Segment(s, e, m[3]))
-    return sorted(segs, key=lambda s: s.start)
 
 
 def write_segments(path, segs):
@@ -85,6 +71,32 @@ def write_segments(path, segs):
         "".join(f"{s.start - FRAME_OFFSET}-{s.end - FRAME_OFFSET}: {s.text}\n" for s in segs),
         encoding="utf-8",
     )
+
+
+# ---------------------------------------------------------------- 讀語音句子 (Phase2 01voice.py 的 .csv)
+def to_frames(start, end, fps):
+    """秒 → 格 (兩端都含)：第 i 格涵蓋 [i/fps, (i+1)/fps)。"""
+    first = math.floor(start * fps + 1e-6)
+    last = math.ceil(end * fps - 1e-6) - 1
+    return first, max(first, last)
+
+
+def read_stt_segments(csv_path, fps):
+    """context_breeze 的 .csv (start, end, text，單位是秒) → 依起始格排序的 [Segment, ...]，空白句子略過。"""
+    segs = []
+    with csv_path.open(encoding="utf-8-sig", newline="") as f:
+        for row in csv.DictReader(f):
+            text = (row.get("text") or "").strip()
+            if text:
+                s, e = to_frames(float(row["start"]), float(row["end"]), fps)
+                segs.append(Segment(s + FRAME_OFFSET, e + FRAME_OFFSET, text))
+    return sorted(segs, key=lambda s: s.start)
+
+
+def is_stt_part(part):
+    """STT 路徑的 part：part_videos/<part>/<n>/ 底下有 <TOP>_<BOTTOM>_<LEFT>_<RIGHT>/ 範圍資料夾。
+    OCR 和 STT 的結果都放在 output/，所以 OCR 的 part 不能跑這支，否則會用語音的時間蓋掉 OCR 的切點。"""
+    return any(d.is_dir() and BOX_RE.fullmatch(d.name) for d in (Path(PART_VIDEOS_DIR) / part).glob("*/*"))
 
 
 def load_fps_table(csv_path):
@@ -244,10 +256,10 @@ def find_pauses(energy, bounds, fps):
 
 
 # ---------------------------------------------------------------- 單一檔案
-def align_file(npy_path, txt_path, out_path, fps, plot_path):
+def align_file(npy_path, csv_path, out_path, fps, plot_path):
     arr = np.nan_to_num(np.load(npy_path).astype(np.float32))
     T = len(arr)
-    segs = [s for s in read_segments(txt_path) if s.start <= T - 1]   # 超出 .npy 的句子略過
+    segs = [s for s in read_stt_segments(csv_path, fps) if s.start <= T - 1]   # 超出 .npy 的句子略過
     if not segs:
         raise ValueError(f"沒有可用的語音句子 (T={T})")
 
@@ -298,14 +310,17 @@ def save_plot(path, energy, old, new):
 
 # ---------------------------------------------------------------- 主程式
 def run_part(part):
+    if not is_stt_part(part):
+        print(f"part {part}：part_videos 裡沒有範圍資料夾，不是 STT 路徑的 part (OCR 的 part 請用 OCR/ 的程式)，跳過")
+        return
     npy_dir = Path(NPY_DIR) / part
-    txt_dir = Path(TXT_DIR) / part
+    stt_dir = Path(STT_DIR) / part
     out_dir = Path(OUT_DIR) / part
     plot_dir = Path(PLOT_DIR) / part if PLOT_DIR else None
     failed_log = Path(__file__).parent / f"failed_pause_part_{part}.txt"
     fps_csv = Path(FPS_CSV) / f"fps_{part}.csv"
     if not fps_csv.exists():
-        print(f"part {part}：找不到 {fps_csv}，請先跑 01stt_frames.py，跳過")
+        print(f"part {part}：找不到 {fps_csv}，請先跑 STT/01get_fps.py，跳過")
         return
     fps_table = load_fps_table(fps_csv)
 
@@ -319,10 +334,13 @@ def run_part(part):
         )
         names = [p.relative_to(npy_dir).with_suffix("").as_posix() for p in files]
 
-    # 沒有語音句子的片段 (沒有 .txt 或是空的) 直接跳過，不算失敗
+    # 沒有語音句子的片段 (沒有 .csv，或 .csv 裡沒有句子) 直接跳過，不算失敗
     def has_speech(name):
-        txt = txt_dir / Path(name).parent / f"{Path(name).name}{TXT_SUFFIX}.txt"
-        return txt.exists() and txt.stat().st_size > 0
+        csv_path = stt_dir / f"{name}.csv"
+        if not csv_path.exists():
+            return False
+        with csv_path.open(encoding="utf-8-sig", newline="") as f:
+            return any((row.get("text") or "").strip() for row in csv.DictReader(f))
     no_speech = [name for name in names if not has_speech(name)]
     names = [name for name in names if has_speech(name)]
     if no_speech:
@@ -335,7 +353,7 @@ def run_part(part):
         try:
             align_file(
                 npy_dir / f"{name}.npy",
-                txt_dir / rel.parent / txt_name,
+                stt_dir / f"{name}.csv",
                 out_dir / rel.parent / txt_name,
                 fps_table[name],
                 plot_dir / f"{name}.png" if plot_dir else None,
@@ -362,9 +380,12 @@ def parse_parts(answer, root):
 
 
 def main():
-    parts = parse_parts(input("part (例如 3、1,2,5 或 all): "), Path(TXT_DIR))
+    answer = input("part (例如 13、13,14 或 all): ")
+    parts = parse_parts(answer, Path(STT_DIR))
+    if answer.strip().lower() == "all":
+        parts = [part for part in parts if is_stt_part(part)]   # all 只取 STT 路徑的 part
     if not parts:
-        print("沒有輸入 part")
+        print("沒有 STT 路徑的 part" if answer.strip().lower() == "all" else "沒有輸入 part")
         return
     print(f"要處理的 part：{'、'.join(parts)}")
     for part in parts:
