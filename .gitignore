@@ -8,11 +8,28 @@ __pycache__/
 *.jpg
 
 *.txt
-#*.npy
+*.npy
 *.pt
 
 *.png
 *.task
+
+#npy
+#Data Preparation/Phase4-Keypoint/Keypoint_output/01face/
+#Data Preparation/Phase4-Keypoint/Keypoint_output/01hand/
+#Data Preparation/Phase4-Keypoint/Keypoint_output/01pose/
+#03segments/
+#Data Preparation/Phase4-Keypoint/Keypoint_output/02combined/1
+#Data Preparation/Phase4-Keypoint/Keypoint_output/02combined/2
+#Data Preparation/Phase4-Keypoint/Keypoint_output/02combined/3
+#Data Preparation/Phase4-Keypoint/Keypoint_output/02combined/4
+#Data Preparation/Phase4-Keypoint/Keypoint_output/02combined/5
+#Data Preparation/Phase4-Keypoint/Keypoint_output/02combined/6
+#Data Preparation/Phase4-Keypoint/Keypoint_output/02combined/7
+#Data Preparation/Phase4-Keypoint/Keypoint_output/02combined/8
+#Data Preparation/Phase4-Keypoint/Keypoint_output/02combined/9
+#Data Preparation/Phase4-Keypoint/Keypoint_output/02combined/10
+#Data Preparation/Phase4-Keypoint/Keypoint_output/02combined/11
 
 # VS Code
 .vscode/
