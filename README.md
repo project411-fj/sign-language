@@ -133,7 +133,7 @@ Whisper 系列模型給的句子時間是首尾相接的 (上一句的 end = 下
 | 順序 | 程式 | 做什麼 | 輸出 (`Keypoint_output/`) |
 |---|---|---|---|
 | 1 | `OCR/01cropV2.py` | OCR 路徑：用 YOLO 找出手語員，裁出上半身並縮成 640×640 (frame 數不變)；已裁切過的影片會跳過 | `videos/keypoint_videos/` |
-| 1 | `STT/01cropV2.py` | STT 路徑：讀 `part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/`，照資料夾名稱的範圍裁切 (不用模型)，等比例縮放後補黑邊成 640×640 (frame 數不變) | `videos/keypoint_videos/` |
+| 1 | `STT/01cropV2.py` | STT 路徑：讀 `part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/`，照資料夾名稱的範圍裁切 (不用模型)，等比例縮放後補黑邊成 640×640 (frame 數不變)。預設全程用 NVIDIA 顯卡 (cuvid 解碼時裁切、`scale_cuda` 縮放、NVENC 編碼，補黑邊在 CPU)，沒有顯卡就把 `GPU` 改成 `False` | `videos/keypoint_videos/` |
 | 2 | `02keypoint_hand.py` | MediaPipe 雙手 21 點 (以手腕為原點、依手掌大小縮放) | `01hand/` |
 | 2 | `02keypoint_pose.py` | YOLO 身體 9 點：鼻、肩、肘、腕、髖 | `01pose/` |
 | 2 | `02keypoint_face.py` | MediaPipe 臉部：52 個表情分數、嘴唇 40 點、頭部轉向 | `01face/` |

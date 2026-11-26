@@ -6,6 +6,7 @@
 <TOP>_<BOTTOM>_<LEFT>_<RIGHT> 是 Phase1 01crop_text_13~.py 建立的資料夾 (例如 0.20_0.73_0.10_0.33)，
 四個數字是要保留的範圍佔畫面高 / 寬的比例：高 20%~73%、寬 10%~33%。
 OCR 版 (OCR/01cropV2.py) 是用 YOLO 自動找手語員；STT 版範圍已經知道，所以直接照範圍裁切，不需要模型。
+預設全程用 NVIDIA 顯卡 (GPU = True)：解碼時裁切、顯卡上縮放、NVENC 編碼，只有補黑邊在 CPU 上做。
 輸出和 OCR 版放在同一個 keypoint_videos，後面的 02keypoint_*.py、03keypoint_combine.py 兩條路徑共用。
 
 執行後輸入 part：「13」、「13,14」或「all」(part_videos 底下有範圍資料夾的 part)。
@@ -15,7 +16,6 @@ import subprocess
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-import cv2
 from tqdm import tqdm
 
 INPUT_ROOT = Path("Data Preparation/videos/part_videos")       # part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/<start>_<end>.mp4
@@ -26,14 +26,15 @@ OUTPUT_SIZE = 640
 PAD_TO_SQUARE = True   # True：範圍不是正方形時，等比例縮放後上下或左右補黑邊成 640×640 (和 OCR 版尺寸一致、畫面不變形)
                        # False：只等比例縮放到最長邊 640，不補邊 (輸出不一定是正方形)
 
-# 裁切輸出用 ffmpeg（需在 PATH 中）
-MAX_WORKERS = 2
+# 裁切輸出用 ffmpeg / ffprobe（需在 PATH 中）
 FFMPEG = "ffmpeg"
-VIDEO_CODEC = "libx264"
-VIDEO_CODEC_ARGS = ["-preset", "veryfast", "-crf", "18"]
-# 有 NVIDIA 顯卡可改用硬體編碼：
-# VIDEO_CODEC = "h264_nvenc"
-# VIDEO_CODEC_ARGS = ["-preset", "p4", "-cq", "19"]
+FFPROBE = "ffprobe"
+GPU = True             # True：解碼 + 裁切 (cuvid)、縮放 (scale_cuda)、編碼 (NVENC) 都在 NVIDIA 顯卡上，只有補黑邊在 CPU 上做
+                       # False：全部用 CPU (libx264)，沒有 NVIDIA 顯卡時用這個
+MAX_WORKERS = 2        # 同時處理幾支影片；GPU 模式下每支佔一個 NVENC 編碼器，一般顯卡同時最多 5~8 個
+
+GPU_CODEC_ARGS = ["-preset", "p4", "-rc", "vbr", "-cq", "19", "-b:v", "0"]   # NVENC 固定品質 (cq 越小品質越好)
+CPU_CODEC_ARGS = ["-preset", "veryfast", "-crf", "18"]                       # libx264 固定品質
 
 BOX_RE = re.compile(r"\d+(\.\d+)?(_\d+(\.\d+)?){3}")
 CLIP_RE = re.compile(r"\d+_\d+")
@@ -70,36 +71,75 @@ def find_jobs(part_dir):
     return jobs, problems
 
 
-def crop_filter(width, height, box):
+def video_info(path):
+    """回傳 (編碼格式, 寬, 高)，例如 ("h264", 1920, 1080)。"""
+    out = subprocess.run(
+        [FFPROBE, "-v", "error", "-select_streams", "v:0",
+         "-show_entries", "stream=codec_name,width,height", "-of", "csv=p=0", str(path)],
+        capture_output=True, text=True, encoding="utf-8", errors="replace",
+    )
+    if out.returncode != 0 or not out.stdout.strip():
+        raise RuntimeError(f"讀不到影片資訊：{out.stderr.strip()}")
+    codec, width, height = out.stdout.strip().split(",")[:3]
+    return codec, int(width), int(height)
+
+
+def crop_rect(width, height, box):
+    """範圍換成像素 (x1, y1, x2, y2)，四個邊都取偶數 (cuvid 和 yuv420 都要求偶數)。"""
     top, bottom, left, right = box
-    x1, x2 = int(width * left), int(width * right)
-    y1, y2 = int(height * top), int(height * bottom)
-    w, h = (x2 - x1) // 2 * 2, (y2 - y1) // 2 * 2          # yuv420p 需要偶數寬高
-    vf = f"crop={w}:{h}:{x1}:{y1}"
-    if PAD_TO_SQUARE:
-        vf += (f",scale={OUTPUT_SIZE}:{OUTPUT_SIZE}:force_original_aspect_ratio=decrease:flags=area"
-               f",pad={OUTPUT_SIZE}:{OUTPUT_SIZE}:(ow-iw)/2:(oh-ih)/2:color=black")
+    x1, y1 = int(width * left) // 2 * 2, int(height * top) // 2 * 2
+    x2, y2 = int(width * right) // 2 * 2, int(height * bottom) // 2 * 2
+    if x2 - x1 < 2 or y2 - y1 < 2:
+        raise ValueError(f"裁切範圍太小：{x2 - x1}×{y2 - y1}")
+    return x1, y1, x2, y2
+
+
+def scaled_size(w, h):
+    """等比例縮放到最長邊 OUTPUT_SIZE，寬高取偶數。"""
+    ratio = OUTPUT_SIZE / max(w, h)
+    return max(2, round(w * ratio / 2) * 2), max(2, round(h * ratio / 2) * 2)
+
+
+def pad_filter(sw, sh):
+    """在 CPU 上補黑邊成 OUTPUT_SIZE×OUTPUT_SIZE (置中，位移取偶數)；PAD_TO_SQUARE = False 時不補。"""
+    if not PAD_TO_SQUARE:
+        return ""
+    px, py = (OUTPUT_SIZE - sw) // 4 * 2, (OUTPUT_SIZE - sh) // 4 * 2
+    return f",pad={OUTPUT_SIZE}:{OUTPUT_SIZE}:{px}:{py}:color=black"
+
+
+def ffmpeg_command(video, temp, codec, width, height, box):
+    x1, y1, x2, y2 = crop_rect(width, height, box)
+    sw, sh = scaled_size(x2 - x1, y2 - y1)
+    if GPU:
+        decode = [
+            "-hwaccel", "cuda", "-hwaccel_output_format", "cuda",
+            "-c:v", f"{codec}_cuvid",                                 # 依影片格式選解碼器：h264_cuvid、hevc_cuvid…
+            "-crop", f"{y1}x{height - y2}x{x1}x{width - x2}",         # 解碼時直接裁掉 上x下x左x右 的像素
+        ]
+        # 在顯卡上縮放，下載回 CPU 補黑邊，再交給 NVENC 編碼
+        vf = f"scale_cuda=w={sw}:h={sh}:interp_algo=bicubic,hwdownload,format=nv12" + pad_filter(sw, sh)
+        encode = ["-c:v", "h264_nvenc", *GPU_CODEC_ARGS]            # NVENC 直接吃 nv12，不用再轉格式
     else:
-        vf += f",scale='if(gt(iw,ih),{OUTPUT_SIZE},-2)':'if(gt(iw,ih),-2,{OUTPUT_SIZE})':flags=area"
-    return vf
+        decode = []
+        vf = f"crop={x2 - x1}:{y2 - y1}:{x1}:{y1},scale={sw}:{sh}:flags=area" + pad_filter(sw, sh)
+        encode = ["-c:v", "libx264", *CPU_CODEC_ARGS, "-pix_fmt", "yuv420p"]
+    return [
+        FFMPEG, "-nostdin", "-y", "-loglevel", "error",
+        *decode, "-i", str(video),
+        "-vf", vf,
+        "-fps_mode", "passthrough",          # 每個解碼出來的幀都輸出，不補幀也不丟幀 (frame 數要和原片段一樣)
+        "-an", *encode,
+        str(temp),
+    ]
 
 
 def crop_video(video, output, box_name):
     # 先寫到暫存檔，成功後才改成正式檔名：中途中斷不會留下只寫一半的影片
-    cap = cv2.VideoCapture(str(video))
-    width, height = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-    cap.release()
-    if not width or not height:
-        raise RuntimeError("讀不到影片尺寸")
+    codec, width, height = video_info(video)
     output.parent.mkdir(parents=True, exist_ok=True)
     temp = output.with_name(output.stem + ".tmp.mp4")
-    cmd = [
-        FFMPEG, "-y", "-loglevel", "error",
-        "-i", str(video),
-        "-vf", crop_filter(width, height, parse_box(box_name)),
-        "-an", "-c:v", VIDEO_CODEC, *VIDEO_CODEC_ARGS, "-pix_fmt", "yuv420p",
-        str(temp),
-    ]
+    cmd = ffmpeg_command(video, temp, codec, width, height, parse_box(box_name))
     result = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace")
     if result.returncode != 0:
         temp.unlink(missing_ok=True)
