@@ -14,8 +14,12 @@
 
 判斷方式跟 02style.py 一樣是「粗掃 + 細掃」：每 SAMPLE_SEC 秒判斷一格，
 前後兩次結果不同時，中間的每一格都再判斷一次，找出準確的邊界。影片只會讀一次。
+
+GPU = True 時：影片用 ffmpeg 在顯卡上解碼 (NVDEC)，直接在顯卡上裁出手語員範圍、縮小，只有縮小後的小畫面搬回 CPU；
+YOLO 判斷也在顯卡上。找範圍時跳著讀的 DETECT_SAMPLES 格仍然用 CPU (只有幾百格)。
 """
 import re
+import subprocess
 from pathlib import Path
 
 import cv2
@@ -39,6 +43,10 @@ SOURCE_ROOT = BASE.parent / "videos" / "source_videos"   # 輸入 part 時找 so
 OUTPUT = BASE / "02intervals"                   # 02intervals/<part>/<n>_frames.txt
 PART_VIDEOS_ROOT = BASE.parent / "videos" / "part_videos"
 OVERWRITE = False      # 02intervals 裡已經有這支影片的結果 (例如 02style 的) 時：False = 跳過，True = 覆蓋
+
+GPU = True                    # True：影片在 NVIDIA 顯卡上解碼、裁切、縮小 (跟 01crop_text_13~.py 一樣)；False：用 CPU
+FFMPEG = "ffmpeg"             # 不在 PATH 就改成 ffmpeg.exe 完整路徑
+FFPROBE = "ffprobe"
 
 WEIGHTS = "yolo26n-pose.pt"   # 跟 Phase4 02keypoint_pose.py 同一個模型，第一次執行會自動下載
 DEVICE = 0                    # 第一張 GPU；沒有 GPU 就改成 "cpu"
@@ -192,24 +200,67 @@ def has_signer(model, crops):
     return out
 
 
+def video_info(path):
+    """(編碼格式, 寬, 高)，例如 ("h264", 1920, 1080)。"""
+    codec, w, h = subprocess.run(
+        [FFPROBE, "-v", "error", "-select_streams", "v:0",
+         "-show_entries", "stream=codec_name,width,height", "-of", "csv=p=0", str(path)],
+        capture_output=True, text=True, check=True,
+    ).stdout.strip().split(",")[:3]
+    return codec, int(w), int(h)
+
+
+def read_crops(video, box):
+    """用 ffmpeg 依序讀出每一格的手語員範圍 (已縮到最長邊 <= IMGSZ，BGR)。
+    GPU = True：解碼、裁切、縮小都在顯卡上，只有小畫面搬回 CPU。每個解碼出來的格都會輸出，不補格也不丟格。"""
+    codec, w, h = video_info(video)
+    top, bottom, left, right = box
+    y1, y2, x1, x2 = int(h * top) // 2 * 2, min(h, (int(h * bottom) + 1) // 2 * 2), \
+        int(w * left) // 2 * 2, min(w, (int(w * right) + 1) // 2 * 2)   # 顯卡的 NV12 格式要偶數座標
+    cw, ch = x2 - x1, y2 - y1
+    scale = min(1.0, IMGSZ / max(cw, ch))
+    ow, oh = max(2, round(cw * scale / 2) * 2), max(2, round(ch * scale / 2) * 2)
+    if GPU:
+        decode = ["-hwaccel", "cuda", "-hwaccel_output_format", "cuda",
+                  "-c:v", f"{codec}_cuvid",                     # h264_cuvid、hevc_cuvid、vp9_cuvid…
+                  "-crop", f"{y1}x{h - y2}x{x1}x{w - x2}"]      # 解碼時直接裁掉 上x下x左x右 的像素
+        # 色彩標記改成一般的 BT.709 (有些 VP9 影片標錯會讓轉換失敗，跟 01crop_text_13~.py 相同的處理)
+        vf = (f"scale_cuda=w={ow}:h={oh}:interp_algo=bilinear,hwdownload,format=nv12,"
+              "setparams=range=tv:color_primaries=bt709:color_trc=bt709:colorspace=bt709")
+    else:
+        decode = []
+        vf = f"crop={cw}:{ch}:{x1}:{y1}:exact=1,scale={ow}:{oh}:flags=area"
+    cmd = [FFMPEG, "-nostdin", "-loglevel", "error", *decode, "-i", str(video), "-an",
+           "-vf", vf + ",setpts=N", "-fps_mode", "passthrough",
+           "-f", "rawvideo", "-pix_fmt", "bgr24", "pipe:1"]
+    size = ow * oh * 3
+    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, bufsize=size * 8)
+    try:
+        while True:
+            data = proc.stdout.read(size)
+            if len(data) < size:
+                break
+            yield np.frombuffer(data, np.uint8).reshape(oh, ow, 3)
+    finally:
+        proc.stdout.close()
+        err = proc.stderr.read().decode("utf-8", "replace").strip()
+        if proc.wait() != 0:
+            raise RuntimeError(f"ffmpeg 讀取 {video} 失敗" + (" (顯卡不支援這個影片格式的話，把 GPU 改成 False)" if GPU else "")
+                               + f"：\n{err}")
+
+
 def scan(model, video, box, bar):
     """逐格讀影片，回傳每一格有沒有手語員 (np.bool_ 陣列) 和 fps。"""
     cap = cv2.VideoCapture(str(video))
     if not cap.isOpened():
         raise RuntimeError(f"打不開 {video}")
     fps = cap.get(cv2.CAP_PROP_FPS) or 30.0
+    cap.release()
     step = max(1, round(fps * SAMPLE_SEC))
-    top, bottom, left, right = box
 
     labels = []          # 已經確定的格
     buf, buf_label = [], None   # buf[0] 是上一個取樣點 (結果 = buf_label)，後面是還沒判斷的格
     tested = 0
-
-    def crop(frame):
-        h, w = frame.shape[:2]
-        c = frame[round(top * h):round(bottom * h), round(left * w):round(right * w)]
-        scale = IMGSZ / max(c.shape[:2])
-        return cv2.resize(c, None, fx=scale, fy=scale, interpolation=cv2.INTER_AREA) if scale < 1 else c
 
     def flush(final):
         """判斷 buf 裡的取樣點，結果不同的兩個取樣點之間逐格補判斷；最後一個取樣點留在 buf 給下一批。"""
@@ -236,15 +287,11 @@ def scan(model, video, box, bar):
         labels.extend(res[:keep])
         buf, buf_label = buf[keep:], (None if final else res[keep])
 
-    while True:
-        ok, frame = cap.read()
-        if not ok:
-            break
-        buf.append(crop(frame))
+    for crop in read_crops(video, box):
+        buf.append(crop)
         bar.update()
         if len(buf) > BATCH * step:
             flush(final=False)
-    cap.release()
     if buf:
         flush(final=True)
     return np.array(labels, dtype=bool), fps, tested
