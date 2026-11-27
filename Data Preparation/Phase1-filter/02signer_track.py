@@ -21,6 +21,8 @@ GPU = True 時：影片用 ffmpeg 在顯卡上解碼 (NVDEC) 並縮小，只有�
 """
 import re
 import subprocess
+import threading
+from collections import deque
 from pathlib import Path
 
 import cv2
@@ -176,18 +178,38 @@ def read_frames(video, every=1):
            "-f", "rawvideo", "-pix_fmt", "bgr24", "pipe:1"]
     size = ow * oh * 3
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, bufsize=size * 8)
+
+    # ffmpeg 的錯誤訊息要邊跑邊讀掉：影片中間有壞掉的格時 ffmpeg 會一直印錯誤訊息，
+    # 沒人讀的話管道塞滿，ffmpeg 就卡住不再輸出畫面 (進度條停在某個 % 不動)
+    errors, count = deque(maxlen=20), [0]
+
+    def drain():
+        for line in proc.stderr:
+            errors.append(line.decode("utf-8", "replace").rstrip())
+            count[0] += 1
+    reader = threading.Thread(target=drain, daemon=True)
+    reader.start()
+
+    finished = False
     try:
         while True:
             data = proc.stdout.read(size)
             if len(data) < size:
                 break
             yield np.frombuffer(data, np.uint8).reshape(oh, ow, 3)
+        finished = True
     finally:
+        if not finished:                 # 呼叫端提早結束 (例如出錯)：把 ffmpeg 關掉
+            proc.kill()
         proc.stdout.close()
-        err = proc.stderr.read().decode("utf-8", "replace").strip()
-        if proc.wait() != 0:
+        code = proc.wait()
+        reader.join(timeout=5)
+        if finished and code != 0:
             raise RuntimeError(f"ffmpeg 讀取 {video} 失敗" + (" (顯卡不支援這個影片格式的話，把 GPU 改成 False)" if GPU else "")
-                               + f"：\n{err}")
+                               + "：\n" + "\n".join(errors))
+        if finished and count[0]:
+            tqdm.write(f"  注意：ffmpeg 讀 {video.name} 時有 {count[0]} 行錯誤訊息 (通常是影片裡有壞掉的格，"
+                       f"格數可能跟 01frames_crop 不一致)，最後幾行：\n    " + "\n    ".join(list(errors)[-3:]))
 
 
 # ---------------------------------------------------------------- YOLO
