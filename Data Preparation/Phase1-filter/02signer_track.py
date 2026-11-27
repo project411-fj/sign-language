@@ -174,12 +174,14 @@ def read_frames(video, every=1):
         decode = []
         vf = f"{select}scale={ow}:{oh}:flags=area"
     cmd = [FFMPEG, "-nostdin", "-loglevel", "error", *decode, "-i", str(video), "-an",
-           "-vf", vf + ",setpts=N", "-fps_mode", "passthrough",
+           # setpts=N 依畫面順序重新編時間戳記，並沿用原影片的時間單位 (-enc_time_base demux)；
+           # 少了後者，29.97 fps 這類影片每一格都會印「non monotonically increasing dts」錯誤 (跟 01crop_text_13~.py 相同的處理)
+           "-vf", vf + ",setpts=N", "-fps_mode", "passthrough", "-enc_time_base", "demux",
            "-f", "rawvideo", "-pix_fmt", "bgr24", "pipe:1"]
     size = ow * oh * 3
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, bufsize=size * 8)
 
-    # ffmpeg 的錯誤訊息要邊跑邊讀掉：影片中間有壞掉的格時 ffmpeg 會一直印錯誤訊息，
+    # ffmpeg 的錯誤訊息要邊跑邊讀掉：ffmpeg 一直印錯誤訊息時 (例如影片裡有壞掉的格)，
     # 沒人讀的話管道塞滿，ffmpeg 就卡住不再輸出畫面 (進度條停在某個 % 不動)
     errors, count = deque(maxlen=20), [0]
 
@@ -208,8 +210,8 @@ def read_frames(video, every=1):
             raise RuntimeError(f"ffmpeg 讀取 {video} 失敗" + (" (顯卡不支援這個影片格式的話，把 GPU 改成 False)" if GPU else "")
                                + "：\n" + "\n".join(errors))
         if finished and count[0]:
-            tqdm.write(f"  注意：ffmpeg 讀 {video.name} 時有 {count[0]} 行錯誤訊息 (通常是影片裡有壞掉的格，"
-                       f"格數可能跟 01frames_crop 不一致)，最後幾行：\n    " + "\n    ".join(list(errors)[-3:]))
+            tqdm.write(f"  注意：ffmpeg 讀 {video.name} 時有 {count[0]} 行錯誤訊息 (可能是影片裡有壞掉的格，"
+                       f"格數可能跟影片時間對不上)，最後幾行：\n    " + "\n    ".join(list(errors)[-3:]))
 
 
 # ---------------------------------------------------------------- YOLO
