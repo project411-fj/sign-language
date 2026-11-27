@@ -10,7 +10,7 @@ from ultralytics import YOLO
 BASE = Path(__file__).resolve().parent
 FRAMES_DIR = BASE / "01frames_crop"
 VIDEO_DIR = BASE.parent / "videos" / "source_videos"  # 底下是 <part>/1.mp4、2.mp4 ...
-WEIGHTS = BASE / "best~12.pt"
+WEIGHTS = BASE / "style_model" / "best~12.pt"
 OUTPUT = BASE / "02intervals"
 
 CROP_SIZE = 320

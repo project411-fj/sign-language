@@ -8,7 +8,7 @@ folder_path = sys.argv[1]
 
 target_extensions = [".mp4",".m4a"]
 
-count = 100
+count = 1
 for filename in sorted(os.listdir(folder_path)):
     old_path = os.path.join(folder_path, filename)
 
