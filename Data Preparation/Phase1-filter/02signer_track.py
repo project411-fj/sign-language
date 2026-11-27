@@ -1,6 +1,7 @@
 """找出影片裡「有手語員」的時段，寫成 02style.py 的區間格式，存到 02intervals/。
 
-對 VIDEOS 列出的每一支 source_videos/<part>/<n>.mp4：
+執行後輸入 part：「13」或「13,14」→ 處理 source_videos/<part>/ 底下所有 .mp4；直接按 Enter → 只處理 VIDEOS 列出的影片。
+對每一支 source_videos/<part>/<n>.mp4：
     先自動找出手語員的範圍 (TOP, BOTTOM, LEFT, RIGHT)：在整支影片平均取 DETECT_SAMPLES 格，
     找出「一直待在同一個位置、看得到手臂的人」(鏡頭切換時，畫面上的其他人位置會變，手語員的子畫面不會)，
     再把範圍畫在畫面上存成 02intervals/<part>/<n>_box.jpg 讓你確認
@@ -23,7 +24,8 @@ from tqdm import tqdm
 from ultralytics import YOLO
 
 # ========== 設定 ==========
-# 要處理的影片 → 手語員所在的範圍
+# 執行時直接按 Enter 才會用這裡：要處理的影片 → 手語員所在的範圍
+#   (輸入 part 時處理整個 part；這裡有列到的影片會用這裡的範圍，沒列到的自動找)
 #   None：程式自己找 (建議)；自動找錯時 (看 <n>_box.jpg)，可以改成手動指定 (TOP, BOTTOM, LEFT, RIGHT)，
 #   都是佔畫面高 / 寬的比例，例如 (0.20, 0.73, 0.10, 0.33)。相對路徑從專案根目錄 (sign-language/) 算起，也可以寫完整路徑
 VIDEOS = {
@@ -33,6 +35,7 @@ VIDEOS = {
 
 BASE = Path(__file__).resolve().parent          # Data Preparation/Phase1-filter/
 PROJECT = BASE.parents[1]                       # sign-language/
+SOURCE_ROOT = BASE.parent / "videos" / "source_videos"   # 輸入 part 時找 source_videos/<part>/*.mp4
 OUTPUT = BASE / "02intervals"                   # 02intervals/<part>/<n>_frames.txt
 PART_VIDEOS_ROOT = BASE.parent / "videos" / "part_videos"
 OVERWRITE = False      # 02intervals 裡已經有這支影片的結果 (例如 02style 的) 時：False = 跳過，True = 覆蓋
@@ -260,8 +263,31 @@ def to_intervals(labels, fps):
     return [(int(s), int(e)) for s, e in merged if e - s + 1 >= MIN_LEN_SEC * fps]
 
 
+def videos_of_parts(answer):
+    """「13」、「13,14」→ {source_videos/<part>/<n>.mp4: 範圍}；VIDEOS 有列到的用它的範圍，其他自動找 (None)。"""
+    listed = {resolve(p).resolve(): box for p, box in VIDEOS.items()}
+    videos = {}
+    for part in (x.strip() for x in answer.split(",") if x.strip()):
+        folder = SOURCE_ROOT / part
+        mp4s = sorted(folder.glob("*.mp4"), key=lambda p: (len(p.stem), p.stem)) if folder.is_dir() else []
+        if not mp4s:
+            print(f"  part {part}：{folder} 裡沒有 .mp4，跳過")
+        for v in mp4s:
+            videos[v] = listed.get(v.resolve())
+    return videos
+
+
 def main():
-    videos = {resolve(p): check_box(p, box) for p, box in VIDEOS.items()}
+    answer = input("part (例如 13 或 13,14；直接按 Enter = 只處理 VIDEOS 列出的影片): ").strip()
+    if answer.lower() == "all":
+        raise SystemExit("不支援 all：part 1~12 是 OCR 路徑，請輸入 STT 路徑的 part，例如 13 或 13,14")
+    if answer:
+        videos = {v: check_box(v, box) for v, box in videos_of_parts(answer).items()}
+    else:
+        videos = {resolve(p): check_box(p, box) for p, box in VIDEOS.items()}
+    if not videos:
+        raise SystemExit("沒有要處理的影片")
+    print(f"要處理 {len(videos)} 支影片：" + "、".join(f"{v.parent.name}/{v.name}" for v in videos))
     not_found = [v for v in videos if not v.is_file()]
     if not_found:
         raise SystemExit("找不到這些影片：\n" + "\n".join(f"  {v}" for v in not_found))
