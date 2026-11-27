@@ -3,8 +3,11 @@
     02intervals/<part>/<n>_frames.txt + source_videos/<part>/<n>.mp4
         → part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/<start>_<end>.mp4
 
-<TOP>_<BOTTOM>_<LEFT>_<RIGHT> 是 01crop_text_13~.py 依 VIDEOS 的範圍建立的資料夾 (例如 0.20_0.73_0.10_0.33)，
-Phase4 STT/01cropV2.py 會依這個範圍裁出手語員。其餘做法和 03clipV2.py 相同。
+<TOP>_<BOTTOM>_<LEFT>_<RIGHT> 是手語員的範圍 (例如 0.20_0.73_0.10_0.33)，Phase4 STT/01cropV2.py 會依這個範圍裁出手語員：
+    - 02signer_track.py 的輸出每行有第三欄範圍 (「起始格 結束格 範圍」)，每個區間剪到自己範圍的資料夾
+      (手語員中途換位置時，同一支影片會有好幾個範圍資料夾)
+    - 02style_13~.py 的輸出只有兩欄，剪到 01crop_text_13~.py 建好的那個 (唯一的) 範圍資料夾
+其餘做法和 03clipV2.py 相同。
 """
 import re
 import subprocess
@@ -62,14 +65,34 @@ def clip_dir_of(num, n):
     return boxes[0]
 
 
+BOX_RE = re.compile(r"\d+(\.\d+)?(_\d+(\.\d+)?){3}")
+
+
+def read_intervals(txt):
+    """02intervals 的 .txt → [(起, 迄, 範圍資料夾名稱或 None), ...]。"""
+    out = []
+    for line in txt.read_text(encoding="utf-8").splitlines():
+        parts = line.split()
+        if not parts:
+            continue
+        box = parts[2] if len(parts) >= 3 else None
+        if box is not None and not BOX_RE.fullmatch(box):
+            raise ValueError(f"{txt}：第三欄 {box} 不是範圍 (TOP_BOTTOM_LEFT_RIGHT)")
+        out.append((int(parts[0]), int(parts[1]), box))
+    return out
+
+
 def cut_video(num, n, intervals, q):
     """剪一支影片的所有片段，透過 q 通知主程式：開始（片段數）、每剪完一段、結束。"""
     q.put(("start", n, len(intervals)))
-    out_dir = clip_dir_of(num, n)
-
     src = VIDEO_DIR / num / f"{n}.mp4"
     fps = video_fps(src)
-    for s, e in intervals:
+    for s, e, box in intervals:
+        if box is None:
+            out_dir = clip_dir_of(num, n)
+        else:
+            out_dir = OUTPUT / num / n / box
+            out_dir.mkdir(parents=True, exist_ok=True)
         t0 = (s - FRAME_START) / fps
         duration = (e - s + 1) / fps   # +1：包含結束那一幀
         cmd = [
@@ -94,17 +117,21 @@ if __name__ == "__main__":
     jobs = []
     for txt in txts:
         n = txt.stem.split("_")[0]   # 1_frames.txt → 1 → 對應 1.mp4
-        intervals = [tuple(map(int, line.split())) for line in txt.read_text(encoding="utf-8").splitlines() if line.strip()]
+        intervals = read_intervals(txt)
         if intervals:
             jobs.append((n, intervals))
 
-    # 先確認每支影片都有唯一的範圍資料夾，避免剪到一半才失敗
+    # 沒有第三欄的區間要用唯一的範圍資料夾：先確認，避免剪到一半才失敗
     problems = []
-    for n, _ in jobs:
-        try:
-            print(f"{n}.mp4 → {clip_dir_of(num, n)}")
-        except Exception as exc:
-            problems.append(str(exc))
+    for n, intervals in jobs:
+        boxes = sorted({b for _, _, b in intervals if b})
+        if boxes:
+            print(f"{n}.mp4 → " + "、".join(str(OUTPUT / num / n / b) for b in boxes))
+        if any(b is None for _, _, b in intervals):
+            try:
+                print(f"{n}.mp4 → {clip_dir_of(num, n)}")
+            except Exception as exc:
+                problems.append(str(exc))
     if problems:
         raise SystemExit("\n".join(problems))
 

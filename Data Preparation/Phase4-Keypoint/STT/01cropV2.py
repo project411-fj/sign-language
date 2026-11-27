@@ -3,8 +3,10 @@
     part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/<start>_<end>.mp4
         → keypoint_videos/<part>/<n>/<start>_<end>_upper_body.mp4   (640×640，frame 數不變)
 
-<TOP>_<BOTTOM>_<LEFT>_<RIGHT> 是 Phase1 01crop_text_13~.py 建立的資料夾 (例如 0.20_0.73_0.10_0.33)，
+<TOP>_<BOTTOM>_<LEFT>_<RIGHT> 是 Phase1 01crop_text_13~.py 或 02signer_track.py 建立的資料夾 (例如 0.20_0.73_0.10_0.33)，
 四個數字是要保留的範圍佔畫面高 / 寬的比例：高 20%~73%、寬 10%~33%。
+手語員中途換位置的影片會有好幾個範圍資料夾，每個片段用自己所在資料夾的範圍裁切；
+不同範圍資料夾裡的片段時間重疊時 (通常是舊範圍留下的片段)，這支影片會先跳過並提醒。
 OCR 版 (OCR/01cropV2.py) 是用 YOLO 自動找手語員；STT 版範圍已經知道，所以直接照範圍裁切，不需要模型。
 預設全程用 NVIDIA 顯卡 (GPU = True)：解碼時裁切、顯卡上縮放、NVENC 編碼，只有補黑邊在 CPU 上做。
 輸出和 OCR 版放在同一個 keypoint_videos，後面的 02keypoint_*.py、03keypoint_combine.py 兩條路徑共用。
@@ -55,19 +57,23 @@ def find_jobs(part_dir):
         boxes = [d for d in n_dir.iterdir() if d.is_dir() and BOX_RE.fullmatch(d.name)]
         if not boxes:
             continue
-        if len(boxes) > 1:
-            problems.append(f"{n_dir.as_posix()} 底下有 {len(boxes)} 個範圍資料夾 "
-                            f"({'、'.join(d.name for d in boxes)})，請只留下正確的那個，這支影片先跳過")
-            continue
-        box_dir = boxes[0]
         try:
-            parse_box(box_dir.name)
+            for box_dir in boxes:
+                parse_box(box_dir.name)
         except ValueError as exc:
             problems.append(str(exc))
             continue
-        clips = sorted((p for p in box_dir.glob("*.mp4") if CLIP_RE.fullmatch(p.stem)),
-                       key=lambda p: [int(x) for x in p.stem.split("_")])
-        jobs.extend((clip, box_dir.name) for clip in clips)
+        clips = sorted(((p, d.name) for d in boxes for p in d.glob("*.mp4") if CLIP_RE.fullmatch(p.stem)),
+                       key=lambda c: [int(x) for x in c[0].stem.split("_")])
+        # 好幾個範圍資料夾時，片段的時間不能重疊 (重疊表示有舊範圍留下的片段，輸出檔名也會撞在一起)
+        overlap = [(a, b) for a, b in zip(clips, clips[1:])
+                   if int(b[0].stem.split("_")[0]) <= int(a[0].stem.split("_")[1])]
+        if overlap:
+            (a, abox), (b, bbox) = overlap[0]
+            problems.append(f"{n_dir.as_posix()}：{abox}/{a.name} 和 {bbox}/{b.name} 時間重疊 "
+                            f"(共 {len(overlap)} 處，通常是舊範圍留下的片段)，請刪掉舊的，這支影片先跳過")
+            continue
+        jobs.extend(clips)
     return jobs, problems
 
 

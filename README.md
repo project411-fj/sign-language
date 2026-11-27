@@ -85,8 +85,8 @@ Data Preparation/videos/
 | `01frames_crop/01crop_text_13~.py` | 在 `VIDEOS` 直接列出影片，每支各自設定裁切範圍 `(上, 下, 左, 右)` (佔畫面的比例，`None` = 預設範圍)。會清掉舊圖片，並檢查輸出張數 = 影片總格數 |
 | `01frames_crop/01crop_text_13~.py` (續) | 同時建立 `part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/` (例如 `13/1/0.20_0.73_0.10_0.33/`)。範圍改過時，舊的空資料夾會刪掉；舊資料夾裡有片段的話只會提醒，請自己確認後刪除 |
 | `02style_13~.py` | 在 `VIDEOS` 直接列出影片 (通常跟上面相同)；每支影片用 `style_model/` 裡自己的模型 `best<part>-<n>.pt` (例如 `14/5.mp4` → `style_model/best14-5.pt`)。還沒裁切或找不到模型的影片會列出並略過 |
-| `02signer_track.py` (可取代上面兩步) | 不用裁字幕條、不用訓練樣式模型：執行後輸入 part (`13` 或 `13,14`，處理 `source_videos/<part>/` 底下所有 .mp4；直接按 Enter 只處理 `VIDEOS` 列出的影片)，範圍寫 `None` 會自動找手語員 (平均取 300 格，找一直待在同一個位置、看得到手臂的人，把範圍畫在 `02intervals/<part>/<n>_box.jpg` 讓你確認；找錯可以改成手動指定 `(上, 下, 左, 右)`)，再用 YOLO Pose (`GPU = True` 時影片用 ffmpeg 在顯卡上解碼、裁切、縮小，YOLO 也在顯卡上；`False` 改用 CPU) (`yolo26n-pose.pt`) 判斷範圍裡有沒有手語員 (夠大的人 + 看得到手肘或手腕)，粗掃 + 細掃找出準確邊界，補掉短於 `MIN_GAP_SEC` 的空隙、去掉短於 `MIN_LEN_SEC` 的區間，寫成同樣格式的 `02intervals/<part>/<n>_frames.txt`，也會建好範圍資料夾。`02intervals` 已經有結果時預設跳過 (`OVERWRITE = True` 才覆蓋) |
-| `03clipV2_13~.py` | 依 `02intervals` 剪片段，輸出到上面建好的 `part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/`。開始前會先檢查每支影片都有唯一的範圍資料夾 |
+| `02signer_track.py` (可取代上面兩步) | 不用裁字幕條、不用訓練樣式模型。執行後輸入 part (`13` 或 `13,14`，處理 `source_videos/<part>/` 底下所有 .mp4；直接按 Enter 只處理 `VIDEOS` 列出的影片)。**手語員的位置可以中途改變**：① 每 1 秒取一格整個畫面，用 YOLO Pose (`yolo26n-pose.pt`) 找看得到手臂的人，依位置分群，累積出現 ≥ `MIN_PRESENCE_SEC` 秒、而且曾經連續出現 ≥ `MIN_RUN_SEC` 秒的位置才算手語員的位置 (最多 `MAX_POSITIONS` 個；新聞畫面裡的人鏡頭一換就變，不會被算進去)，每個位置用不同顏色畫在 `02intervals/<part>/<n>_box.jpg`；② 粗掃 + 細掃算出每一格每個位置有沒有人；③ 整支影片一起決定每一格手語員在哪個位置 (換位置要付 `SWITCH_SEC` 的代價，新聞畫面裡剛好有人站在別的位置幾秒鐘不會被當成換位置)。輸出 `02intervals/<part>/<n>_frames.txt` 每行「起始格 結束格 範圍」，並建好每個位置的範圍資料夾。自動找錯時可以在 `VIDEOS` 手動指定 `(上, 下, 左, 右)` 或多個位置的 list。`GPU = True` 時影片用 ffmpeg 在顯卡上解碼、縮小，YOLO 也在顯卡上。`02intervals` 已經有結果時預設跳過 (`OVERWRITE = True` 才覆蓋) |
+| `03clipV2_13~.py` | 依 `02intervals` 剪片段到 `part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/`：有第三欄範圍 (`02signer_track.py` 的輸出) 就剪到該範圍的資料夾 (一支影片可以有好幾個)；只有兩欄 (`02style_13~.py` 的輸出) 就剪到上面建好的唯一範圍資料夾，開始前會先檢查 |
 
 `VIDEOS` 的範圍是**先高再寬**，例如寬 10%~33%、高 20%~73% 寫成 `(0.20, 0.73, 0.10, 0.33)`；100% 要寫 `1.00` (不是 `0.100`)。
 各影片的範圍記錄在根目錄的 `note.md`。
@@ -134,7 +134,7 @@ Whisper 系列模型給的句子時間是首尾相接的 (上一句的 end = 下
 | 順序 | 程式 | 做什麼 | 輸出 (`Keypoint_output/`) |
 |---|---|---|---|
 | 1 | `OCR/01cropV2.py` | OCR 路徑：用 YOLO 找出手語員，裁出上半身並縮成 640×640 (frame 數不變)；已裁切過的影片會跳過 | `videos/keypoint_videos/` |
-| 1 | `STT/01cropV2.py` | STT 路徑：讀 `part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/`，照資料夾名稱的範圍裁切 (不用模型)，等比例縮放後補黑邊成 640×640 (frame 數不變)。預設全程用 NVIDIA 顯卡 (cuvid 解碼時裁切、`scale_cuda` 縮放、NVENC 編碼，補黑邊在 CPU)，沒有顯卡就把 `GPU` 改成 `False` | `videos/keypoint_videos/` |
+| 1 | `STT/01cropV2.py` | STT 路徑：讀 `part_videos/<part>/<n>/<TOP>_<BOTTOM>_<LEFT>_<RIGHT>/`，照資料夾名稱的範圍裁切 (不用模型；手語員中途換位置的影片有好幾個範圍資料夾，每個片段用自己資料夾的範圍，不同資料夾的片段時間重疊時這支影片會跳過並提醒)，等比例縮放後補黑邊成 640×640 (frame 數不變)。預設全程用 NVIDIA 顯卡 (cuvid 解碼時裁切、`scale_cuda` 縮放、NVENC 編碼，補黑邊在 CPU)，沒有顯卡就把 `GPU` 改成 `False` | `videos/keypoint_videos/` |
 | 2 | `02keypoint_hand.py` | MediaPipe 雙手 21 點 (以手腕為原點、依手掌大小縮放) | `01hand/` |
 | 2 | `02keypoint_pose.py` | YOLO 身體 9 點：鼻、肩、肘、腕、髖 | `01pose/` |
 | 2 | `02keypoint_face.py` | MediaPipe 臉部：52 個表情分數、嘴唇 40 點、頭部轉向 | `01face/` |
