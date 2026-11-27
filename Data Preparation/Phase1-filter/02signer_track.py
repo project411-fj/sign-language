@@ -1,7 +1,10 @@
 """找出影片裡「有手語員」的時段，寫成 02style.py 的區間格式，存到 02intervals/。
 
 對 VIDEOS 列出的每一支 source_videos/<part>/<n>.mp4：
-    逐格讀影片，只看手語員範圍 (TOP, BOTTOM, LEFT, RIGHT) 裡的畫面
+    先自動找出手語員的範圍 (TOP, BOTTOM, LEFT, RIGHT)：在整支影片平均取 DETECT_SAMPLES 格，
+    找出「一直待在同一個位置、看得到手臂的人」(鏡頭切換時，畫面上的其他人位置會變，手語員的子畫面不會)，
+    再把範圍畫在畫面上存成 02intervals/<part>/<n>_box.jpg 讓你確認
+    → 逐格讀影片，只看手語員範圍裡的畫面
     → 用 YOLO Pose 判斷每一格範圍裡有沒有手語員 (夠大的人 + 看得到手臂)
     → 把連續有手語員的格合併成區間，補掉短暫偵測不到的空隙、去掉太短的區間
     → 寫到 02intervals/<part>/<n>_frames.txt (每行「起始格 結束格」，跟 02style.py 一樣，03clipV2_13~.py 會讀這個)
@@ -20,11 +23,12 @@ from tqdm import tqdm
 from ultralytics import YOLO
 
 # ========== 設定 ==========
-# 要處理的影片 → 手語員所在的範圍 (TOP, BOTTOM, LEFT, RIGHT)，都是佔畫面高 / 寬的比例；寫 None 就看整個畫面
-#   通常跟 01crop_text_13~.py 的 VIDEOS 相同。相對路徑從專案根目錄 (sign-language/) 算起，也可以寫完整路徑
+# 要處理的影片 → 手語員所在的範圍
+#   None：程式自己找 (建議)；自動找錯時 (看 <n>_box.jpg)，可以改成手動指定 (TOP, BOTTOM, LEFT, RIGHT)，
+#   都是佔畫面高 / 寬的比例，例如 (0.20, 0.73, 0.10, 0.33)。相對路徑從專案根目錄 (sign-language/) 算起，也可以寫完整路徑
 VIDEOS = {
-    r"Data Preparation\videos\source_videos\13\1.mp4": (0.20, 0.73, 0.10, 0.33),
-    r"Data Preparation\videos\source_videos\13\3.mp4": (0.20, 0.75, 0.63, 1.00),
+    r"Data Preparation\videos\source_videos\13\1.mp4": None,
+    r"Data Preparation\videos\source_videos\13\3.mp4": None,
 }
 
 BASE = Path(__file__).resolve().parent          # Data Preparation/Phase1-filter/
@@ -48,6 +52,13 @@ MIN_GAP_SEC = 1.0      # 區間之間的空隙短於這個秒數就接起來 (�
 MIN_LEN_SEC = 2.0      # 短於這個秒數的區間丟掉
 FRAME_START = 1        # 寫出的格號 = 影片第幾格 + FRAME_START；跟 01frames_crop 的 frame_000001.jpg = 第 0 格一致
 
+# 自動找範圍
+DETECT_SAMPLES = 300   # 在影片裡平均取幾格來找手語員
+DETECT_IMGSZ = 960     # 找範圍時整個畫面縮到這個大小判斷 (子畫面裡的手語員比較小，用大一點)
+SAME_PLACE_IOU = 0.5   # 兩個框重疊 (IoU) 超過這個就算同一個位置
+MIN_PRESENCE = 0.2     # 手語員至少要出現在多少比例的取樣格裡，不然就當作找不到
+MARGIN = 0.15          # 範圍往四周多留人的框寬 / 高的多少 (打手語時手會伸出身體的框)
+
 ARM_POINTS = [7, 8, 9, 10]   # COCO 關鍵點：左手肘、右手肘、左手腕、右手腕
 
 
@@ -57,7 +68,9 @@ def resolve(p):
 
 
 def check_box(path, box):
-    top, bottom, left, right = box if box is not None else (0.0, 1.0, 0.0, 1.0)
+    if box is None:
+        return None          # 之後自動找
+    top, bottom, left, right = box
     if not (0 <= top < bottom <= 1 and 0 <= left < right <= 1):
         raise SystemExit(f"{path} 的範圍不合理：上 {top}、下 {bottom}、左 {left}、右 {right} "
                          "(需要 0 <= 上 < 下 <= 1、0 <= 左 < 右 <= 1，順序是 TOP, BOTTOM, LEFT, RIGHT)")
@@ -86,6 +99,74 @@ def make_clip_dir(video, box):
                     old.rmdir()
     clip_dir.mkdir(parents=True, exist_ok=True)
     return clip_dir
+
+
+def iou(a, b):
+    w = max(0.0, min(a[2], b[2]) - max(a[0], b[0]))
+    h = max(0.0, min(a[3], b[3]) - max(a[1], b[1]))
+    inter = w * h
+    return inter / ((a[2] - a[0]) * (a[3] - a[1]) + (b[2] - b[0]) * (b[3] - b[1]) - inter + 1e-9)
+
+
+def detect_box(model, video, preview):
+    """自動找手語員的範圍 → (TOP, BOTTOM, LEFT, RIGHT)，並把結果畫在畫面上存成 preview。"""
+    cap = cv2.VideoCapture(str(video))
+    total = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+    frames, people = [], []                 # people[i] = 第 i 個取樣格裡的人 [(x1, y1, x2, y2), ...] (比例)
+    for t in tqdm(np.linspace(0, max(total - 1, 0), DETECT_SAMPLES).astype(int), desc="  找手語員範圍", unit="格", leave=False):
+        cap.set(cv2.CAP_PROP_POS_FRAMES, int(t))
+        ok, frame = cap.read()
+        if not ok:
+            continue
+        r = model.predict(frame, imgsz=DETECT_IMGSZ, conf=PERSON_CONF, device=DEVICE, verbose=False)[0]
+        boxes = []
+        if r.boxes is not None and len(r.boxes) and r.keypoints is not None and r.keypoints.conf is not None:
+            arms = (r.keypoints.conf[:, ARM_POINTS].cpu().numpy() >= KPT_CONF).any(1)
+            boxes = [tuple(b) for b, a in zip(r.boxes.xyxyn.cpu().numpy().tolist(), arms) if a or not REQUIRE_ARMS]
+        people.append(boxes)
+        if len(people) % max(1, DETECT_SAMPLES // 6) == 1:   # 確認圖用：平均分散在整支影片的 6 格
+            frames.append(frame)
+    cap.release()
+    if not people:
+        raise RuntimeError(f"{video} 讀不到畫面")
+
+    # 依位置分群：每一群 = 一個固定的位置，記下出現在哪些取樣格
+    groups = []   # [{"boxes": [...], "seen": set(取樣格)}, ...]
+    for i, boxes in enumerate(people):
+        for b in boxes:
+            best = max(groups, key=lambda g: iou(b, np.median(g["boxes"], 0)), default=None)
+            if best is not None and iou(b, np.median(best["boxes"], 0)) >= SAME_PLACE_IOU:
+                best["boxes"].append(b)
+                best["seen"].add(i)
+            else:
+                groups.append({"boxes": [b], "seen": {i}})
+    groups.sort(key=lambda g: -len(g["seen"]))
+    for g in groups[:3]:
+        m = np.median(g["boxes"], 0)
+        print(f"    候選位置 上 {m[1]:.2f} 下 {m[3]:.2f} 左 {m[0]:.2f} 右 {m[2]:.2f}：出現在 {len(g['seen']) / len(people):.0%} 的取樣格")
+    if not groups or len(groups[0]["seen"]) < MIN_PRESENCE * len(people):
+        raise RuntimeError(f"{video}：找不到固定位置的手語員，請在 VIDEOS 手動指定範圍 (TOP, BOTTOM, LEFT, RIGHT)")
+
+    # 範圍 = 這個位置大部分時候的框 (去掉最極端的 5%) 再往外留 MARGIN，取到 0.01
+    b = np.array(groups[0]["boxes"])
+    x1, y1 = np.percentile(b[:, 0], 5), np.percentile(b[:, 1], 5)
+    x2, y2 = np.percentile(b[:, 2], 95), np.percentile(b[:, 3], 95)
+    mw, mh = MARGIN * (x2 - x1), MARGIN * (y2 - y1)
+    box = (np.floor(max(0.0, y1 - mh) * 100) / 100, np.ceil(min(1.0, y2 + mh) * 100) / 100,
+           np.floor(max(0.0, x1 - mw) * 100) / 100, np.ceil(min(1.0, x2 + mw) * 100) / 100)
+    box = tuple(float(v) for v in box)
+
+    # 確認用的圖：幾張取樣畫面並排，紅框 = 手語員範圍
+    tiles = []
+    for f in frames[:6]:
+        h, w = f.shape[:2]
+        f = f.copy()
+        cv2.rectangle(f, (round(box[2] * w), round(box[0] * h)), (round(box[3] * w), round(box[1] * h)), (0, 0, 255), max(2, w // 300))
+        tiles.append(cv2.resize(f, (640, round(640 * h / w))))
+    preview.parent.mkdir(parents=True, exist_ok=True)
+    rows = [np.hstack(tiles[i:i + 3] + [np.zeros_like(tiles[0])] * (3 - len(tiles[i:i + 3]))) for i in range(0, len(tiles), 3)]
+    cv2.imwrite(str(preview), np.vstack(rows))
+    return box
 
 
 def has_signer(model, crops):
@@ -191,18 +272,28 @@ def main():
         if out.exists() and not OVERWRITE:
             print(f"  [略過] {v.parent.name}/{v.name}：{out} 已經存在 (要重做就把 OVERWRITE 改成 True)")
             continue
-        print(f"  {v.parent.name}/{v.name}：範圍 {box_name(box)}，片段資料夾 {make_clip_dir(v, box)}")
         jobs.append((v, box, out))
     if not jobs:
         raise SystemExit("沒有要處理的影片")
 
     model = YOLO(WEIGHTS)
-    results = []
+    results, found = [], []
     for n, (video, box, out) in enumerate(jobs, 1):
+        print(f"\n({n}/{len(jobs)}) {video.parent.name}/{video.name}")
+        if box is None:
+            preview = out.with_name(f"{video.stem}_box.jpg")
+            try:
+                box = detect_box(model, video, preview)
+            except RuntimeError as exc:
+                print(f"  [略過] {exc}")
+                continue
+            print(f"  自動找到範圍 {box} (TOP, BOTTOM, LEFT, RIGHT)，請打開 {preview} 確認紅框框住手語員")
+            found.append((video, box))
+        print(f"  範圍 {box_name(box)}，片段資料夾 {make_clip_dir(video, box)}")
         cap = cv2.VideoCapture(str(video))
         total = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
         cap.release()
-        with tqdm(total=total, desc=f"({n}/{len(jobs)}) {video.parent.name}/{video.name}", unit="格") as bar:
+        with tqdm(total=total, desc="  逐格判斷", unit="格") as bar:
             labels, fps, tested = scan(model, video, box, bar)
         intervals = to_intervals(labels, fps)
 
@@ -223,6 +314,10 @@ def main():
     print("\n全部完成，下一步：03clipV2_13~.py (輸入 part)")
     for r in results:
         print(f"  {r}")
+    if found:
+        print("\n自動找到的範圍 (可以記到 note.md；找錯的話把它改好貼回 VIDEOS 再跑一次，記得 OVERWRITE = True)：")
+        for v, box in found:
+            print(f'    r"{v.relative_to(PROJECT) if v.is_relative_to(PROJECT) else v}": {box},')
 
 
 if __name__ == "__main__":
