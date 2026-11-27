@@ -43,18 +43,20 @@ def video_sort_key(path):
 
 
 def is_stt_part(part):
-    """STT 路徑的 part：part_videos/<part>/<n>/ 底下有 <TOP>_<BOTTOM>_<LEFT>_<RIGHT>/ 範圍資料夾。
+    """STT 路徑的 part：part_videos/<part>/<n>/ 底下有 <TOP>_<BOTTOM>_<LEFT>_<RIGHT>/ 範圍資料夾
+    (Phase1 03clipV2_13~.py 的輸出)，或有 crop_boxes.csv (Phase1 03clipV3.py 的輸出)。
     OCR 和 STT 的結果都放在 output/，所以 OCR 的 part 不能跑 STT 的程式，否則會用語音的時間蓋掉 OCR 的切點。"""
-    return any(d.is_dir() and BOX_RE.fullmatch(d.name) for d in (PART_VIDEOS_DIR / part).glob("*/*"))
+    root = (PART_VIDEOS_DIR / part)
+    return any((d.is_dir() and BOX_RE.fullmatch(d.name)) or d.name == "crop_boxes.csv" for d in root.glob("*/*"))
 
 
 def run_part(part):
     if not is_stt_part(part):
-        print(f"part {part}：part_videos 裡沒有範圍資料夾，不是 STT 路徑的 part (OCR 的 part 請用 OCR/ 的程式)，跳過")
+        print(f"part {part}：part_videos 裡沒有範圍資料夾或 crop_boxes.csv，不是 STT 路徑的 part (OCR 的 part 請用 OCR/ 的程式)，跳過")
         return
     video_dir = VIDEO_DIR / part
     if not video_dir.is_dir():
-        print(f"part {part}：找不到 {video_dir}，請先跑 Phase4 的 STT/01cropV2.py，跳過")
+        print(f"part {part}：找不到 {video_dir}，請先跑 Phase1 的 03clipV3.py 或 Phase4 的 STT/01cropV2.py，跳過")
         return
 
     videos = sorted(video_dir.glob("*/*_upper_body.mp4"), key=video_sort_key)

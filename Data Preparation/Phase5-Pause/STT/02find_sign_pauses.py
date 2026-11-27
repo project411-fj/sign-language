@@ -94,9 +94,11 @@ def read_stt_segments(csv_path, fps):
 
 
 def is_stt_part(part):
-    """STT 路徑的 part：part_videos/<part>/<n>/ 底下有 <TOP>_<BOTTOM>_<LEFT>_<RIGHT>/ 範圍資料夾。
+    """STT 路徑的 part：part_videos/<part>/<n>/ 底下有 <TOP>_<BOTTOM>_<LEFT>_<RIGHT>/ 範圍資料夾
+    (Phase1 03clipV2_13~.py 的輸出)，或有 crop_boxes.csv (Phase1 03clipV3.py 的輸出)。
     OCR 和 STT 的結果都放在 output/，所以 OCR 的 part 不能跑這支，否則會用語音的時間蓋掉 OCR 的切點。"""
-    return any(d.is_dir() and BOX_RE.fullmatch(d.name) for d in (Path(PART_VIDEOS_DIR) / part).glob("*/*"))
+    root = (Path(PART_VIDEOS_DIR) / part)
+    return any((d.is_dir() and BOX_RE.fullmatch(d.name)) or d.name == "crop_boxes.csv" for d in root.glob("*/*"))
 
 
 def load_fps_table(csv_path):
@@ -311,7 +313,7 @@ def save_plot(path, energy, old, new):
 # ---------------------------------------------------------------- 主程式
 def run_part(part):
     if not is_stt_part(part):
-        print(f"part {part}：part_videos 裡沒有範圍資料夾，不是 STT 路徑的 part (OCR 的 part 請用 OCR/ 的程式)，跳過")
+        print(f"part {part}：part_videos 裡沒有範圍資料夾或 crop_boxes.csv，不是 STT 路徑的 part (OCR 的 part 請用 OCR/ 的程式)，跳過")
         return
     npy_dir = Path(NPY_DIR) / part
     stt_dir = Path(STT_DIR) / part

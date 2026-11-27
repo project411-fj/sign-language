@@ -76,13 +76,15 @@ def parse_parts(answer, npy_root):
 
 
 def is_stt_part(part):
-    """STT 路徑的 part：part_videos/<part>/<n>/ 底下有 <TOP>_<BOTTOM>_<LEFT>_<RIGHT>/ 範圍資料夾。"""
-    return any(d.is_dir() and BOX_RE.fullmatch(d.name) for d in (Path(PART_VIDEOS_DIR) / part).glob("*/*"))
+    """STT 路徑的 part：part_videos/<part>/<n>/ 底下有 <TOP>_<BOTTOM>_<LEFT>_<RIGHT>/ 範圍資料夾
+    (Phase1 03clipV2_13~.py 的輸出)，或有 crop_boxes.csv (Phase1 03clipV3.py 的輸出)。"""
+    root = (Path(PART_VIDEOS_DIR) / part)
+    return any((d.is_dir() and BOX_RE.fullmatch(d.name)) or d.name == "crop_boxes.csv" for d in root.glob("*/*"))
 
 
 def run_part(part):
     if not is_stt_part(part):
-        print(f"part {part}：part_videos 裡沒有範圍資料夾，不是 STT 路徑的 part (OCR 的 part 請用 OCR/03split_npy.py)，跳過")
+        print(f"part {part}：part_videos 裡沒有範圍資料夾或 crop_boxes.csv，不是 STT 路徑的 part (OCR 的 part 請用 OCR/03split_npy.py)，跳過")
         return
     npy_dir, txt_dir = Path(NPY_DIR) / part, Path(TXT_DIR) / part
     seg_dir, label_dir = Path(SEG_DIR) / part, Path(LABEL_DIR) / part
