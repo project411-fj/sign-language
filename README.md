@@ -107,7 +107,7 @@ Data Preparation/videos/
 |---|---|---|
 | `voice.py` | Whisper large-v3 (faster-whisper，轉成繁體) | `context/<part>/<n>/<start>_<end>.csv` |
 | `01voice.py` | [Breeze-ASR-25](https://huggingface.co/MediaTek-Research/Breeze-ASR-25) (針對台灣華語、中英夾雜微調；transformers) | `context_breeze/<part>/<n>/<start>_<end>.csv` |
-| `02gemini_correct.py` | 把 `context_breeze` 的句子送給 Gemini 修正同音錯字 (只改錯字，不改寫、不合併句子；改太多的保留原句)。API key 寫在程式開頭的 `API_KEY` (留空讀環境變數 `GEMINI_API_KEY`，**填了不要 push**) | `context_breeze_gemini/<part>/<n>/<start>_<end>.csv` (多一欄 `original`；Phase5 STT 要用的話把 `STT_DIR` 改成這個資料夾) |
+| `02gemini_correct.py` | 把 `context_breeze` 的句子送給 Gemini 修正同音錯字 (只改錯字，不改寫、不合併句子；改太多的保留原句)。一次請求送 `N_PER_REQUEST` 個 `<n>` (整支影片的句子依時間順序一起送)，失敗或漏回太多時自動切成兩半重送。API key 寫在程式開頭的 `API_KEY` (留空讀環境變數 `GEMINI_API_KEY`，**填了不要 push**) | `context_breeze_gemini/<part>/<n>/<start>_<end>.csv` (多一欄 `original`；Phase5 STT 要用的話把 `STT_DIR` 改成這個資料夾) |
 
 兩支程式的 part 都可輸入 `all`，已經轉過的片段會跳過；輸出欄位都是 `start, end, text`。
 兩種 `part_videos` 結構都讀得到 (STT 路徑多一層範圍資料夾)，輸出都是 `<part>/<n>/<start>_<end>.csv`。目前只作為參考，後面的步驟用的是 Phase3 的字幕。
