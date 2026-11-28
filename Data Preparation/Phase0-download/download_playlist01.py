@@ -5,7 +5,7 @@ import yt_dlp
 # ===== 設定 =====
 #PLAYLIST_URL = "https://youtube.com/playlist?list=PLHybHfSlbzTVGAfLGXA29jHcVql9PcRso"
 PLAYLIST_URL = "https://www.youtube.com/playlist?list=PLGjeUzy1QRDCF5sL1V9drqDHL-quAOKmq"
-SAVE_FOLDER = r"G:\videos01\20"
+SAVE_FOLDER = r"C:\Users\User\Desktop\videos\15"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 BATCH_SIZE = 50          # 每批最多下載幾部
@@ -22,6 +22,7 @@ ydl_opts = {
     'download_archive': os.path.join(SCRIPT_DIR, 'downloaded.txt'),
     'js_runtimes': {'node': {}},
     'ignoreerrors': True,
+    'cookiesfrombrowser': ('firefox',),
 
     # --- 降低請求頻率（對應 yt-dlp 官方 `-t sleep` 預設值）---
     'sleep_interval': 10,             # 每部影片下載前隨機等待 10~20 秒

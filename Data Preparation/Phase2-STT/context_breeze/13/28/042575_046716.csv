@@ -1,0 +1,45 @@
+﻿start,end,text
+0.706,3.880,應用在網頁開發的後端程式語言 PHP
+3.880,5.720,已經有數十年的歷史
+5.720,9.440,最初是為了支援動態網頁以及應用程式的運作
+9.440,11.160,應用範圍相當的廣泛
+11.160,12.320,從維基百科
+12.320,13.440,電商平臺
+13.440,16.040,以及 WordPress 等內容管理系統
+16.040,18.560,根據網路技術追蹤機構的統計
+18.560,20.880,在能辨識程式語言的網站中
+20.880,22.920,約有 7 成使用 PHP
+22.920,26.120,而這次的漏洞也引發廣泛的資安疑慮
+26.120,28.760,資安公司 With Research 以及 Calif
+28.760,30.360,發現了相關的漏洞
+30.360,32.320,並和 PHP 開發團體
+32.320,34.720,以及 OpenAI 等單位協調處理
+34.720,38.320,這個漏洞讓攻擊者在不需要身份驗證的情況下
+38.320,39.920,遠端執行程式碼
+39.920,42.240,進一步控制受影響的伺服器
+42.240,44.520,甚至竊取資料或癱瘓服務
+44.520,51.710,"Using this exploit on someone's website is essentially getting into their front door or maybe the gate to their property, right?"
+52.162,56.318,And now they have access to the rest of that property and now they're free to go
+57.538,63.486,around inside of the network and they can do things like ransomware and all kinds of really bad things
+63.746,65.040,資安專家表示
+65.040,69.320,這些漏洞在 PHP 的程式碼中已經潛藏超過十年
+69.320,72.280,直到研究人員透過 AI 工具才被發現
+72.280,76.480,2018 年就出版過資安相關著作的日本首相高市早苗
+76.480,79.520,21 號率先透過 X 平臺發文示警
+79.520,83.160,呼籲各個機構盡快地確認網站安全並且更新
+83.160,86.800,美國在內的國家資安機構也陸續發布警示
+86.800,87.520,法國
+87.520,91.200,德國 芬蘭以及荷蘭等國政府的部分網站
+91.200,93.440,也採取預防性的下限措施
+93.440,96.640,部分網站已經在 22 號陸續地恢復服務
+96.640,109.640,AI and computer science in general reduce the bar which is needed to develop working exploits and to overtax and weaponize vulnerabilities
+109.640,117.160,therefore the risks are real and we should not especially the vendors should not postpone
+117.160,118.660,Developing patches
+118.660,120.200,資安專家提醒
+120.200,122.320,雖然已經發布修補的程式
+122.320,124.160,但道高一尺魔高一丈
+124.160,127.100,駭客也能針對漏洞找出新的攻擊方法
+127.100,130.000,尚未完成更新的系統還是存有風險
+130.000,133.880,這場資安攻防也考驗各國政府和企業修補漏洞
+133.880,135.518,以及抵禦攻擊的速度
+135.778,137.374,公視新聞專屬分別營業
