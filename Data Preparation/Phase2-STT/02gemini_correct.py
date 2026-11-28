@@ -36,10 +36,10 @@ SLEEP_BETWEEN = 1.0    # 每次請求之間停幾秒
 MIN_SIMILARITY = 0.5   # 修正後跟原句的相似度 (0~1) 低於這個，就當作 Gemini 改太多，保留原句
 
 # 影片的主題、會出現的人名 / 地名 / 專有名詞，寫在這裡可以幫 Gemini 改對 (可以留空)
-TOPIC = "台灣的電視新聞與政見辯論會"
+TOPIC = "台灣的電視新聞與政見辯論會"   # 可以留空 (留空就不告訴 Gemini 主題)
 TERMS = ""             # 例如 "盧秀燕、臺中市、公辦電視政見辯論會"
 
-PROMPT = """你會收到語音辨識 (STT) 的逐句結果，內容是{topic}。
+PROMPT = """你會收到語音辨識 (STT) 的逐句結果{topic}。
 句子依片段分組，同一支影片的片段依時間順序排列，每句有編號，順序就是說話的順序。
 語音辨識常把字聽成同音或近音的錯字，請只修正這類錯字，輸出正確的繁體中文 (台灣用字)。
 規則：
@@ -75,7 +75,8 @@ def ask_gemini(items):
         lines.append(f"{i}. {text}")
     response = client.models.generate_content(
         model=MODEL_NAME,
-        contents=[PROMPT.format(topic=TOPIC, terms=terms), "\n".join(lines)],
+        contents=[PROMPT.format(topic=f"，內容是{TOPIC.strip()}" if TOPIC.strip() else "", terms=terms),
+                  "\n".join(lines)],
         config=types.GenerateContentConfig(
             response_mime_type="application/json",
             response_schema=RESPONSE_SCHEMA,
